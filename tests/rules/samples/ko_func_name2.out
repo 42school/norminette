@@ -44,7 +44,7 @@ ko_func_name2.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: EXP_PARENTHESIS      (line:   1, col:   9):	Expected parenthesis
 Error: EXP_PARENTHESIS      (line:   6, col:   9):	Expected parenthesis
-Error: SPACE_BEFORE_FUNC    (line:  11, col:   4):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  11, col:   4):	Found space when expecting tab before function name
 Error: EXP_PARENTHESIS      (line:  11, col:   9):	Expected parenthesis
 Error: TOO_FEW_TAB          (line:  13, col:   1):	Missing tabs for indent level
 Error: SPACE_REPLACE_TAB    (line:  13, col:   5):	Found space when expecting tab
@@ -52,4 +52,4 @@ Error: SPACE_REPLACE_TAB    (line:  13, col:   8):	Found space when expecting ta
 Error: DECL_ASSIGN_LINE     (line:  13, col:  17):	Declaration and assignation on a single line
 Error: TOO_FEW_TAB          (line:  15, col:   1):	Missing tabs for indent level
 Error: SPACE_REPLACE_TAB    (line:  15, col:   5):	Found space when expecting tab
-Error: SPACE_BEFORE_FUNC    (line:  18, col:  11):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  18, col:  11):	Found space when expecting tab before function name

@@ -38,5 +38,5 @@
 		<RBRACE> 
 test_file_210412.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: SPACE_BEFORE_FUNC    (line:  14, col:   4):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  14, col:   4):	Found space when expecting tab before function name
 Error: BRACE_SHOULD_EOL     (line:  21, col:   1):	Expected newline after brace
