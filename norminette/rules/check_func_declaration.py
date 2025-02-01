@@ -1,4 +1,5 @@
 from norminette.rules import Rule, Check
+from norminette.errors import Error
 
 types = ["INT", "FLOAT", "CHAR", "DOUBLE", "LONG", "SHORT"]
 
@@ -22,7 +23,10 @@ class CheckFuncDeclaration(Rule, Check):
         arg = 1
         while context.check_token(tmp, ["SEMI_COLON", "NEWLINE"]) is False:
             if context.check_token(tmp, "LBRACE") is True:
-                context.new_error("BRACE_NEWLINE", context.peek_token(tmp))
+                token = context.peek_token(tmp)
+                error = Error.from_name("BRACE_NEWLINE")
+                error.add_highlight(*token.pos, length=1)
+                context.errors.add(error)
             tmp += 1
         if context.history[-1] == "IsUserDefinedType":
             return
@@ -70,6 +74,4 @@ class CheckFuncDeclaration(Rule, Check):
         arg = []
         while context.check_token(i, ["NEWLINE", "SEMI_COLON"]) is False:
             i += 1
-        if context.check_token(i - 1, ["TAB", "SPACE"]):
-            context.new_error("SPC_BEFORE_NL", context.peek_token(i))
         return False, 0

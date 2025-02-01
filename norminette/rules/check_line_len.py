@@ -1,16 +1,15 @@
 from norminette.rules import Rule, Check
+from norminette.errors import Error
 
 
 class CheckLineLen(Rule, Check):
+    runs_on_rule = False
+    runs_on_end = True
+
     def run(self, context):
-        """
-        Lines must not be over 80 characters long
-        """
-        i = 0
-        line_too_long = {}
-        for tkn in context.tokens[: context.tkn_scope]:
-            if tkn.pos[1] > 81 and tkn.pos[0] not in line_too_long:
-                context.new_error("LINE_TOO_LONG", tkn)
-                line_too_long[tkn.pos[0]] = True
-            i += 1
-        return False, 0
+        for lineno, line in enumerate(context.file, start=1):
+            if len(line.translated) <= 80:
+                continue
+            error = Error.from_name("LINE_TOO_LONG")
+            error.add_highlight(lineno, 81, length=len(line.translated) - 80)
+            context.file.errors.add(error)

@@ -13,6 +13,14 @@ class Token:
         return len(self.value or '')
 
     @property
+    def lineno(self) -> int:
+        return self.pos[0]
+
+    @property
+    def column(self) -> int:
+        return self.pos[1]
+
+    @property
     def line_column(self):
         return self.pos[1]
 

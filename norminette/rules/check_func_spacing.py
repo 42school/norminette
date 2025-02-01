@@ -1,4 +1,5 @@
 from norminette.rules import Rule, Check
+from norminette.errors import Error
 
 whitespaces = ["SPACE", "TAB", "NEWLINE"]
 
@@ -32,7 +33,10 @@ class CheckFuncSpacing(Rule, Check):
         while context.check_token(i, ["MULT", "BWISE_AND", "LPARENTHESIS"]) is True:
             i -= 1
         if context.peek_token(i).type == "SPACE":
-            context.new_error("SPACE_BEFORE_FUNC", context.peek_token(i))
+            token = context.peek_token(i)
+            error = Error.from_name("SPACE_BEFORE_FUNC")
+            error.add_highlight(*token.pos, length=1, hint="Expected a tab instead of a space")
+            context.errors.add(error)
             return False, 0
         if context.peek_token(i).type == "TAB":
             j = i

@@ -228,12 +228,12 @@ Error: TOO_MANY_INSTR       (line:  23, col:  24):	Too many instructions on a si
 Error: TOO_FEW_TAB          (line:  31, col:  12):	Missing tabs for indent level
 Error: TOO_MANY_INSTR       (line:  31, col:  12):	Too many instructions on a single line
 Error: TOO_MANY_FUNCS       (line:  47, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  52, col:  88):	line too long
+Error: LINE_TOO_LONG        (line:  52, col:  81):	line too long
 Error: TOO_MANY_FUNCS       (line:  54, col:   1):	Too many functions in file
 Error: TOO_MANY_FUNCS       (line:  59, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  63, col:  84):	line too long
+Error: LINE_TOO_LONG        (line:  63, col:  81):	line too long
 Error: TOO_MANY_FUNCS       (line:  66, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  70, col:  84):	line too long
+Error: LINE_TOO_LONG        (line:  70, col:  81):	line too long
 Error: TOO_MANY_FUNCS       (line:  73, col:   1):	Too many functions in file
 Error: SPACE_REPLACE_TAB    (line:  75, col:  10):	Found space when expecting tab
 Error: SPC_AFTER_POINTER    (line:  75, col:  11):	space after pointer

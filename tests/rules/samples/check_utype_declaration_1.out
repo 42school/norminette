@@ -79,3 +79,4 @@ Error: TYPE_NOT_GLOBAL      (line:  23, col:   5):	Enums, structs and unions nee
 Error: WRONG_SCOPE_COMMENT  (line:  27, col:  18):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:  27, col:  18):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:  28, col:   1):	Comment is invalid in this scope
+Error: SPC_BEFORE_NL        (line:  28, col:  34):	Space before newline

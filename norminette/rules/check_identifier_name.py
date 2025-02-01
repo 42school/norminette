@@ -2,6 +2,7 @@ import string
 
 from norminette.rules import Rule, Check
 from norminette.scope import GlobalScope, UserDefinedType
+from norminette.errors import Error
 
 
 assigns = ["ASSIGN"]
@@ -22,14 +23,17 @@ class CheckIdentifierName(Rule, Check):
                 sc = sc.outer()
             for c in sc.fnames[-1]:
                 if c not in legal_characters:
-                    context.new_error(
-                        "FORBIDDEN_CHAR_NAME", context.peek_token(context.fname_pos)
-                    )
+                    token = context.peek_token(context.fname_pos)
+                    error = Error.from_name("FORBIDDEN_CHAR_NAME")
+                    error.add_highlight(token)
+                    context.errors.add(error)
         if len(context.scope.vars_name) > 0:
             for val in context.scope.vars_name[::]:
                 for c in val.value:
                     if c not in legal_characters:
-                        context.new_error("FORBIDDEN_CHAR_NAME", val)
+                        error = Error.from_name("FORBIDDEN_CHAR_NAME")
+                        error.add_highlight(val)
+                        context.errors.add(error)
                         break
                 context.scope.vars_name.remove(val)
         return False, 0

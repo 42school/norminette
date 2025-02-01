@@ -21,8 +21,6 @@ class CheckBrace(Rule, Check):
             return False, 0
         i += 1
         i = context.skip_ws(i, nl=False)
-        if context.check_token(i, "NEWLINE") is True and context.check_token(i - 1, ["SPACE", "TAB"]):
-            context.new_error("SPC_BEFORE_NL", context.peek_token(i - 1))
         if context.check_token(i, "NEWLINE") is False or context.check_token(i, "NEWLINE") is None:
             if context.scope.name == "UserDefinedType" or context.scope.name == "UserDefinedEnum":
                 i = context.skip_ws(i, nl=False)

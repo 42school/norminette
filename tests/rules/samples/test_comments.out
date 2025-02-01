@@ -57,7 +57,6 @@ Error: USER_DEFINED_TYPEDEF (line:   6, col:  26):	User defined typedef must sta
 Error: FORBIDDEN_ENUM       (line:   8, col:   1):	Enum declaration are not allowed in .c files
 Error: ENUM_TYPE_NAMING     (line:   8, col:   6):	Enum name must start with e_
 Error: BRACE_NEWLINE        (line:   8, col:  11):	Expected newline before brace
-Error: SPACE_EMPTY_LINE     (line:   9, col:   5):	Space on empty line
 Error: TOO_FEW_TAB          (line:  10, col:   1):	Missing tabs for indent level
 Error: SPACE_REPLACE_TAB    (line:  10, col:   5):	Found space when expecting tab
 Error: CONSECUTIVE_SPC      (line:  10, col:  11):	Two or more consecutives spaces
@@ -66,13 +65,8 @@ Error: TOO_FEW_TAB          (line:  11, col:  16):	Missing tabs for indent level
 Error: SPACE_BEFORE_FUNC    (line:  14, col:   5):	space before function name
 Error: COMMENT_ON_INSTR     (line:  14, col:  12):	Comment must be on its own line or at end of a line
 Error: MISSING_IDENTIFIER   (line:  14, col:  25):	missing type qualifier or identifier in function arguments
-Error: SPACE_EMPTY_LINE     (line:  16, col:   4):	Space on empty line
 Error: WRONG_SCOPE_COMMENT  (line:  16, col:   4):	Comment is invalid in this scope
 Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
-Error: SPACE_EMPTY_LINE     (line:  17, col:   4):	Space on empty line
-Error: SPACE_EMPTY_LINE     (line:  18, col:   7):	Space on empty line
 Error: WRONG_SCOPE_COMMENT  (line:  18, col:   7):	Comment is invalid in this scope
-Error: SPACE_EMPTY_LINE     (line:  19, col:   7):	Space on empty line
 Error: WRONG_SCOPE_COMMENT  (line:  19, col:   7):	Comment is invalid in this scope
 Error: TOO_FEW_TAB          (line:  20, col:   1):	Missing tabs for indent level
-Error: SPACE_EMPTY_LINE     (line:  20, col:   4):	Space on empty line

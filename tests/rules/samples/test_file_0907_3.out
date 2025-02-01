@@ -505,7 +505,7 @@ Error: SPC_AFTER_OPERATOR   (line:  65, col:  61):	missing space after operator
 Error: SPC_BFR_OPERATOR     (line:  65, col:  61):	missing space before operator
 Error: SPC_AFTER_OPERATOR   (line:  65, col:  80):	missing space after operator
 Error: SPC_BFR_OPERATOR     (line:  65, col:  80):	missing space before operator
-Error: LINE_TOO_LONG        (line:  65, col:  87):	line too long
+Error: LINE_TOO_LONG        (line:  65, col:  81):	line too long
 Error: SPC_AFTER_OPERATOR   (line:  65, col:  87):	missing space after operator
 Error: SPC_BFR_OPERATOR     (line:  65, col:  87):	missing space before operator
 Error: ASSIGN_IN_CONTROL    (line:  66, col:  19):	Assignment in control structure
@@ -542,10 +542,10 @@ Error: SPACE_AFTER_KW       (line: 155, col:  13):	Missing space after keyword
 Error: NO_SPC_AFR_PAR       (line: 156, col:  50):	Extra space after parenthesis (brace/bracket)
 Error: TOO_FEW_TAB          (line: 156, col:  52):	Missing tabs for indent level
 Error: SPACE_AFTER_KW       (line: 159, col:  17):	Missing space after keyword
-Error: LINE_TOO_LONG        (line: 162, col:  86):	line too long
+Error: LINE_TOO_LONG        (line: 162, col:  81):	line too long
 Error: NO_SPC_AFR_PAR       (line: 168, col:  23):	Extra space after parenthesis (brace/bracket)
 Error: TOO_FEW_TAB          (line: 168, col:  25):	Missing tabs for indent level
-Error: LINE_TOO_LONG        (line: 172, col:  86):	line too long
+Error: LINE_TOO_LONG        (line: 172, col:  81):	line too long
 Error: SPACE_AFTER_KW       (line: 182, col:  17):	Missing space after keyword
 Error: BRACE_SHOULD_EOL     (line: 201, col:   1):	Expected newline after brace
 Error: TOO_MANY_LINES       (line: 201, col:   1):	Function has more than 25 lines

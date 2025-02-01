@@ -123,7 +123,7 @@ Error: TOO_MANY_VARS_FUNC   (line:  25, col:   1):	Too many variables declaratio
 Error: DECL_ASSIGN_LINE     (line:  25, col:  33):	Declaration and assignation on a single line
 Error: TOO_MANY_VARS_FUNC   (line:  26, col:   1):	Too many variables declarations in a function
 Error: DECL_ASSIGN_LINE     (line:  26, col:  34):	Declaration and assignation on a single line
-Error: LINE_TOO_LONG        (line:  29, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  29, col:  81):	line too long
 Error: TOO_MANY_ARGS        (line:  29, col: 115):	Function has more than 4 arguments
 Error: TOO_MANY_VARS_FUNC   (line:  36, col:   1):	Too many variables declarations in a function
 Error: TOO_MANY_VARS_FUNC   (line:  37, col:   1):	Too many variables declarations in a function

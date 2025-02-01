@@ -18,6 +18,7 @@ from typing import (
 from norminette.norm_error import NormError, NormWarning, errors as errors_dict
 
 if TYPE_CHECKING:
+    from norminette.lexer import Token
     from norminette.file import File
 
 
@@ -35,6 +36,14 @@ class Highlight:
                 return len(self.hint or '') > len(other.hint or '')
             return self.column > other.column
         return self.lineno > other.lineno
+
+    @classmethod
+    def from_token(cls, token: Token, /) -> Highlight:
+        return cls(
+            lineno=token.lineno,
+            column=token.column,
+            length=token.length,
+        )
 
 
 @dataclass
@@ -69,10 +78,14 @@ class Error:
     ) -> None: ...
     @overload
     def add_highlight(self, highlight: Highlight, /) -> None: ...
+    @overload
+    def add_highlight(self, token: Token, /) -> None: ...
 
     def add_highlight(self, *args, **kwargs) -> None:
         if len(args) == 1:
             highlight, = args
+            if not isinstance(highlight, Highlight):  # highlight is Token
+                highlight = Highlight.from_token(highlight)
         else:
             highlight = Highlight(*args, **kwargs)
         self.highlights.append(highlight)
@@ -167,10 +180,34 @@ class _formatter:
         self.files = files
 
     def __init_subclass__(cls) -> None:
-        cls.name = cls.__name__.rstrip("ErrorsFormatter").lower()
+        name = cls.__name__
+        if name.endswith(suffix := "ErrorsFormatter"):
+            name = name[:-len(suffix)]
+        cls.name = name.lower()
 
 
 class HumanizedErrorsFormatter(_formatter):
+    def __str__(self) -> str:
+        output = ''
+        for file in self.files:
+            for error in file.errors:
+                highlight = error.highlights[0]
+                # Location
+                output += f"\x1b[;97m{file.path}:{highlight.lineno}:{highlight.column}\x1b[0m"
+                output += ' ' + error.name
+                if not highlight.length:
+                    output += ' ' + error.text
+                if highlight.length:
+                    # Line
+                    output += f"\n {highlight.lineno:>5} | {file[highlight.lineno,].translated}"
+                    # Arrow
+                    output += "\n       | " + ' ' * (highlight.column - 1)
+                    output += f"\x1b[0;91m{'^' * (highlight.length or 0)} {highlight.hint or error.text}\x1b[0m"
+                output += '\n'
+        return output
+
+
+class ShortErrorsFormatter(_formatter):
     def __str__(self) -> str:
         output = ''
         for file in self.files:
@@ -200,5 +237,6 @@ class JSONErrorsFormatter(_formatter):
 
 formatters = (
     JSONErrorsFormatter,
+    ShortErrorsFormatter,
     HumanizedErrorsFormatter,
 )
