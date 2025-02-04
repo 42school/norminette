@@ -10,12 +10,12 @@
 
 \begin{document}
 \title{The Norm}
-\subtitle{Version 4}
+\subtitle{Version 4.1}
 
 \summary
 {
-    This document describes the applicable standard (Norm) at 42. A
-    programming standard defines a set of rules to follow when writing code.
+    This document describes the applicable standard (Norm) at 42: a
+    programming standard that defines a set of rules to follow when writing code.
     The Norm applies to all C projects within the Common Core by default, and
     to any project where it's specified.
 }
@@ -33,11 +33,19 @@
 %******************************************************************************%
 \chapter{Foreword}
 
-    The \texttt{norminette} is in python and open source. \\
-    Its repository is available at https://github.com/42School/norminette.\\
-    Pull requests, suggestions and issues are welcome!
+The \texttt{norminette} is a Python and open source code that checks Norm
+compliance of your source code. It checks many constraints of the Norm, but not
+all of them (eg. subjective constraints). Unless specific local regulations on
+your campus, the \texttt{norminette} prevails during evaluations on the controlled
+items. In the following pages, rules that are not checked by the \texttt{norminette}
+are marked with \textit{(*)}, and can lead to project failure (using the Norm flag) if
+discovered by the evaluator during a code review.\\
 
-   \newpage
+Its repository is available at https://github.com/42School/norminette.\\
+
+Pull requests, suggestions and issues are welcome!
+
+\newpage
 
 
 %******************************************************************************%
@@ -45,7 +53,7 @@
 %                                   Pedago explanations                        %
 %
 %******************************************************************************%
-    \chapter{Why ?}
+    \chapter{Why?}
 
     The Norm has been carefully crafted to fulfill many pedagogical needs. Here
     are the most important reasons for all the choices below:
@@ -70,7 +78,7 @@
       The Norm asks you to use a specific look and feel, providing instructions for the naming
       of the functions and variables, indentation, brace rules, tab and spaces at many places... .
       This will allow you to smoothly have a look at other's codes that will look familiar,
-      and get directly to the point instead of spending time to read the code before understanding it.
+      and get directly to the point instead of spending time reading the code before understanding it.
       The Norm also comes as a trademark. As part of the 42 community, you will be able to
       recognize code written by another 42 student or alumni when you'll be in the labor market.
 
@@ -86,7 +94,7 @@
       arbitrary, but we actually thought and read about what to do and how to do it. We highly
       encourage you to Google why the functions should be short and just do one thing, why the
       name of the variables should make sense, why lines shouldn't be longer than 80 columns wide,
-      why a function should not take many parameters, why comments should be useful, etc, etc, etc...
+      why a function should not take many parameters, why comments should be useful, etc.
 
     \end{itemize}
 
@@ -104,7 +112,7 @@
 %******************************************************************************%
 %                             Naming conventions                               %
 %******************************************************************************%
-    \section{Denomination}
+    \section{Naming}
 
         \begin{itemize}
 
@@ -120,27 +128,21 @@
 
             \item A global's name must start by \texttt{g\_}.
 
-            \item Variables and functions names can only contain lowercases, digits and
-                '\_' (snake\_case).
+            \item Identifiers, like variables, functions names, user defined types,
+              can only contain lowercases, digits and '\_' (snake\_case). No capital letters are allowed.
 
             \item Files and directories names can only contain lowercases, digits and
                 '\_' (snake\_case).
 
             \item Characters that aren't part of the standard
-                ASCII table are forbidden.
+                ASCII table are forbidden, except inside litteral strings and chars.
 
-            \item Variables, functions, and any other identifier must use
-                snake case. No capital letters, and each word separated by an
-                underscore.
+            \item \textit{(*)} All identifiers (functions, types,
+              variables, etc.) names should be explicit, or a mnemonic,
+              should be readable in English, with each word separated by an underscore.
+              This applies to macros, filenames and directories as well.
 
-            \item All identifiers (functions, macros, types,
-                variables, etc.) must be in English.
-
-            \item Objects (variables, functions, macros, types,
-                files or directories) must have the most
-                explicit or most mnemonic names as possible.
-
-            \item Using global variables that are not marked const and static is
+            \item Using global variables that are not marked const or static is
             forbidden and is considered a norm error, unless the project explicitly allows them.
 
             \item The file must compile. A file that doesn't compile isn't expected
@@ -155,75 +157,75 @@
 
             \begin{itemize}
 
-                \item You must indent your code with 4-space
-                  tabulations. This is not the same as 4 average
-                  spaces, we're talking about real tabulations here.
+            \item Each function must be at most 25 lines long, not
+              counting the function's own braces.
 
-                \item Each function must be maximum 25 lines, not
-                  counting the function's own curly brackets.
+            \item Each line must be at most 80 columns wide, comments
+              included. Warning: a tabulation doesn't count
+              as a single column, but as the number of spaces it
+              represents.
 
-                \item Each line must be at most 80 columns wide, comments
-                  included. Warning: a tabulation doesn't count
-                  as a column, but as the number of spaces it
-                  represents.
+            \item Functions must be separated by an empty line. Comments or preprocessor instructions
+              can be inserted between functions. At least an empty line must exists.
 
-                \item Each function must be separated by a newline. Any comment or preprocessor instruction
-                    can be right above the function. The newline is after the previous function.
+            \item You must indent your code with 4-char-long tabulations.
+              This is not the same as 4 spaces, we're talking about real tabulations here (ASCII char number 9).
+              Check that your code editor is correctly configured in order to visually get a proper indentation
+              that will be validated by the \texttt{norminette}.
 
-                \item One instruction per line.
+            \item Blocks within braces must be indented. Braces are alone on their own line,
+              except in declaration of struct, enum, union.
 
-                \item An empty line must be empty: no spaces or tabulations.
+            \item An empty line must be empty: no spaces or tabulations.
 
-                \item A line can never end with spaces or tabulations.
+            \item A line can never end with spaces or tabulations.
+              
+            \item You can never have two consecutive empty lines.
+              You can never have two consecutive spaces.
 
-                \item You can never have two consecutive spaces.
+            \item Declarations must be at the beginning of a function.
 
-                \item You need to start a new line after each curly bracket
-                  or end of control structure.
+            \item All variable names must be indented on the same
+              column in their scope. Note: types are already indented by the containing block.
 
-                \item Unless it's the end of a line, each comma or semi-colon
-                  must be followed by a space.
+            \item The asterisks that go with pointers must be stuck to
+              variable names.
 
-                \item Each operator or operand must be separated by one
-                 - and only one - space.
+            \item One single variable declaration per line.
 
-                \item Each C keyword must be followed by a space, except for
-                  keywords for types (such as int, char, float, etc.),
-                  as well as sizeof.
+            \item Declaration and an initialisation cannot be
+              on the same line, except for global variables (when allowed),
+              static variables, and constants.
 
-                \item Each variable declaration must be indented on the same
-                  column for its scope.
+            \item In a function, you must place an empty line between
+              variable declarations and the remaining of the function.
+              No other empty lines are allowed in a function.
 
-                \item The asterisks that go with pointers must be stuck to
-                  variable names.
+            \item Only one instruction or control structure per line is allowed. Eg.: Assignment in
+              a control structure is forbidden, two or multiple assignments on the same line is forbidden,
+              a newline is needed at the end of a control structure, ... .
 
-                \item One single variable declaration per line.
+            \item An instruction or control structure can be split into multiple lines when needed.
+              The following lines created must be indented compared to the first line,
+              natural spaces will be used to cut the line, and if applies, operators will be
+              at the beginning of the new line and not at the end of the previous one.
 
-                \item Declaration and an initialisation cannot be
-                  on the same line, except for global variables (when allowed),
-                  static variables, and constants.
+            \item Unless it's the end of a line, each comma or semi-colon
+              must be followed by a space.
 
-                \item Declarations must be at the beginning of a function.
+            \item Each operator or operand must be separated by one
+              - and only one - space.
 
-                \item In a function, you must place an empty line between
-                    variable declarations and the remaining of the function.
-                    No other empty lines are allowed in a function.
+            \item Each C keyword must be followed by a space, except for
+              keywords for types (such as int, char, float, etc.),
+              as well as sizeof.
 
-                \item Multiple assignments are strictly forbidden.
-
-                \item You may add a new line after an instruction or
-                  control structure, but you'll have to add an
-                  indentation with brackets or assignment operator.
-                  Operators must be at the beginning of a line.
-
-                \item Control structures (if, while..) must have braces, unless they contain a single
-                    line.
-
-                \item Braces following functions, declarators or control structures must be preceded and followed by a newline.
+            \item Control structures (if, while..) must use braces, unless they contain a single
+              instruction on a single line.
 
             \end{itemize}
 
-            \newpage
+\vspace{1cm}
 
             General example:
             \begin{42ccode}
@@ -252,7 +254,7 @@ int     main(void)
 
         \begin{itemize}
 
-            \item A function can take 4 named parameters maximum.
+            \item A function can take 4 named parameters at most.
 
             \item A function that doesn't take arguments must be
                 explicitly prototyped with the word "void" as the
@@ -260,16 +262,18 @@ int     main(void)
 
             \item Parameters in functions' prototypes must be named.
 
-            \item Each function must be separated from the next by
-                an empty line.
-
             \item You can't declare more than 5 variables per function.
 
-            \item Return of a function has to be between parenthesis.
+            \item Return of a function has to be between parenthesis, unless the
+              function returns nothing.
 
             \item Each function must have a single tabulation between its
                 return type and its name.
 
+        \end{itemize}
+
+\vspace{1cm}
+        
             \begin{42ccode}
 int my_func(int arg1, char arg2, char *arg3)
 {
@@ -282,7 +286,6 @@ int func2(void)
 }
             \end{42ccode}
 
-        \end{itemize}
         \newpage
 
 
@@ -293,19 +296,21 @@ int func2(void)
 
         \begin{itemize}
 
-            \item Add a tabulation when declaring a struct, enum or union.
+        \item As other C keywords, add a space between ``struct'' and the name
+          when declaring a struct. Same applies to enum and union.
 
-            \item When declaring a variable of type struct, enum or union,
-                add a single space in the type.
+        \item When declaring a variable of type struct, apply the usual indentation for the name
+          of the variable. Same applies to enum and union.
 
-            \item When declaring a struct, union or enum with a typedef,
-                all indentation rules apply.
+        \item Inside the braces of the struct, enum, union, regular indentation rules
+          apply, like any other blocks.
 
-            \item Typedef name must be preceded by a tab.
+        \item As other C keywords, add a space after ``typedef'',
+          and apply regular indentation for the new defined name.
 
-            \item You must indent all structures' names on the same column for their scope.
+        \item You must indent all structures' names on the same column for their scope.
 
-            \item You cannot declare types like structs, unions, enums or typedefs in a .c file.
+        \item You cannot declare a structure in a .c file.
 
         \end{itemize}
         \newpage
@@ -318,24 +323,26 @@ int func2(void)
 
         \begin{itemize}
 
-            \item The things allowed in header files are:
+            \item \textit{(*)} The allowed elements of a header file are:
                 header inclusions (system or not), declarations, defines,
                 prototypes and macros.
 
             \item All includes must be at the beginning of the file.
 
-            \item You cannot include a C file.
+            \item You cannot include a C file in a header file or another C file.
 
             \item Header files must be protected from double inclusions. If the file is
             \texttt{ft\_foo.h}, its bystander macro is \texttt{FT\_FOO\_H}.
 
-            \item Unused header inclusions (.h) are forbidden.
+            \item \textit{(*)} Inclusion of unused headers is forbidden.
 
-            \item All header inclusions must be justified in a .c file
-                as well as in a .h file.
+            \item Header inclusion can be justified in the .c file and in the .h file itself
+              using comments.
 
         \end{itemize}
 
+\vspace{1cm}
+        
         \begin{42ccode}
 #ifndef FT_HEADER_H
 # define FT_HEADER_H
@@ -343,8 +350,8 @@ int func2(void)
 # include <stdio.h>
 # define FOO "bar"
 
-int		g_variable;
-struct	s_struct;
+int     g_variable;
+struct  s_struct;
 
 #endif
         \end{42ccode}
@@ -359,18 +366,23 @@ struct	s_struct;
 
         \begin{itemize}
 
-        \item Every .c and .h file must immediately begin with the standard 42 header :
+        \item Every .c and .h file must immediately begin with the standard 42 header:
           a multi-line comment with a special format including useful informations. The
           standard header is naturally available on computers in clusters for various
-          text editors (emacs : using \texttt{C-c C-h}, vim using \texttt{:Stdheader} or
+          text editors (emacs: using \texttt{C-c C-h}, vim using \texttt{:Stdheader} or
           \texttt{F1}, etc...).
 
-        \item The 42 header must contain several informations up-to-date, including the
-          creator with login and email, the date of creation, the login and date of the
-          last update. Each time the file is saved on disk, the information should be
-          automatically updated.
+        \item \textit{(*)} The 42 header must contain several informations up-to-date, including the
+          creator with login and student email (@student.campus), the date of creation,
+          the login and date of the last update. Each time the file is saved on disk,
+          the information should be automatically updated.
 
         \end{itemize}
+        \info{
+          The default standard header may not automatically be configured with your personnal
+          information. You may need to change it to follow the previous rule.
+          }
+        
         \newpage
 
 
@@ -381,16 +393,16 @@ struct	s_struct;
 
         \begin{itemize}
 
-            \item Preprocessor constants (or \#define) you create must be used
+            \item \textit{(*)} Preprocessor constants (or \#define) you create must be used
                 only for literal and constant values.
-            \item All \#define created to bypass the norm and/or obfuscate
-                code are forbidden. This part must be checked by a human.
-            \item You can use macros available in standard libraries, only
+            \item \textit{(*)} All \#define created to bypass the norm and/or obfuscate
+                code are forbidden.
+            \item \textit{(*)} You can use macros available in standard libraries, only
                 if those ones are allowed in the scope of the given project.
             \item Multiline macros are forbidden.
             \item Macro names must be all uppercase.
-            \item You must indent characters following \#if, \#ifdef
-                or \#ifndef.
+            \item You must indent preprocessor directives inside \#if, \#ifdef
+                or \#ifndef blocks.
             \item Preprocessor instructions are forbidden outside of global scope.
 
         \end{itemize}
@@ -423,11 +435,14 @@ struct	s_struct;
             \item Implicit type in variable declarations
 
         \end{itemize}
+
+\vspace{1cm}
+        
         \begin{42ccode}
     int main(int argc, char **argv)
     {
         int     i;
-        char    string[argc]; // This is a VLA
+        char    str[argc]; // This is a VLA
 
         i = argc > 5 ? 0 : 1 // Ternary
     }
@@ -441,25 +456,24 @@ struct	s_struct;
 
         \begin{itemize}
 
-            \item Comments cannot be inside functions' bodies.
-                Comments must be at the end of a line, or on their own line
+        \item Comments cannot be inside function bodies.
+          Comments must be at the end of a line, or on their own line
 
-            \item Your comments must be in English. And they must be
-                useful.
+        \item \textit{(*)} Your comments should be in English, and useful.
 
-            \item  A comment cannot justify the creation of a carryall or bad function.
+        \item  \textit{(*)} A comment cannot justify the creation of a carryall or bad function.
 
         \end{itemize}
 
         \warn{
             A carryall or bad function usually comes with names that are
-            not explicit such as f1, f2... for the function and a, b, i,..
-            for the declarations.
+            not explicit such as f1, f2... for the function and a, b, c,..
+            for the variables names.
             A function whose only goal is to avoid the norm, without a unique
             logical purpose, is also considered as a bad function.
             Please remind that it is desirable to have clear and readable functions that achieve a
             clear and simple task each. Avoid any code obfuscation techniques,
-            such as the one-liner..
+            such as the one-liner, ... .
         }
         \newpage
 
@@ -471,7 +485,7 @@ struct	s_struct;
 
         \begin{itemize}
 
-            \item You cannot include a .c file.
+            \item You cannot include a .c file in a .c file.
 
             \item You cannot have more than 5 function-definitions in a .c file.
 
@@ -484,27 +498,27 @@ struct	s_struct;
 %******************************************************************************%
     \section{Makefile}
 
-            Makefiles aren't checked by the Norm, and must be checked during evaluation by
-            the student.
+            Makefiles aren't checked by the \texttt{norminette}, and must be checked during evaluation by
+            the student when asked by the evaluation guidelines. Unless specific instructions, the following rules
+            apply to the Makefiles:
             \begin{itemize}
 
-                \item The \$(NAME), clean, fclean, re and all
-                  rules are mandatory.
+                \item The \textit{\$(NAME)}, \textit{clean}, \textit{fclean}, \textit{re} and \textit{all}
+                  rules are mandatory. The \textit{all} rule must be the default one and executed when typing just \texttt{make}.
 
-                \item If the makefile relinks, the project will be considered
+                \item If the makefile relinks when not necessary, the project will be considered
                   non-functional.
 
                 \item In the case of a multibinary project, in addition to
-                  the above rules, you must have a rule that compiles
-                  both binaries as well as a specific rule for each
-                  binary compiled.
+                  the above rules, you must have a rule for each binary (eg: \$(NAME\_1), \$(NAME\_2), ...).
+                  The ``all'' rule will compile all the binaries, using each binary rule.
 
                   \item In the case of a project that calls a function from a non-system library
-                  (e.g.: \texttt{libft}), your makefile must compile
+                  (e.g.: \texttt{libft}) that exists along your source code, your makefile must compile
                   this library automatically.
 
-                  \item All source files you need to compile your project must
-                    be explicitly named in your Makefile.
+                  \item All source files needed to compile your project must
+                    be explicitly named in your Makefile. Eg: no ``*.c'', no ``*.o'' , etc ...
 
             \end{itemize}
 

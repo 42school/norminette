@@ -1,4 +1,5 @@
 \documentclass{42-pt}
+\newcommand\qdsh{\texttt{42sh}}
 
 
 
@@ -10,11 +11,11 @@
 
 \begin{document}
 \title{A Norma}
-\subtitle{Versão 4}
+\subtitle{Versão 3}
 
 \summary
 {
-    Este documento descreve o padrão aplicável (Norma) na 42. Um padrão de
+    Este documento descreve o padrão aplicável (norma) na 42. Um padrão de
 	programação define um conjunto de regras a seguir ao escrever um código.
     A norma aplica-se a todos os projetos C dentro do círculo interno por padrão, e
     para qualquer projeto onde é especificado.
@@ -33,7 +34,7 @@
 %******************************************************************************%
 \chapter{Introdução}
 
-    A \texttt{norminette} é em Python e código aberto.\\
+    A norma é em Python e código aberto.\\
     Seu repositório está disponível em https://github.com/42school/norminette. \\
     Pull requests, sugestões e indicação de bugs são bem-vindos!
 
@@ -111,10 +112,10 @@
 
 %******************************************************************************%
 %                                                                              %
-%                                  A Norma                                     %
+%                                  A norma                                     %
 %                                                                              %
 %******************************************************************************%
-\chapter{A Norma}
+\chapter{A norma}
 
 
 %******************************************************************************%
@@ -156,7 +157,9 @@
                 arquivos ou diretórios) devem ter os
                 nomes mais explícitos ou mais mnemônicos possíveis.
 
-            \item Usar variáveis globais é proibido e considerado um erro de norma, há menos que seja explicitamente permitido o uso no projeto.
+            \item Usando uma variável global em um projeto onde não é
+                explicitamente permitido é um erro de norma, exceto onde é
+                obrigatório (manuseio de sinais, por exemplo).
 
             \item O arquivo deve compilar. Um arquivo que não compila não é esperado
                 que passe na norma.
@@ -213,7 +216,7 @@
                 \item Os asteriscos que vão com ponteiros devem estar juntos aos
                   nomes das variáveis.
 
-                \item Uma única declaração de variável por linha.
+                \item Uma única declaração variável por linha.
 
                 \item Declaração e uma inicialização não podem estar
                   na mesma linha, exceto para variáveis globais (quando permitido),
@@ -233,8 +236,7 @@
                   Os operadores devem estar no início de uma linha.
 
                 \item Estruturas de controle (if, while ...) devem ter chaves,
-                a menos que contenham uma única linha.
-                \item Funções seguidas de chaves, declaradores ou estruturas de controle devem ser precedidas e seguidas de uma nova linha.
+                a menos que contenham uma única linha ou uma única condição.
 
             \end{itemize}
 
@@ -371,7 +373,7 @@ struct s_struct;
 %                                 O Header da 42                               %
 %******************************************************************************%
 
-   \section{O Header da 42 - vulgo começar um arquivo com estilo}
+   \section{O Header da 42}
 
         \begin{itemize}
 
@@ -383,7 +385,7 @@ struct s_struct;
 
         \item O header da 42 deve conter informações atualizadas, incluindo o
           criador com login e email, a data de criação e a data da atualização
-          mais recente. Cada vez que o arquivo for salvo em disco, a informação deve ser atualizada automaticamente.
+          mais recente.
 
         \end{itemize}
         \newpage
@@ -406,7 +408,7 @@ struct s_struct;
             \item Nomes de macro devem ser todos maiúsculos (uppercase).
             \item Você deve recuar caracteres que seguirem \#if, \#ifdef
                 or \#ifndef.
-            \item Instruções de pré-processamento são proibidas fora do escopo global.
+
         \end{itemize}
         \newpage
 
@@ -461,14 +463,10 @@ struct s_struct;
             \item Seus comentários devem estar em inglês. E eles devem ser
                 úteis.
 
-            \item Um comentário não pode ser usado para justificar declarações ou uma função 
+            \item Um comentário não pode ser usado para justificar uma função 
 				mal feita.
 
         \end{itemize}
-	\warn{
-		Uma declaração ou função mal feita normalmente vem com nomes não inteligíveis como f1, f2, etc. para as funções e, a, b, i, etc. para declarações.
-		Uma função cujo objetivo é evitar ou burlar a norma, sem um único propósito lógico, também é considerado uma função mal feita.
-		Por favor, lembre-se de que é desejável ter funções limpas e legíveis que realizem uma clara e simples tarefa. Evite qualquer técnica de ofuscação de código como \emph{one-liner}.
         \newpage
 
 

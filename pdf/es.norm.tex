@@ -1,0 +1,481 @@
+\documentclass{42-es}
+
+%******************************************************************************%
+%                                                                              %
+%                               Prologue                                       %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+\title{La Norma}
+\subtitle{Version 4}
+
+\summary
+{
+      Este documento describe la norma aplicable en 42. Una norma de
+      programación
+      define un conjunto de reglas a seguir al escribir código. La Norma se
+      aplica
+      a todos los proyectos de C dentro del Common Core por defecto, y a
+      cualquier
+      proyecto donde se especifique.
+      This document describes the applicable standard (Norm) at 42. A
+      programming standard defines a set of rules to follow when writing code.
+      The Norm applies to all C projects within the Common Core by default, and
+      to any project where it's specified.
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                                 Foreword                                     %
+%                                                                              %
+%******************************************************************************%
+\chapter{Prefacio}
+
+La \texttt{norminette} está escrita en python y es de código abierto. \\
+Su repositorio está disponible en \url{https://github.com/42School/norminette}.\\
+¡Pull request, sugerencias e issues serán bien recibidos!
+
+\newpage
+
+%******************************************************************************%
+%
+%                                   Pedago explanations                        %
+%
+%******************************************************************************%
+\chapter{¿Por qué?}
+
+La Norma ha sido cuidadosamente elaborada para cumplir con muchas
+necesidades pedagógicas. Aquí están las razones más importantes para todas las
+elecciones a continuación:
+\begin{itemize}
+
+      \item Secuenciación: programar implica dividir una tarea grande y
+            compleja en una larga serie de instrucciones elementales. Todas
+            estas instrucciones se ejecutarán en secuencia: una tras otra. Un
+            principiante que comienza a crear software necesita una
+            arquitectura
+            simple y clara para su proyecto, con una comprensión completa de
+            todas las instrucciones individuales y el orden preciso de
+            ejecución. Los lenguajes de programación crípticos que hacen
+            múltiples instrucciones aparentemente al mismo tiempo son
+            confusos, las funciones que intentan abordar múltiples tareas
+            mezcladas en la misma porción de código son fuente de errores.\\
+            La Norma te pide que crees piezas de código simples, donde la
+            tarea única de cada pieza pueda ser claramente entendida y
+            verificada, y donde la secuencia de todas las instrucciones
+            ejecutadas no deje lugar a dudas. Por eso pedimos un máximo de 25
+            líneas en las funciones, también por qué se prohíben los
+            \texttt{for}, \texttt{do .. while}, o ternarios.
+      \item Aspecto: al intercambiar con tus amigos y compañeros de trabajo
+            durante el proceso normal de aprendizaje entre pares, y también
+            durante las evaluaciones entre pares, no quieres perder tiempo
+            descifrando su código, sino hablar directamente sobre la lógica de
+            la pieza de código.\\
+            La Norma te pide que uses un aspecto específico, proporcionando
+            instrucciones para el nombre de las funciones y variables,
+            indentación, reglas de llaves, tabulaciones y espacios en muchos
+            lugares... . Esto te permitirá echar un vistazo a otros códigos que
+            te resultarán familiares y llegar directamente al punto en lugar de
+            perder tiempo leyendo el código antes de entenderlo. La Norma
+            también
+            funciona como una marca registrada. Como parte de la comunidad 42,
+            podrás reconocer el código escrito por otro estudiante o exalumno
+            de
+            42 cuando estés en el mercado laboral.
+
+      \item Visión a largo plazo: hacer el esfuerzo de escribir código
+            comprensible es la mejor manera de mantenerlo. Cada vez que alguien
+            más, incluyéndote a ti, tenga que corregir un error o agregar una
+            nueva característica, no tendrá que perder su valioso tiempo
+            tratando de entender lo que hace si previamente hiciste las cosas
+            de
+            la manera correcta. Esto evitará situaciones en las que los
+            fragmentos de código dejen de ser mantenidos solo porque lleva
+            tiempo, y eso puede marcar la diferencia cuando hablamos de tener
+            un
+            producto exitoso en el mercado. Cuanto antes aprendas a hacerlo,
+            mejor.
+
+      \item Referencias: puedes pensar que algunas, o todas, las reglas
+            incluidas
+            en la Norma son arbitrarias, pero en realidad pensamos y leímos
+            sobre
+            qué hacer y cómo hacerlo. Te animamos encarecidamente a buscar por
+            qué
+            las funciones deben ser cortas y hacer una sola cosa, por qué el
+            nombre de las variables debe tener sentido, por qué las líneas no
+            deben ser más largas de 80 columnas, por qué una función no debe
+            tener muchos parámetros, por qué los comentarios deben ser útiles,
+            etc, etc, etc...
+
+\end{itemize}
+
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                The Norm                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{La Norma}
+
+%******************************************************************************%
+%                             Naming conventions                               %
+%******************************************************************************%
+\section{Denominación}
+
+\begin{itemize}
+
+      \item El nombre de una estructura debe comenzar con \texttt{s\_}.
+      \item El nombre de un typedef debe comenzar con \texttt{t\_}.
+      \item El nombre de un union debe comenzar con \texttt{u\_}.
+      \item El nombre de un enum debe comenzar con \texttt{e\_}.
+      \item El nombre de una variable global debe comenzar con \texttt{g\_}.
+      \item Los nombres de variables y funciones solo pueden contener
+            minúsculas, dígitos y '\_' (snake\_case).
+      \item Los nombres de archivos y directorios solo pueden contener
+            minúsculas, dígitos y '\_' (snake\_case).
+      \item Los caracteres que no forman parte de la tabla ASCII estándar están
+            prohibidos.
+      \item Las variables, funciones y cualquier otro identificador deben usar
+            snake case. Sin letras mayúsculas, y cada palabra separada por un
+            guión bajo.
+      \item Todos los identificadores (funciones, macros, tipos, variables,
+            etc.)
+            deben estar en inglés.
+      \item Los objetos (variables, funciones, macros, tipos, archivos o
+            directorios) deben tener nombres lo más explícitos o mnemótecnicos
+            posibles.
+      \item El uso de variables globales que no están marcadas como const y
+            static está prohibido y se considera un error de norma, a menos que
+            el proyecto las permita explícitamente.
+      \item El archivo debe compilar. Un archivo que no compila no se espera
+            que
+            pase la Norma.
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                                 Formatting                                   %
+%******************************************************************************%
+\section{Formato}
+
+\begin{itemize}
+
+      \item Debes indentar tu código con tabulaciones de 4 espacios.
+            Esto no es lo mismo que 4 espacios normales, estamos hablando de
+            verdaderas tabulaciones.
+      \item Cada función debe tener un máximo de 25 líneas, sin contar las
+            llaves
+            de la función.
+      \item Cada línea debe tener como máximo 80 columnas de ancho, incluidos
+            los
+            comentarios. Advertencia: una tabulación no cuenta como una
+            columna,
+            sino como
+            el número de espacios que representa.
+      \item Cada función debe estar separada por una nueva línea. Cualquier
+            comentario
+            o instrucción de preprocesador puede estar justo encima de la
+            función. La
+            nueva línea está después de la función anterior.
+      \item Una instrucción por línea.
+      \item Una línea vacía debe estar vacía: sin espacios o tabulaciones.
+      \item Una línea no puede terminar con espacios o tabulaciones.
+      \item No puedes tener dos espacios consecutivos.
+      \item Debes comenzar una nueva línea después de cada llave de apertura o
+            cierre o después de una estructura de control.
+      \item Salvo que sea el final de una linea, cada coma o punto y coma
+            debe ser seguido por un espacio.
+      \item Cada operador u operando debe estar separado por un (y solo un)
+            espacio.
+      \item Cada palabra clave de C debe ir seguida de un espacio, excepto las
+            palabras clave para tipos (como int, char, float, etc.), así como
+            sizeof.
+      \item Cada declaración de variable debe estar indentada en la misma
+            columna
+            dentro de su scope.
+      \item Los asteriscos que acompañan a los punteros deben estar pegados a
+            los
+            nombres de las variables.
+      \item Una sola declaración de variable por línea.
+      \item La declaración y la inicialización no pueden estar en la misma
+            línea,
+            excepto para las variables globales (cuando se permiten), variables
+            estáticas y
+            constantes.
+      \item Las declaraciones deben estar al principio de una función.
+      \item En una función, debes colocar una línea vacía entre las
+            declaraciones
+            de variables y el resto de la función. No se permiten otras líneas
+            vacías en una función.
+      \item Las asignaciones múltiples están completamente prohibidas.
+      \item Puedes agregar una nueva línea después de una instrucción o
+            estructura
+            de control, pero tendrás que agregar una indentación con llaves o
+            operador de asignación. Los operadores deben estar al principio de
+            una línea.
+      \item Las estructuras de control (if, while, etc...) deben tener llaves,
+            salvo que contengan una sola línea.
+      \item Las llaves que siguen a las funciones, declaradores o estructuras
+            de
+            control deben estar precedidas y seguidas por una nueva línea.
+
+\end{itemize}
+
+Ejemplo general de formato:
+\begin{42ccode}
+      int	g_global;
+      typedef struct	s_struct
+      {
+      char    *my_string;
+      int     i;
+      } 	t_struct;
+      struct		s_other_struct;
+
+      int main(void)
+      {
+                  int	  i;
+                  char	  c;
+
+                  return (i);
+            }
+\end{42ccode}
+\newpage
+
+%******************************************************************************%
+%                              Function parameters                             %
+%******************************************************************************%
+\section{Funciones}
+
+\begin{itemize}
+
+      \item Una función no puede recibir más de 4 parámetros.
+      \item Una función que no recibe argumentos debe ser prototipada con la
+            palabra ``void'' como argumento.
+      \item Los parámetros en los prototipos de las funciones deben tener
+            nombre.
+      \item Cada función debe estar separada de la siguiente por una línea
+            vacía.
+      \item No puedes declarar más de 5 variables por función.
+      \item El retorno de una función debe estar entre paréntesis.
+      \item Cada función debe tener una sola tabulación entre su tipo de
+            retorno
+            y
+            su nombre.
+
+            \begin{42ccode}
+                  int my_func(int arg1, char arg2, char *arg3)
+                  {
+                              return (my_val);
+                        }
+
+                  int func2(void)
+                  {
+                              return ;
+                        }
+            \end{42ccode}
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                        Typedef, struct, enum and union                       %
+%******************************************************************************%
+\section{Typedef, struct, enum y union}
+
+\begin{itemize}
+      \item Agrega una tabulación al declarar un struct, enum o union.
+      \item Al declarar una variable de tipo struct, enum o union, agrega un
+            solo
+            espacio en el tipo.
+      \item Al declarar un struct, union o enum con un typedef, se aplican
+            todas
+            las reglas de indentación.
+      \item El nombre del typedef debe ir precedido por una tabulación.
+      \item Debes indentar todos los nombres de las estructuras en la misma
+            columna dentro de su scope.
+      \item No puedes declarar una estructura en un archivo .c.
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                                   Headers                                    %
+%******************************************************************************%
+\section{Headers - a.k.a archivos include}
+
+\begin{itemize}
+      \item Las cosas permitidas en los archivos de cabecera son:
+            inclusiones de cabecera (de sistema o no), declaraciones, defines,
+            prototipos y macros.
+      \item Todos los includes deben estar al principio del archivo.
+      \item No puedes incluir un archivo C.
+      \item Los archivos de cabecera deben estar protegidos de inclusiones
+            dobles. Si el archivo es \texttt{ft\_foo.h}, su macro de protección
+            es
+            \texttt{FT\_FOO\_H}.
+      \item Las inclusiones de cabecera no utilizadas (.h) están prohibidas.
+      \item Todas las inclusiones de cabecera deben estar justificadas en un
+            archivo .c, así como en un archivo .h.
+\end{itemize}
+
+\begin{42ccode}
+      #ifndef FT_HEADER_H
+      # define FT_HEADER_H
+      # include <stdlib.h>
+      # include <stdio.h>
+      # define FOO "bar"
+
+      int	g_variable;
+      struct	s_struct;
+
+      #endif
+\end{42ccode}
+\newpage
+
+%******************************************************************************%
+%                                 The 42 header                                %
+%******************************************************************************%
+
+\section{La cabecera de 42 - a.k.a cómo empezar un archivo con estilo}
+
+\begin{itemize}
+      \item Todos los archivos .c y .h deben comenzar inmediatamente con la
+            cabecera 42 estándar: un comentario de varias líneas con un formato
+            especial
+            que incluye información útil. La cabecera estándar está
+            naturalmente
+            disponible
+            en las computadoras en clusters para varios editores de texto
+            (emacs:
+            usando
+            \texttt{C-c C-h}, vim usando \texttt{:Stdheader} o \texttt{F1},
+            etc...).
+      \item La cabecera 42 debe contener varias informaciones actualizadas,
+            incluyendo
+            el creador con login y correo electrónico, la fecha de creación, el
+            login y
+            la fecha de la última actualización. Cada vez que el archivo se
+            guarda en
+            disco, la información debe actualizarse automáticamente.
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                           Macros and Pre-processors                          %
+%******************************************************************************%
+\section{Macros y Preprocesadores}
+
+\begin{itemize}
+
+      \item Las constantes del preprocesador (o \#define) que crees, deben
+            usarse solo para valores literales y constantes.
+      \item Todos los \#define creados para evitar la norma y/o para ofuscar
+            el código están prohibidos. Esta parte debe ser verificada por un
+            humano.
+      \item Puedes usar macros disponibles en bibliotecas estándar, solo si
+            esas están permitidas en el alcance del proyecto dado.
+      \item Las macros de varias líneas están prohibidas.
+      \item Los nombres de las macros deben estar en mayúsculas.
+      \item Debes indentar los caracteres que siguen a \#if, \#ifdef o
+            \#ifndef.
+      \item Las instrucciones del preprocesador están prohibidas fuera del
+            alcance global.
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                              Forbidden stuff!                                %
+%******************************************************************************%
+\section{¡Cosas Prohibidas!}
+
+\begin{itemize}
+      \item No puedes utilizar:
+            \begin{itemize}
+
+                  \item for
+                  \item do...while
+                  \item switch
+                  \item case
+                  \item goto
+
+            \end{itemize}
+      \item Operadores ternarios como `?'.
+      \item VLAs - o arrays de longitud variable.
+      \item Tipos implícitos en declaraciones de variables.
+
+\end{itemize}
+\begin{42ccode}
+      int main(int argc, char **argv)
+      {
+                  int i;
+                  char	string[argc]; // This is a VLA
+
+                  i = argc > 5 ? 0 : 1 // Ternary
+            }
+\end{42ccode}
+\newpage
+
+%******************************************************************************%
+%                                   Comments                                   %
+%******************************************************************************%
+\section{Comentarios}
+
+\begin{itemize}
+      \item Los comentarios no pueden estar dentro de los cuerpos de las
+            funciones. Los comentarios deben estar al final de una línea, o en
+            su propia
+            línea.
+      \item Tus comentarios deben estar en inglés. Y deben ser útiles.
+      \item Un comentario no puede justificar la creación de un carryall o
+            una mala función.
+\end{itemize}
+
+\warn{
+      Un carryall o mala función generalmente viene con nombres que no son
+      explícitos como f1, f2... para la función y a, b, i,.. para las
+      declaraciones.
+      Una función cuyo único objetivo es evitar la norma, sin un propósito
+      lógico único, también se considera como una mala función.
+      Por favor, recuerda que es preferible tener funciones claras y legibles
+      que logren una tarea clara y simple cada una. Evita cualquier técnica
+      de obfuscación de código, como la de una sola línea.
+}
+\newpage
+
+%******************************************************************************%
+%                                    Files                                     %
+%******************************************************************************%
+\section{Archivos}
+
+\begin{itemize}
+      \item No puedes incluir un archivo .c
+      \item No puedes tener más de 5 definiciones de funciones en un archivo
+            .c.
+\end{itemize}
+\newpage
+
+%******************************************************************************%
+%                                   Makefile                                   %
+%******************************************************************************%
+\section{Makefile}
+Los Makefiles no son verificados por la Norma, y deben ser verificados durante
+la evaluación por el estudiante.
+
+\begin{itemize}
+
+      \item El \$(NAME), clean, fclean, re y all son reglas obligatorias.
+      \item Si el makefile hace relinks, el proyecto se considerará no funcional.
+      \item En el caso de un proyecto multibinario, además de las reglas
+            anteriores, debes tener una regla que compile ambos binarios, así
+            como una regla específica para cada binario compilado.
+      \item En el caso de un proyecto que llama a una función de una librería no del sistema (por ejemplo: libft), tu makefile debe compilar esta biblioteca automáticamente.
+      \item Todos los archivos fuente que necesitas para compilar tu proyecto deben estar nombrados explícitamente en tu Makefile.
+\end{itemize}
+
+\end{document}
+%******************************************************************************%
