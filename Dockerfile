@@ -4,7 +4,7 @@ WORKDIR /usr/src/norminette
 
 COPY pyproject.toml poetry.lock ./
 
-RUN pip3 install poetry \
+RUN pip3 install setuptools poetry==1.8.5 \
     && poetry config virtualenvs.create false \
     && poetry install --no-dev
 
