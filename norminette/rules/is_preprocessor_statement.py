@@ -320,6 +320,17 @@ class ConstantExpressionParser:
             self.parse_expression()
             return
 
+        if (
+                self.directive in ["if", "elif"]
+                and self.context.check_token(self.index, "IDENTIFIER")
+                and self.context.peek_token(self.index).value == "defined"
+        ):
+            """Handles 'defined' operator within #if directive"""
+            self.index += 1
+            self.skip_ws()
+            self.parse_expression()
+            return
+
         if self.context.check_token(self.index, "IDENTIFIER"):
             self.index += 1
             if self.context.check_token(self.index, "LPARENTHESIS"):
