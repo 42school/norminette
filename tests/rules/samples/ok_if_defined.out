@@ -1,0 +1,20 @@
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IF> <SPACE> <IDENTIFIER=defined> <SPACE> <IDENTIFIER=FOO> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 2":
+		<HASH> <SPACE> <IDENTIFIER=undef> <SPACE> <IDENTIFIER=FOO> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 3":
+		<HASH> <IDENTIFIER=elif> <SPACE> <IDENTIFIER=defined> <SPACE> <LPARENTHESIS> <IDENTIFIER=BAR> <RPARENTHESIS> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 4":
+		<HASH> <SPACE> <IDENTIFIER=undef> <SPACE> <IDENTIFIER=BAR> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 5":
+		<HASH> <IDENTIFIER=elif> <SPACE> <IDENTIFIER=defined> <LPARENTHESIS> <IDENTIFIER=FOOBAR> <RPARENTHESIS> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 6":
+		<HASH> <SPACE> <IDENTIFIER=undef> <SPACE> <IDENTIFIER=FOOBAR> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 7":
+		<HASH> <IDENTIFIER=endif> <SPACE> <MULT_COMMENT=/* if defined FOO */> <NEWLINE>
+[36mok_if_defined.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 8":
+		<NEWLINE>
+[36mok_if_defined.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 9":
+		<VOID> <TAB> <IDENTIFIER=defined> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+ok_if_defined.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
