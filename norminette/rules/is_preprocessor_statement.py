@@ -315,17 +315,13 @@ class ConstantExpressionParser:
             self.parse_potential_binary_operator()
             return
 
-        if self.context.check_token(self.index, UNARY_OPERATORS):
-            self.index += 1
-            self.parse_expression()
-            return
-
         if (
-                self.directive in ["if", "elif"]
-                and self.context.check_token(self.index, "IDENTIFIER")
-                and self.context.peek_token(self.index).value == "defined"
+                self.context.check_token(self.index, UNARY_OPERATORS)
+                or (
+                    self.context.check_token(self.index, "IDENTIFIER")
+                    and self.context.peek_token(self.index).value == "defined"
+                )
         ):
-            """Handles 'defined' operator within #if directive"""
             self.index += 1
             self.skip_ws()
             self.parse_expression()
