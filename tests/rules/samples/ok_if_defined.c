@@ -6,4 +6,6 @@
 # undef FOOBAR
 #endif /* if defined FOO */
 
+#define A defined B
+
 void	defined(void);
