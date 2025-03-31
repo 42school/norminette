@@ -63,7 +63,7 @@ Error: SPACE_REPLACE_TAB    (line:  10, col:   5):	Found space when expecting ta
 Error: CONSECUTIVE_SPC      (line:  10, col:  11):	Two or more consecutives spaces
 Error: SPACE_REPLACE_TAB    (line:  11, col:   5):	Found space when expecting tab
 Error: TOO_FEW_TAB          (line:  11, col:  16):	Missing tabs for indent level
-Error: SPACE_BEFORE_FUNC    (line:  14, col:   5):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  14, col:   5):	Found space when expecting tab before function name
 Error: COMMENT_ON_INSTR     (line:  14, col:  12):	Comment must be on its own line or at end of a line
 Error: MISSING_IDENTIFIER   (line:  14, col:  25):	missing type qualifier or identifier in function arguments
 Error: SPACE_EMPTY_LINE     (line:  16, col:   4):	Space on empty line

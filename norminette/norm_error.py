@@ -16,7 +16,7 @@ errors = {
     "SPC_AFTER_POINTER": "space after pointer",
     "SPC_LINE_START": "Unexpected space/tab at line start",
     "SPC_BFR_POINTER": "bad spacing before pointer",
-    "SPACE_BEFORE_FUNC": "space before function name",
+    "SPACE_BEFORE_FUNC": "Found space when expecting tab before function name",
     "TOO_MANY_TABS_FUNC": "extra tabs before function name",
     "TOO_MANY_TABS_TD": "extra tabs before typedef name",
     "MISSING_TAB_FUNC": "missing tab before function name",
