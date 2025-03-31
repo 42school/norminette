@@ -31,9 +31,9 @@
 [36mtest_file_2007.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 16":
 		<RBRACE> <NEWLINE>
 test_file_2007.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: SPACE_REPLACE_TAB    (line:   3, col:   9):	Found space when expecting tab
-Error: LINE_TOO_LONG        (line:   7, col:  82):	line too long
-Error: LINE_TOO_LONG        (line:   8, col:  82):	line too long
-Error: LINE_TOO_LONG        (line:  10, col: 117):	line too long
-Error: LINE_TOO_LONG        (line:  11, col:  82):	line too long
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: SPACE_REPLACE_TAB    (line:   3, col:   9):	[0mFound space when expecting tab[0m
+Error: LINE_TOO_LONG        (line:   7, col:  82):	[94mline too long[0m
+Error: LINE_TOO_LONG        (line:   8, col:  82):	[94mline too long[0m
+Error: LINE_TOO_LONG        (line:  10, col: 117):	[94mline too long[0m
+Error: LINE_TOO_LONG        (line:  11, col:  82):	[94mline too long[0m

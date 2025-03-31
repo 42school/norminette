@@ -23,4 +23,4 @@
 [36mcheck_utype_declaration_2.h[0m - [32mIsBlockEnd[0m In "UserDefinedType" from "GlobalScope" line 12":
 		<RBRACE> <SEMI_COLON> <NEWLINE>
 check_utype_declaration_2.h: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m

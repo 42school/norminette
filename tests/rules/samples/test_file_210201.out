@@ -25,9 +25,9 @@
 [36mtest_file_210201.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
 		<RBRACE> <NEWLINE>
 test_file_210201.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: RETURN_PARENTHESIS   (line:   3, col:  20):	Return value must be in parenthesis
-Error: RETURN_PARENTHESIS   (line:   4, col:  17):	Return value must be in parenthesis
-Error: RETURN_PARENTHESIS   (line:   5, col:  18):	Return value must be in parenthesis
-Error: RETURN_PARENTHESIS   (line:   6, col:  20):	Return value must be in parenthesis
-Error: RETURN_PARENTHESIS   (line:   7, col:  17):	Return value must be in parenthesis
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: RETURN_PARENTHESIS   (line:   3, col:  20):	[0mReturn value must be in parenthesis[0m
+Error: RETURN_PARENTHESIS   (line:   4, col:  17):	[0mReturn value must be in parenthesis[0m
+Error: RETURN_PARENTHESIS   (line:   5, col:  18):	[0mReturn value must be in parenthesis[0m
+Error: RETURN_PARENTHESIS   (line:   6, col:  20):	[0mReturn value must be in parenthesis[0m
+Error: RETURN_PARENTHESIS   (line:   7, col:  17):	[0mReturn value must be in parenthesis[0m

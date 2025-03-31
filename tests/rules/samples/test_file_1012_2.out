@@ -154,5 +154,5 @@
 [36mtest_file_1012_2.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 82":
 		<RBRACE> <NEWLINE>
 test_file_1012_2.c: Error!
-Error: TOO_FEW_TAB          (line:  47, col:   1):	Missing tabs for indent level
-Error: TOO_FEW_TAB          (line:  51, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  47, col:   1):	[0mMissing tabs for indent level[0m
+Error: TOO_FEW_TAB          (line:  51, col:   1):	[0mMissing tabs for indent level[0m

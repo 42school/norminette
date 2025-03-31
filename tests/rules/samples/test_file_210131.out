@@ -13,4 +13,4 @@
 [36mtest_file_210131.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 8":
 		<RBRACE> <NEWLINE>
 test_file_210131.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m

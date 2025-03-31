@@ -23,6 +23,6 @@
 [36mtest_file_210223.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 14":
 		<RBRACE> <NEWLINE>
 test_file_210223.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: MIXED_SPACE_TAB      (line:   3, col:  61):	Mixed spaces and tabs
-Error: TAB_INSTEAD_SPC      (line:   4, col:   1):	Found tab when expecting space
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: MIXED_SPACE_TAB      (line:   3, col:  61):	[93mMixed spaces and tabs[0m
+Error: TAB_INSTEAD_SPC      (line:   4, col:   1):	[94mFound tab when expecting space[0m

@@ -26,6 +26,6 @@
 [36mcheck_attributes.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 14":
 		<RBRACE> <NEWLINE>
 check_attributes.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: ATTR_EOL             (line:   6, col:   7):	Function attribute must be at the end of line
-Error: MISALIGNED_FUNC_DECL (line:   6, col:  37):	Misaligned function declaration
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: ATTR_EOL             (line:   6, col:   7):	[0mFunction attribute must be at the end of line[0m
+Error: MISALIGNED_FUNC_DECL (line:   6, col:  37):	[0mMisaligned function declaration[0m
