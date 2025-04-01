@@ -105,6 +105,7 @@ operators = [
     "CASE",
 ]
 misc_specifiers = [
+    "AUTO",
     "CONST",
     "RESTRICT",
     "REGISTER",
