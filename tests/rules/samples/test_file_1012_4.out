@@ -4,5 +4,5 @@
 		<IDENTIFIER=t_montype> <TAB> <IDENTIFIER=g_glob> <SEMI_COLON> 
 test_file_1012_4.c: Error!
 Notice: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
 Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.

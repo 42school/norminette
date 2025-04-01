@@ -423,129 +423,129 @@
 [36mtest_file_0907_3.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 201":
 		<RBRACE> 
 test_file_0907_3.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: TOO_MANY_TABS_FUNC   (line:   1, col:   5):	extra tabs before function name
-Error: MIXED_SPACE_TAB      (line:   4, col:  19):	Mixed spaces and tabs
-Error: SPACE_REPLACE_TAB    (line:   4, col:  19):	Found space when expecting tab
-Error: MULT_DECL_LINE       (line:   4, col:  24):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:   6, col:  23):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:   7, col:  25):	Multiple declarations on a single line
-Error: TOO_MANY_VARS_FUNC   (line:   8, col:   1):	Too many variables declarations in a function
-Error: TOO_MANY_VARS_FUNC   (line:   9, col:   1):	Too many variables declarations in a function
-Error: TOO_MANY_VARS_FUNC   (line:  10, col:   1):	Too many variables declarations in a function
-Error: TOO_MANY_VARS_FUNC   (line:  11, col:   1):	Too many variables declarations in a function
-Error: MULT_DECL_LINE       (line:  11, col:  25):	Multiple declarations on a single line
-Error: FORBIDDEN_CHAR_NAME  (line:  11, col:  27):	user defined identifiers should contain only lowercase characters, digits or '_'
-Error: MULT_DECL_LINE       (line:  11, col:  31):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:  11, col:  37):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:  11, col:  43):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:  11, col:  47):	Multiple declarations on a single line
-Error: MULT_DECL_LINE       (line:  11, col:  50):	Multiple declarations on a single line
-Error: TOO_MANY_VARS_FUNC   (line:  12, col:   1):	Too many variables declarations in a function
-Error: MULT_DECL_LINE       (line:  12, col:  30):	Multiple declarations on a single line
-Error: TOO_MANY_VARS_FUNC   (line:  13, col:   1):	Too many variables declarations in a function
-Error: MULT_DECL_LINE       (line:  13, col:  26):	Multiple declarations on a single line
-Error: MULT_ASSIGN_LINE     (line:  15, col:  17):	Multiple assignations on a single line
-Error: MULT_ASSIGN_LINE     (line:  15, col:  24):	Multiple assignations on a single line
-Error: MULT_ASSIGN_LINE     (line:  15, col:  31):	Multiple assignations on a single line
-Error: TAB_INSTEAD_SPC      (line:  19, col:  16):	Found tab when expecting space
-Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
-Error: EMPTY_LINE_FUNCTION  (line:  22, col:   1):	Empty line in function
-Error: ASSIGN_IN_CONTROL    (line:  23, col:  16):	Assignment in control structure
-Error: FORBIDDEN_CS         (line:  24, col:   9):	Forbidden control structure
-Error: SPACE_AFTER_KW       (line:  24, col:   9):	Missing space after keyword
-Error: SPC_BFR_PAR          (line:  24, col:  15):	Missing space before parenthesis (brace/bracket)
-Error: NO_SPC_AFR_PAR       (line:  24, col:  18):	Extra space after parenthesis (brace/bracket)
-Error: MULT_IN_SINGLE_INSTR (line:  24, col:  20):	Multiple instructions in single line control structure
-Error: TOO_FEW_TAB          (line:  24, col:  20):	Missing tabs for indent level
-Error: FORBIDDEN_CS         (line:  25, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  27, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  27, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  28, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  30, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  30, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  31, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  33, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  33, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  34, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  36, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  36, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  37, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  39, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  39, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  40, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  42, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  42, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  43, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  45, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  45, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  46, col:  13):	Forbidden control structure
-Error: TOO_MANY_TAB         (line:  48, col:   1):	Extra tabs for indent level
-Error: TOO_MANY_TAB         (line:  49, col:   1):	Extra tabs for indent level
-Error: TOO_MANY_TAB         (line:  50, col:   1):	Extra tabs for indent level
-Error: SPACE_AFTER_KW       (line:  50, col:  17):	Missing space after keyword
-Error: FORBIDDEN_CS         (line:  51, col:  13):	Forbidden control structure
-Error: TOO_FEW_TAB          (line:  52, col:   1):	Missing tabs for indent level
-Error: SPACE_AFTER_KW       (line:  52, col:  13):	Missing space after keyword
-Error: TOO_FEW_TAB          (line:  53, col:   1):	Missing tabs for indent level
-Error: EMPTY_LINE_FUNCTION  (line:  57, col:   1):	Empty line in function
-Error: BRACE_SHOULD_EOL     (line:  63, col:   6):	Expected newline after brace
-Error: TOO_FEW_TAB          (line:  63, col:   7):	Missing tabs for indent level
-Error: TOO_MANY_INSTR       (line:  63, col:   7):	Too many instructions on a single line
-Error: TOO_MANY_VARS_FUNC   (line:  65, col:   1):	Too many variables declarations in a function
-Error: VAR_DECL_START_FUNC  (line:  65, col:   1):	Variable declaration not at start of function
-Error: MISALIGNED_VAR_DECL  (line:  65, col:  13):	Misaligned variable declaration
-Error: DECL_ASSIGN_LINE     (line:  65, col:  20):	Declaration and assignation on a single line
-Error: TERNARY_FBIDDEN      (line:  65, col:  27):	Ternaries are forbidden
-Error: TERNARY_FBIDDEN      (line:  65, col:  45):	Ternaries are forbidden
-Error: SPC_AFTER_OPERATOR   (line:  65, col:  54):	missing space after operator
-Error: SPC_BFR_OPERATOR     (line:  65, col:  54):	missing space before operator
-Error: SPC_AFTER_OPERATOR   (line:  65, col:  61):	missing space after operator
-Error: SPC_BFR_OPERATOR     (line:  65, col:  61):	missing space before operator
-Error: SPC_AFTER_OPERATOR   (line:  65, col:  80):	missing space after operator
-Error: SPC_BFR_OPERATOR     (line:  65, col:  80):	missing space before operator
-Error: LINE_TOO_LONG        (line:  65, col:  87):	line too long
-Error: SPC_AFTER_OPERATOR   (line:  65, col:  87):	missing space after operator
-Error: SPC_BFR_OPERATOR     (line:  65, col:  87):	missing space before operator
-Error: ASSIGN_IN_CONTROL    (line:  66, col:  19):	Assignment in control structure
-Error: EMPTY_LINE_FUNCTION  (line:  68, col:   1):	Empty line in function
-Error: WRONG_SCOPE_COMMENT  (line:  69, col:   5):	Comment is invalid in this scope
-Error: EMPTY_LINE_FUNCTION  (line:  71, col:   1):	Empty line in function
-Error: ASSIGN_IN_CONTROL    (line:  72, col:  17):	Assignment in control structure
-Error: NO_SPC_AFR_PAR       (line:  72, col:  49):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line:  72, col:  51):	Missing tabs for indent level
-Error: BRACE_SHOULD_EOL     (line:  79, col:   6):	Expected newline after brace
-Error: TOO_FEW_TAB          (line:  79, col:   7):	Missing tabs for indent level
-Error: TOO_MANY_INSTR       (line:  79, col:   7):	Too many instructions on a single line
-Error: TOO_FEW_TAB          (line:  79, col:  12):	Missing tabs for indent level
-Error: EMPTY_LINE_FUNCTION  (line:  83, col:   1):	Empty line in function
-Error: EMPTY_LINE_FUNCTION  (line:  86, col:   1):	Empty line in function
-Error: WRONG_SCOPE_COMMENT  (line:  92, col:   9):	Comment is invalid in this scope
-Error: NO_SPC_AFR_PAR       (line:  93, col:  20):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line:  93, col:  22):	Missing tabs for indent level
-Error: WRONG_SCOPE_COMMENT  (line:  96, col:  13):	Comment is invalid in this scope
-Error: NO_SPC_AFR_PAR       (line:  97, col:  24):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line:  97, col:  26):	Missing tabs for indent level
-Error: FORBIDDEN_CS         (line: 100, col:  17):	Forbidden control structure
-Error: NO_SPC_BFR_OPR       (line: 100, col:  28):	extra space before operator
-Error: NO_SPC_AFR_PAR       (line: 100, col:  36):	Extra space after parenthesis (brace/bracket)
-Error: NO_SPC_BFR_OPR       (line: 100, col:  38):	extra space before operator
-Error: NO_SPC_AFR_PAR       (line: 100, col:  43):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line: 100, col:  45):	Missing tabs for indent level
-Error: EMPTY_LINE_FUNCTION  (line: 116, col:   1):	Empty line in function
-Error: NO_SPC_AFR_PAR       (line: 118, col:  18):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line: 118, col:  20):	Missing tabs for indent level
-Error: EMPTY_LINE_FUNCTION  (line: 127, col:   1):	Empty line in function
-Error: MULT_ASSIGN_LINE     (line: 128, col:  18):	Multiple assignations on a single line
-Error: SPACE_AFTER_KW       (line: 155, col:  13):	Missing space after keyword
-Error: NO_SPC_AFR_PAR       (line: 156, col:  50):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line: 156, col:  52):	Missing tabs for indent level
-Error: SPACE_AFTER_KW       (line: 159, col:  17):	Missing space after keyword
-Error: LINE_TOO_LONG        (line: 162, col:  86):	line too long
-Error: NO_SPC_AFR_PAR       (line: 168, col:  23):	Extra space after parenthesis (brace/bracket)
-Error: TOO_FEW_TAB          (line: 168, col:  25):	Missing tabs for indent level
-Error: LINE_TOO_LONG        (line: 172, col:  86):	line too long
-Error: SPACE_AFTER_KW       (line: 182, col:  17):	Missing space after keyword
-Error: BRACE_SHOULD_EOL     (line: 201, col:   1):	Expected newline after brace
-Error: TOO_MANY_LINES       (line: 201, col:   1):	Function has more than 25 lines
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: TOO_MANY_TABS_FUNC   (line:   1, col:   5):	[94mextra tabs before function name[0m
+Error: MIXED_SPACE_TAB      (line:   4, col:  19):	[93mMixed spaces and tabs[0m
+Error: SPACE_REPLACE_TAB    (line:   4, col:  19):	[0mFound space when expecting tab[0m
+Error: MULT_DECL_LINE       (line:   4, col:  24):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:   6, col:  23):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:   7, col:  25):	[0mMultiple declarations on a single line[0m
+Error: TOO_MANY_VARS_FUNC   (line:   8, col:   1):	[91mToo many variables declarations in a function[0m
+Error: TOO_MANY_VARS_FUNC   (line:   9, col:   1):	[91mToo many variables declarations in a function[0m
+Error: TOO_MANY_VARS_FUNC   (line:  10, col:   1):	[91mToo many variables declarations in a function[0m
+Error: TOO_MANY_VARS_FUNC   (line:  11, col:   1):	[91mToo many variables declarations in a function[0m
+Error: MULT_DECL_LINE       (line:  11, col:  25):	[0mMultiple declarations on a single line[0m
+Error: FORBIDDEN_CHAR_NAME  (line:  11, col:  27):	[0muser defined identifiers should contain only lowercase characters, digits or '_'[0m
+Error: MULT_DECL_LINE       (line:  11, col:  31):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:  11, col:  37):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:  11, col:  43):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:  11, col:  47):	[0mMultiple declarations on a single line[0m
+Error: MULT_DECL_LINE       (line:  11, col:  50):	[0mMultiple declarations on a single line[0m
+Error: TOO_MANY_VARS_FUNC   (line:  12, col:   1):	[91mToo many variables declarations in a function[0m
+Error: MULT_DECL_LINE       (line:  12, col:  30):	[0mMultiple declarations on a single line[0m
+Error: TOO_MANY_VARS_FUNC   (line:  13, col:   1):	[91mToo many variables declarations in a function[0m
+Error: MULT_DECL_LINE       (line:  13, col:  26):	[0mMultiple declarations on a single line[0m
+Error: MULT_ASSIGN_LINE     (line:  15, col:  17):	[0mMultiple assignations on a single line[0m
+Error: MULT_ASSIGN_LINE     (line:  15, col:  24):	[0mMultiple assignations on a single line[0m
+Error: MULT_ASSIGN_LINE     (line:  15, col:  31):	[0mMultiple assignations on a single line[0m
+Error: TAB_INSTEAD_SPC      (line:  19, col:  16):	[94mFound tab when expecting space[0m
+Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	[95mComment is invalid in this scope[0m
+Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	[95mComment is invalid in this scope[0m
+Error: EMPTY_LINE_FUNCTION  (line:  22, col:   1):	[0mEmpty line in function[0m
+Error: ASSIGN_IN_CONTROL    (line:  23, col:  16):	[0mAssignment in control structure[0m
+Error: FORBIDDEN_CS         (line:  24, col:   9):	[0mForbidden control structure[0m
+Error: SPACE_AFTER_KW       (line:  24, col:   9):	[0mMissing space after keyword[0m
+Error: SPC_BFR_PAR          (line:  24, col:  15):	[94mMissing space before parenthesis (brace/bracket)[0m
+Error: NO_SPC_AFR_PAR       (line:  24, col:  18):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: MULT_IN_SINGLE_INSTR (line:  24, col:  20):	[0mMultiple instructions in single line control structure[0m
+Error: TOO_FEW_TAB          (line:  24, col:  20):	[0mMissing tabs for indent level[0m
+Error: FORBIDDEN_CS         (line:  25, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  27, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  27, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  28, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  30, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  30, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  31, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  33, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  33, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  34, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  36, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  36, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  37, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  39, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  39, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  40, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  42, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  42, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  43, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  45, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  45, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  46, col:  13):	[0mForbidden control structure[0m
+Error: TOO_MANY_TAB         (line:  48, col:   1):	[0mExtra tabs for indent level[0m
+Error: TOO_MANY_TAB         (line:  49, col:   1):	[0mExtra tabs for indent level[0m
+Error: TOO_MANY_TAB         (line:  50, col:   1):	[0mExtra tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  50, col:  17):	[0mMissing space after keyword[0m
+Error: FORBIDDEN_CS         (line:  51, col:  13):	[0mForbidden control structure[0m
+Error: TOO_FEW_TAB          (line:  52, col:   1):	[0mMissing tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line:  52, col:  13):	[0mMissing space after keyword[0m
+Error: TOO_FEW_TAB          (line:  53, col:   1):	[0mMissing tabs for indent level[0m
+Error: EMPTY_LINE_FUNCTION  (line:  57, col:   1):	[0mEmpty line in function[0m
+Error: BRACE_SHOULD_EOL     (line:  63, col:   6):	[0mExpected newline after brace[0m
+Error: TOO_FEW_TAB          (line:  63, col:   7):	[0mMissing tabs for indent level[0m
+Error: TOO_MANY_INSTR       (line:  63, col:   7):	[0mToo many instructions on a single line[0m
+Error: TOO_MANY_VARS_FUNC   (line:  65, col:   1):	[91mToo many variables declarations in a function[0m
+Error: VAR_DECL_START_FUNC  (line:  65, col:   1):	[0mVariable declaration not at start of function[0m
+Error: MISALIGNED_VAR_DECL  (line:  65, col:  13):	[0mMisaligned variable declaration[0m
+Error: DECL_ASSIGN_LINE     (line:  65, col:  20):	[0mDeclaration and assignation on a single line[0m
+Error: TERNARY_FBIDDEN      (line:  65, col:  27):	[0mTernaries are forbidden[0m
+Error: TERNARY_FBIDDEN      (line:  65, col:  45):	[0mTernaries are forbidden[0m
+Error: SPC_AFTER_OPERATOR   (line:  65, col:  54):	[94mmissing space after operator[0m
+Error: SPC_BFR_OPERATOR     (line:  65, col:  54):	[94mmissing space before operator[0m
+Error: SPC_AFTER_OPERATOR   (line:  65, col:  61):	[94mmissing space after operator[0m
+Error: SPC_BFR_OPERATOR     (line:  65, col:  61):	[94mmissing space before operator[0m
+Error: SPC_AFTER_OPERATOR   (line:  65, col:  80):	[94mmissing space after operator[0m
+Error: SPC_BFR_OPERATOR     (line:  65, col:  80):	[94mmissing space before operator[0m
+Error: LINE_TOO_LONG        (line:  65, col:  87):	[94mline too long[0m
+Error: SPC_AFTER_OPERATOR   (line:  65, col:  87):	[94mmissing space after operator[0m
+Error: SPC_BFR_OPERATOR     (line:  65, col:  87):	[94mmissing space before operator[0m
+Error: ASSIGN_IN_CONTROL    (line:  66, col:  19):	[0mAssignment in control structure[0m
+Error: EMPTY_LINE_FUNCTION  (line:  68, col:   1):	[0mEmpty line in function[0m
+Error: WRONG_SCOPE_COMMENT  (line:  69, col:   5):	[95mComment is invalid in this scope[0m
+Error: EMPTY_LINE_FUNCTION  (line:  71, col:   1):	[0mEmpty line in function[0m
+Error: ASSIGN_IN_CONTROL    (line:  72, col:  17):	[0mAssignment in control structure[0m
+Error: NO_SPC_AFR_PAR       (line:  72, col:  49):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line:  72, col:  51):	[0mMissing tabs for indent level[0m
+Error: BRACE_SHOULD_EOL     (line:  79, col:   6):	[0mExpected newline after brace[0m
+Error: TOO_FEW_TAB          (line:  79, col:   7):	[0mMissing tabs for indent level[0m
+Error: TOO_MANY_INSTR       (line:  79, col:   7):	[0mToo many instructions on a single line[0m
+Error: TOO_FEW_TAB          (line:  79, col:  12):	[0mMissing tabs for indent level[0m
+Error: EMPTY_LINE_FUNCTION  (line:  83, col:   1):	[0mEmpty line in function[0m
+Error: EMPTY_LINE_FUNCTION  (line:  86, col:   1):	[0mEmpty line in function[0m
+Error: WRONG_SCOPE_COMMENT  (line:  92, col:   9):	[95mComment is invalid in this scope[0m
+Error: NO_SPC_AFR_PAR       (line:  93, col:  20):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line:  93, col:  22):	[0mMissing tabs for indent level[0m
+Error: WRONG_SCOPE_COMMENT  (line:  96, col:  13):	[95mComment is invalid in this scope[0m
+Error: NO_SPC_AFR_PAR       (line:  97, col:  24):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line:  97, col:  26):	[0mMissing tabs for indent level[0m
+Error: FORBIDDEN_CS         (line: 100, col:  17):	[0mForbidden control structure[0m
+Error: NO_SPC_BFR_OPR       (line: 100, col:  28):	[94mextra space before operator[0m
+Error: NO_SPC_AFR_PAR       (line: 100, col:  36):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: NO_SPC_BFR_OPR       (line: 100, col:  38):	[94mextra space before operator[0m
+Error: NO_SPC_AFR_PAR       (line: 100, col:  43):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line: 100, col:  45):	[0mMissing tabs for indent level[0m
+Error: EMPTY_LINE_FUNCTION  (line: 116, col:   1):	[0mEmpty line in function[0m
+Error: NO_SPC_AFR_PAR       (line: 118, col:  18):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line: 118, col:  20):	[0mMissing tabs for indent level[0m
+Error: EMPTY_LINE_FUNCTION  (line: 127, col:   1):	[0mEmpty line in function[0m
+Error: MULT_ASSIGN_LINE     (line: 128, col:  18):	[0mMultiple assignations on a single line[0m
+Error: SPACE_AFTER_KW       (line: 155, col:  13):	[0mMissing space after keyword[0m
+Error: NO_SPC_AFR_PAR       (line: 156, col:  50):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line: 156, col:  52):	[0mMissing tabs for indent level[0m
+Error: SPACE_AFTER_KW       (line: 159, col:  17):	[0mMissing space after keyword[0m
+Error: LINE_TOO_LONG        (line: 162, col:  86):	[94mline too long[0m
+Error: NO_SPC_AFR_PAR       (line: 168, col:  23):	[94mExtra space after parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line: 168, col:  25):	[0mMissing tabs for indent level[0m
+Error: LINE_TOO_LONG        (line: 172, col:  86):	[94mline too long[0m
+Error: SPACE_AFTER_KW       (line: 182, col:  17):	[0mMissing space after keyword[0m
+Error: BRACE_SHOULD_EOL     (line: 201, col:   1):	[0mExpected newline after brace[0m
+Error: TOO_MANY_LINES       (line: 201, col:   1):	[0mFunction has more than 25 lines[0m

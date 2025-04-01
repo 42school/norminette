@@ -161,27 +161,27 @@
 [36mtest_file_1019.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 81":
 		<RBRACE> <TAB> <NEWLINE>
 test_file_1019.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: RETURN_PARENTHESIS   (line:   8, col:  12):	Return value must be in parenthesis
-Error: FORBIDDEN_STRUCT     (line:  11, col:   1):	Struct declaration are not allowed in .c files
-Error: FORBIDDEN_CHAR_NAME  (line:  28, col:   9):	user defined identifiers should contain only lowercase characters, digits or '_'
-Error: COMMENT_ON_INSTR     (line:  35, col:   6):	Comment must be on its own line or at end of a line
-Error: COMMENT_ON_INSTR     (line:  41, col:  10):	Comment must be on its own line or at end of a line
-Error: WRONG_SCOPE_COMMENT  (line:  41, col:  10):	Comment is invalid in this scope
-Error: COMMENT_ON_INSTR     (line:  42, col:  10):	Comment must be on its own line or at end of a line
-Error: WRONG_SCOPE_COMMENT  (line:  42, col:  10):	Comment is invalid in this scope
-Error: TOO_MANY_FUNCS       (line:  46, col:   1):	Too many functions in file
-Error: GOTO_FBIDDEN         (line:  50, col:   1):	Goto statements are forbidden
-Error: LABEL_FBIDDEN        (line:  52, col:   1):	Label statements are forbidden
-Error: TOO_MANY_FUNCS       (line:  56, col:   1):	Too many functions in file
-Error: COMMENT_ON_INSTR     (line:  62, col:  27):	Comment must be on its own line or at end of a line
-Error: WRONG_SCOPE_COMMENT  (line:  62, col:  27):	Comment is invalid in this scope
-Error: TOO_MANY_FUNCS       (line:  66, col:   1):	Too many functions in file
-Error: COMMENT_ON_INSTR     (line:  70, col:  14):	Comment must be on its own line or at end of a line
-Error: WRONG_SCOPE_COMMENT  (line:  70, col:  14):	Comment is invalid in this scope
-Error: TOO_MANY_FUNCS       (line:  73, col:   1):	Too many functions in file
-Error: SPC_BEFORE_NL        (line:  73, col:  17):	Space before newline
-Error: TOO_MANY_FUNCS       (line:  78, col:   1):	Too many functions in file
-Error: SPC_BEFORE_NL        (line:  78, col:  17):	Space before newline
-Error: SPC_BEFORE_NL        (line:  79, col:   2):	Space before newline
-Error: SPC_BEFORE_NL        (line:  81, col:   2):	Space before newline
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: RETURN_PARENTHESIS   (line:   8, col:  12):	[0mReturn value must be in parenthesis[0m
+Error: FORBIDDEN_STRUCT     (line:  11, col:   1):	[0mStruct declaration are not allowed in .c files[0m
+Error: FORBIDDEN_CHAR_NAME  (line:  28, col:   9):	[0muser defined identifiers should contain only lowercase characters, digits or '_'[0m
+Error: COMMENT_ON_INSTR     (line:  35, col:   6):	[95mComment must be on its own line or at end of a line[0m
+Error: COMMENT_ON_INSTR     (line:  41, col:  10):	[95mComment must be on its own line or at end of a line[0m
+Error: WRONG_SCOPE_COMMENT  (line:  41, col:  10):	[95mComment is invalid in this scope[0m
+Error: COMMENT_ON_INSTR     (line:  42, col:  10):	[95mComment must be on its own line or at end of a line[0m
+Error: WRONG_SCOPE_COMMENT  (line:  42, col:  10):	[95mComment is invalid in this scope[0m
+Error: TOO_MANY_FUNCS       (line:  46, col:   1):	[92mToo many functions in file[0m
+Error: GOTO_FBIDDEN         (line:  50, col:   1):	[0mGoto statements are forbidden[0m
+Error: LABEL_FBIDDEN        (line:  52, col:   1):	[0mLabel statements are forbidden[0m
+Error: TOO_MANY_FUNCS       (line:  56, col:   1):	[92mToo many functions in file[0m
+Error: COMMENT_ON_INSTR     (line:  62, col:  27):	[95mComment must be on its own line or at end of a line[0m
+Error: WRONG_SCOPE_COMMENT  (line:  62, col:  27):	[95mComment is invalid in this scope[0m
+Error: TOO_MANY_FUNCS       (line:  66, col:   1):	[92mToo many functions in file[0m
+Error: COMMENT_ON_INSTR     (line:  70, col:  14):	[95mComment must be on its own line or at end of a line[0m
+Error: WRONG_SCOPE_COMMENT  (line:  70, col:  14):	[95mComment is invalid in this scope[0m
+Error: TOO_MANY_FUNCS       (line:  73, col:   1):	[92mToo many functions in file[0m
+Error: SPC_BEFORE_NL        (line:  73, col:  17):	[0mSpace before newline[0m
+Error: TOO_MANY_FUNCS       (line:  78, col:   1):	[92mToo many functions in file[0m
+Error: SPC_BEFORE_NL        (line:  78, col:  17):	[0mSpace before newline[0m
+Error: SPC_BEFORE_NL        (line:  79, col:   2):	[0mSpace before newline[0m
+Error: SPC_BEFORE_NL        (line:  81, col:   2):	[0mSpace before newline[0m

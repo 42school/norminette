@@ -31,9 +31,9 @@
 [36mcheck_preprocessor_protection.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 16":
 		<HASH> <IDENTIFIER=endif> <NEWLINE>
 check_preprocessor_protection.h: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: HEADER_PROT_ALL      (line:   3, col:   1):	Header protection must include all the instructions
-Error: HEADER_PROT_UPPER    (line:   3, col:   9):	Header protection must be in uppercase
-Error: HEADER_PROT_ALL_AF   (line:   8, col:   1):	Instructions after header protection are forbidden
-Error: HEADER_PROT_MULT     (line:  10, col:   1):	Multiple header protections, only one is allowed
-Error: HEADER_PROT_MULT     (line:  14, col:   1):	Multiple header protections, only one is allowed
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: HEADER_PROT_ALL      (line:   3, col:   1):	[0mHeader protection must include all the instructions[0m
+Error: HEADER_PROT_UPPER    (line:   3, col:   9):	[0mHeader protection must be in uppercase[0m
+Error: HEADER_PROT_ALL_AF   (line:   8, col:   1):	[0mInstructions after header protection are forbidden[0m
+Error: HEADER_PROT_MULT     (line:  10, col:   1):	[0mMultiple header protections, only one is allowed[0m
+Error: HEADER_PROT_MULT     (line:  14, col:   1):	[0mMultiple header protections, only one is allowed[0m

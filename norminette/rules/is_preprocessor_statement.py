@@ -315,8 +315,15 @@ class ConstantExpressionParser:
             self.parse_potential_binary_operator()
             return
 
-        if self.context.check_token(self.index, UNARY_OPERATORS):
+        if (
+                self.context.check_token(self.index, UNARY_OPERATORS)
+                or (
+                    self.context.check_token(self.index, "IDENTIFIER")
+                    and self.context.peek_token(self.index).value == "defined"
+                )
+        ):
             self.index += 1
+            self.skip_ws()
             self.parse_expression()
             return
 

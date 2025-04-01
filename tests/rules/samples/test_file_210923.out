@@ -218,40 +218,40 @@
 [36mtest_file_210923.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 107":
 		<RBRACE> <NEWLINE>
 test_file_210923.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: MULT_ASSIGN_LINE     (line:   6, col:  16):	Multiple assignations on a single line
-Error: INCLUDE_START_FILE   (line:   9, col:   1):	Include must be at the start of file
-Error: TOO_FEW_TAB          (line:  15, col:  13):	Missing tabs for indent level
-Error: TOO_MANY_INSTR       (line:  15, col:  13):	Too many instructions on a single line
-Error: TOO_FEW_TAB          (line:  23, col:  24):	Missing tabs for indent level
-Error: TOO_MANY_INSTR       (line:  23, col:  24):	Too many instructions on a single line
-Error: TOO_FEW_TAB          (line:  31, col:  12):	Missing tabs for indent level
-Error: TOO_MANY_INSTR       (line:  31, col:  12):	Too many instructions on a single line
-Error: TOO_MANY_FUNCS       (line:  47, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  52, col:  88):	line too long
-Error: TOO_MANY_FUNCS       (line:  54, col:   1):	Too many functions in file
-Error: TOO_MANY_FUNCS       (line:  59, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  63, col:  84):	line too long
-Error: TOO_MANY_FUNCS       (line:  66, col:   1):	Too many functions in file
-Error: LINE_TOO_LONG        (line:  70, col:  84):	line too long
-Error: TOO_MANY_FUNCS       (line:  73, col:   1):	Too many functions in file
-Error: SPACE_REPLACE_TAB    (line:  75, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  75, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  75, col:  24):	Declaration and assignation on a single line
-Error: SPACE_REPLACE_TAB    (line:  76, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  76, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  76, col:  24):	Declaration and assignation on a single line
-Error: SPACE_REPLACE_TAB    (line:  77, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  77, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  77, col:  24):	Declaration and assignation on a single line
-Error: SPACE_REPLACE_TAB    (line:  78, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  78, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  78, col:  24):	Declaration and assignation on a single line
-Error: SPACE_REPLACE_TAB    (line:  79, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  79, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  79, col:  24):	Declaration and assignation on a single line
-Error: TOO_MANY_VARS_FUNC   (line:  80, col:   1):	Too many variables declarations in a function
-Error: SPACE_REPLACE_TAB    (line:  80, col:  10):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:  80, col:  11):	space after pointer
-Error: DECL_ASSIGN_LINE     (line:  80, col:  24):	Declaration and assignation on a single line
-Error: TOO_MANY_FUNCS       (line:  83, col:   1):	Too many functions in file
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: MULT_ASSIGN_LINE     (line:   6, col:  16):	[0mMultiple assignations on a single line[0m
+Error: INCLUDE_START_FILE   (line:   9, col:   1):	[0mInclude must be at the start of file[0m
+Error: TOO_FEW_TAB          (line:  15, col:  13):	[0mMissing tabs for indent level[0m
+Error: TOO_MANY_INSTR       (line:  15, col:  13):	[0mToo many instructions on a single line[0m
+Error: TOO_FEW_TAB          (line:  23, col:  24):	[0mMissing tabs for indent level[0m
+Error: TOO_MANY_INSTR       (line:  23, col:  24):	[0mToo many instructions on a single line[0m
+Error: TOO_FEW_TAB          (line:  31, col:  12):	[0mMissing tabs for indent level[0m
+Error: TOO_MANY_INSTR       (line:  31, col:  12):	[0mToo many instructions on a single line[0m
+Error: TOO_MANY_FUNCS       (line:  47, col:   1):	[92mToo many functions in file[0m
+Error: LINE_TOO_LONG        (line:  52, col:  88):	[94mline too long[0m
+Error: TOO_MANY_FUNCS       (line:  54, col:   1):	[92mToo many functions in file[0m
+Error: TOO_MANY_FUNCS       (line:  59, col:   1):	[92mToo many functions in file[0m
+Error: LINE_TOO_LONG        (line:  63, col:  84):	[94mline too long[0m
+Error: TOO_MANY_FUNCS       (line:  66, col:   1):	[92mToo many functions in file[0m
+Error: LINE_TOO_LONG        (line:  70, col:  84):	[94mline too long[0m
+Error: TOO_MANY_FUNCS       (line:  73, col:   1):	[92mToo many functions in file[0m
+Error: SPACE_REPLACE_TAB    (line:  75, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  75, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  75, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: SPACE_REPLACE_TAB    (line:  76, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  76, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  76, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: SPACE_REPLACE_TAB    (line:  77, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  77, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  77, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: SPACE_REPLACE_TAB    (line:  78, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  78, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  78, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: SPACE_REPLACE_TAB    (line:  79, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  79, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  79, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: TOO_MANY_VARS_FUNC   (line:  80, col:   1):	[91mToo many variables declarations in a function[0m
+Error: SPACE_REPLACE_TAB    (line:  80, col:  10):	[0mFound space when expecting tab[0m
+Error: SPC_AFTER_POINTER    (line:  80, col:  11):	[94mspace after pointer[0m
+Error: DECL_ASSIGN_LINE     (line:  80, col:  24):	[0mDeclaration and assignation on a single line[0m
+Error: TOO_MANY_FUNCS       (line:  83, col:   1):	[92mToo many functions in file[0m

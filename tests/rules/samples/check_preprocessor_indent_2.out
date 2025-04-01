@@ -31,16 +31,16 @@
 [36mcheck_preprocessor_indent_2.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 16":
 		<HASH> <IDENTIFIER=endif> <NEWLINE>
 check_preprocessor_indent_2.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: PREPROC_BAD_ENDIF    (line:   1, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ELSE     (line:   2, col:   1):	Else preprocessor statement without if or elif
-Error: PREPROC_BAD_ENDIF    (line:   3, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ELSE     (line:   4, col:   1):	Else preprocessor statement without if or elif
-Error: PREPROC_BAD_ENDIF    (line:   5, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ENDIF    (line:   6, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ENDIF    (line:   7, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ELSE     (line:   8, col:   1):	Else preprocessor statement without if or elif
-Error: PREPROC_BAD_ELSE     (line:   9, col:   1):	Else preprocessor statement without if or elif
-Error: PREPROC_BAD_ENDIF    (line:  10, col:   1):	Endif preprocessor statement without if, elif or else
-Error: PREPROC_BAD_ELSE     (line:  15, col:   1):	Else preprocessor statement without if or elif
-Error: PREPROC_BAD_ENDIF    (line:  16, col:   1):	Endif preprocessor statement without if, elif or else
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: PREPROC_BAD_ENDIF    (line:   1, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ELSE     (line:   2, col:   1):	[0mElse preprocessor statement without if or elif[0m
+Error: PREPROC_BAD_ENDIF    (line:   3, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ELSE     (line:   4, col:   1):	[0mElse preprocessor statement without if or elif[0m
+Error: PREPROC_BAD_ENDIF    (line:   5, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ENDIF    (line:   6, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ENDIF    (line:   7, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ELSE     (line:   8, col:   1):	[0mElse preprocessor statement without if or elif[0m
+Error: PREPROC_BAD_ELSE     (line:   9, col:   1):	[0mElse preprocessor statement without if or elif[0m
+Error: PREPROC_BAD_ENDIF    (line:  10, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m
+Error: PREPROC_BAD_ELSE     (line:  15, col:   1):	[0mElse preprocessor statement without if or elif[0m
+Error: PREPROC_BAD_ENDIF    (line:  16, col:   1):	[0mEndif preprocessor statement without if, elif or else[0m

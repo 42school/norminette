@@ -1,6 +1,6 @@
 from norminette.colors import red, blue, yellow, pink, grey, green
 
-errors = {  
+errors = {
     "SPC_INSTEAD_TAB": "Spaces at beginning of line",
     "TAB_INSTEAD_SPC": "Found tab when expecting space",
     "CONSECUTIVE_SPC": "Two or more consecutives spaces",
@@ -155,14 +155,14 @@ class NormError:
         self.no_color = "\033[0m"
         self.color = self.no_color
         color = {
-                "\033[91m":red,
-                "\033[92m":green,
-                "\033[93m":yellow,
-                "\033[94m":blue,
-                "\033[95m":pink,
-                "\033[97m":grey,
+                "\033[91m": red,
+                "\033[92m": green,
+                "\033[93m": yellow,
+                "\033[94m": blue,
+                "\033[95m": pink,
+                "\033[97m": grey,
         }
-        for key,value in color.items():
+        for key, value in color.items():
             if errno in value:
                 self.color = key
                 break
@@ -171,7 +171,6 @@ class NormError:
 
     def __str__(self):
         return self.prefix + self.error_msg
-
 
 
 class NormWarning:

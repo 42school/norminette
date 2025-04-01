@@ -1,4 +1,4 @@
 [36mtest_multiple_lines_escaping.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 1":
 		<COMMENT=//\ ola \ ola \ ola          oxi eita> <NEWLINE>
 test_multiple_lines_escaping.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m

@@ -1,0 +1,19 @@
+---
+name: 'norminette-action'
+author: '42 School'
+description: 'It is the official github action for 42 school norminette'
+branding:
+  icon: 'check'
+  color: 'gray-dark'
+inputs:
+  args:
+    description: 'Args passed to norminette'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  entrypoint: 'sh'
+  args:
+    - '-c'
+    - "norminette ${{ inputs.args }}"

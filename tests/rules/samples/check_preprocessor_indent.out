@@ -141,33 +141,33 @@ printf
 [36mcheck_preprocessor_indent.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 74":
 		<HASH> <IDENTIFIER=endif> 
 check_preprocessor_indent.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: TOO_MANY_WS          (line:   1, col:   1):	Extra whitespaces for indent level
-Error: PREPROC_BAD_INDENT   (line:   3, col:   1):	Bad preprocessor indentation
-Error: PREPROC_BAD_INDENT   (line:   4, col:   1):	Bad preprocessor indentation
-Error: PREPROC_BAD_INDENT   (line:   5, col:   1):	Bad preprocessor indentation
-Error: TOO_MANY_WS          (line:   6, col:   1):	Extra whitespaces for indent level
-Error: TOO_MANY_WS          (line:   7, col:   1):	Extra whitespaces for indent level
-Error: TAB_REPLACE_SPACE    (line:   7, col:   2):	Found tab when expecting space
-Error: TOO_MANY_WS          (line:   9, col:   1):	Extra whitespaces for indent level
-Error: MACRO_NAME_CAPITAL   (line:   9, col:  10):	Macro name must be capitalized
-Error: PREPROC_START_LINE   (line:  29, col:  17):	Preprocessor statement not at the beginning of the line
-Error: PREPROC_START_LINE   (line:  30, col:   5):	Preprocessor statement not at the beginning of the line
-Error: PREPROC_START_LINE   (line:  31, col:   5):	Preprocessor statement not at the beginning of the line
-Error: PREPROC_START_LINE   (line:  32, col:   3):	Preprocessor statement not at the beginning of the line
-Error: MACRO_NAME_CAPITAL   (line:  32, col:  11):	Macro name must be capitalized
-Error: PREPROC_NO_SPACE     (line:  34, col:   9):	Missing space after preprocessor directive
-Error: TAB_REPLACE_SPACE    (line:  35, col:   9):	Found tab when expecting space
-Error: CONSECUTIVE_WS       (line:  36, col:   9):	Two or more consecutives white spaces
-Error: CONSECUTIVE_WS       (line:  37, col:   9):	Two or more consecutives white spaces
-Error: TAB_REPLACE_SPACE    (line:  37, col:  11):	Found tab when expecting space
-Error: CONSECUTIVE_WS       (line:  38, col:   9):	Two or more consecutives white spaces
-Error: TAB_REPLACE_SPACE    (line:  38, col:  10):	Found tab when expecting space
-Error: PREPROC_NO_SPACE     (line:  39, col:   9):	Missing space after preprocessor directive
-Error: TAB_REPLACE_SPACE    (line:  50, col:   8):	Found tab when expecting space
-Error: PREPOC_ONLY_GLOBAL   (line:  61, col:   1):	Preprocessor statements are only allowed in the global scope
-Error: NL_AFTER_PREPROC     (line:  62, col:   1):	Preprocessor statement must be followed by a newline
-Error: PREPOC_ONLY_GLOBAL   (line:  63, col:   1):	Preprocessor statements are only allowed in the global scope
-Error: NL_AFTER_PREPROC     (line:  64, col:   1):	Preprocessor statement must be followed by a newline
-Error: PREPOC_ONLY_GLOBAL   (line:  65, col:   1):	Preprocessor statements are only allowed in the global scope
-Error: NL_AFTER_PREPROC     (line:  66, col:   1):	Preprocessor statement must be followed by a newline
+Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: TOO_MANY_WS          (line:   1, col:   1):	[0mExtra whitespaces for indent level[0m
+Error: PREPROC_BAD_INDENT   (line:   3, col:   1):	[0mBad preprocessor indentation[0m
+Error: PREPROC_BAD_INDENT   (line:   4, col:   1):	[0mBad preprocessor indentation[0m
+Error: PREPROC_BAD_INDENT   (line:   5, col:   1):	[0mBad preprocessor indentation[0m
+Error: TOO_MANY_WS          (line:   6, col:   1):	[0mExtra whitespaces for indent level[0m
+Error: TOO_MANY_WS          (line:   7, col:   1):	[0mExtra whitespaces for indent level[0m
+Error: TAB_REPLACE_SPACE    (line:   7, col:   2):	[0mFound tab when expecting space[0m
+Error: TOO_MANY_WS          (line:   9, col:   1):	[0mExtra whitespaces for indent level[0m
+Error: MACRO_NAME_CAPITAL   (line:   9, col:  10):	[0mMacro name must be capitalized[0m
+Error: PREPROC_START_LINE   (line:  29, col:  17):	[0mPreprocessor statement not at the beginning of the line[0m
+Error: PREPROC_START_LINE   (line:  30, col:   5):	[0mPreprocessor statement not at the beginning of the line[0m
+Error: PREPROC_START_LINE   (line:  31, col:   5):	[0mPreprocessor statement not at the beginning of the line[0m
+Error: PREPROC_START_LINE   (line:  32, col:   3):	[0mPreprocessor statement not at the beginning of the line[0m
+Error: MACRO_NAME_CAPITAL   (line:  32, col:  11):	[0mMacro name must be capitalized[0m
+Error: PREPROC_NO_SPACE     (line:  34, col:   9):	[0mMissing space after preprocessor directive[0m
+Error: TAB_REPLACE_SPACE    (line:  35, col:   9):	[0mFound tab when expecting space[0m
+Error: CONSECUTIVE_WS       (line:  36, col:   9):	[94mTwo or more consecutives white spaces[0m
+Error: CONSECUTIVE_WS       (line:  37, col:   9):	[94mTwo or more consecutives white spaces[0m
+Error: TAB_REPLACE_SPACE    (line:  37, col:  11):	[0mFound tab when expecting space[0m
+Error: CONSECUTIVE_WS       (line:  38, col:   9):	[94mTwo or more consecutives white spaces[0m
+Error: TAB_REPLACE_SPACE    (line:  38, col:  10):	[0mFound tab when expecting space[0m
+Error: PREPROC_NO_SPACE     (line:  39, col:   9):	[0mMissing space after preprocessor directive[0m
+Error: TAB_REPLACE_SPACE    (line:  50, col:   8):	[0mFound tab when expecting space[0m
+Error: PREPOC_ONLY_GLOBAL   (line:  61, col:   1):	[0mPreprocessor statements are only allowed in the global scope[0m
+Error: NL_AFTER_PREPROC     (line:  62, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
+Error: PREPOC_ONLY_GLOBAL   (line:  63, col:   1):	[0mPreprocessor statements are only allowed in the global scope[0m
+Error: NL_AFTER_PREPROC     (line:  64, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
+Error: PREPOC_ONLY_GLOBAL   (line:  65, col:   1):	[0mPreprocessor statements are only allowed in the global scope[0m
+Error: NL_AFTER_PREPROC     (line:  66, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
