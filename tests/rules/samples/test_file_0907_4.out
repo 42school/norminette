@@ -9,6 +9,6 @@
 [36mtest_file_0907_4.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 5":
 		<RBRACE> 
 test_file_0907_4.c: Error!
-Error: EMPTY_LINE_FILE_START (line:   1, col:   1):	[0mEmpty line at start of file[0m
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: BRACE_SHOULD_EOL     (line:   5, col:   1):	[0mExpected newline after brace[0m
+Error: EMPTY_LINE_FILE_START (line:   1, col:   1):	Empty line at start of file
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: BRACE_SHOULD_EOL     (line:   5, col:   1):	Expected newline after brace

@@ -5,4 +5,4 @@
 [36mko_func_name.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 3":
 		<INT> <TAB> <IDENTIFIER=B> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 ko_func_name.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

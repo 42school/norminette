@@ -7,5 +7,5 @@
 [36mko_too_many_arg.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 4":
 		<RBRACE> <NEWLINE>
 ko_too_many_arg.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: TOO_MANY_ARGS        (line:   1, col:  71):	[91mFunction has more than 4 arguments[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_MANY_ARGS        (line:   1, col:  71):	Function has more than 4 arguments

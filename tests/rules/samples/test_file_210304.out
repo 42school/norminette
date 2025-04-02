@@ -56,7 +56,7 @@
 [36mtest_file_210304.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 31":
 		<RBRACE> <NEWLINE>
 test_file_210304.c: Error!
-Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: FORBIDDEN_TYPEDEF    (line:   6, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: FORBIDDEN_TYPEDEF    (line:  14, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
+Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	Typedef declaration are not allowed in .c files
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: FORBIDDEN_TYPEDEF    (line:   6, col:   1):	Typedef declaration are not allowed in .c files
+Error: FORBIDDEN_TYPEDEF    (line:  14, col:   1):	Typedef declaration are not allowed in .c files

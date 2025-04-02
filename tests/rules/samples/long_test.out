@@ -143,69 +143,69 @@
 [36mlong_test.c[0m - [32mIsFunctionCall[0m In "GlobalScope" from "None" line 63":
 		<MULT> <MULT> <MULT> <IDENTIFIER=func4> <LPARENTHESIS> <IDENTIFIER=udidf> <SPACE> <IDENTIFIER=fdfd> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 long_test.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: TOO_MANY_TAB         (line:   4, col:   1):	[0mExtra tabs for indent level[0m
-Error: EMPTY_LINE_FUNCTION  (line:   5, col:   1):	[0mEmpty line in function[0m
-Error: SPACE_EMPTY_LINE     (line:   5, col:   1):	[0mSpace on empty line[0m
-Error: TOO_FEW_TAB          (line:   6, col:   1):	[0mMissing tabs for indent level[0m
-Error: SPACE_BEFORE_FUNC    (line:  10, col:  10):	[94mspace before function name[0m
-Error: NO_ARGS_VOID         (line:  10, col:  13):	[0mEmpty function argument requires void[0m
-Error: BRACE_NEWLINE        (line:  10, col:  15):	[93mExpected newline before brace[0m
-Error: BRACE_SHOULD_EOL     (line:  10, col:  16):	[0mExpected newline after brace[0m
-Error: TOO_FEW_TAB          (line:  10, col:  17):	[0mMissing tabs for indent level[0m
-Error: TOO_FEW_TAB          (line:  10, col:  17):	[0mMissing tabs for indent level[0m
-Error: TOO_MANY_INSTR       (line:  10, col:  17):	[0mToo many instructions on a single line[0m
-Error: RETURN_PARENTHESIS   (line:  10, col:  24):	[0mReturn value must be in parenthesis[0m
-Error: TOO_MANY_INSTR       (line:  10, col:  27):	[0mToo many instructions on a single line[0m
-Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	[94mspace before function name[0m
-Error: RETURN_PARENTHESIS   (line:  14, col:  12):	[0mReturn value must be in parenthesis[0m
-Error: INCLUDE_START_FILE   (line:  17, col:   1):	[0mInclude must be at the start of file[0m
-Error: NL_AFTER_PREPROC     (line:  18, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
-Error: NO_ARGS_VOID         (line:  18, col:  11):	[0mEmpty function argument requires void[0m
-Error: RETURN_PARENTHESIS   (line:  20, col:  12):	[0mReturn value must be in parenthesis[0m
-Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	[94mspace before function name[0m
-Error: MISSING_IDENTIFIER   (line:  23, col:  16):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: BRACE_NEWLINE        (line:  23, col:  22):	[93mExpected newline before brace[0m
-Error: RETURN_PARENTHESIS   (line:  24, col:  12):	[0mReturn value must be in parenthesis[0m
-Error: TOO_MANY_INSTR       (line:  24, col:  17):	[0mToo many instructions on a single line[0m
-Error: TOO_MANY_FUNCS       (line:  26, col:   1):	[92mToo many functions in file[0m
-Error: MISSING_IDENTIFIER   (line:  26, col:  28):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: TOO_MANY_FUNCS       (line:  31, col:   1):	[92mToo many functions in file[0m
-Error: MISSING_IDENTIFIER   (line:  31, col:  33):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: BRACE_NEWLINE        (line:  31, col:  39):	[93mExpected newline before brace[0m
-Error: BRACE_SHOULD_EOL     (line:  31, col:  40):	[0mExpected newline after brace[0m
-Error: TOO_FEW_TAB          (line:  31, col:  41):	[0mMissing tabs for indent level[0m
-Error: TOO_FEW_TAB          (line:  31, col:  41):	[0mMissing tabs for indent level[0m
-Error: TOO_MANY_INSTR       (line:  31, col:  41):	[0mToo many instructions on a single line[0m
-Error: RETURN_PARENTHESIS   (line:  31, col:  48):	[0mReturn value must be in parenthesis[0m
-Error: TOO_MANY_INSTR       (line:  31, col:  52):	[0mToo many instructions on a single line[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_MANY_TAB         (line:   4, col:   1):	Extra tabs for indent level
+Error: EMPTY_LINE_FUNCTION  (line:   5, col:   1):	Empty line in function
+Error: SPACE_EMPTY_LINE     (line:   5, col:   1):	Space on empty line
+Error: TOO_FEW_TAB          (line:   6, col:   1):	Missing tabs for indent level
+Error: SPACE_BEFORE_FUNC    (line:  10, col:  10):	space before function name
+Error: NO_ARGS_VOID         (line:  10, col:  13):	Empty function argument requires void
+Error: BRACE_NEWLINE        (line:  10, col:  15):	Expected newline before brace
+Error: BRACE_SHOULD_EOL     (line:  10, col:  16):	Expected newline after brace
+Error: TOO_FEW_TAB          (line:  10, col:  17):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  10, col:  17):	Missing tabs for indent level
+Error: TOO_MANY_INSTR       (line:  10, col:  17):	Too many instructions on a single line
+Error: RETURN_PARENTHESIS   (line:  10, col:  24):	Return value must be in parenthesis
+Error: TOO_MANY_INSTR       (line:  10, col:  27):	Too many instructions on a single line
+Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	space before function name
+Error: RETURN_PARENTHESIS   (line:  14, col:  12):	Return value must be in parenthesis
+Error: INCLUDE_START_FILE   (line:  17, col:   1):	Include must be at the start of file
+Error: NL_AFTER_PREPROC     (line:  18, col:   1):	Preprocessor statement must be followed by a newline
+Error: NO_ARGS_VOID         (line:  18, col:  11):	Empty function argument requires void
+Error: RETURN_PARENTHESIS   (line:  20, col:  12):	Return value must be in parenthesis
+Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	space before function name
+Error: MISSING_IDENTIFIER   (line:  23, col:  16):	missing type qualifier or identifier in function arguments
+Error: BRACE_NEWLINE        (line:  23, col:  22):	Expected newline before brace
+Error: RETURN_PARENTHESIS   (line:  24, col:  12):	Return value must be in parenthesis
+Error: TOO_MANY_INSTR       (line:  24, col:  17):	Too many instructions on a single line
+Error: TOO_MANY_FUNCS       (line:  26, col:   1):	Too many functions in file
+Error: MISSING_IDENTIFIER   (line:  26, col:  28):	missing type qualifier or identifier in function arguments
+Error: TOO_MANY_FUNCS       (line:  31, col:   1):	Too many functions in file
+Error: MISSING_IDENTIFIER   (line:  31, col:  33):	missing type qualifier or identifier in function arguments
+Error: BRACE_NEWLINE        (line:  31, col:  39):	Expected newline before brace
+Error: BRACE_SHOULD_EOL     (line:  31, col:  40):	Expected newline after brace
+Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
+Error: TOO_MANY_INSTR       (line:  31, col:  41):	Too many instructions on a single line
+Error: RETURN_PARENTHESIS   (line:  31, col:  48):	Return value must be in parenthesis
+Error: TOO_MANY_INSTR       (line:  31, col:  52):	Too many instructions on a single line
 Notice: GLOBAL_VAR_DETECTED  (line:  33, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: GLOBAL_VAR_NAMING    (line:  33, col:   7):	[0mGlobal variable must start with g_[0m
+Error: GLOBAL_VAR_NAMING    (line:  33, col:   7):	Global variable must start with g_
 Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: GLOBAL_VAR_NAMING    (line:  34, col:   9):	[0mGlobal variable must start with g_[0m
-Error: MISALIGNED_VAR_DECL  (line:  34, col:  19):	[0mMisaligned variable declaration[0m
+Error: GLOBAL_VAR_NAMING    (line:  34, col:   9):	Global variable must start with g_
+Error: MISALIGNED_VAR_DECL  (line:  34, col:  19):	Misaligned variable declaration
 Notice: GLOBAL_VAR_DETECTED  (line:  38, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: SPACE_REPLACE_TAB    (line:  38, col:   4):	[0mFound space when expecting tab[0m
-Error: GLOBAL_VAR_NAMING    (line:  38, col:   8):	[0mGlobal variable must start with g_[0m
-Error: NO_SPC_AFR_PAR       (line:  38, col:  17):	[94mExtra space after parenthesis (brace/bracket)[0m
-Error: SPACE_REPLACE_TAB    (line:  39, col:   4):	[0mFound space when expecting tab[0m
-Error: EXP_PARENTHESIS      (line:  39, col:  10):	[94mExpected parenthesis[0m
-Error: FORBIDDEN_ENUM       (line:  40, col:   1):	[0mEnum declaration are not allowed in .c files[0m
-Error: ENUM_TYPE_NAMING     (line:  40, col:   6):	[0mEnum name must start with e_[0m
-Error: BRACE_NEWLINE        (line:  40, col:  10):	[93mExpected newline before brace[0m
-Error: MISALIGNED_FUNC_DECL (line:  46, col:  21):	[0mMisaligned function declaration[0m
-Error: MISALIGNED_FUNC_DECL (line:  47, col:  21):	[0mMisaligned function declaration[0m
-Error: MISALIGNED_FUNC_DECL (line:  48, col:  21):	[0mMisaligned function declaration[0m
-Error: MISALIGNED_FUNC_DECL (line:  49, col:  21):	[0mMisaligned function declaration[0m
-Error: SPACE_REPLACE_TAB    (line:  50, col:   2):	[0mFound space when expecting tab[0m
-Error: MISALIGNED_FUNC_DECL (line:  50, col:   9):	[0mMisaligned function declaration[0m
-Error: MISALIGNED_FUNC_DECL (line:  51, col:   9):	[0mMisaligned function declaration[0m
-Error: MISALIGNED_FUNC_DECL (line:  52, col:  17):	[0mMisaligned function declaration[0m
-Error: MISSING_IDENTIFIER   (line:  53, col:  30):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: MISSING_IDENTIFIER   (line:  54, col:  26):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: CONSECUTIVE_SPC      (line:  57, col:  43):	[94mTwo or more consecutives spaces[0m
-Error: SPC_AFTER_OPERATOR   (line:  58, col:  38):	[94mmissing space after operator[0m
-Error: SPC_AFTER_POINTER    (line:  60, col:  44):	[94mspace after pointer[0m
-Error: SPC_AFTER_POINTER    (line:  61, col:  47):	[94mspace after pointer[0m
-Error: SPC_AFTER_POINTER    (line:  61, col:  48):	[94mspace after pointer[0m
-Error: MISALIGNED_FUNC_DECL (line:  62, col:  21):	[0mMisaligned function declaration[0m
+Error: SPACE_REPLACE_TAB    (line:  38, col:   4):	Found space when expecting tab
+Error: GLOBAL_VAR_NAMING    (line:  38, col:   8):	Global variable must start with g_
+Error: NO_SPC_AFR_PAR       (line:  38, col:  17):	Extra space after parenthesis (brace/bracket)
+Error: SPACE_REPLACE_TAB    (line:  39, col:   4):	Found space when expecting tab
+Error: EXP_PARENTHESIS      (line:  39, col:  10):	Expected parenthesis
+Error: FORBIDDEN_ENUM       (line:  40, col:   1):	Enum declaration are not allowed in .c files
+Error: ENUM_TYPE_NAMING     (line:  40, col:   6):	Enum name must start with e_
+Error: BRACE_NEWLINE        (line:  40, col:  10):	Expected newline before brace
+Error: MISALIGNED_FUNC_DECL (line:  46, col:  21):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  47, col:  21):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  48, col:  21):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  49, col:  21):	Misaligned function declaration
+Error: SPACE_REPLACE_TAB    (line:  50, col:   2):	Found space when expecting tab
+Error: MISALIGNED_FUNC_DECL (line:  50, col:   9):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  51, col:   9):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  52, col:  17):	Misaligned function declaration
+Error: MISSING_IDENTIFIER   (line:  53, col:  30):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  54, col:  26):	missing type qualifier or identifier in function arguments
+Error: CONSECUTIVE_SPC      (line:  57, col:  43):	Two or more consecutives spaces
+Error: SPC_AFTER_OPERATOR   (line:  58, col:  38):	missing space after operator
+Error: SPC_AFTER_POINTER    (line:  60, col:  44):	space after pointer
+Error: SPC_AFTER_POINTER    (line:  61, col:  47):	space after pointer
+Error: SPC_AFTER_POINTER    (line:  61, col:  48):	space after pointer
+Error: MISALIGNED_FUNC_DECL (line:  62, col:  21):	Misaligned function declaration

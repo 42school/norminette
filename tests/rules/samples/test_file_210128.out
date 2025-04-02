@@ -38,13 +38,13 @@
 [36mtest_file_210128.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 19":
 		<RBRACE> <NEWLINE>
 test_file_210128.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:   6, col:   5):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:  12, col:  36):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	[95mComment is invalid in this scope[0m
-Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	[95mComment is invalid in this scope[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   6, col:   5):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  12, col:  36):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	Comment is invalid in this scope
