@@ -1,3 +1,5 @@
+from typing import Optional
+
 red = {
     "TOO_MANY_ARGS",
     "TOO_MANY_VARS_FUNC",
@@ -42,3 +44,19 @@ grey = {
     "INVALID_HEADER",
     "WRONG_SCOPE_COMMENT",
 }
+
+_color_table = {
+    "91": red,
+    "92": green,
+    "93": yellow,
+    "94": blue,
+    "95": pink,
+    "97": grey,
+}
+
+
+def error_color(name: str) -> Optional[str]:
+    for color, table in _color_table.items():
+        if name in table:
+            return color
+    return None

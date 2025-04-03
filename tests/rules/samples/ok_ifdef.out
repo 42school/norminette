@@ -15,7 +15,7 @@
 [36mok_ifdef.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 8":
 		<RBRACE> <NEWLINE>
 ok_ifdef.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: NL_AFTER_PREPROC     (line:   2, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
-Error: NL_AFTER_PREPROC     (line:   4, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
-Error: NL_AFTER_PREPROC     (line:   6, col:   1):	[0mPreprocessor statement must be followed by a newline[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NL_AFTER_PREPROC     (line:   2, col:   1):	Preprocessor statement must be followed by a newline
+Error: NL_AFTER_PREPROC     (line:   4, col:   1):	Preprocessor statement must be followed by a newline
+Error: NL_AFTER_PREPROC     (line:   6, col:   1):	Preprocessor statement must be followed by a newline

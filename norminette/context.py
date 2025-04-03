@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
 
+from norminette.errors import Error, Highlight
+from norminette.lexer import Token
 from norminette.exceptions import CParsingError
-from norminette.norm_error import NormError, NormWarning
 from norminette.scope import GlobalScope, ControlStructure
 from norminette.tools.colors import colors
 
@@ -241,14 +242,15 @@ class Context:
                 return i
         return -1
 
-    def new_error(self, errno, tkn):
-        pos = tkn
-        if not isinstance(tkn, (tuple, list)):
-            pos = tkn.pos
-        self.errors.append(NormError(errno, pos[0], pos[1]))
+    def new_error(self, errno, tkn: Token):
+        # XXX Deprecated, use `.errors` and `norminette.errors` module.
+        error = Error.from_name(errno, highlights=[Highlight.from_token(tkn)])
+        self.errors.add(error)
 
-    def new_warning(self, errno, tkn):
-        self.errors.append(NormWarning(errno, tkn.pos[0], tkn.pos[1]))
+    def new_warning(self, errno, tkn: Token):
+        # XXX Deprecated, use `.errors` and `norminette.errors` module.
+        error = Error.from_name(errno, level="Notice", highlights=[Highlight.from_token(tkn)])
+        self.errors.append(error)
 
     def get_parent_rule(self):
         if len(self.history) == 0:

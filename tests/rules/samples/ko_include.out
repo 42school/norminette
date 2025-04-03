@@ -5,7 +5,7 @@
 [36mko_include.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 3":
 		<HASH> <IDENTIFIER=include> <SPACE> <LESS_THAN> <IDENTIFIER=main> <DOT> <IDENTIFIER=c> <MORE_THAN> <NEWLINE>
 ko_include.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: INCLUDE_HEADER_ONLY  (line:   1, col:  10):	[0m.c file includes are forbidden[0m
-Error: MACRO_NAME_CAPITAL   (line:   2, col:   9):	[0mMacro name must be capitalized[0m
-Error: INCLUDE_HEADER_ONLY  (line:   3, col:  10):	[0m.c file includes are forbidden[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INCLUDE_HEADER_ONLY  (line:   1, col:  10):	.c file includes are forbidden
+Error: MACRO_NAME_CAPITAL   (line:   2, col:   9):	Macro name must be capitalized
+Error: INCLUDE_HEADER_ONLY  (line:   3, col:  10):	.c file includes are forbidden

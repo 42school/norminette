@@ -24,7 +24,7 @@ def test_rule_for_file(file, capsys):
     lexer = Lexer(file)
     context = Context(file, list(lexer), debug=2)
     registry.run(context)
-    errors = HumanizedErrorsFormatter(file)
+    errors = HumanizedErrorsFormatter(file, use_colors=False)
     print(errors, end='')
     captured = capsys.readouterr()
 

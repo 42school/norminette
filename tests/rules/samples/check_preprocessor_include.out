@@ -43,18 +43,18 @@
 [36mcheck_preprocessor_include.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 22":
 		<HASH> <IDENTIFIER=include> <SPACE> <LESS_THAN> <NULL> <DOT> <IDENTIFIER=h> <MORE_THAN> <NEWLINE>
 check_preprocessor_include.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: INCLUDE_HEADER_ONLY  (line:   2, col:  10):	[0m.c file includes are forbidden[0m
-Error: INCLUDE_HEADER_ONLY  (line:   3, col:  10):	[0m.c file includes are forbidden[0m
-Error: CONSECUTIVE_NEWLINES (line:   5, col:   1):	[0mConsecutive newlines[0m
-Error: INCLUDE_START_FILE   (line:   8, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  11, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  14, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  15, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  16, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  17, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  18, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  19, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  20, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  21, col:   1):	[0mInclude must be at the start of file[0m
-Error: INCLUDE_START_FILE   (line:  22, col:   1):	[0mInclude must be at the start of file[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INCLUDE_HEADER_ONLY  (line:   2, col:  10):	.c file includes are forbidden
+Error: INCLUDE_HEADER_ONLY  (line:   3, col:  10):	.c file includes are forbidden
+Error: CONSECUTIVE_NEWLINES (line:   5, col:   1):	Consecutive newlines
+Error: INCLUDE_START_FILE   (line:   8, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  11, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  14, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  15, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  16, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  17, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  18, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  19, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  20, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  21, col:   1):	Include must be at the start of file
+Error: INCLUDE_START_FILE   (line:  22, col:   1):	Include must be at the start of file

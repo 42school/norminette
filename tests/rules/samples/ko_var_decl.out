@@ -37,5 +37,5 @@
 [36mko_var_decl.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 19":
 		<RBRACE> <NEWLINE>
 ko_var_decl.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: MULT_IN_SINGLE_INSTR (line:   9, col:   1):	[0mMultiple instructions in single line control structure[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: MULT_IN_SINGLE_INSTR (line:   9, col:   1):	Multiple instructions in single line control structure

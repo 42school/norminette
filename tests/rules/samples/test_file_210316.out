@@ -57,21 +57,21 @@
 [36mtest_file_210316.c[0m - [32mIsAssignation[0m In "GlobalScope" from "None" line 38":
 		<MULT> <IDENTIFIER=result> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <IDENTIFIER=t_quaternion> <RPARENTHESIS> <LBRACE> <IDENTIFIER=r> <SPACE> <COLON> <SPACE> <CONSTANT=1> <COMMA> <SPACE> <IDENTIFIER=i> <SPACE> <COLON> <SPACE> <CONSTANT=0> <COMMA> <SPACE> <IDENTIFIER=j> <SPACE> <COLON> <SPACE> <CONSTANT=0> <COMMA> <SPACE> <IDENTIFIER=k> <SPACE> <COLON> <SPACE> <CONSTANT=0> <SPACE> <RBRACE> <SEMI_COLON> 
 test_file_210316.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: SPACE_AFTER_KW       (line:   3, col:  20):	[0mMissing space after keyword[0m
-Error: SPACE_AFTER_KW       (line:   3, col:  50):	[0mMissing space after keyword[0m
-Error: SPACE_AFTER_KW       (line:   4, col:  28):	[0mMissing space after keyword[0m
-Error: SPACE_AFTER_KW       (line:   4, col:  57):	[0mMissing space after keyword[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPACE_AFTER_KW       (line:   3, col:  20):	Missing space after keyword
+Error: SPACE_AFTER_KW       (line:   3, col:  50):	Missing space after keyword
+Error: SPACE_AFTER_KW       (line:   4, col:  28):	Missing space after keyword
+Error: SPACE_AFTER_KW       (line:   4, col:  57):	Missing space after keyword
 Notice: GLOBAL_VAR_DETECTED  (line:   7, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: DECL_ASSIGN_LINE     (line:  13, col:  28):	[0mDeclaration and assignation on a single line[0m
-Error: DECL_ASSIGN_LINE     (line:  14, col:  12):	[0mDeclaration and assignation on a single line[0m
-Error: DECL_ASSIGN_LINE     (line:  15, col:  12):	[0mDeclaration and assignation on a single line[0m
-Error: DECL_ASSIGN_LINE     (line:  16, col:  12):	[0mDeclaration and assignation on a single line[0m
-Error: DECL_ASSIGN_LINE     (line:  17, col:  12):	[0mDeclaration and assignation on a single line[0m
+Error: DECL_ASSIGN_LINE     (line:  13, col:  28):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:  14, col:  12):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:  15, col:  12):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:  16, col:  12):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:  17, col:  12):	Declaration and assignation on a single line
 Notice: GLOBAL_VAR_DETECTED  (line:  20, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
 Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
 Notice: GLOBAL_VAR_DETECTED  (line:  35, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: NO_SPC_BFR_PAR       (line:  35, col:  65):	[94mExtra space before parenthesis (brace/bracket)[0m
+Error: NO_SPC_BFR_PAR       (line:  35, col:  65):	Extra space before parenthesis (brace/bracket)
 Notice: GLOBAL_VAR_DETECTED  (line:  36, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: NO_SPC_BFR_PAR       (line:  36, col:  64):	[94mExtra space before parenthesis (brace/bracket)[0m
-Error: NO_SPC_BFR_PAR       (line:  38, col:  53):	[94mExtra space before parenthesis (brace/bracket)[0m
+Error: NO_SPC_BFR_PAR       (line:  36, col:  64):	Extra space before parenthesis (brace/bracket)
+Error: NO_SPC_BFR_PAR       (line:  38, col:  53):	Extra space before parenthesis (brace/bracket)

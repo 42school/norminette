@@ -29,7 +29,7 @@
 [36mtest_file_1019_1.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 15":
 		<RBRACE> <NEWLINE>
 test_file_1019_1.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: PREPROC_BAD_IFNDEF   (line:   1, col:   1):	[0mIfndef preprocessor statement without endif[0m
-Error: FORBIDDEN_TYPEDEF    (line:   4, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: FORBIDDEN_STRUCT     (line:   5, col:   1):	[0mStruct declaration are not allowed in .c files[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: PREPROC_BAD_IFNDEF   (line:   1, col:   1):	Ifndef preprocessor statement without endif
+Error: FORBIDDEN_TYPEDEF    (line:   4, col:   1):	Typedef declaration are not allowed in .c files
+Error: FORBIDDEN_STRUCT     (line:   5, col:   1):	Struct declaration are not allowed in .c files
