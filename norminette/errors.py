@@ -15,10 +15,14 @@ from typing import (
     Type,
 )
 
-from norminette.norm_error import NormError, NormWarning, errors as errors_dict
+from norminette.colors import error_color
+from norminette.norm_error import errors as errors_dict
 
 if TYPE_CHECKING:
+    from norminette.lexer import Token
     from norminette.file import File
+
+ErrorLevel = Literal["Error", "Notice"]
 
 
 @dataclass
@@ -27,6 +31,15 @@ class Highlight:
     column: int
     length: Optional[int] = field(default=None)
     hint: Optional[str] = field(default=None)
+
+    @classmethod
+    def from_token(
+        cls,
+        token: Token,
+        *,
+        hint: Optional[str] = None,
+    ) -> Highlight:
+        return cls(token.lineno, token.column, token.unsafe_length, hint)
 
     def __lt__(self, other: Any) -> bool:
         assert isinstance(other, Highlight)
@@ -41,7 +54,7 @@ class Highlight:
 class Error:
     name: str
     text: str
-    level: Literal["Error", "Notice"] = field(default="Error")
+    level: ErrorLevel = field(default="Error")
     highlights: List[Highlight] = field(default_factory=list)
 
     @classmethod
@@ -101,7 +114,7 @@ class Errors:
         ...
 
     @overload
-    def add(self, name: str, *, level: Literal["Error", "Notice"] = "Error", highlights: List[Highlight] = ...) -> None:
+    def add(self, name: str, *, level: ErrorLevel = "Error", highlights: List[Highlight] = ...) -> None:
         """Builds an `Error` instance from a name in `errors_dict` and adds it to the errors.
 
         ```python
@@ -119,7 +132,7 @@ class Errors:
         name: str,
         text: str,
         *,
-        level: Literal["Error", "Notice"] = "Error",
+        level: ErrorLevel = "Error",
         highlights: List[Highlight] = ...,
     ) -> None:
         """Builds an `Error` instance and adds it to the errors.
@@ -148,37 +161,47 @@ class Errors:
     def status(self) -> Literal["OK", "Error"]:
         return "OK" if all(it.level == "Notice" for it in self._inner) else "Error"
 
-    def append(self, value: Union[NormError, NormWarning]) -> None:
-        # TODO Remove NormError and NormWarning since it does not provide `length` data
-        assert isinstance(value, (NormError, NormWarning))
-        level = "Error" if isinstance(value, NormError) else "Notice"
-        error = Error(value.errno, value.error_msg, level, highlights=[
-            Highlight(value.line, value.col, None),
-        ])
-        self._inner.append(error)
+    def append(self, *args, **kwargs):
+        """Deprecated alias for `.add(...)`, kept for backward compatibility.
+
+        Use `.add(...)` instead.
+        """
+        return self.add(*args, **kwargs)
 
 
 class _formatter:
     name: str
 
-    def __init__(self, files: Union[File, Sequence[File]]) -> None:
+    def __init__(self, files: Union[File, Sequence[File]], **options) -> None:
         if not isinstance(files, Sequence):
             files = [files]
         self.files = files
+        self.options = options
 
     def __init_subclass__(cls) -> None:
         cls.name = cls.__name__.rstrip("ErrorsFormatter").lower()
 
 
 class HumanizedErrorsFormatter(_formatter):
+    @property
+    def use_colors(self) -> bool:
+        return self.options.get("use_colors", True)
+
+    def _colorize_error_text(self, error: Error) -> str:
+        color = error_color(error.name)
+        if not self.use_colors or not color:
+            return error.text
+        return f"\x1b[{color}m{error.text}\x1b[0m"
+
     def __str__(self) -> str:
         output = ''
         for file in self.files:
             output += f"{file.basename}: {file.errors.status}!"
             for error in file.errors:
                 highlight = error.highlights[0]
+                error_text = self._colorize_error_text(error)
                 output += f"\n{error.level}: {error.name:<20} "
-                output += f"(line: {highlight.lineno:>3}, col: {highlight.column:>3}):\t{error.text}"
+                output += f"(line: {highlight.lineno:>3}, col: {highlight.column:>3}):\t{error_text}"
             output += '\n'
         return output
 

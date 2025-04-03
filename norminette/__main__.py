@@ -74,6 +74,7 @@ def main():
         help="formatting style for errors",
         default="humanized",
     )
+    parser.add_argument("--no-colors", action="store_true", help="Disable colors in output")
     parser.add_argument("-R", nargs=1, help="compatibility for norminette 2")
     args = parser.parse_args()
     registry = Registry()
@@ -135,7 +136,7 @@ def main():
             sys.exit(1)
         except KeyboardInterrupt:
             sys.exit(1)
-    errors = format(files)
+    errors = format(files, use_colors=not args.no_colors)
     print(errors, end='')
     sys.exit(1 if len(file.errors) else 0)
 

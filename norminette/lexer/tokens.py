@@ -13,6 +13,20 @@ class Token:
         return len(self.value or '')
 
     @property
+    def unsafe_length(self) -> Optional[int]:
+        if self.value is None:
+            return None
+        return self.length
+
+    @property
+    def lineno(self) -> int:
+        return self.pos[0]
+
+    @property
+    def column(self) -> int:
+        return self.pos[1]
+
+    @property
     def line_column(self):
         return self.pos[1]
 
