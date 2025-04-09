@@ -1,0 +1,27 @@
+[36mtest_comment_line_len.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 5":
+		<MULT_COMMENT=/**
+ *
+ *
+ * THIS IS A BIG COMMENTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+ * THIS IS A BIG COMMENTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+ */> <NEWLINE>
+[36mtest_comment_line_len.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 7":
+		<NEWLINE>
+[36mtest_comment_line_len.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 8":
+		<INT> <SPACE> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> 
+[36mtest_comment_line_len.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 8":
+		<LBRACE> <NEWLINE>
+[36mtest_comment_line_len.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 9":
+		<SPACE> <SPACE> <SPACE> <SPACE> <SPACE> <SPACE> <SPACE> <SPACE> <RETURN> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_comment_line_len.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 10":
+		<RBRACE> <NEWLINE>
+test_comment_line_len.c: Error!
+Error: LINE_TOO_LONG        (line:   4, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:   5, col:   1):	line too long
+Error: INVALID_HEADER       (line:   7, col:   1):	Missing or invalid 42 header
+Error: SPACE_BEFORE_FUNC    (line:   8, col:   4):	space before function name
+Error: BRACE_NEWLINE        (line:   8, col:  15):	Expected newline before brace
+Error: TOO_FEW_TAB          (line:   9, col:   1):	Missing tabs for indent level
+Error: SPACE_AFTER_KW       (line:   9, col:   9):	Missing space after keyword
+Error: SPACE_REPLACE_TAB    (line:   9, col:   9):	Found space when expecting tab
+Error: SPC_BFR_PAR          (line:   9, col:  15):	Missing space before parenthesis (brace/bracket)

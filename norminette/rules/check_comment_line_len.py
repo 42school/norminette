@@ -2,9 +2,7 @@ from norminette.rules import Rule, Check
 
 
 class CheckCommentLineLen(Rule, Check):
-    depends_on = (
-        "IsComment",
-    )
+    depends_on = ("IsComment",)
 
     def run(self, context):
         """
@@ -18,12 +16,13 @@ class CheckCommentLineLen(Rule, Check):
             return
         index = token.pos[1]
         if token.type == "MULT_COMMENT":
-            lines = token.value.split('\n')
+            lines = token.value.split("\n")
             # We need to add a padding to the first line because the comment
             # can be at the end of a line.
-            lines[0] = ' ' * index + lines[0]
+            lines[0] = " " * index + lines[0]
             for lineno, line in enumerate(lines, start=token.pos[0]):
                 if len(line) > 81:
-                    context.new_error("LINE_TOO_LONG", (lineno, 1))
+                    token.pos = (lineno, 1)
+                    context.new_error("LINE_TOO_LONG", token)
         elif index + len(token.value) > 81:  # token.type == "COMMENT"
             context.new_error("LINE_TOO_LONG", token)
