@@ -2,14 +2,13 @@
 
 ## Install
 
-Requires python3.8+ (3.8, 3.9, 3.10, 3.11)
+Norminette requires Python >=3.10.
 
 ### Directly inside your global commands
 
 Install using pip.
 ```shell
-python3 -m pip install --upgrade pip setuptools
-python3 -m pip install norminette
+python3 -m pip install -U norminette
 ```
 
 Install using pipx.

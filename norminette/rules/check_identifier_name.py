@@ -18,7 +18,7 @@ class CheckIdentifierName(Rule, Check):
             sc = context.scope
             if type(sc) is not GlobalScope and type(sc) is not UserDefinedType:
                 context.new_error("WRONG_SCOPE_FCT", context.peek_token(0))
-            while type(sc) != GlobalScope:
+            while type(sc) is not GlobalScope:
                 sc = sc.outer()
             for c in sc.fnames[-1]:
                 if c not in legal_characters:

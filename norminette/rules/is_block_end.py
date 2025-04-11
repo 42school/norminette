@@ -27,7 +27,7 @@ class IsBlockEnd(Rule, Primary, priority=54):
         i = context.skip_ws(0)
         if context.check_token(i, "RBRACE") is False:
             return False, 0
-        if type(context.scope) != ControlStructure:
+        if type(context.scope) is not ControlStructure:
             context.sub = context.scope.outer()
         else:
             context.scope.multiline = False

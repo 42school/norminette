@@ -6,25 +6,40 @@ authors = ["42 <pedago@42.fr>"]
 license = "MIT Licence"
 readme = "README.md"
 repository = "https://github.com/42School/norminette"
-keywords = ['42', 'norminette']
+keywords = ["42", "norminette"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+skipsdist = true
+envlist = py310, py311, py312, py313
+
+[testenv]
+allowlist_externals = poetry
+commands =
+    poetry install -v
+    poetry run pytest
+"""
+
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = ">=3.10"
 argparse = "^1.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.2"
 tox = "^4.6.0"
-flake8 = "^6.0.0"
+flake8 = ">=7,<8"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

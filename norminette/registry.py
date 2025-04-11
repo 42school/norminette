@@ -8,8 +8,6 @@ rules = Rules()
 
 
 class Registry:
-    global has_err
-
     def __init__(self):
         self.dependencies = collections.defaultdict(list)
         for rule in rules.checks:

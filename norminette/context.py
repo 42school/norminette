@@ -290,7 +290,7 @@ class Context:
         print(
             f"{colors(self.file.basename, 'cyan')} - {colors(rule, 'green')} \
 In \"{self.scope.name}\" from \
-\"{self.scope.parent.name if self.scope.parent is not  None else None}\" line {self.tokens[0].pos[0]}\":"
+\"{self.scope.parent.name if self.scope.parent is not None else None}\" line {self.tokens[0].pos[0]}\":"
         )
         i = 0
         for t in self.tokens[:pos]:

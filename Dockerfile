@@ -1,16 +1,13 @@
-FROM python:3.12-slim
+FROM python:3.13-alpine
 
 WORKDIR /usr/src/norminette
 
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml poetry.lock README.md ./
+COPY norminette/ ./norminette/
 
-RUN pip3 install setuptools poetry \
-    && poetry config virtualenvs.create false \
-    && poetry install --no-dev
-
-COPY . .
-
-RUN python3 setup.py install
+RUN pip3 install --no-cache-dir 'poetry>=2,<3' --root-user-action=ignore \
+    && poetry build \
+    && pip3 install dist/*.whl --root-user-action=ignore
 
 WORKDIR /code
 
