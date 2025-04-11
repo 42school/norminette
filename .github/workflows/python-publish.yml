@@ -20,8 +20,12 @@ jobs:
         python-version: '3.9'
     - name: Install dependencies
       run: |
+        sudo apt-get update && sudo apt-get install -y gettext
         python -m pip install --upgrade pip
         pip install setuptools wheel twine poetry
+    - name: Compile .mo files
+      run: |
+        python norminette/i18n.py
     - name: Build and publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}

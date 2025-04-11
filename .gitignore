@@ -22,3 +22,5 @@ dist/
 *_cache
 .venv
 .tox
+*.pot
+**/*.mo

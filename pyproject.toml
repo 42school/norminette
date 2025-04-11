@@ -16,6 +16,9 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
 ]
+include = [
+    "norminette/locale/**/LC_MESSAGES/*.mo"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
