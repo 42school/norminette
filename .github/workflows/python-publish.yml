@@ -28,9 +28,3 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
         poetry publish --build --username $TWINE_USERNAME --password $TWINE_PASSWORD
-    - name: Build and publish to test_pypi
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_TEST_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_TEST_PASSWORD }}
-      run: |
-        poetry publish --build --repository testpypi --username $TWINE_USERNAME --password $TWINE_PASSWORD

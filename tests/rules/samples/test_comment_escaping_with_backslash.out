@@ -21,17 +21,17 @@
 [36mtest_comment_escaping_with_backslash.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 11":
 		<MULT_COMMENT=/**/> 
 test_comment_escaping_with_backslash.c: Error!
-Error: INVALID_HEADER       (line:   3, col:   1):	[97mMissing or invalid 42 header[0m
-Error: SPACE_BEFORE_FUNC    (line:   6, col:   4):	[94mspace before function name[0m
-Error: NO_ARGS_VOID         (line:   6, col:  10):	[0mEmpty function argument requires void[0m
-Error: BRACE_NEWLINE        (line:   6, col:  12):	[93mExpected newline before brace[0m
-Error: TOO_FEW_TAB          (line:   7, col:   1):	[0mMissing tabs for indent level[0m
-Error: FORBIDDEN_CS         (line:   7, col:   3):	[0mForbidden control structure[0m
-Error: SPACE_REPLACE_TAB    (line:   7, col:   3):	[0mFound space when expecting tab[0m
-Error: SPC_AFTER_OPERATOR   (line:   7, col:  13):	[94mmissing space after operator[0m
-Error: SPC_BFR_OPERATOR     (line:   7, col:  13):	[94mmissing space before operator[0m
-Error: SPC_AFTER_OPERATOR   (line:   7, col:  18):	[94mmissing space after operator[0m
-Error: SPC_BFR_OPERATOR     (line:   7, col:  18):	[94mmissing space before operator[0m
-Error: SPC_AFTER_OPERATOR   (line:   7, col:  20):	[94mmissing space after operator[0m
-Error: TOO_FEW_TAB          (line:   8, col:   1):	[0mMissing tabs for indent level[0m
-Error: SPACE_REPLACE_TAB    (line:   8, col:   5):	[0mFound space when expecting tab[0m
+Error: INVALID_HEADER       (line:   3, col:   1):	Missing or invalid 42 header
+Error: SPACE_BEFORE_FUNC    (line:   6, col:   4):	Found space when expecting tab before function name
+Error: NO_ARGS_VOID         (line:   6, col:  10):	Empty function argument requires void
+Error: BRACE_NEWLINE        (line:   6, col:  12):	Expected newline before brace
+Error: TOO_FEW_TAB          (line:   7, col:   1):	Missing tabs for indent level
+Error: FORBIDDEN_CS         (line:   7, col:   3):	Forbidden control structure
+Error: SPACE_REPLACE_TAB    (line:   7, col:   3):	Found space when expecting tab
+Error: SPC_AFTER_OPERATOR   (line:   7, col:  13):	missing space after operator
+Error: SPC_BFR_OPERATOR     (line:   7, col:  13):	missing space before operator
+Error: SPC_AFTER_OPERATOR   (line:   7, col:  18):	missing space after operator
+Error: SPC_BFR_OPERATOR     (line:   7, col:  18):	missing space before operator
+Error: SPC_AFTER_OPERATOR   (line:   7, col:  20):	missing space after operator
+Error: TOO_FEW_TAB          (line:   8, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:   8, col:   5):	Found space when expecting tab

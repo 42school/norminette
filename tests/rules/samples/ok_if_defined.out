@@ -21,5 +21,5 @@
 [36mok_if_defined.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 11":
 		<VOID> <TAB> <IDENTIFIER=defined> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 ok_if_defined.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: PREPROC_CONSTANT     (line:   9, col:  19):	[0mPreprocessor statement must only contain constant defines[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: PREPROC_CONSTANT     (line:   9, col:  19):	Preprocessor statement must only contain constant defines

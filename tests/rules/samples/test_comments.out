@@ -47,32 +47,32 @@
 [36mtest_comments.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 21":
 		<RBRACE> <NEWLINE>
 test_comments.c: Error!
-Error: FORBIDDEN_STRUCT     (line:   1, col:   1):	[0mStruct declaration are not allowed in .c files[0m
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: BRACE_NEWLINE        (line:   1, col:   8):	[93mExpected newline before brace[0m
-Error: FORBIDDEN_TYPEDEF    (line:   6, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: COMMENT_ON_INSTR     (line:   6, col:   9):	[95mComment must be on its own line or at end of a line[0m
-Error: SPACE_REPLACE_TAB    (line:   6, col:  25):	[0mFound space when expecting tab[0m
-Error: USER_DEFINED_TYPEDEF (line:   6, col:  26):	[0mUser defined typedef must start with t_[0m
-Error: FORBIDDEN_ENUM       (line:   8, col:   1):	[0mEnum declaration are not allowed in .c files[0m
-Error: ENUM_TYPE_NAMING     (line:   8, col:   6):	[0mEnum name must start with e_[0m
-Error: BRACE_NEWLINE        (line:   8, col:  11):	[93mExpected newline before brace[0m
-Error: SPACE_EMPTY_LINE     (line:   9, col:   5):	[0mSpace on empty line[0m
-Error: TOO_FEW_TAB          (line:  10, col:   1):	[0mMissing tabs for indent level[0m
-Error: SPACE_REPLACE_TAB    (line:  10, col:   5):	[0mFound space when expecting tab[0m
-Error: CONSECUTIVE_SPC      (line:  10, col:  11):	[94mTwo or more consecutives spaces[0m
-Error: SPACE_REPLACE_TAB    (line:  11, col:   5):	[0mFound space when expecting tab[0m
-Error: TOO_FEW_TAB          (line:  11, col:  16):	[0mMissing tabs for indent level[0m
-Error: SPACE_BEFORE_FUNC    (line:  14, col:   5):	[94mspace before function name[0m
-Error: COMMENT_ON_INSTR     (line:  14, col:  12):	[95mComment must be on its own line or at end of a line[0m
-Error: MISSING_IDENTIFIER   (line:  14, col:  25):	[0mmissing type qualifier or identifier in function arguments[0m
-Error: SPACE_EMPTY_LINE     (line:  16, col:   4):	[0mSpace on empty line[0m
-Error: WRONG_SCOPE_COMMENT  (line:  16, col:   4):	[95mComment is invalid in this scope[0m
-Error: TOO_FEW_TAB          (line:  17, col:   1):	[0mMissing tabs for indent level[0m
-Error: SPACE_EMPTY_LINE     (line:  17, col:   4):	[0mSpace on empty line[0m
-Error: SPACE_EMPTY_LINE     (line:  18, col:   7):	[0mSpace on empty line[0m
-Error: WRONG_SCOPE_COMMENT  (line:  18, col:   7):	[95mComment is invalid in this scope[0m
-Error: SPACE_EMPTY_LINE     (line:  19, col:   7):	[0mSpace on empty line[0m
-Error: WRONG_SCOPE_COMMENT  (line:  19, col:   7):	[95mComment is invalid in this scope[0m
-Error: TOO_FEW_TAB          (line:  20, col:   1):	[0mMissing tabs for indent level[0m
-Error: SPACE_EMPTY_LINE     (line:  20, col:   4):	[0mSpace on empty line[0m
+Error: FORBIDDEN_STRUCT     (line:   1, col:   1):	Struct declaration are not allowed in .c files
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: BRACE_NEWLINE        (line:   1, col:   8):	Expected newline before brace
+Error: FORBIDDEN_TYPEDEF    (line:   6, col:   1):	Typedef declaration are not allowed in .c files
+Error: COMMENT_ON_INSTR     (line:   6, col:   9):	Comment must be on its own line or at end of a line
+Error: SPACE_REPLACE_TAB    (line:   6, col:  25):	Found space when expecting tab
+Error: USER_DEFINED_TYPEDEF (line:   6, col:  26):	User defined typedef must start with t_
+Error: FORBIDDEN_ENUM       (line:   8, col:   1):	Enum declaration are not allowed in .c files
+Error: ENUM_TYPE_NAMING     (line:   8, col:   6):	Enum name must start with e_
+Error: BRACE_NEWLINE        (line:   8, col:  11):	Expected newline before brace
+Error: SPACE_EMPTY_LINE     (line:   9, col:   5):	Space on empty line
+Error: TOO_FEW_TAB          (line:  10, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  10, col:   5):	Found space when expecting tab
+Error: CONSECUTIVE_SPC      (line:  10, col:  11):	Two or more consecutives spaces
+Error: SPACE_REPLACE_TAB    (line:  11, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  11, col:  16):	Missing tabs for indent level
+Error: SPACE_BEFORE_FUNC    (line:  14, col:   5):	Found space when expecting tab before function name
+Error: COMMENT_ON_INSTR     (line:  14, col:  12):	Comment must be on its own line or at end of a line
+Error: MISSING_IDENTIFIER   (line:  14, col:  25):	missing type qualifier or identifier in function arguments
+Error: SPACE_EMPTY_LINE     (line:  16, col:   4):	Space on empty line
+Error: WRONG_SCOPE_COMMENT  (line:  16, col:   4):	Comment is invalid in this scope
+Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  17, col:   4):	Space on empty line
+Error: SPACE_EMPTY_LINE     (line:  18, col:   7):	Space on empty line
+Error: WRONG_SCOPE_COMMENT  (line:  18, col:   7):	Comment is invalid in this scope
+Error: SPACE_EMPTY_LINE     (line:  19, col:   7):	Space on empty line
+Error: WRONG_SCOPE_COMMENT  (line:  19, col:   7):	Comment is invalid in this scope
+Error: TOO_FEW_TAB          (line:  20, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  20, col:   4):	Space on empty line

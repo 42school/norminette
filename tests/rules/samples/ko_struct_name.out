@@ -39,16 +39,16 @@
 [36mko_struct_name.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 20":
 		<RBRACE> <NEWLINE>
 ko_struct_name.c: Error!
-Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
-Error: USER_DEFINED_TYPEDEF (line:   1, col:  25):	[0mUser defined typedef must start with t_[0m
+Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	Typedef declaration are not allowed in .c files
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: USER_DEFINED_TYPEDEF (line:   1, col:  25):	User defined typedef must start with t_
 Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: GLOBAL_VAR_NAMING    (line:   2, col:  25):	[0mGlobal variable must start with g_[0m
+Error: GLOBAL_VAR_NAMING    (line:   2, col:  25):	Global variable must start with g_
 Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Error: GLOBAL_VAR_NAMING    (line:   3, col:  25):	[0mGlobal variable must start with g_[0m
-Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: BRACE_NEWLINE        (line:   5, col:  21):	[93mExpected newline before brace[0m
-Error: USER_DEFINED_TYPEDEF (line:   8, col:  25):	[0mUser defined typedef must start with t_[0m
-Error: USER_DEFINED_TYPEDEF (line:  10, col:   5):	[0mUser defined typedef must start with t_[0m
-Error: FORBIDDEN_TYPEDEF    (line:  12, col:   1):	[0mTypedef declaration are not allowed in .c files[0m
-Error: NO_TAB_BF_TYPEDEF    (line:  15, col:   2):	[0mMissing whitespace before typedef name[0m
+Error: GLOBAL_VAR_NAMING    (line:   3, col:  25):	Global variable must start with g_
+Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	Typedef declaration are not allowed in .c files
+Error: BRACE_NEWLINE        (line:   5, col:  21):	Expected newline before brace
+Error: USER_DEFINED_TYPEDEF (line:   8, col:  25):	User defined typedef must start with t_
+Error: USER_DEFINED_TYPEDEF (line:  10, col:   5):	User defined typedef must start with t_
+Error: FORBIDDEN_TYPEDEF    (line:  12, col:   1):	Typedef declaration are not allowed in .c files
+Error: NO_TAB_BF_TYPEDEF    (line:  15, col:   2):	Missing whitespace before typedef name

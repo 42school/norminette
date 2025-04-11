@@ -188,4 +188,4 @@
 [36mtest_file_1012.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 99":
 		<RBRACE> <NEWLINE>
 test_file_1012.c: Error!
-Error: SPACE_AFTER_KW       (line:  71, col:  15):	[0mMissing space after keyword[0m
+Error: SPACE_AFTER_KW       (line:  71, col:  15):	Missing space after keyword

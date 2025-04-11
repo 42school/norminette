@@ -5,4 +5,4 @@
 [36mok_function_pointer.c[0m - [32mIsAssignation[0m In "GlobalScope" from "None" line 3":
 		<IDENTIFIER=result> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=fpcomparer> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=a> <COMMA> <SPACE> <IDENTIFIER=a> <SPACE> <MULT> <SPACE> <MULT> <IDENTIFIER=b> <RPARENTHESIS> <SEMI_COLON> 
 ok_function_pointer.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	[97mMissing or invalid 42 header[0m
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

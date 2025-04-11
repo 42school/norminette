@@ -15,7 +15,7 @@ from norminette.tools.colors import colors
 
 import subprocess
 
-version_text = "norminette" + version("norminette")
+version_text = f"norminette {version('norminette')}"
 version_text += f", Python {platform.python_version()}"
 version_text += f", {platform.platform()}"
 
@@ -74,6 +74,9 @@ def main():
         help="formatting style for errors",
         default="humanized",
     )
+    parser.add_argument(
+        "--no-colors", action="store_true", help="Disable colors in output"
+    )
     parser.add_argument("-R", nargs=1, help="compatibility for norminette 2")
     args = parser.parse_args()
     registry = Registry()
@@ -108,7 +111,9 @@ def main():
         tmp_targets = []
         for target in files:
             command = ["git", "check-ignore", "-q", target.path]
-            exit_code = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).returncode
+            exit_code = subprocess.run(
+                command, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+            ).returncode
             """
             see: $ man git-check-ignore
             EXIT STATUS
@@ -121,7 +126,9 @@ def main():
             elif exit_code == 1:
                 tmp_targets.append(target)
             elif exit_code == 128:
-                print(f'Error: something wrong with --use-gitignore option {target.path!r}')
+                print(
+                    f"Error: something wrong with --use-gitignore option {target.path!r}"
+                )
                 sys.exit(0)
         files = tmp_targets
     for file in files:
@@ -135,8 +142,8 @@ def main():
             sys.exit(1)
         except KeyboardInterrupt:
             sys.exit(1)
-    errors = format(files)
-    print(errors, end='')
+    errors = format(files, use_colors=not args.no_colors)
+    print(errors, end="")
     sys.exit(1 if len(file.errors) else 0)
 
 
