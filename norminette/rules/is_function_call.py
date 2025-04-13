@@ -128,7 +128,9 @@ class IsFunctionCall(Rule, Primary, priority=80):
                     expected = "SEMI_COLON"
                 else:
                     expected = SEPARATORS
-                while not context.check_token(i, expected):
+                while (not context.check_token(i, expected)
+                       and context.peek_token(i) is not None
+                       ):
                     i += 1
                 i += 1
                 i = context.eol(i)
