@@ -1,0 +1,8 @@
+[36mcheck_preprocessor_protection_5.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IF> <SPACE> <NOT> <IDENTIFIER=defined> <SPACE> <IDENTIFIER=CHECK_PREPROCESSOR_PROTECTION_5_H> <NEWLINE>
+[36mcheck_preprocessor_protection_5.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 2":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=CHECK_PREPROCESSOR_PROTECTION_5_H> <NEWLINE>
+[36mcheck_preprocessor_protection_5.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 3":
+		<HASH> <IDENTIFIER=endif> <NEWLINE>
+check_preprocessor_protection_5.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

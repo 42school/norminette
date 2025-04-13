@@ -15,21 +15,42 @@ class CheckPreprocessorProtection(Rule, Check):
         #ifndef __FILENAME_H__
         # define __FILENAME_H__
         #endif
+        OR
+        #!defined __FILENAME_H__
+        # define __FILENAME_H__
+        #endif
         ```
         Any header instruction must be within the header protection
         """
         if context.file.type != ".h":
             return False, 0
+        using_defined = False
         i = context.skip_ws(0)
         hash = context.peek_token(i)
         i += 1  # Skip the HASH
         i = context.skip_ws(i)
-        if not context.check_token(i, "IDENTIFIER"):
+        if (context.check_token(i, "IF")):
+            using_defined = True
+            i = context.skip_ws(i + 1)
+        if not (not using_defined and context.check_token(i, "IDENTIFIER")
+                or using_defined and context.check_token(i, "NOT")):
             return False, 0
         # TODO: Add to check if macro definition is bellow #ifndef
         t = context.peek_token(i)
-        if not t or t.type != "IDENTIFIER" or t.value.upper() not in ("IFNDEF", "ENDIF"):
+        if not t or (
+                not using_defined
+                and (
+                    t.type != "IDENTIFIER"
+                    or t.value.upper() not in ("IFNDEF", "ENDIF"))
+                ):
             return False, 0
+        elif using_defined:
+            if t.type != "NOT":
+                return False, 0
+            i = context.skip_ws(i + 1)
+            t = context.peek_token(i)
+            if not t or t.type != "IDENTIFIER" or t.value != "defined":
+                return False, 0
         i += 1
         guard = context.file.basename.upper().replace(".", "_")
         if t.value.upper() == "ENDIF":
