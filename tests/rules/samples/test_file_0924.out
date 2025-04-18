@@ -24,7 +24,7 @@
 		<NEWLINE>
 test_file_0924.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: SPACE_BEFORE_FUNC    (line:   1, col:   5):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:   1, col:   5):	Found space when expecting tab before function name
 Error: BRACE_NEWLINE        (line:   1, col:  47):	Expected newline before brace
 Error: TOO_MANY_TAB         (line:   5, col:   1):	Extra tabs for indent level
 Error: BRACE_SHOULD_EOL     (line:   5, col:  13):	Expected newline after brace

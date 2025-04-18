@@ -22,7 +22,7 @@
 		<MULT_COMMENT=/**/> 
 test_comment_escaping_with_backslash.c: Error!
 Error: INVALID_HEADER       (line:   3, col:   1):	Missing or invalid 42 header
-Error: SPACE_BEFORE_FUNC    (line:   6, col:   4):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:   6, col:   4):	Found space when expecting tab before function name
 Error: NO_ARGS_VOID         (line:   6, col:  10):	Empty function argument requires void
 Error: BRACE_NEWLINE        (line:   6, col:  12):	Expected newline before brace
 Error: TOO_FEW_TAB          (line:   7, col:   1):	Missing tabs for indent level

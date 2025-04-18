@@ -148,7 +148,7 @@ Error: TOO_MANY_TAB         (line:   4, col:   1):	Extra tabs for indent level
 Error: EMPTY_LINE_FUNCTION  (line:   5, col:   1):	Empty line in function
 Error: SPACE_EMPTY_LINE     (line:   5, col:   1):	Space on empty line
 Error: TOO_FEW_TAB          (line:   6, col:   1):	Missing tabs for indent level
-Error: SPACE_BEFORE_FUNC    (line:  10, col:  10):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  10, col:  10):	Found space when expecting tab before function name
 Error: NO_ARGS_VOID         (line:  10, col:  13):	Empty function argument requires void
 Error: BRACE_NEWLINE        (line:  10, col:  15):	Expected newline before brace
 Error: BRACE_SHOULD_EOL     (line:  10, col:  16):	Expected newline after brace
@@ -157,13 +157,13 @@ Error: TOO_FEW_TAB          (line:  10, col:  17):	Missing tabs for indent level
 Error: TOO_MANY_INSTR       (line:  10, col:  17):	Too many instructions on a single line
 Error: RETURN_PARENTHESIS   (line:  10, col:  24):	Return value must be in parenthesis
 Error: TOO_MANY_INSTR       (line:  10, col:  27):	Too many instructions on a single line
-Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	Found space when expecting tab before function name
 Error: RETURN_PARENTHESIS   (line:  14, col:  12):	Return value must be in parenthesis
 Error: INCLUDE_START_FILE   (line:  17, col:   1):	Include must be at the start of file
 Error: NL_AFTER_PREPROC     (line:  18, col:   1):	Preprocessor statement must be followed by a newline
 Error: NO_ARGS_VOID         (line:  18, col:  11):	Empty function argument requires void
 Error: RETURN_PARENTHESIS   (line:  20, col:  12):	Return value must be in parenthesis
-Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	space before function name
+Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	Found space when expecting tab before function name
 Error: MISSING_IDENTIFIER   (line:  23, col:  16):	missing type qualifier or identifier in function arguments
 Error: BRACE_NEWLINE        (line:  23, col:  22):	Expected newline before brace
 Error: RETURN_PARENTHESIS   (line:  24, col:  12):	Return value must be in parenthesis
