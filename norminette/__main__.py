@@ -1,19 +1,18 @@
+import argparse
 import glob
-import sys
 import pathlib
 import platform
+import subprocess
+import sys
 from importlib.metadata import version
 
-import argparse
+from norminette.context import Context
 from norminette.errors import formatters
+from norminette.exceptions import CParsingError
 from norminette.file import File
 from norminette.lexer import Lexer
-from norminette.exceptions import CParsingError
 from norminette.registry import Registry
-from norminette.context import Context
 from norminette.tools.colors import colors
-
-import subprocess
 
 version_text = f"norminette {version('norminette')}"
 version_text += f", Python {platform.python_version()}"
@@ -144,7 +143,8 @@ def main():
             sys.exit(1)
     errors = format(files, use_colors=not args.no_colors)
     print(errors, end="")
-    sys.exit(1 if len(file.errors) else 0)
+    has_errors = any(file.errors for file in files)
+    sys.exit(1 if has_errors else 0)
 
 
 if __name__ == "__main__":
