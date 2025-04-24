@@ -75,7 +75,10 @@ def main():
         default="humanized",
     )
     parser.add_argument(
-        "--no-colors", action="store_true", help="Disable colors in output"
+        "--color",
+        choices=["auto", "always", "never"],
+        help="Colorize output",
+        default="auto",
     )
     parser.add_argument("-R", nargs=1, help="compatibility for norminette 2")
     args = parser.parse_args()
@@ -142,7 +145,11 @@ def main():
             sys.exit(1)
         except KeyboardInterrupt:
             sys.exit(1)
-    errors = format(files, use_colors=not args.no_colors)
+    if args.color == "auto":
+        use_colors = sys.stdout.isatty()
+    else:
+        use_colors = args.color == "always"
+    errors = format(files, use_colors=use_colors)
     print(errors, end="")
     sys.exit(1 if len(file.errors) else 0)
 
