@@ -15,6 +15,7 @@ __all__ = (
 LOCALES = (
     "en_US",
     "pt_BR",
+    "ja_JP",
 )
 
 LOCALE_DIR = Path(__file__).parent / "locale"
