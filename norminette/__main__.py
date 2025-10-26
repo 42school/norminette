@@ -41,6 +41,12 @@ def main():
         default=False,
     )
     parser.add_argument(
+        "-E",
+        "--only-errors",
+        action="store_true",
+        help="Display only errors instead of every file result",
+    )
+    parser.add_argument(
         "-v",
         "--version",
         action="version",
@@ -141,6 +147,8 @@ def main():
             sys.exit(1)
         except KeyboardInterrupt:
             sys.exit(1)
+    if args.only_errors:
+        files = list(filter(lambda file: file.errors.status != "OK", files))
     errors = format(files, use_colors=not args.no_colors)
     print(errors, end="")
     sys.exit(1 if any(len(it.errors) for it in files) else 0)
