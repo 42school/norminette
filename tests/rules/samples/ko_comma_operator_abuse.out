@@ -1,0 +1,63 @@
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 1":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 2":
+		<MULT_COMMENT=/*                                                                            */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 3":
+		<MULT_COMMENT=/*                                                        :::      ::::::::   */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 4":
+		<MULT_COMMENT=/*   ko_comma_operator_abuse.c                          :+:      :+:    :+:   */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 5":
+		<MULT_COMMENT=/*                                                    +:+ +:+         +:+     */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 6":
+		<MULT_COMMENT=/*   By: norminette <norminette@student.42.fr>      +#+  +:+       +#+        */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 7":
+		<MULT_COMMENT=/*                                                +#+#+#+#+#+   +#+           */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 8":
+		<MULT_COMMENT=/*   Created: 2025/12/08 00:00:00 by norminette        #+#    #+#             */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 9":
+		<MULT_COMMENT=/*   Updated: 2025/12/08 00:00:00 by norminette       ###   ########.fr       */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 10":
+		<MULT_COMMENT=/*                                                                            */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 11":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 12":
+		<NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 13":
+		<HASH> <IDENTIFIER=include> <SPACE> <LESS_THAN> <IDENTIFIER=stdlib> <DOT> <IDENTIFIER=h> <MORE_THAN> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 14":
+		<NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 15":
+		<VOID> <TAB> <IDENTIFIER=test_comma_abuse> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 16":
+		<LBRACE> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 17":
+		<TAB> <CHAR> <TAB> <MULT> <IDENTIFIER=a> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 18":
+		<TAB> <CHAR> <TAB> <MULT> <IDENTIFIER=b> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 19":
+		<TAB> <CHAR> <TAB> <MULT> <IDENTIFIER=c> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 20":
+		<NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsDeclaration[0m In "Function" from "GlobalScope" line 21":
+		<TAB> <LPARENTHESIS> <IDENTIFIER=free> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <COMMA> <SPACE> <IDENTIFIER=free> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <COMMA> <SPACE> <IDENTIFIER=free> <LPARENTHESIS> <IDENTIFIER=c> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 22":
+		<RBRACE> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 23":
+		<NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 24":
+		<INT> <TAB> <IDENTIFIER=test_return_abuse> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 25":
+		<LBRACE> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 26":
+		<TAB> <CHAR> <TAB> <MULT> <IDENTIFIER=a> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 27":
+		<TAB> <CHAR> <TAB> <MULT> <IDENTIFIER=b> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 28":
+		<NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 29":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=free> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <COMMA> <SPACE> <IDENTIFIER=free> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <COMMA> <SPACE> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mko_comma_operator_abuse.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 30":
+		<RBRACE> <NEWLINE>
+ko_comma_operator_abuse.c: Error!
+Error: COMMA_OP_ABUSE       (line:  21, col:   5):	Comma operator used to chain multiple function calls or assignments
+Error: COMMA_OP_ABUSE       (line:  29, col:  12):	Comma operator used to chain multiple function calls or assignments

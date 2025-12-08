@@ -1,0 +1,67 @@
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 1":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 2":
+		<MULT_COMMENT=/*                                                                            */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 3":
+		<MULT_COMMENT=/*                                                        :::      ::::::::   */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 4":
+		<MULT_COMMENT=/*   ok_comma_in_params.c                               :+:      :+:    :+:   */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 5":
+		<MULT_COMMENT=/*                                                    +:+ +:+         +:+     */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 6":
+		<MULT_COMMENT=/*   By: norminette <norminette@student.42.fr>      +#+  +:+       +#+        */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 7":
+		<MULT_COMMENT=/*                                                +#+#+#+#+#+   +#+           */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 8":
+		<MULT_COMMENT=/*   Created: 2025/12/08 00:00:00 by norminette        #+#    #+#             */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 9":
+		<MULT_COMMENT=/*   Updated: 2025/12/08 00:00:00 by norminette       ###   ########.fr       */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 10":
+		<MULT_COMMENT=/*                                                                            */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 11":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 12":
+		<NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 13":
+		<HASH> <IDENTIFIER=include> <SPACE> <LESS_THAN> <IDENTIFIER=stdio> <DOT> <IDENTIFIER=h> <MORE_THAN> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 14":
+		<NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 15":
+		<VOID> <TAB> <IDENTIFIER=test_proper_comma_use> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 16":
+		<LBRACE> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 17":
+		<TAB> <INT> <TAB> <IDENTIFIER=a> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 18":
+		<TAB> <INT> <TAB> <IDENTIFIER=b> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 19":
+		<TAB> <INT> <TAB> <IDENTIFIER=c> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 20":
+		<NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsFunctionCall[0m In "Function" from "GlobalScope" line 21":
+		<TAB> <IDENTIFIER=printf> <LPARENTHESIS> <STRING="%d %d %d"> <COMMA> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <IDENTIFIER=b> <COMMA> <SPACE> <IDENTIFIER=c> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 22":
+		<TAB> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 23":
+		<TAB> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <CONSTANT=2> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 24":
+		<TAB> <IDENTIFIER=c> <SPACE> <ASSIGN> <SPACE> <CONSTANT=3> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 25":
+		<RBRACE> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 26":
+		<NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 27":
+		<INT> <TAB> <IDENTIFIER=test_proper_return> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 28":
+		<LBRACE> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 29":
+		<TAB> <INT> <TAB> <IDENTIFIER=result> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 30":
+		<NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 31":
+		<TAB> <IDENTIFIER=result> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=calculate> <LPARENTHESIS> <CONSTANT=1> <COMMA> <SPACE> <CONSTANT=2> <COMMA> <SPACE> <CONSTANT=3> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 32":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=result> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mok_comma_in_params.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 33":
+		<RBRACE> <NEWLINE>
+ok_comma_in_params.c: OK!
