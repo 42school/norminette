@@ -1,4 +1,5 @@
 from norminette.rules import Rule, Check
+from norminette.errors import Error
 
 
 class CheckPreprocessorDefine(Rule, Check):
@@ -24,7 +25,9 @@ class CheckPreprocessorDefine(Rule, Check):
         i = context.skip_ws(i)
 
         if not context.peek_token(i).value.isupper():
-            context.new_error("MACRO_NAME_CAPITAL", context.peek_token(i))
+            error = Error.from_name("MACRO_NAME_CAPITAL")
+            error.add_highlight(context.peek_token(i))
+            context.errors.add(error)
         i += 1  # skip macro name
 
         if context.check_token(i, "LPARENTHESIS"):

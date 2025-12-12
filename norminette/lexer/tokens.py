@@ -1,6 +1,15 @@
 from typing import Optional, Tuple
 from dataclasses import dataclass, field
 
+SHOW_NAME_AND_VALUE_TOKENS = {
+    "CONSTANT",
+    "COMMENT",
+    "MULT_COMMENT",
+    "CHAR_CONST",
+    "STRING",
+    "IDENTIFIER",
+}
+
 
 @dataclass(eq=True, repr=True)
 class Token:
@@ -35,5 +44,6 @@ class Token:
         Token representation for debugging, using the format <TYPE=value>
         or simply <TYPE> when value is None
         """
-        r = f"<{self.type}={self.value}>" if self.value else f"<{self.type}>"
-        return r
+        if self.type in SHOW_NAME_AND_VALUE_TOKENS:
+            return f"<{self.type}={self.value}>"
+        return f"<{self.type}>"

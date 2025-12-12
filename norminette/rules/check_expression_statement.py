@@ -1,4 +1,5 @@
 from norminette.rules import Rule, Check
+from norminette.errors import Error
 
 kw = [
     # C reserved keywords #
@@ -72,7 +73,10 @@ class CheckExpressionStatement(Rule, Check):
                     context.check_token(tmp, "SEMI_COLON") is False
                     and context.check_token(tmp, "LPARENTHESIS") is False
                 ):
-                    context.new_error("RETURN_PARENTHESIS", context.peek_token(tmp))
+                    token = context.peek_token(tmp)
+                    error = Error.from_name("RETURN_PARENTHESIS")
+                    error.add_highlight(token)
+                    context.errors.add(error)
                     return False, 0
                 elif context.check_token(tmp, "SEMI_COLON") is False:
                     tmp = context.skip_nest(tmp) + 1

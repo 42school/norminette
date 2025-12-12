@@ -487,7 +487,7 @@ class Lexer:
             return
         start = self.line_pos()
         value = self.pop()
-        return Token(brackets[value], start)
+        return Token(brackets[value], start, value=value)
 
     parsers = (
         parse_float_literal,  # Need to be above:

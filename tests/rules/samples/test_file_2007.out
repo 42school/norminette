@@ -33,7 +33,7 @@
 test_file_2007.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: SPACE_REPLACE_TAB    (line:   3, col:   9):	Found space when expecting tab
-Error: LINE_TOO_LONG        (line:   7, col:  82):	line too long
-Error: LINE_TOO_LONG        (line:   8, col:  82):	line too long
-Error: LINE_TOO_LONG        (line:  10, col: 117):	line too long
-Error: LINE_TOO_LONG        (line:  11, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:   7, col:  81):	line too long
+Error: LINE_TOO_LONG        (line:   8, col:  81):	line too long
+Error: LINE_TOO_LONG        (line:  10, col:  81):	line too long
+Error: LINE_TOO_LONG        (line:  11, col:  81):	line too long

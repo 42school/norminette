@@ -39,8 +39,6 @@ class CheckEmptyLine(Rule, Check):
             context.new_error("NL_AFTER_PREPROC", context.peek_token(i))
         if context.history[-1] != "IsEmptyLine":
             return False, 0
-        if context.check_token(i, "NEWLINE") is False:
-            context.new_error("SPACE_EMPTY_LINE", context.peek_token(i))
         if context.history[-2] == "IsEmptyLine":
             context.new_error("CONSECUTIVE_NEWLINES", context.peek_token(i))
         if (

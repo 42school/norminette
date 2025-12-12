@@ -151,6 +151,7 @@ Error: TOO_MANY_WS          (line:   7, col:   1):	Extra whitespaces for indent 
 Error: TAB_REPLACE_SPACE    (line:   7, col:   2):	Found tab when expecting space
 Error: TOO_MANY_WS          (line:   9, col:   1):	Extra whitespaces for indent level
 Error: MACRO_NAME_CAPITAL   (line:   9, col:  10):	Macro name must be capitalized
+Error: SPC_BEFORE_NL        (line:  26, col:   2):	Space before newline
 Error: PREPROC_START_LINE   (line:  29, col:  17):	Preprocessor statement not at the beginning of the line
 Error: PREPROC_START_LINE   (line:  30, col:   5):	Preprocessor statement not at the beginning of the line
 Error: PREPROC_START_LINE   (line:  31, col:   5):	Preprocessor statement not at the beginning of the line
@@ -164,6 +165,7 @@ Error: TAB_REPLACE_SPACE    (line:  37, col:  11):	Found tab when expecting spac
 Error: CONSECUTIVE_WS       (line:  38, col:   9):	Two or more consecutives white spaces
 Error: TAB_REPLACE_SPACE    (line:  38, col:  10):	Found tab when expecting space
 Error: PREPROC_NO_SPACE     (line:  39, col:   9):	Missing space after preprocessor directive
+Error: SPC_BEFORE_NL        (line:  45, col:  34):	Space before newline
 Error: TAB_REPLACE_SPACE    (line:  50, col:   8):	Found tab when expecting space
 Error: PREPOC_ONLY_GLOBAL   (line:  61, col:   1):	Preprocessor statements are only allowed in the global scope
 Error: NL_AFTER_PREPROC     (line:  62, col:   1):	Preprocessor statement must be followed by a newline
