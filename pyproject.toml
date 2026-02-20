@@ -38,6 +38,7 @@ commands =
 [tool.poetry.dependencies]
 python = ">=3.10"
 argparse = "^1.4.0"
+pathspec = ">=1.0.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.2"

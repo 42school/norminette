@@ -61,6 +61,12 @@ norminette -d
 norminette -dd
 ```
 
+### Ignore file
+
+You can create a `.normignore` file that works exactly like `.gitignore` but for norminette.
+
+You can disable this feature by using the `--no-normignore` flag.
+
 ## Docker usage
 
 ```

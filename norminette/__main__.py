@@ -4,6 +4,7 @@ import pathlib
 import platform
 import subprocess
 import sys
+import os
 from importlib.metadata import version
 
 from norminette.context import Context
@@ -13,6 +14,7 @@ from norminette.file import File
 from norminette.lexer import Lexer
 from norminette.registry import Registry
 from norminette.tools.colors import colors
+from norminette.tools.normignore import NormIgnoreSpec
 
 version_text = f"norminette {version('norminette')}"
 version_text += f", Python {platform.python_version()}"
@@ -65,6 +67,11 @@ def main():
         "--use-gitignore",
         action="store_true",
         help="Parse only source files not match to .gitignore",
+    )
+    parser.add_argument(
+        "--no-normignore",
+        action="store_true",
+        help="Ignore .normignore file",
     )
     parser.add_argument(
         "-f",
@@ -130,6 +137,15 @@ def main():
                 )
                 sys.exit(0)
         files = tmp_targets
+
+    if not args.no_normignore:
+        spec = NormIgnoreSpec(os.getcwd())
+        tmp_targets = []
+        for target in files:
+            if not spec.is_ignored(target.path):
+                tmp_targets.append(target)
+        files = tmp_targets
+
     for file in files:
         try:
             lexer = Lexer(file)
