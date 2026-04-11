@@ -15,6 +15,7 @@ __all__ = (
 LOCALES = (
     "en_US",
     "pt_BR",
+    "ar_JO",
 )
 
 LOCALE_DIR = Path(__file__).parent / "locale"
@@ -54,6 +55,7 @@ def get_env_locale(default: str = "en_US") -> str:
     keys = (
         "NORMINETTE_LOCALE",
         "LOCALE",
+        "LANG",
     )
     for key in keys:
         locale = os.environ.get(key)
