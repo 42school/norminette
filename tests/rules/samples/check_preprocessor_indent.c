@@ -17,6 +17,11 @@ o X é 2, logo 2 não é X
 */
 
 #define NEVER 2
+%:define FUNCTIONAL_DIGRAPHS 1
+%:if 1
+%: define DIGRAPH_WITH_INDENT 1
+%:	define DIGRAPH_WITH_TABS 1
+%:endif
 #if 1
 # if 1
 #  if 1

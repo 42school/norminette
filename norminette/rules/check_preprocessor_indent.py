@@ -44,14 +44,18 @@ class CheckPreprocessorIndent(Rule, Check):
             return
 
         n = context.skip_ws(i)
+        spaces = 0
         while context.check_token(i, "SPACE"):
             i += 1
+            spaces += 1
         if context.check_token(i, "TAB"):
             context.new_error("TAB_REPLACE_SPACE", context.peek_token(i))
+        while context.check_token(i, "TAB"):
+            i += 1
+            spaces += 1
         i = n
 
         # Check indentation
-        spaces = context.peek_token(i).line_column - hash_.line_column - 1
         indent = context.preproc.indent
         if context.check_token(i, ("IF", "ELSE")):
             indent -= 1
