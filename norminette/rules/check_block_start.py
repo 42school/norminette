@@ -35,9 +35,9 @@ class CheckBlockStart(Rule, Check):
                 context.scope.multiline = True
                 context.tmp_scope = None
         if (
-            type(context.scope) == ControlStructure
+            type(context.scope) is ControlStructure
             and outer is not None
-            and type(outer) == ControlStructure
+            and type(outer) is ControlStructure
         ):
             if outer.multiline is False:
                 context.new_error("MULT_IN_SINGLE_INSTR", context.peek_token(0))

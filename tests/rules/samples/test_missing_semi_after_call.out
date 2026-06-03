@@ -1,0 +1,10 @@
+[36mtest_missing_semi_after_call.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=test> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_missing_semi_after_call.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_missing_semi_after_call.c[0m - [32mIsDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IDENTIFIER=foo> <LPARENTHESIS> <CONSTANT=42> <RPARENTHESIS> <NEWLINE>
+		<RBRACE> <NEWLINE>
+test_missing_semi_after_call.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_FEW_TAB          (line:   4, col:   1):	Missing tabs for indent level

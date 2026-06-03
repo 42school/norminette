@@ -1,0 +1,576 @@
+# Portuguese translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.3.59\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-11 10:12-0300\n"
+"PO-Revision-Date: 2025-04-09 17:51-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: norminette/norm_error.py:4
+msgid "Spaces at beginning of line"
+msgstr "Espaços no começo da linha"
+
+#: norminette/norm_error.py:5 norminette/norm_error.py:35
+msgid "Found tab when expecting space"
+msgstr "Encontrado tabulação ao invés espaço"
+
+#: norminette/norm_error.py:6
+msgid "Two or more consecutives spaces"
+msgstr "Dois ou mais espaços consecutivos"
+
+#: norminette/norm_error.py:7
+msgid "Two or more consecutives white spaces"
+msgstr "Dois ou mais espaços em branco consecutivos"
+
+#: norminette/norm_error.py:8
+msgid "missing space before operator"
+msgstr "Faltando espaço antes do operador"
+
+#: norminette/norm_error.py:9
+msgid "missing space after operator"
+msgstr "Faltando espaço após o operador"
+
+#: norminette/norm_error.py:10
+msgid "extra space before operator"
+msgstr "Espaço a mais antes do operador"
+
+#: norminette/norm_error.py:11
+msgid "extra space after operator"
+msgstr "Espaço a mais depois do operador"
+
+#: norminette/norm_error.py:12
+msgid "Missing space after parenthesis (brace/bracket)"
+msgstr "Faltando espaço após parêntese (chave/colchete)"
+
+#: norminette/norm_error.py:13
+msgid "Missing space before parenthesis (brace/bracket)"
+msgstr "Faltando espaço antes de parêntese (chave/colchete)"
+
+#: norminette/norm_error.py:14
+msgid "Extra space after parenthesis (brace/bracket)"
+msgstr "Espaço extra após parêntese (chave/colchete)"
+
+#: norminette/norm_error.py:15
+msgid "Extra space before parenthesis (brace/bracket)"
+msgstr "Espaço extra antes de parêntese (chave/colchete)"
+
+#: norminette/norm_error.py:16
+msgid "space after pointer"
+msgstr "Espaço após ponteiro"
+
+#: norminette/norm_error.py:17
+msgid "Unexpected space/tab at line start"
+msgstr "Espaço/tabulação inesperado no início da linha"
+
+#: norminette/norm_error.py:18
+msgid "bad spacing before pointer"
+msgstr "Espaçamento incorreto antes do ponteiro"
+
+#: norminette/norm_error.py:19
+msgid "Found space when expecting tab before function name"
+msgstr "Espaço encontrado onde era esperada tabulação antes do nome da função"
+
+#: norminette/norm_error.py:20
+msgid "extra tabs before function name"
+msgstr "Tabulações extras antes do nome da função"
+
+#: norminette/norm_error.py:21
+msgid "extra tabs before typedef name"
+msgstr "Tabulações extras antes do nome do typedef"
+
+#: norminette/norm_error.py:22
+msgid "missing tab before function name"
+msgstr "Faltando tabulação antes do nome da função"
+
+#: norminette/norm_error.py:23
+msgid "missing tab before variable name"
+msgstr "Faltando tabulação antes do nome da variável"
+
+#: norminette/norm_error.py:24
+msgid "Missing tab before typedef name"
+msgstr "Faltando tabulação antes do nome do typedef"
+
+#: norminette/norm_error.py:25
+msgid "extra tab before variable name"
+msgstr "Tabulação extra antes do nome da variável"
+
+#: norminette/norm_error.py:26
+msgid "line too long"
+msgstr "Linha muito longa"
+
+#: norminette/norm_error.py:27
+msgid "Expected parenthesis"
+msgstr "Parêntese esperado"
+
+#: norminette/norm_error.py:28
+msgid "missing type qualifier or identifier in function arguments"
+msgstr ""
+"Faltando qualificador de tipo ou identificador nos argumentos da função"
+
+#: norminette/norm_error.py:29
+msgid ""
+"user defined identifiers should contain only lowercase characters, digits or "
+"'_'"
+msgstr ""
+"Identificadores definidos pelo usuário devem conter apenas letras "
+"minúsculas, dígitos ou '_'"
+
+#: norminette/norm_error.py:31
+msgid "Missing tabs for indent level"
+msgstr "Faltando tabulações para o nível de indentação"
+
+#: norminette/norm_error.py:32
+msgid "Extra tabs for indent level"
+msgstr "Tabulações extras para o nível de indentação"
+
+#: norminette/norm_error.py:33
+msgid "Extra whitespaces for indent level"
+msgstr "Espaços extras para o nível de indentação"
+
+#: norminette/norm_error.py:34
+msgid "Found space when expecting tab"
+msgstr "Espaço encontrado onde era esperado tabulação"
+
+#: norminette/norm_error.py:36
+msgid "Function has more than 25 lines"
+msgstr "A função tem mais de 25 linhas"
+
+#: norminette/norm_error.py:37
+msgid "Space on empty line"
+msgstr "Espaço em linha vazia"
+
+#: norminette/norm_error.py:38
+msgid "Space before newline"
+msgstr "Espaço antes da nova linha"
+
+#: norminette/norm_error.py:39
+msgid "Too many instructions on a single line"
+msgstr "Muitas instruções em uma única linha"
+
+#: norminette/norm_error.py:40
+msgid "Missing space after preprocessor directive"
+msgstr "Faltando espaço após a diretiva do pré-processador"
+
+#: norminette/norm_error.py:41
+msgid "Unrecognized preprocessor statement"
+msgstr "Declaração de pré-processador não reconhecida"
+
+#: norminette/norm_error.py:42
+msgid "Preprocessor statement not at the beginning of the line"
+msgstr "Declaração de pré-processador não está no início da linha"
+
+#: norminette/norm_error.py:43
+msgid "Preprocessor statement must only contain constant defines"
+msgstr "Declaração de pré-processador deve conter apenas constantes definidas"
+
+#: norminette/norm_error.py:44
+msgid "Expected EOL after preprocessor statement"
+msgstr "Esperado fim de linha após a declaração do pré-processador"
+
+#: norminette/norm_error.py:45
+msgid "If preprocessor statement without endif"
+msgstr "Declaração de pré-processador 'if' sem 'endif'"
+
+#: norminette/norm_error.py:46
+msgid "Elif preprocessor statement without if or elif"
+msgstr "Declaração de pré-processador 'elif' sem 'if' ou 'elif'"
+
+#: norminette/norm_error.py:47
+msgid "Ifdef preprocessor statement without endif"
+msgstr "Declaração de pré-processador 'ifdef' sem 'endif'"
+
+#: norminette/norm_error.py:48
+msgid "Ifndef preprocessor statement without endif"
+msgstr "Declaração de pré-processador 'ifndef' sem 'endif'"
+
+#: norminette/norm_error.py:49
+msgid "Else preprocessor statement without if or elif"
+msgstr "Declaração de pré-processador 'else' sem 'if' ou 'elif'"
+
+#: norminette/norm_error.py:50
+msgid "Endif preprocessor statement without if, elif or else"
+msgstr "Declaração de pré-processador 'endif' sem 'if', 'elif' ou 'else'"
+
+#: norminette/norm_error.py:51
+msgid "Bad preprocessor indentation"
+msgstr "Indentação incorreta no pré-processador"
+
+#: norminette/norm_error.py:52
+msgid "Multiline preprocessor statement is forbidden"
+msgstr "Declaração de pré-processador em múltiplas linhas é proibida"
+
+#: norminette/norm_error.py:53
+msgid "Preprocessor statements are only allowed in the global scope"
+msgstr "Declarações de pré-processador são permitidas apenas no escopo global"
+
+#: norminette/norm_error.py:54
+msgid "User defined typedef must start with t_"
+msgstr "Typedef definido pelo usuário deve começar com t_"
+
+#: norminette/norm_error.py:55
+msgid "Structure name must start with s_"
+msgstr "Nome da estrutura deve começar com s_"
+
+#: norminette/norm_error.py:56
+msgid "Enum name must start with e_"
+msgstr "Nome do enum deve começar com e_"
+
+#: norminette/norm_error.py:57
+msgid "Union name must start with u_"
+msgstr "Nome da união deve começar com u_"
+
+#: norminette/norm_error.py:58
+msgid "Global variable must start with g_"
+msgstr "Variável global deve começar com g_"
+
+#: norminette/norm_error.py:59
+msgid "Missing whitespace before typedef name"
+msgstr "Espaço em branco faltando antes do nome do typedef"
+
+#: norminette/norm_error.py:60
+msgid "Global variable present in file. Make sure it is a reasonable choice."
+msgstr ""
+"Variável global presente no arquivo. Certifique-se de que é uma escolha "
+"razoável."
+
+#: norminette/norm_error.py:61
+msgid "Logic operator at the end of line"
+msgstr "Operador lógico no final da linha"
+
+#: norminette/norm_error.py:62
+msgid "Empty line at start of file"
+msgstr "Linha vazia no início do arquivo"
+
+#: norminette/norm_error.py:63
+msgid "Empty line in function"
+msgstr "Linha vazia dentro da função"
+
+#: norminette/norm_error.py:64
+msgid "Empty line at end of file"
+msgstr "Linha vazia no final do arquivo"
+
+#: norminette/norm_error.py:65
+msgid "Variable declared in incorrect scope"
+msgstr "Variável declarada no escopo incorreto"
+
+#: norminette/norm_error.py:66
+msgid "Missing type in variable declaration"
+msgstr "Faltando tipo na declaração da variável"
+
+#: norminette/norm_error.py:67
+msgid "Variable declaration not at start of function"
+msgstr "Declaração de variável não está no início da função"
+
+#: norminette/norm_error.py:68
+msgid "Too many variables declarations in a function"
+msgstr "Muitas declarações de variáveis em uma função"
+
+#: norminette/norm_error.py:69
+msgid "Too many functions in file"
+msgstr "Muitas funções no arquivo"
+
+#: norminette/norm_error.py:70
+msgid "Expected newline after brace"
+msgstr "Esperada nova linha após a chave"
+
+#: norminette/norm_error.py:71
+msgid "Consecutive newlines"
+msgstr "Novas linhas consecutivas"
+
+#: norminette/norm_error.py:72
+msgid "Functions must be separated by a newline"
+msgstr "Funções devem ser separadas por uma linha em branco"
+
+#: norminette/norm_error.py:73
+msgid "Variable declarations must be followed by a newline"
+msgstr "Declarações de variáveis devem ser seguidas por uma nova linha"
+
+#: norminette/norm_error.py:74
+msgid "Preprocessor statement must be followed by a newline"
+msgstr "Declaração de pré-processador deve ser seguida por uma nova linha"
+
+#: norminette/norm_error.py:75
+msgid "Multiple assignations on a single line"
+msgstr "Múltiplas atribuições em uma única linha"
+
+#: norminette/norm_error.py:76
+msgid "Multiple declarations on a single line"
+msgstr "Múltiplas declarações em uma única linha"
+
+#: norminette/norm_error.py:77
+msgid "Declaration and assignation on a single line"
+msgstr "Declaração e atribuição na mesma linha"
+
+#: norminette/norm_error.py:78
+msgid "Forbidden control structure"
+msgstr "Estrutura de controle proibida"
+
+#: norminette/norm_error.py:79
+msgid "Missing space after keyword"
+msgstr "Faltando espaço após a palavra-chave"
+
+#: norminette/norm_error.py:80
+msgid "Return value must be in parenthesis"
+msgstr ""
+
+#: norminette/norm_error.py:81
+msgid "Expected semicolon"
+msgstr "Esperado ponto e vírgula"
+
+#: norminette/norm_error.py:82
+msgid "Expected tab"
+msgstr "Tabulação esperada"
+
+#: norminette/norm_error.py:83
+msgid "Empty function argument requires void"
+msgstr "Argumento de função vazio requer void"
+
+#: norminette/norm_error.py:84
+msgid "Misaligned variable declaration"
+msgstr "Declaração de variável desalinhada"
+
+#: norminette/norm_error.py:85
+msgid "Misaligned function declaration"
+msgstr "Declaração de função desalinhada"
+
+#: norminette/norm_error.py:86
+msgid "Comment is invalid in this scope"
+msgstr "Comentário inválido neste escopo"
+
+#: norminette/norm_error.py:87
+msgid "Macro name must be capitalized"
+msgstr "Nome de macro deve estar em letras maiúsculas"
+
+#: norminette/norm_error.py:88
+msgid "Macro functions are forbidden"
+msgstr "Funções de macro são proibidas"
+
+#: norminette/norm_error.py:89
+msgid "Assignment in control structure"
+msgstr "Atribuição dentro de estrutura de controle"
+
+#: norminette/norm_error.py:90
+msgid "Variable length array forbidden"
+msgstr "Arrays de tamanho variável são proibidos"
+
+#: norminette/norm_error.py:91
+msgid "Function has more than 4 arguments"
+msgstr "A função possui mais de 4 argumentos"
+
+#: norminette/norm_error.py:92
+msgid ".c file includes are forbidden"
+msgstr "Inclusões de arquivos .c são proibidas"
+
+#: norminette/norm_error.py:93
+msgid "Include must be at the start of file"
+msgstr "Instruções de include devem estar no início do arquivo"
+
+#: norminette/norm_error.py:94
+msgid "Header protection must include all the instructions"
+msgstr "A proteção de cabeçalho deve englobar todas as instruções"
+
+#: norminette/norm_error.py:95
+msgid "Instructions after header protection are forbidden"
+msgstr "Instruções após a proteção de cabeçalho são proibidas"
+
+#: norminette/norm_error.py:96
+msgid "Wrong header protection name"
+msgstr "Nome da proteção de cabeçalho incorreto"
+
+#: norminette/norm_error.py:97
+msgid "Header protection must be in uppercase"
+msgstr "A proteção de cabeçalho deve estar em letras maiúsculas"
+
+#: norminette/norm_error.py:98
+msgid "Multiple header protections, only one is allowed"
+msgstr "Múltiplas proteções de cabeçalho — apenas uma é permitida"
+
+#: norminette/norm_error.py:99
+msgid "Header protection not containing #define"
+msgstr "Proteção de cabeçalho não contém #define"
+
+#: norminette/norm_error.py:100
+msgid "Ternaries are forbidden"
+msgstr "Operadores ternários são proibidos"
+
+#: norminette/norm_error.py:101
+msgid "Too many values on define"
+msgstr "Muitos valores em uma diretiva define"
+
+#: norminette/norm_error.py:102
+msgid "Newline in declaration"
+msgstr "Nova linha na declaração"
+
+#: norminette/norm_error.py:103
+msgid "Multiple instructions in single line control structure"
+msgstr "Múltiplas instruções em uma única linha de estrutura de controle"
+
+#: norminette/norm_error.py:104
+msgid "Newline in define"
+msgstr "Nova linha em uma diretiva define"
+
+#: norminette/norm_error.py:105
+msgid "Missing identifier in typedef declaration"
+msgstr "Identificador ausente na declaração de typedef"
+
+#: norminette/norm_error.py:106
+msgid "Label statements are forbidden"
+msgstr "Declarações de rótulo (label) são proibidas"
+
+#: norminette/norm_error.py:107
+msgid "Goto statements are forbidden"
+msgstr "Declarações goto são proibidas"
+
+#: norminette/norm_error.py:108
+msgid "Preprocessors can only be used in the global scope"
+msgstr "Pré-processadores só podem ser usados no escopo global"
+
+#: norminette/norm_error.py:109
+msgid "Function prototype in incorrect scope"
+msgstr "Protótipo de função em escopo incorreto"
+
+#: norminette/norm_error.py:110
+msgid "Statement is in incorrect scope"
+msgstr "Instrução está em escopo incorreto"
+
+#: norminette/norm_error.py:111
+msgid "Incorrect values in define"
+msgstr "Valores incorretos em uma diretiva define"
+
+#: norminette/norm_error.py:112
+msgid "Expected newline before brace"
+msgstr "Esperada nova linha antes da chave"
+
+#: norminette/norm_error.py:113
+msgid "Expected newline after control structure"
+msgstr "Esperada nova linha após a estrutura de controle"
+
+#: norminette/norm_error.py:114
+msgid "Unrecognized variable type"
+msgstr "Tipo de variável não reconhecido"
+
+#: norminette/norm_error.py:115
+msgid "Comment must be on its own line or at end of a line"
+msgstr "Comentário deve estar em sua própria linha ou ao fim de uma linha"
+
+#: norminette/norm_error.py:116
+msgid "Comma at line start"
+msgstr "Vírgula no início da linha"
+
+#: norminette/norm_error.py:117
+msgid "Mixed spaces and tabs"
+msgstr "Mistura de espaços e tabulações"
+
+#: norminette/norm_error.py:118
+msgid "Function attribute must be at the end of line"
+msgstr "Atributo da função deve estar no final da linha"
+
+#: norminette/norm_error.py:119
+msgid "Missing or invalid 42 header"
+msgstr "Cabeçalho 42 ausente ou inválido"
+
+#: norminette/norm_error.py:120
+msgid "Missing space between include and filename"
+msgstr "Faltando espaço entre include e nome do arquivo"
+
+#: norminette/norm_error.py:121
+msgid "Enums, structs and unions need to be defined only in global scope"
+msgstr "Enums, structs e unions devem ser definidos apenas no escopo global"
+
+#: norminette/norm_error.py:122
+msgid "Typedef declaration are not allowed in .c files"
+msgstr "Declarações typedef não são permitidas em arquivos .c"
+
+#: norminette/norm_error.py:123
+msgid "Struct declaration are not allowed in .c files"
+msgstr "Declarações struct não são permitidas em arquivos .c"
+
+#: norminette/norm_error.py:124
+msgid "Union declaration are not allowed in .c files"
+msgstr "Declarações union não são permitidas em arquivos .c"
+
+#: norminette/norm_error.py:125
+msgid "Enum declaration are not allowed in .c files"
+msgstr "Declarações enum não são permitidas em arquivos .c"
+
+#: norminette/norm_error.py:126
+msgid "Unexpected end of file (EOF) while parsing a char"
+msgstr "Fim de arquivo inesperado (EOF) ao analisar um caractere"
+
+#: norminette/norm_error.py:127
+msgid "Unexpected end of line (EOL) while parsing a char"
+msgstr "Fim de linha inesperado (EOL) ao analisar um caractere"
+
+#: norminette/norm_error.py:128
+msgid "Unexpected end of file (EOF) while parsing a multiline comment"
+msgstr "Fim de arquivo inesperado (EOF) ao analisar um comentário multilinha"
+
+#: norminette/norm_error.py:129
+msgid "Unexpected end of file (EOF) while parsing a string"
+msgstr "Fim de arquivo inesperado (EOF) ao analisar uma string"
+
+#: norminette/norm_error.py:130
+msgid "Empty character constant"
+msgstr "Constante de caractere vazia"
+
+#: norminette/norm_error.py:131
+msgid "Character constants can have only one character"
+msgstr "Constantes de caractere devem conter apenas um caractere"
+
+#: norminette/norm_error.py:132
+msgid "This suffix is invalid"
+msgstr "Esse sufixo é inválido"
+
+#: norminette/norm_error.py:133
+msgid "Invalid suffix for float/double literal constant"
+msgstr "Sufixo inválido para constante literal float/double"
+
+#: norminette/norm_error.py:134
+msgid "Invalid binary integer literal"
+msgstr "Literal inteiro binário inválido"
+
+#: norminette/norm_error.py:135
+msgid "Invalid octal integer literal"
+msgstr "Literal inteiro octal inválido"
+
+#: norminette/norm_error.py:136
+msgid "Invalid hexadecimal integer literal"
+msgstr "Literal inteiro hexadecimal inválido"
+
+#: norminette/norm_error.py:137
+msgid "Potential maximal munch detected"
+msgstr "Possível ocorrência de 'maximal munch' detectada"
+
+#: norminette/norm_error.py:138
+msgid "No hexadecimal digits followed by the \\x"
+msgstr "Nenhum dígito hexadecimal após o \\x"
+
+#: norminette/norm_error.py:139
+msgid "Unknown escape sequence"
+msgstr "Sequência de escape desconhecida"
+
+#: norminette/norm_error.py:140
+msgid "Exponent has no digits"
+msgstr "Expoente sem dígitos"
+
+#: norminette/norm_error.py:141
+msgid "Multiple dots in float constant"
+msgstr "Múltiplos pontos em constante float"
+
+#: norminette/norm_error.py:142
+msgid "Multiple 'x' in hexadecimal float constant"
+msgstr "Múltiplos 'x' em constante float hexadecimal"
+
+#~ msgid "space before function name"
+#~ msgstr "Espaço antes do nome da função"

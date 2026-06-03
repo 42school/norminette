@@ -179,7 +179,7 @@ class IsFuncDeclaration(Rule, Primary, priority=81):
             while context.check_token(i, ["LPARENTHESIS", "MULT", "BWISE_AND"]) is True:
                 i += 1
             sc = context.scope
-            while type(sc) != GlobalScope:
+            while type(sc) is not GlobalScope:
                 sc = sc.outer()
             sc.fnames.append(context.peek_token(i).value)
             context.fname_pos = i
