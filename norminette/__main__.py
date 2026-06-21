@@ -142,8 +142,10 @@ def main():
         except KeyboardInterrupt:
             sys.exit(1)
     errors = format(files, use_colors=not args.no_colors)
+    total_errors = sum(len(file.errors) for file in files)
     print(errors, end="")
-    sys.exit(1 if any(len(it.errors) for it in files) else 0)
+    print(f"{total_errors} norm errors detected")
+    sys.exit(1 if total_errors else 0)
 
 
 if __name__ == "__main__":
