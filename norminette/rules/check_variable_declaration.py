@@ -66,7 +66,12 @@ class CheckVariableDeclaration(Rule, Check):
         while context.peek_token(tmp) and context.check_token(
             tmp, ["SEMI_COLON"] + assigns
         ) is False:
-            if context.check_token(tmp, ["STATIC", "CONST"]) is True:
+            if (
+                context.check_token(tmp, "LPARENTHESIS") is True
+                and context.parenthesis_contain(tmp)[0] != "pointer"
+            ):
+                tmp = context.skip_nest(tmp)
+            elif context.check_token(tmp, ["STATIC", "CONST"]) is True:
                 static_or_const = True
             tmp += 1
         while context.peek_token(i) and context.check_token(i, "SEMI_COLON") is False:
