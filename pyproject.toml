@@ -17,6 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
     "argparse>=1.4.0",
@@ -30,8 +31,8 @@ norminette = "norminette.__main__:main"
 
 [dependency-groups]
 dev = [
-    "pytest>=7.3.2,<8",
-    "flake8>=7,<8",
+    "pytest>=9.1.1",
+    "flake8>=7.3.0",
 ]
 
 [build-system]
