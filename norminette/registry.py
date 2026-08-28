@@ -73,6 +73,5 @@ class Registry:
         for rule in self.dependencies["_end"]:
             self.run_rules(context, rule)
         if unrecognized_tkns != []:
-            print(context.debug)
             if context.debug > 0:
                 print("uncaught ->", unrecognized_tkns)
