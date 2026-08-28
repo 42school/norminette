@@ -8,7 +8,7 @@ from importlib.metadata import version
 
 from norminette.context import Context
 from norminette.errors import Error, formatters
-from norminette.exceptions import CParsingError
+from norminette.exceptions import NorminetteError
 from norminette.file import File
 from norminette.lexer import Lexer
 from norminette.registry import Registry
@@ -81,6 +81,7 @@ def main():
 
     format = next(filter(lambda it: it.name == args.format, formatters))
     files = []
+    failed = False
     debug = args.debug
     if args.cfile or args.hfile:
         file_name = args.filename or ("file.c" if args.cfile else "file.h")
@@ -99,7 +100,8 @@ def main():
             if path.is_file():
                 if path.suffix not in (".c", ".h"):
                     print(f"Error: {path.name!r} is not valid C or C header file")
-                    sys.exit(1)
+                    failed = True
+                    continue
                 resolved = path.resolve()
                 if resolved in seen:
                     continue
@@ -133,16 +135,15 @@ def main():
                 )
                 sys.exit(1)
         files = tmp_targets
-    failed = False
     for file in files:
         try:
             lexer = Lexer(file)
             tokens = list(lexer)
             context = Context(file, tokens, debug, args.R)
             registry.run(context)
-        except CParsingError as e:
+        except NorminetteError as e:
             # Reported through the formatter, so `--format json` stays valid
-            file.errors.add(Error("PARSING_ERROR", e.msg))
+            file.errors.add(Error("PARSING_ERROR", str(e)))
             failed = True
         except KeyboardInterrupt:
             sys.exit(1)
