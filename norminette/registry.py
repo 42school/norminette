@@ -62,7 +62,7 @@ class Registry:
                         print("uncaught -> ", unrecognized_tkns)
                         unrecognized_tkns = []
                     context.dprint(rule.name, jump)
-                    context.update()
+                    context.update(jump)
                     context.pop_tokens(jump)
                     break
             # #############################################################

@@ -264,7 +264,12 @@ class Context:
             return ""
         return self.history[-1 if len(self.history) == 1 else -2]
 
-    def update(self):
+    def else_follows(self, pos):
+        """Returns True if the next statement starts with an `else`"""
+        i = self.skip_ws(pos, nl=True, comment=True)
+        return self.check_token(i, "ELSE") is True
+
+    def update(self, jump=0):
         """Updates informations about the context and  the scope if needed
         after a primary rule has succeeded.
         Do nothing on empty lines since they can be anywhere
@@ -283,9 +288,12 @@ class Context:
             and self.scope.multiline is False
             and self.scope.instructions > 0
         ):
+            # The structure holding an `if` is not over until its `else`
+            waits_for_else = self.scope.keyword == "IF" and self.else_follows(jump)
             self.scope = self.scope.outer()
             self.sub = None
-            self.update()
+            if waits_for_else is False:
+                self.update(jump)
         self.arg_pos = [0, 0]
 
     def dprint(self, rule, pos):

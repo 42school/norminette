@@ -97,6 +97,7 @@ class ControlStructure(Scope):
     def __init__(self, parent, multiline=False):
         super().__init__(parent)
         self.multiline = multiline
+        self.keyword = None
 
 
 class UserDefinedType(Scope):
