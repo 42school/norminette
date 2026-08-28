@@ -539,6 +539,13 @@ In \"{self.scope.name}\" from \
             return True
         return False
 
+    def starts_with_a_constant(self, pos):
+        """Returns True if the parenthesis at 'pos' opens on a constant, which
+        no cast can do"""
+        if self.check_token(pos, "LPARENTHESIS") is False:
+            return False
+        return self.check_token(self.skip_ws(pos + 1, nl=True), "CONSTANT") is True
+
     def is_in_function(self):
         """Returns True if the current scope is a function body, or any scope
         nested inside one"""
@@ -599,9 +606,9 @@ In \"{self.scope.name}\" from \
             if self.check_token(pos, ["RBRACKET", "RPARENTHESIS"]) is True:
                 value_before = True
                 pos = self.skip_nest_reverse(pos) - 1
-                if (
-                    self.check_token(pos + 1, "LPARENTHESIS") is True
-                    and self.parenthesis_contain(pos + 1)[0] in value_parenthesis
+                if self.check_token(pos + 1, "LPARENTHESIS") is True and (
+                    self.parenthesis_contain(pos + 1)[0] in value_parenthesis
+                    or self.starts_with_a_constant(pos + 1)
                 ):
                     # `(int)(fct(i)) * 2`: the left operand is complete
                     return True
