@@ -66,6 +66,56 @@ def test_truncated_prototype_reports_a_parsing_error():
         check("int a(int b)", filename="test.h")
 
 
+def test_a_binary_file_is_reported_not_raised(tmp_path):
+    path = tmp_path / "binary.c"
+    path.write_bytes(bytes(range(256)) * 16)
+    result = norminette(str(path))
+    assert "PARSING_ERROR" in result.stdout
+    assert "Traceback" not in result.stderr
+    assert result.returncode == 1
+
+
+def test_an_unterminated_char_is_reported_not_raised(tmp_path):
+    path = tmp_path / "quote.c"
+    path.write_text("int\tmain(void)\n{\n\tchar c = '" + "a" * 300 + "\n}\n")
+    result = norminette(str(path))
+    assert "PARSING_ERROR" in result.stdout
+    assert result.returncode == 1
+
+
+def test_json_survives_a_file_that_cannot_be_parsed(tmp_path):
+    path = tmp_path / "binary.c"
+    path.write_bytes(bytes(range(256)) * 16)
+    result = norminette("--format", "json", str(path))
+    assert json.loads(result.stdout)["files"][0]["status"] == "Error"
+
+
+def test_a_const_argument_does_not_excuse_the_declaration(tmp_path):
+    source = "int\tmain(void)\n{\n\tvoid\t(*f)(const char *) = 0;\n\n\treturn (f != 0);\n}\n"
+    assert "DECL_ASSIGN_LINE" in names(check(source))
+
+    excused = "int\tmain(void)\n{\n\tvoid\t(*const f)(int) = 0;\n\n\treturn (f != 0);\n}\n"
+    assert "DECL_ASSIGN_LINE" not in names(check(excused))
+
+
+def test_an_unsupported_extension_does_not_hide_the_others(tmp_path):
+    (tmp_path / "Makefile").write_text("all:\n")
+    good = write(tmp_path, "good.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+
+    result = norminette(str(tmp_path / "Makefile"), good)
+    assert "is not valid C or C header file" in result.stdout
+    assert "good.c: OK!" in result.stdout
+    assert result.returncode == 1
+
+
+def test_a_constant_expression_is_not_a_pointer():
+    source = "int\tmain(void)\n{\n\tdouble\tx;\n\n\tx = (double)(90 / 640) * 6;\n\treturn ((int)x);\n}\n"
+    assert "SPC_AFTER_POINTER" not in names(check(source))
+
+    pointer = "int\tmain(int *p)\n{\n\tint\tx;\n\n\tx = (int) * p;\n\treturn (x);\n}\n"
+    assert "SPC_AFTER_POINTER" in names(check(pointer))
+
+
 def test_a_line_holding_only_a_space_at_eof_is_not_a_crash():
     file = check("void\tfn(int a)\n ")
     assert "INVALID_HEADER" in names(file)
