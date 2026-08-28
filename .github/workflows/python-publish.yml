@@ -1,4 +1,4 @@
-# This workflow will upload a Python Package using Twine when a release is created
+# This workflow will upload a Python Package using uv when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
 name: Upload Python Package
@@ -13,25 +13,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v4
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v6
       with:
+        enable-cache: true
         python-version: '3.10'
-    - name: Install dependencies
-      run: |
-        sudo apt-get update && sudo apt-get install -y gettext
-        python -m pip install --upgrade pip
-        pip install setuptools wheel twine poetry
+
+    - name: Install system dependencies
+      run: sudo apt-get update && sudo apt-get install -y gettext
+
     - name: Install norminette package
-      run: |
-        poetry install
+      run: uv sync --locked
+
     - name: Compile .mo files
-      run: |
-        poetry run python norminette/i18n.py
+      run: uv run python -m norminette.i18n
+
     - name: Build and publish
       env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        UV_PUBLISH_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        UV_PUBLISH_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        poetry publish --build --username $TWINE_USERNAME --password $TWINE_PASSWORD
+        uv build
+        uv publish
