@@ -183,7 +183,7 @@ class PreProcessors:
 
 
 class Context:
-    def __init__(self, file, tokens, debug=0, added_value=[]):
+    def __init__(self, file, tokens, debug=0, added_value=None):
         # Header relative informations
         self.header_started = False
         self.header_parsed = False
@@ -211,7 +211,9 @@ class Context:
         self.preproc.skip_define = "CheckDefine" in (added_value or [])
 
     def peek_token(self, pos):
-        return self.tokens[pos] if pos < len(self.tokens) else None
+        if pos < 0 or pos >= len(self.tokens):
+            return None
+        return self.tokens[pos]
 
     def pop_tokens(self, stop):
         self.tokens = self.tokens[stop:]
@@ -232,6 +234,8 @@ class Context:
         nests = 0
         for i in range(0, self.tkn_scope):
             tkn = self.peek_token(i)
+            if tkn is None:
+                break
             if self.check_token(i, ["LBRACKET", "LPARENTHESIS", "LBRACE"]) is True:
                 nests += 1
             if self.check_token(i, ["RBRACKET", "RPARENTHESIS", "RBRACE"]) is True:
@@ -335,10 +339,10 @@ In \"{self.scope.name}\" from \
         """
         rbrackets = ["LBRACKET", "LBRACE", "LPARENTHESIS"]
         lbrackets = ["RBRACKET", "RBRACE", "RPARENTHESIS"]
-        try:
-            c = self.peek_token(pos).type
-        except:
+        tkn = self.peek_token(pos)
+        if tkn is None:
             raise CParsingError(f"Error: Unexpected EOF line {pos}")
+        c = tkn.type
         if c not in lbrackets:
             return pos
         c = rbrackets[lbrackets.index(c)]
@@ -357,8 +361,6 @@ In \"{self.scope.name}\" from \
  are not correctly closed"
         )
 
-        return -1
-
     def skip_nest(self, pos):
         """Skips anything between two brackets, parentheses or braces starting
         at 'pos', if the brackets, parentheses or braces are not closed or
@@ -366,10 +368,10 @@ In \"{self.scope.name}\" from \
         """
         lbrackets = ["LBRACKET", "LBRACE", "LPARENTHESIS"]
         rbrackets = ["RBRACKET", "RBRACE", "RPARENTHESIS"]
-        # try:
-        c = self.peek_token(pos).type
-        # except:
-        # raise CParsingError(f"Error: Code ended unexpectedly.")
+        tkn = self.peek_token(pos)
+        if tkn is None:
+            raise CParsingError(f"Error: Unexpected EOF line {pos}")
+        c = tkn.type
         if c not in lbrackets:
             return pos
         c = rbrackets[lbrackets.index(c)]
@@ -387,8 +389,6 @@ In \"{self.scope.name}\" from \
             "Error: Nested parentheses, braces or brackets\
  are not correctly closed"
         )
-
-        return -1
 
     def skip_misc_specifier(self, pos, nl=False):
         i = self.skip_ws(pos, nl=nl)

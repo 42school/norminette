@@ -18,7 +18,9 @@ class Registry:
     def run_rules(self, context, rule):
         rule = rule(context)
         result = rule.run(context)
-        ret, read = result if isinstance(rule, Primary) else (False, 0)
+        if not isinstance(rule, Primary) or result is None:
+            result = (False, 0)
+        ret, read = result
         if ret:
             context.scope.instructions += 1
             if isinstance(rule, Primary):
