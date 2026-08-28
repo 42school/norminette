@@ -117,6 +117,8 @@ class IsFunctionCall(Rule, Primary, priority=80):
             i += 1
             i = context.skip_ws(i)
             if context.check_token(i, "LPARENTHESIS"):
+                if context.parenthesis_contain(i)[0] == "pointer":
+                    return False, 0
                 while context.check_token(i, "LPARENTHESIS") is True:
                     i = context.skip_nest(i) + 1
                 i = context.skip_ws(i)
