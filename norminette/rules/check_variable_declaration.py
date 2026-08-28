@@ -61,6 +61,14 @@ class CheckVariableDeclaration(Rule, Check):
         if identifier is False:
             context.new_error("IMPLICIT_VAR_TYPE", context.peek_token(0))
             return False
+        # `void *(*const f)(size_t) = malloc;` qualifies the declarator
+        tmp = 0
+        while context.peek_token(tmp) and context.check_token(
+            tmp, ["SEMI_COLON"] + assigns
+        ) is False:
+            if context.check_token(tmp, ["STATIC", "CONST"]) is True:
+                static_or_const = True
+            tmp += 1
         while context.peek_token(i) and context.check_token(i, "SEMI_COLON") is False:
             if context.check_token(i, "LPARENTHESIS") is True:
                 i = context.skip_nest(i)
