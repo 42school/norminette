@@ -1,0 +1,9 @@
+[36mtest_proto_returning_pointer.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=grid> <LPARENTHESIS> <VOID> <RPARENTHESIS> <RPARENTHESIS> <LBRACKET> <CONSTANT=8> <RBRACKET> <SEMI_COLON> <NEWLINE>
+[36mtest_proto_returning_pointer.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 2":
+		<INT> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=get_builtin> <LPARENTHESIS> <IDENTIFIER=t_list> <SPACE> <MULT> <IDENTIFIER=lst> <RPARENTHESIS> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=t_list> <SPACE> <MULT> <COMMA> <SPACE> <IDENTIFIER=t_env> <SPACE> <MULT> <MULT> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_proto_returning_pointer.h[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 3":
+		<INT> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=g_arr> <RPARENTHESIS> <LBRACKET> <CONSTANT=8> <RBRACKET> <SEMI_COLON> <NEWLINE>
+test_proto_returning_pointer.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. Make sure it is a reasonable choice.

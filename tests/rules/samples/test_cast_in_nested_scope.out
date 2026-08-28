@@ -1,0 +1,26 @@
+[36mtest_cast_in_nested_scope.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=i> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=j> <RPARENTHESIS> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=i> <RPARENTHESIS> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockStart[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <LBRACE> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 5":
+		<TAB> <TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=j> <SPACE> <NOT_EQUAL> <SPACE> <LPARENTHESIS> <IDENTIFIER=size_t> <RPARENTHESIS> <MINUS> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockStart[0m In "ControlStructure" from "ControlStructure" line 6":
+		<TAB> <TAB> <LBRACE> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 7":
+		<TAB> <TAB> <TAB> <IDENTIFIER=j> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockEnd[0m In "ControlStructure" from "ControlStructure" line 8":
+		<TAB> <TAB> <RBRACE> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsAssignation[0m In "ControlStructure" from "Function" line 9":
+		<TAB> <TAB> <IDENTIFIER=i> <DEC> <SEMI_COLON> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockEnd[0m In "ControlStructure" from "Function" line 10":
+		<TAB> <RBRACE> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 11":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_cast_in_nested_scope.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 12":
+		<RBRACE> <NEWLINE>
+test_cast_in_nested_scope.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
