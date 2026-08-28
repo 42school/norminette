@@ -140,6 +140,9 @@ whitespaces = ["SPACE", "TAB", "ESCAPED_NEWLINE", "NEWLINE"]
 
 arg_separator = ["COMMA", "CLOSING_PARENTHESIS"]
 
+# `parenthesis_contain` results that hold a complete value
+value_parenthesis = ["variable", "var", "fct_call", "assign"]
+
 
 @dataclass
 class Macro:
@@ -528,18 +531,41 @@ In \"{self.scope.name}\" from \
             return True
         return False
 
+    def is_in_function(self):
+        """Returns True if the current scope is a function body, or any scope
+        nested inside one"""
+        scope = self.scope
+        while scope is not None:
+            if scope.name == "Function":
+                return True
+            scope = scope.get_outer()
+        return False
+
+    def is_in_brackets(self, pos):
+        """Returns True if the token at 'pos' sits inside a '[...]' nest"""
+        depth = 0
+        for i in range(0, pos):
+            if self.check_token(i, "LBRACKET") is True:
+                depth += 1
+            elif self.check_token(i, "RBRACKET") is True:
+                depth -= 1
+        return depth > 0
+
     def is_operator(self, pos):
         """
         Returns True if the given operator (among '*&') is an actual operator,
         and returns False if said operator is a pointer/adress indicator
         """
+        origin = pos
         start = pos + 1
         pos -= 1
         if (
             self.history[-1] == "IsFuncPrototype"
             or self.history[-1] == "IsFuncDeclaration"
         ):
-            return False
+            # `int foo(char aug[2 * N])`: an array size is an expression
+            if self.is_in_brackets(origin) is False:
+                return False
         if self.check_token(start, ["RPARENTHESIS", "MULT"]) is True:
             return False
         start = self.skip_ws(start, nl=False)
@@ -567,8 +593,9 @@ In \"{self.scope.name}\" from \
                 pos = self.skip_nest_reverse(pos) - 1
                 if (
                     self.check_token(pos + 1, "LPARENTHESIS") is True
-                    and self.parenthesis_contain(pos + 1)[0] == "variable"
+                    and self.parenthesis_contain(pos + 1)[0] in value_parenthesis
                 ):
+                    # `(int)(fct(i)) * 2`: the left operand is complete
                     return True
                 if (
                     self.check_token(pos + 1, "LPARENTHESIS") is True
@@ -674,7 +701,7 @@ In \"{self.scope.name}\" from \
                 if (
                     identifier is not True
                     and self.check_token(tmp, "RPARENTHESIS")
-                    and self.scope.name == "Function"
+                    and self.is_in_function()
                     and deep == 1
                     and pointer is None
                     and sizeof is False
@@ -695,9 +722,9 @@ In \"{self.scope.name}\" from \
                     if self.check_token(tmp, "LBRACKET"):
                         tmp = self.skip_nest(tmp)
                         tmp += 1
-                    while self.check_token(tmp, "RPARENTHESIS"):
+                    end = self.skip_nest(start)
+                    while tmp <= end and self.check_token(tmp, "RPARENTHESIS"):
                         tmp += 1
-                        # start = tmp
                     tmp = self.skip_ws(tmp)
                     if self.check_token(tmp, "LPARENTHESIS"):
                         return "pointer", self.skip_nest(start)
