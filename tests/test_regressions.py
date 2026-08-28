@@ -108,6 +108,17 @@ def test_an_unsupported_extension_does_not_hide_the_others(tmp_path):
     assert result.returncode == 1
 
 
+def test_an_address_argument_is_still_a_call():
+    source = (
+        "void\tf(char *d, char *s1, char *s2)\n{\n"
+        "\tft_strlcpy(&d[ft_strlen(s1)], s2, 1);\n}\n"
+    )
+    assert "VAR_DECL_START_FUNC" not in names(check(source))
+
+    declaration = "void\tf(void)\n{\n\tt_example\t(*fp)(void);\n\n\tfp = 0;\n}\n"
+    assert "TAB_INSTEAD_SPC" not in names(check(declaration))
+
+
 def test_a_constant_expression_is_not_a_pointer():
     source = "int\tmain(void)\n{\n\tdouble\tx;\n\n\tx = (double)(90 / 640) * 6;\n\treturn ((int)x);\n}\n"
     assert "SPC_AFTER_POINTER" not in names(check(source))

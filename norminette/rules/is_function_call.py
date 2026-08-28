@@ -83,6 +83,24 @@ ws = ["SPACE", "TAB", "NEWLINE"]
 
 
 class IsFunctionCall(Rule, Primary, priority=80):
+    def is_pointer_declarator(self, context, pos):
+        """Returns True on `(*name)` followed by a parameter list, which is a
+        function pointer being declared rather than a call"""
+        i = context.skip_ws(pos + 1, nl=True)
+        if context.check_token(i, "MULT") is False:
+            return False
+        while context.check_token(i, "MULT"):
+            i += 1
+        i = context.skip_ws(i, nl=True)
+        i = context.skip_misc_specifier(i)
+        if context.check_token(i, "IDENTIFIER") is False:
+            return False
+        i = context.skip_ws(i + 1, nl=True)
+        if context.check_token(i, "RPARENTHESIS") is False:
+            return False
+        i = context.skip_ws(i + 1, nl=True)
+        return context.check_token(i, "LPARENTHESIS") is True
+
     def run(self, context):
         """
         Catches function calls when it's in an assignation
@@ -117,7 +135,7 @@ class IsFunctionCall(Rule, Primary, priority=80):
             i += 1
             i = context.skip_ws(i)
             if context.check_token(i, "LPARENTHESIS"):
-                if context.parenthesis_contain(i)[0] == "pointer":
+                if self.is_pointer_declarator(context, i):
                     return False, 0
                 while context.check_token(i, "LPARENTHESIS") is True:
                     i = context.skip_nest(i) + 1
