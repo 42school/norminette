@@ -179,7 +179,7 @@ class _formatter:
         self.options = options
 
     def __init_subclass__(cls) -> None:
-        cls.name = cls.__name__.rstrip("ErrorsFormatter").lower()
+        cls.name = cls.__name__.removesuffix("ErrorsFormatter").lower()
 
 
 class HumanizedErrorsFormatter(_formatter):
@@ -198,10 +198,12 @@ class HumanizedErrorsFormatter(_formatter):
         for file in self.files:
             output += f"{file.basename}: {file.errors.status}!"
             for error in file.errors:
-                highlight = error.highlights[0]
                 error_text = self._colorize_error_text(error)
                 output += f"\n{error.level}: {error.name:<20} "
-                output += f"(line: {highlight.lineno:>3}, col: {highlight.column:>3}):\t{error_text}"
+                if error.highlights:
+                    highlight = error.highlights[0]
+                    output += f"(line: {highlight.lineno:>3}, col: {highlight.column:>3}):"
+                output += f"\t{error_text}"
             output += '\n'
         return output
 
