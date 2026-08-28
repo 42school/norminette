@@ -7,10 +7,10 @@
 Please ensure the following steps have been completed:
 - [ ] Added new tests to cover the changes.
 - [ ] Fixed all broken tests.
-- [ ] Ran `poetry run flake8` to check for linting issues.
+- [ ] Ran `uv run flake8` to check for linting issues.
 - [ ] Verified that all unit tests are passing:
-  - [ ] Ran `poetry run pytest` to ensure unit tests pass.
-  - [ ] Ran `poetry run tox` to validate compatibility across Python versions.
+  - [ ] Ran `uv run pytest` to ensure unit tests pass.
+  - [ ] Ran `uv run --python 3.10 pytest` to validate compatibility across Python versions.
 
 ## Additional Notes
 <!-- Add any other relevant information, context, or screenshots -->
