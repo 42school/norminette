@@ -322,7 +322,7 @@ msgstr "Faltando espaço após a palavra-chave"
 
 #: norminette/norm_error.py:80
 msgid "Return value must be in parenthesis"
-msgstr ""
+msgstr "Valor de retorno deve estar entre parênteses"
 
 #: norminette/norm_error.py:81
 msgid "Expected semicolon"
