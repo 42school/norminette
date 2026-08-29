@@ -13,6 +13,7 @@ __all__ = (
 )
 
 LOCALES = (
+    "ar_JO",
     "en_US",
     "fr_FR",
     "ja_JP",
