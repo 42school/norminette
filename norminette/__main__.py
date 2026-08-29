@@ -7,12 +7,11 @@ import sys
 from importlib.metadata import version
 
 from norminette.context import Context
-from norminette.errors import formatters
-from norminette.exceptions import CParsingError
+from norminette.errors import Error, formatters
+from norminette.exceptions import NorminetteError
 from norminette.file import File
 from norminette.lexer import Lexer
 from norminette.registry import Registry
-from norminette.tools.colors import colors
 
 version_text = f"norminette {version('norminette')}"
 version_text += f", Python {platform.python_version()}"
@@ -82,6 +81,7 @@ def main():
 
     format = next(filter(lambda it: it.name == args.format, formatters))
     files = []
+    failed = False
     debug = args.debug
     if args.cfile or args.hfile:
         file_name = args.filename or ("file.c" if args.cfile else "file.h")
@@ -90,6 +90,7 @@ def main():
         files.append(file)
     else:
         stack = []
+        seen = set()
         stack += args.file if args.file else glob.glob("**/*.[ch]", recursive=True)
         for item in stack:
             path = pathlib.Path(item)
@@ -99,9 +100,13 @@ def main():
             if path.is_file():
                 if path.suffix not in (".c", ".h"):
                     print(f"Error: {path.name!r} is not valid C or C header file")
-                else:
-                    file = File(item)
-                    files.append(file)
+                    failed = True
+                    continue
+                resolved = path.resolve()
+                if resolved in seen:
+                    continue
+                seen.add(resolved)
+                files.append(File(item))
             if path.is_dir():
                 stack += glob.glob(str(path) + "/**/*.[ch]", recursive=True)
         del stack
@@ -128,7 +133,7 @@ def main():
                 print(
                     f"Error: something wrong with --use-gitignore option {target.path!r}"
                 )
-                sys.exit(0)
+                sys.exit(1)
         files = tmp_targets
     for file in files:
         try:
@@ -136,14 +141,15 @@ def main():
             tokens = list(lexer)
             context = Context(file, tokens, debug, args.R)
             registry.run(context)
-        except CParsingError as e:
-            print(file.path + f": Error!\n\t{colors(e.msg, 'red')}")
-            sys.exit(1)
+        except NorminetteError as e:
+            # Reported through the formatter, so `--format json` stays valid
+            file.errors.add(Error("PARSING_ERROR", str(e)))
+            failed = True
         except KeyboardInterrupt:
             sys.exit(1)
     errors = format(files, use_colors=not args.no_colors)
     print(errors, end="")
-    sys.exit(1 if any(len(it.errors) for it in files) else 0)
+    sys.exit(1 if failed or any(it.errors.status != "OK" for it in files) else 0)
 
 
 if __name__ == "__main__":

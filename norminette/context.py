@@ -140,6 +140,9 @@ whitespaces = ["SPACE", "TAB", "ESCAPED_NEWLINE", "NEWLINE"]
 
 arg_separator = ["COMMA", "CLOSING_PARENTHESIS"]
 
+# `parenthesis_contain` results that hold a complete value
+value_parenthesis = ["variable", "var", "fct_call", "assign"]
+
 
 @dataclass
 class Macro:
@@ -183,7 +186,7 @@ class PreProcessors:
 
 
 class Context:
-    def __init__(self, file, tokens, debug=0, added_value=[]):
+    def __init__(self, file, tokens, debug=0, added_value=None):
         # Header relative informations
         self.header_started = False
         self.header_parsed = False
@@ -211,7 +214,9 @@ class Context:
         self.preproc.skip_define = "CheckDefine" in (added_value or [])
 
     def peek_token(self, pos):
-        return self.tokens[pos] if pos < len(self.tokens) else None
+        if pos < 0 or pos >= len(self.tokens):
+            return None
+        return self.tokens[pos]
 
     def pop_tokens(self, stop):
         self.tokens = self.tokens[stop:]
@@ -232,6 +237,8 @@ class Context:
         nests = 0
         for i in range(0, self.tkn_scope):
             tkn = self.peek_token(i)
+            if tkn is None:
+                break
             if self.check_token(i, ["LBRACKET", "LPARENTHESIS", "LBRACE"]) is True:
                 nests += 1
             if self.check_token(i, ["RBRACKET", "RPARENTHESIS", "RBRACE"]) is True:
@@ -257,7 +264,12 @@ class Context:
             return ""
         return self.history[-1 if len(self.history) == 1 else -2]
 
-    def update(self):
+    def else_follows(self, pos):
+        """Returns True if the next statement starts with an `else`"""
+        i = self.skip_ws(pos, nl=True, comment=True)
+        return self.check_token(i, "ELSE") is True
+
+    def update(self, jump=0):
         """Updates informations about the context and  the scope if needed
         after a primary rule has succeeded.
         Do nothing on empty lines since they can be anywhere
@@ -276,9 +288,12 @@ class Context:
             and self.scope.multiline is False
             and self.scope.instructions > 0
         ):
+            # The structure holding an `if` is not over until its `else`
+            waits_for_else = self.scope.keyword == "IF" and self.else_follows(jump)
             self.scope = self.scope.outer()
             self.sub = None
-            self.update()
+            if waits_for_else is False:
+                self.update(jump)
         self.arg_pos = [0, 0]
 
     def dprint(self, rule, pos):
@@ -335,10 +350,10 @@ In \"{self.scope.name}\" from \
         """
         rbrackets = ["LBRACKET", "LBRACE", "LPARENTHESIS"]
         lbrackets = ["RBRACKET", "RBRACE", "RPARENTHESIS"]
-        try:
-            c = self.peek_token(pos).type
-        except:
+        tkn = self.peek_token(pos)
+        if tkn is None:
             raise CParsingError(f"Error: Unexpected EOF line {pos}")
+        c = tkn.type
         if c not in lbrackets:
             return pos
         c = rbrackets[lbrackets.index(c)]
@@ -357,8 +372,6 @@ In \"{self.scope.name}\" from \
  are not correctly closed"
         )
 
-        return -1
-
     def skip_nest(self, pos):
         """Skips anything between two brackets, parentheses or braces starting
         at 'pos', if the brackets, parentheses or braces are not closed or
@@ -366,10 +379,10 @@ In \"{self.scope.name}\" from \
         """
         lbrackets = ["LBRACKET", "LBRACE", "LPARENTHESIS"]
         rbrackets = ["RBRACKET", "RBRACE", "RPARENTHESIS"]
-        # try:
-        c = self.peek_token(pos).type
-        # except:
-        # raise CParsingError(f"Error: Code ended unexpectedly.")
+        tkn = self.peek_token(pos)
+        if tkn is None:
+            raise CParsingError(f"Error: Unexpected EOF line {pos}")
+        c = tkn.type
         if c not in lbrackets:
             return pos
         c = rbrackets[lbrackets.index(c)]
@@ -387,8 +400,6 @@ In \"{self.scope.name}\" from \
             "Error: Nested parentheses, braces or brackets\
  are not correctly closed"
         )
-
-        return -1
 
     def skip_misc_specifier(self, pos, nl=False):
         i = self.skip_ws(pos, nl=nl)
@@ -528,18 +539,48 @@ In \"{self.scope.name}\" from \
             return True
         return False
 
+    def starts_with_a_constant(self, pos):
+        """Returns True if the parenthesis at 'pos' opens on a constant, which
+        no cast can do"""
+        if self.check_token(pos, "LPARENTHESIS") is False:
+            return False
+        return self.check_token(self.skip_ws(pos + 1, nl=True), "CONSTANT") is True
+
+    def is_in_function(self):
+        """Returns True if the current scope is a function body, or any scope
+        nested inside one"""
+        scope = self.scope
+        while scope is not None:
+            if scope.name == "Function":
+                return True
+            scope = scope.get_outer()
+        return False
+
+    def is_in_brackets(self, pos):
+        """Returns True if the token at 'pos' sits inside a '[...]' nest"""
+        depth = 0
+        for i in range(0, pos):
+            if self.check_token(i, "LBRACKET") is True:
+                depth += 1
+            elif self.check_token(i, "RBRACKET") is True:
+                depth -= 1
+        return depth > 0
+
     def is_operator(self, pos):
         """
         Returns True if the given operator (among '*&') is an actual operator,
         and returns False if said operator is a pointer/adress indicator
         """
+        origin = pos
         start = pos + 1
         pos -= 1
         if (
             self.history[-1] == "IsFuncPrototype"
             or self.history[-1] == "IsFuncDeclaration"
         ):
-            return False
+            # `int foo(char aug[2 * N])`: an array size is an expression
+            if self.is_in_brackets(origin) is False:
+                return False
         if self.check_token(start, ["RPARENTHESIS", "MULT"]) is True:
             return False
         start = self.skip_ws(start, nl=False)
@@ -565,10 +606,11 @@ In \"{self.scope.name}\" from \
             if self.check_token(pos, ["RBRACKET", "RPARENTHESIS"]) is True:
                 value_before = True
                 pos = self.skip_nest_reverse(pos) - 1
-                if (
-                    self.check_token(pos + 1, "LPARENTHESIS") is True
-                    and self.parenthesis_contain(pos + 1)[0] == "variable"
+                if self.check_token(pos + 1, "LPARENTHESIS") is True and (
+                    self.parenthesis_contain(pos + 1)[0] in value_parenthesis
+                    or self.starts_with_a_constant(pos + 1)
                 ):
+                    # `(int)(fct(i)) * 2`: the left operand is complete
                     return True
                 if (
                     self.check_token(pos + 1, "LPARENTHESIS") is True
@@ -674,7 +716,7 @@ In \"{self.scope.name}\" from \
                 if (
                     identifier is not True
                     and self.check_token(tmp, "RPARENTHESIS")
-                    and self.scope.name == "Function"
+                    and self.is_in_function()
                     and deep == 1
                     and pointer is None
                     and sizeof is False
@@ -695,9 +737,9 @@ In \"{self.scope.name}\" from \
                     if self.check_token(tmp, "LBRACKET"):
                         tmp = self.skip_nest(tmp)
                         tmp += 1
-                    while self.check_token(tmp, "RPARENTHESIS"):
+                    end = self.skip_nest(start)
+                    while tmp <= end and self.check_token(tmp, "RPARENTHESIS"):
                         tmp += 1
-                        # start = tmp
                     tmp = self.skip_ws(tmp)
                     if self.check_token(tmp, "LPARENTHESIS"):
                         return "pointer", self.skip_nest(start)

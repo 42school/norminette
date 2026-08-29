@@ -41,7 +41,7 @@ class Scope:
     def __eq__(self, value) -> bool:
         if isinstance(value, str):
             return self.name == value
-        if issubclass(value, Scope):
+        if isinstance(value, type) and issubclass(value, Scope):
             return self.name == value.__name__
         if hasattr(value, "name"):
             return self.name == value.name
@@ -97,6 +97,7 @@ class ControlStructure(Scope):
     def __init__(self, parent, multiline=False):
         super().__init__(parent)
         self.multiline = multiline
+        self.keyword = None
 
 
 class UserDefinedType(Scope):

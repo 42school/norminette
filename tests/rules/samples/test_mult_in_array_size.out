@@ -1,0 +1,10 @@
+[36mtest_mult_in_array_size.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=find_and_swap> <LPARENTHESIS> <DOUBLE> <SPACE> <IDENTIFIER=aug> <LBRACKET> <CONSTANT=10> <RBRACKET> <LBRACKET> <CONSTANT=2> <SPACE> <MULT> <SPACE> <CONSTANT=10> <RBRACKET> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=i> <RPARENTHESIS> <NEWLINE>
+[36mtest_mult_in_array_size.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_mult_in_array_size.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=i> <SPACE> <PLUS> <SPACE> <LPARENTHESIS> <INT> <RPARENTHESIS> <IDENTIFIER=aug> <LBRACKET> <CONSTANT=0> <RBRACKET> <LBRACKET> <CONSTANT=0> <RBRACKET> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_in_array_size.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 4":
+		<RBRACE> <NEWLINE>
+test_mult_in_array_size.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

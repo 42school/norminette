@@ -18,7 +18,9 @@ class Registry:
     def run_rules(self, context, rule):
         rule = rule(context)
         result = rule.run(context)
-        ret, read = result if isinstance(rule, Primary) else (False, 0)
+        if not isinstance(rule, Primary) or result is None:
+            result = (False, 0)
+        ret, read = result
         if ret:
             context.scope.instructions += 1
             if isinstance(rule, Primary):
@@ -60,7 +62,7 @@ class Registry:
                         print("uncaught -> ", unrecognized_tkns)
                         unrecognized_tkns = []
                     context.dprint(rule.name, jump)
-                    context.update()
+                    context.update(jump)
                     context.pop_tokens(jump)
                     break
             # #############################################################
@@ -73,6 +75,5 @@ class Registry:
         for rule in self.dependencies["_end"]:
             self.run_rules(context, rule)
         if unrecognized_tkns != []:
-            print(context.debug)
             if context.debug > 0:
                 print("uncaught ->", unrecognized_tkns)

@@ -34,6 +34,7 @@ class IsControlStatement(Rule, Primary, priority=65):
         i = context.skip_ws(0, nl=False)
         if context.check_token(i, cs_keywords) is False:
             return False, 0
+        keyword = context.peek_token(i).type
         if context.check_token(i, "IDENTIFIER") is True:
             is_id = True
             id_instead_cs = True
@@ -48,6 +49,7 @@ class IsControlStatement(Rule, Primary, priority=65):
             i = context.skip_ws(i, nl=False)
             context.sub = context.scope.inner(ControlStructure)
             context.sub.multiline = False
+            context.sub.keyword = keyword
             if context.check_token(i, "COLON") is True:
                 i += 1
                 i = context.eol(i)
@@ -68,18 +70,21 @@ class IsControlStatement(Rule, Primary, priority=65):
             if context.check_token(i, "NEWLINE") is True:
                 context.sub = context.scope.inner(ControlStructure)
                 context.sub.multiline = False
+                context.sub.keyword = keyword
                 i = context.eol(i)
                 return True, i
             if context.check_token(i, ["IF"]) is True:
-                pass
+                keyword = "IF"
             elif context.check_token(i, ["LBRACE", "COMMENT", "MULT_COMMENT"]) is False:
                 context.sub = context.scope.inner(ControlStructure)
                 context.sub.multiline = False
+                context.sub.keyword = keyword
                 i = context.eol(i)
                 return True, i
             else:
                 context.sub = context.scope.inner(ControlStructure)
                 context.sub.multiline = False
+                context.sub.keyword = keyword
                 i = context.eol(i)
                 return True, i
         i += 1
@@ -100,5 +105,6 @@ class IsControlStatement(Rule, Primary, priority=65):
         i = context.skip_ws(i, nl=False)
         context.sub = context.scope.inner(ControlStructure)
         context.sub.multiline = False
+        context.sub.keyword = keyword
         i = context.eol(i)
         return True, i

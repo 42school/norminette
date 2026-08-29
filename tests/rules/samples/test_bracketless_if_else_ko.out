@@ -1,0 +1,32 @@
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 5":
+		<TAB> <TAB> <TAB> <BREAK> <SPACE> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 6":
+		<TAB> <ELSE> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 7":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 8":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 9":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 10":
+		<TAB> <TAB> <ELSE> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 11":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=2> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 12":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=b> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else_ko.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
+		<RBRACE> <NEWLINE>
+test_bracketless_if_else_ko.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_FEW_TAB          (line:   6, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:   7, col:   1):	Missing tabs for indent level
+Error: TOO_MANY_TAB         (line:  10, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  11, col:   1):	Extra tabs for indent level

@@ -28,10 +28,10 @@ To contribute to this project, follow these steps:
 
 ## Code Guidelines
 
-- Use the flake8 linter to check your code for errors.
+- Use the flake8 linter to check your code for errors (`uv run flake8`).
 - Try to keep your code easy to understand.
 - Write unit tests for new code or modify existing tests to maintain test coverage.
-- Run the existing tests and ensure they pass before submitting your contribution.
+- Run the existing tests (`uv run pytest`) and ensure they pass before submitting your contribution.
 - Code which not pass flake8 or the test will not be reviewed.
 
 Thank you for your interest in contributing to our project. <br/>

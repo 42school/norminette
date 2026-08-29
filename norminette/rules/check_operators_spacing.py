@@ -449,7 +449,7 @@ class CheckOperatorsSpacing(Rule, Check):
             "BWISE_XOR",
         ]
         i = 0
-        if context.peek_token(pos).type == "MULT":
+        if context.check_token(pos, "MULT"):
             if context.check_token(pos - 1, lpointer) is False and (
                 context.is_glued_operator(pos - 1) is True
             ):  # or context.check_token(pos - 1, c_operators) is False):
@@ -457,9 +457,9 @@ class CheckOperatorsSpacing(Rule, Check):
             if context.check_token(pos + 1, ["SPACE", "TAB"]):
                 context.new_error("SPC_AFTER_POINTER", context.peek_token(pos))
             i = 1
-            while context.peek_token(pos + i).type in ["MULT", "LPARENTHESIS"]:
+            while context.check_token(pos + i, ["MULT", "LPARENTHESIS"]):
                 i += 1
-                if context.peek_token(pos + i).type == "SPACE":
+                if context.check_token(pos + i, "SPACE"):
                     context.new_error("SPC_AFTER_POINTER", context.peek_token(pos + i))
                 return i
 
