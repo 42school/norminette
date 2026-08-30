@@ -1,0 +1,21 @@
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IF> <SPACE> <NOT> <IDENTIFIER=defined> <SPACE> <IDENTIFIER=CHECK_PREPROCESSOR_PROTECTION_3_H> <NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 2":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=CHECK_PREPROCESSOR_PROTECTION_3_H> <NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 3":
+		<NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 4":
+		<VOID> <TAB> <IDENTIFIER=some_instruction> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 5":
+		<NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 6":
+		<HASH> <IDENTIFIER=endif> <NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 7":
+		<NEWLINE>
+[36mcheck_preprocessor_protection_4.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 8":
+		<VOID> <TAB> <IDENTIFIER=some_other_instruction> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+check_preprocessor_protection_4.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: HEADER_PROT_NAME     (line:   1, col:  14):	Wrong header protection name
+Error: HEADER_PROT_NODEF    (line:   6, col:   1):	Header protection not containing #define
+Error: HEADER_PROT_ALL_AF   (line:   8, col:   1):	Instructions after header protection are forbidden
