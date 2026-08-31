@@ -8,6 +8,7 @@ lbrackets = ["LBRACE", "LPARENTHESIS", "LBRACKET"]
 rbrackets = ["RBRACE", "RPARENTHESIS", "RBRACKET"]
 
 misc_specifiers = [
+    "AUTO",
     "CONST",
     "REGISTER",
     "STATIC",

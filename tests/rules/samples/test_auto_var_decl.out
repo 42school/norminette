@@ -1,0 +1,20 @@
+[36mtest_auto_var_decl.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_auto_var_decl.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_auto_var_decl.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <AUTO> <SPACE> <INT> <TAB> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0> <COMMA> <SPACE> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <SEMI_COLON> <NEWLINE>
+[36mtest_auto_var_decl.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <AUTO> <SPACE> <INT> <TAB> <IDENTIFIER=c> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0> <COMMA> <SPACE> <IDENTIFIER=d> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <SEMI_COLON> <NEWLINE>
+[36mtest_auto_var_decl.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <AUTO> <SPACE> <INT> <TAB> <IDENTIFIER=e> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0> <COMMA> <SPACE> <IDENTIFIER=f> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <SEMI_COLON> <NEWLINE>
+[36mtest_auto_var_decl.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 6":
+		<RBRACE> <NEWLINE>
+test_auto_var_decl.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: DECL_ASSIGN_LINE     (line:   3, col:  19):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:   3, col:  26):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:   4, col:  19):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:   4, col:  26):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:   5, col:  19):	Declaration and assignation on a single line
+Error: DECL_ASSIGN_LINE     (line:   5, col:  26):	Declaration and assignation on a single line
