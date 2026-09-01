@@ -1,6 +1,6 @@
 [36mok_pointer.c[0m - [32mIsAssignation[0m In "GlobalScope" from "None" line 1":
 		<IDENTIFIER=result> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=result> <SPACE> <MULT> <SPACE> <CONSTANT=10> <SPACE> <PLUS> <SPACE> <MULT> <LPARENTHESIS> <MULT> <IDENTIFIER=str> <RPARENTHESIS> <INC> <SPACE> <MINUS> <SPACE> <CHAR_CONST='0'> <SEMI_COLON> <NEWLINE>
-[36mok_pointer.c[0m - [32mIsFunctionCall[0m In "GlobalScope" from "None" line 2":
+[36mok_pointer.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 2":
 		<IDENTIFIER=func> <LPARENTHESIS> <IDENTIFIER=i> <SPACE> <MULT> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <MULT> <IDENTIFIER=b> <COMMA> <SPACE> <LPARENTHESIS> <BWISE_AND> <IDENTIFIER=c> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 [36mok_pointer.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 3":
 		<NEWLINE>
@@ -14,3 +14,6 @@
 		<RBRACE> <NEWLINE>
 ok_pointer.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: ARG_TYPE_UKN         (line:   2, col:   1):	Unrecognized variable type
+Error: MISSING_RETURN_TYPE  (line:   2, col:   1):	Missing return type in function declaration
+Error: SPC_AFTER_POINTER    (line:   2, col:   8):	space after pointer

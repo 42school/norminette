@@ -140,7 +140,7 @@
 		<IDENTIFIER=trololo43> <TAB> <IDENTIFIER=func3> <LPARENTHESIS> <IDENTIFIER=youpibanane> <SPACE> <MULT> <MULT> <IDENTIFIER=cahuete> <COMMA> <SPACE> <IDENTIFIER=lol> <MULT> <MULT> <MULT> <SPACE> <MULT> <MULT> <IDENTIFIER=choupette> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 [36mlong_test.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 62":
 		<IDENTIFIER=trololo> <TAB> <IDENTIFIER=trololol> <TAB> <IDENTIFIER=func4> <LPARENTHESIS> <IDENTIFIER=uopi> <SPACE> <IDENTIFIER=sks> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
-[36mlong_test.c[0m - [32mIsFunctionCall[0m In "GlobalScope" from "None" line 63":
+[36mlong_test.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 63":
 		<MULT> <MULT> <MULT> <IDENTIFIER=func4> <LPARENTHESIS> <IDENTIFIER=udidf> <SPACE> <IDENTIFIER=fdfd> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 long_test.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
@@ -209,3 +209,5 @@ Error: SPC_AFTER_POINTER    (line:  60, col:  44):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  61, col:  47):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  61, col:  48):	space after pointer
 Error: MISALIGNED_FUNC_DECL (line:  62, col:  21):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  63, col:   4):	Misaligned function declaration
+Error: MISSING_RETURN_TYPE  (line:  63, col:   4):	Missing return type in function declaration

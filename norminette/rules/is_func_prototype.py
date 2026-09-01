@@ -161,7 +161,7 @@ class IsFuncPrototype(Rule, Primary, priority=82):
                     break
             else:
                 i += 1
-        if len(type_id) > 0 and args is True and identifier is not None:
+        if args is True and identifier is not None:
             i = identifier[1]
             while context.check_token(i, ["LPARENTHESIS", "MULT", "BWISE_AND"]) is True:
                 i += 1
