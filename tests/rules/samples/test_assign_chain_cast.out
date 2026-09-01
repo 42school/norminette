@@ -1,0 +1,13 @@
+[36mtest_assign_chain_cast.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=func> <LPARENTHESIS> <VOID> <SPACE> <MULT> <MULT> <IDENTIFIER=arr> <COMMA> <SPACE> <CHAR> <SPACE> <MULT> <IDENTIFIER=str> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_assign_chain_cast.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_assign_chain_cast.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <SPACE> <MULT> <SPACE> <CONSTANT=2> <SEMI_COLON> <NEWLINE>
+[36mtest_assign_chain_cast.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <IDENTIFIER=str> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <LPARENTHESIS> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <MULT> <RPARENTHESIS> <IDENTIFIER=arr> <RPARENTHESIS> <LBRACKET> <CONSTANT=1> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=str> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_assign_chain_cast.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 5":
+		<RBRACE> <NEWLINE>
+test_assign_chain_cast.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: MULT_ASSIGN_LINE     (line:   4, col:  30):	Multiple assignations on a single line
