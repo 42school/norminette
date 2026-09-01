@@ -1,0 +1,16 @@
+[36mtest_comment_in_brackets.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=argc> <COMMA> <SPACE> <CHAR> <SPACE> <MULT> <MULT> <IDENTIFIER=argv> <RPARENTHESIS> <NEWLINE>
+[36mtest_comment_in_brackets.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_comment_in_brackets.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <IDENTIFIER=argv> <LBRACKET> <NEWLINE>
+		<TAB> <TAB> <TAB> <COMMENT=// invalid here> <NEWLINE>
+		<TAB> <TAB> <TAB> <IDENTIFIER=argc> <NEWLINE>
+		<TAB> <TAB> <RBRACKET> <NEWLINE>
+		<TAB> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_comment_in_brackets.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 9":
+		<RBRACE> <NEWLINE>
+test_comment_in_brackets.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: WRONG_SCOPE_COMMENT  (line:   5, col:  13):	Comment is invalid in this scope
