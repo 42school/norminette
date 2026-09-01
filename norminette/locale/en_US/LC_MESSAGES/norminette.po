@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.3.60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 11:19+0200\n"
+"POT-Creation-Date: 2026-09-01 11:28+0200\n"
 "PO-Revision-Date: 2025-04-09 17:51-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -362,210 +362,214 @@ msgid "Variable length array forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:92
-msgid "Function has more than 4 arguments"
+msgid "typeof is forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:93
-msgid ".c file includes are forbidden"
+msgid "Function has more than 4 arguments"
 msgstr ""
 
 #: norminette/norm_error.py:94
-msgid "Include must be at the start of file"
+msgid ".c file includes are forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:95
-msgid "Header protection must include all the instructions"
+msgid "Include must be at the start of file"
 msgstr ""
 
 #: norminette/norm_error.py:96
-msgid "Instructions after header protection are forbidden"
+msgid "Header protection must include all the instructions"
 msgstr ""
 
 #: norminette/norm_error.py:97
-msgid "Wrong header protection name"
+msgid "Instructions after header protection are forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:98
-msgid "Header protection must be in uppercase"
+msgid "Wrong header protection name"
 msgstr ""
 
 #: norminette/norm_error.py:99
-msgid "Multiple header protections, only one is allowed"
+msgid "Header protection must be in uppercase"
 msgstr ""
 
 #: norminette/norm_error.py:100
-msgid "Header protection not containing #define"
+msgid "Multiple header protections, only one is allowed"
 msgstr ""
 
 #: norminette/norm_error.py:101
-msgid "Ternaries are forbidden"
+msgid "Header protection not containing #define"
 msgstr ""
 
 #: norminette/norm_error.py:102
-msgid "Too many values on define"
+msgid "Ternaries are forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:103
-msgid "Newline in declaration"
+msgid "Too many values on define"
 msgstr ""
 
 #: norminette/norm_error.py:104
-msgid "Multiple instructions in single line control structure"
+msgid "Newline in declaration"
 msgstr ""
 
 #: norminette/norm_error.py:105
-msgid "Newline in define"
+msgid "Multiple instructions in single line control structure"
 msgstr ""
 
 #: norminette/norm_error.py:106
-msgid "Missing identifier in typedef declaration"
+msgid "Newline in define"
 msgstr ""
 
 #: norminette/norm_error.py:107
-msgid "Label statements are forbidden"
+msgid "Missing identifier in typedef declaration"
 msgstr ""
 
 #: norminette/norm_error.py:108
-msgid "Goto statements are forbidden"
+msgid "Label statements are forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:109
-msgid "Preprocessors can only be used in the global scope"
+msgid "Goto statements are forbidden"
 msgstr ""
 
 #: norminette/norm_error.py:110
-msgid "Function prototype in incorrect scope"
+msgid "Preprocessors can only be used in the global scope"
 msgstr ""
 
 #: norminette/norm_error.py:111
-msgid "Statement is in incorrect scope"
+msgid "Function prototype in incorrect scope"
 msgstr ""
 
 #: norminette/norm_error.py:112
-msgid "Incorrect values in define"
+msgid "Statement is in incorrect scope"
 msgstr ""
 
 #: norminette/norm_error.py:113
-msgid "Expected newline before brace"
+msgid "Incorrect values in define"
 msgstr ""
 
 #: norminette/norm_error.py:114
-msgid "Expected newline after control structure"
+msgid "Expected newline before brace"
 msgstr ""
 
 #: norminette/norm_error.py:115
-msgid "Unrecognized variable type"
+msgid "Expected newline after control structure"
 msgstr ""
 
 #: norminette/norm_error.py:116
-msgid "Comment must be on its own line or at end of a line"
+msgid "Unrecognized variable type"
 msgstr ""
 
 #: norminette/norm_error.py:117
-msgid "Comma at line start"
+msgid "Comment must be on its own line or at end of a line"
 msgstr ""
 
 #: norminette/norm_error.py:118
-msgid "Mixed spaces and tabs"
+msgid "Comma at line start"
 msgstr ""
 
 #: norminette/norm_error.py:119
-msgid "Function attribute must be at the end of line"
+msgid "Mixed spaces and tabs"
 msgstr ""
 
 #: norminette/norm_error.py:120
-msgid "Missing or invalid 42 header"
+msgid "Function attribute must be at the end of line"
 msgstr ""
 
 #: norminette/norm_error.py:121
-msgid "Missing space between include and filename"
+msgid "Missing or invalid 42 header"
 msgstr ""
 
 #: norminette/norm_error.py:122
-msgid "Enums, structs and unions need to be defined only in global scope"
+msgid "Missing space between include and filename"
 msgstr ""
 
 #: norminette/norm_error.py:123
-msgid "Typedef declaration are not allowed in .c files"
+msgid "Enums, structs and unions need to be defined only in global scope"
 msgstr ""
 
 #: norminette/norm_error.py:124
-msgid "Struct declaration are not allowed in .c files"
+msgid "Typedef declaration are not allowed in .c files"
 msgstr ""
 
 #: norminette/norm_error.py:125
-msgid "Union declaration are not allowed in .c files"
+msgid "Struct declaration are not allowed in .c files"
 msgstr ""
 
 #: norminette/norm_error.py:126
-msgid "Enum declaration are not allowed in .c files"
+msgid "Union declaration are not allowed in .c files"
 msgstr ""
 
 #: norminette/norm_error.py:127
-msgid "Unexpected end of file (EOF) while parsing a char"
+msgid "Enum declaration are not allowed in .c files"
 msgstr ""
 
 #: norminette/norm_error.py:128
-msgid "Unexpected end of line (EOL) while parsing a char"
+msgid "Unexpected end of file (EOF) while parsing a char"
 msgstr ""
 
 #: norminette/norm_error.py:129
-msgid "Unexpected end of file (EOF) while parsing a multiline comment"
+msgid "Unexpected end of line (EOL) while parsing a char"
 msgstr ""
 
 #: norminette/norm_error.py:130
-msgid "Unexpected end of file (EOF) while parsing a string"
+msgid "Unexpected end of file (EOF) while parsing a multiline comment"
 msgstr ""
 
 #: norminette/norm_error.py:131
-msgid "Empty character constant"
+msgid "Unexpected end of file (EOF) while parsing a string"
 msgstr ""
 
 #: norminette/norm_error.py:132
-msgid "Character constants can have only one character"
+msgid "Empty character constant"
 msgstr ""
 
 #: norminette/norm_error.py:133
-msgid "This suffix is invalid"
+msgid "Character constants can have only one character"
 msgstr ""
 
 #: norminette/norm_error.py:134
-msgid "Invalid suffix for float/double literal constant"
+msgid "This suffix is invalid"
 msgstr ""
 
 #: norminette/norm_error.py:135
-msgid "Invalid binary integer literal"
+msgid "Invalid suffix for float/double literal constant"
 msgstr ""
 
 #: norminette/norm_error.py:136
-msgid "Invalid octal integer literal"
+msgid "Invalid binary integer literal"
 msgstr ""
 
 #: norminette/norm_error.py:137
-msgid "Invalid hexadecimal integer literal"
+msgid "Invalid octal integer literal"
 msgstr ""
 
 #: norminette/norm_error.py:138
-msgid "Potential maximal munch detected"
+msgid "Invalid hexadecimal integer literal"
 msgstr ""
 
 #: norminette/norm_error.py:139
-msgid "No hexadecimal digits followed by the \\x"
+msgid "Potential maximal munch detected"
 msgstr ""
 
 #: norminette/norm_error.py:140
-msgid "Unknown escape sequence"
+msgid "No hexadecimal digits followed by the \\x"
 msgstr ""
 
 #: norminette/norm_error.py:141
-msgid "Exponent has no digits"
+msgid "Unknown escape sequence"
 msgstr ""
 
 #: norminette/norm_error.py:142
-msgid "Multiple dots in float constant"
+msgid "Exponent has no digits"
 msgstr ""
 
 #: norminette/norm_error.py:143
+msgid "Multiple dots in float constant"
+msgstr ""
+
+#: norminette/norm_error.py:144
 msgid "Multiple 'x' in hexadecimal float constant"
 msgstr ""
 
