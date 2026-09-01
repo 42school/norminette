@@ -374,6 +374,11 @@ class CheckOperatorsSpacing(Rule, Check):
                     is True
                 ):
                     return False, 0
+                # A line split on a backslash leaves no token behind: the
+                # operator opens the new line, so nothing can precede it
+                before = context.peek_token(pos + tmp)
+                if before and before.lineno < context.peek_token(pos).lineno:
+                    return False, 0
             if (
                 context.check_token(pos - 1, "RPARENTHESIS")
                 and context.parenthesis_contain(context.skip_nest_reverse(pos - 1))[0]

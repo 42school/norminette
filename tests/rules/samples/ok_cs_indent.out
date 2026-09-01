@@ -20,3 +20,4 @@
 		<RBRACE> <NEWLINE>
 ok_cs_indent.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_MANY_INSTR       (line:   8, col:  18):	Too many instructions on a single line

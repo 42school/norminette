@@ -7,7 +7,7 @@
 [36mtest_line_continuation_indent.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 5":
 		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <MINUS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 [36mtest_line_continuation_indent.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 6":
-		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=foo> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <COMMA> <SPACE> <TAB> <TAB> <TAB> <IDENTIFIER=bar> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=foo> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <SPACE> <TAB> <TAB> <TAB> <PLUS> <SPACE> <IDENTIFIER=bar> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 [36mtest_line_continuation_indent.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 8":
 		<RBRACE> <NEWLINE>
 test_line_continuation_indent.c: Error!
