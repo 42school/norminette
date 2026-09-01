@@ -188,6 +188,37 @@ def test_json_output_holds_nothing_but_json(tmp_path):
     assert json.loads(result.stdout)["files"][0]["status"] == "Error"
 
 
+def test_only_errors_hides_the_files_with_nothing_to_say(tmp_path):
+    clean = write(tmp_path, "clean.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    broken = write(tmp_path, "broken.c", "int\tmain(void)\n{\n\treturn (0)\n}\n")
+
+    full = norminette(clean, broken)
+    assert "clean.c: OK!" in full.stdout
+
+    quiet = norminette("--only-errors", clean, broken)
+    assert "clean.c" not in quiet.stdout
+    assert "broken.c" in quiet.stdout
+    assert quiet.returncode == full.returncode
+
+
+def test_only_errors_leaves_json_complete(tmp_path):
+    clean = write(tmp_path, "clean.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    result = norminette("--format", "json", "--only-errors", clean)
+    assert len(json.loads(result.stdout)["files"]) == 1
+
+
+def test_a_dash_reads_the_file_from_stdin(tmp_path):
+    source = HEADER.format(name="stdin.c") + "int\tmain(void)\n{\n\treturn (0);\n}\n"
+    result = subprocess.run(
+        [sys.executable, "-m", "norminette", "-", "--filename", "stdin.c"],
+        input=source,
+        capture_output=True,
+        text=True,
+    )
+    assert "stdin.c: OK!" in result.stdout
+    assert result.returncode == 0
+
+
 def test_an_unsupported_extension_is_a_failure(tmp_path):
     path = tmp_path / "notes.txt"
     path.write_text("hello\n")
