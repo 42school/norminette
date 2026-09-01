@@ -45,6 +45,7 @@ Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: FORBIDDEN_TYPEDEF    (line:   8, col:   1):	Typedef declaration are not allowed in .c files
 Error: FORBIDDEN_CHAR_NAME  (line:   8, col:  25):	user defined identifiers should contain only lowercase characters, digits or '_'
 Error: FORBIDDEN_STRUCT     (line:   9, col:   1):	Struct declaration are not allowed in .c files
+Error: TAB_REPLACE_SPACE    (line:   9, col:  21):	Found tab when expecting space
 Error: FORBIDDEN_CHAR_NAME  (line:   9, col:  25):	user defined identifiers should contain only lowercase characters, digits or '_'
 Error: GLOBAL_VAR_DETECTED  (line:  11, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: FORBIDDEN_CHAR_NAME  (line:  11, col:  25):	user defined identifiers should contain only lowercase characters, digits or '_'
