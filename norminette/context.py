@@ -169,6 +169,7 @@ class PreProcessors:
         self.total_ifndefs = 0
 
         self.skip_define = False
+        self.guard = None
 
     @property
     def indent(self):
