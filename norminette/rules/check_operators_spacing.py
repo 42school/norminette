@@ -137,6 +137,15 @@ right_auth = []
 
 whitespaces = ["NEWLINE", "SPACE", "TAB"]
 
+operands = [
+    "IDENTIFIER",
+    "CONSTANT",
+    "CHAR_CONST",
+    "STRING",
+    "RPARENTHESIS",
+    "RBRACKET",
+]
+
 
 class CheckOperatorsSpacing(Rule, Check):
     depends_on = (
@@ -413,6 +422,9 @@ class CheckOperatorsSpacing(Rule, Check):
             elif context.check_token(tmp, glued_operators) is False and not (
                 context.check_token(pos, ["PLUS", "MINUS"])
                 and context.check_token(pos + 1, "CONSTANT")
+                # `i +10`: a sign applies to the constant only when no
+                # operand precedes it, otherwise the operator is binary
+                and context.check_token(tmp, operands) is not True
             ):
                 context.new_error("SPC_AFTER_OPERATOR", context.peek_token(pos))
 
