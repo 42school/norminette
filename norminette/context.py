@@ -106,6 +106,7 @@ operators = [
     "CASE",
 ]
 misc_specifiers = [
+    "ALIGNAS",
     "CONST",
     "RESTRICT",
     "REGISTER",
@@ -410,6 +411,12 @@ In \"{self.scope.name}\" from \
 
     def skip_misc_specifier(self, pos, nl=False):
         i = self.skip_ws(pos, nl=nl)
+        # `_Alignas(int) char c;`: the alignment belongs to the qualifier
+        while self.check_token(i, "ALIGNAS") is True:
+            i = self.skip_ws(i + 1, nl=nl)
+            if self.check_token(i, "LPARENTHESIS") is not True:
+                break
+            i = self.skip_ws(self.skip_nest(i) + 1, nl=nl)
         if self.check_token(i, "IDENTIFIER"):
             tmp = self.skip_misc_specifier(i + 1)
             if tmp != i + 1:

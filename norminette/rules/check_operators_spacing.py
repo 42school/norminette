@@ -214,6 +214,7 @@ class CheckOperatorsSpacing(Rule, Check):
                         "BWISE_AND",
                         "IDENTIFIER",
                         "SIZEOF",
+                        "ALIGNAS",
                     ],
                 )
                 is True
@@ -242,6 +243,7 @@ class CheckOperatorsSpacing(Rule, Check):
                         "BWISE_NOT",
                         "IDENTIFIER",
                         "SIZEOF",
+                        "ALIGNAS",
                         "NOT",
                         "MINUS",
                         "PLUS",
