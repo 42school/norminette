@@ -11,5 +11,6 @@
 [36mtest_typedef_array_size.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 6":
 		<TYPEDEF> <SPACE> <CHAR> <TAB> <MULT> <IDENTIFIER=t_str> <SEMI_COLON> <NEWLINE>
 test_typedef_array_size.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: FORBIDDEN_CHAR_NAME  (line:   5, col:  17):	user defined identifiers should contain only lowercase characters, digits or '_'

@@ -27,6 +27,7 @@
 [36mtest_typedef_tag_naming.h[0m - [32mIsBlockEnd[0m In "UserDefinedEnum" from "GlobalScope" line 14":
 		<RBRACE> <TAB> <IDENTIFIER=t_ke> <SEMI_COLON> <NEWLINE>
 test_typedef_tag_naming.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: STRUCT_TYPE_NAMING   (line:   6, col:  16):	Structure name must start with s_
 Error: ENUM_TYPE_NAMING     (line:  11, col:  14):	Enum name must start with e_

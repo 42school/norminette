@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.3.60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 12:04+0200\n"
+"POT-Creation-Date: 2026-09-01 12:17+0200\n"
 "PO-Revision-Date: 2026-04-11 00:00+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -392,198 +392,202 @@ msgid "Include must be at the start of file"
 msgstr "تعليمات include يجب أن تكون في بداية الملف"
 
 #: norminette/norm_error.py:98
+msgid "Header file is not protected from double inclusion"
+msgstr ""
+
+#: norminette/norm_error.py:99
 msgid "Header protection must include all the instructions"
 msgstr "حماية الترويسة يجب أن تشمل جميع التعليمات"
 
-#: norminette/norm_error.py:99
+#: norminette/norm_error.py:100
 msgid "Instructions after header protection are forbidden"
 msgstr "التعليمات بعد حماية الترويسة ممنوعة"
 
-#: norminette/norm_error.py:100
+#: norminette/norm_error.py:101
 msgid "Wrong header protection name"
 msgstr "اسم حماية الترويسة غير صحيح"
 
-#: norminette/norm_error.py:101
+#: norminette/norm_error.py:102
 msgid "Header protection must be in uppercase"
 msgstr "حماية الترويسة يجب أن تكون بأحرف كبيرة"
 
-#: norminette/norm_error.py:102
+#: norminette/norm_error.py:103
 msgid "Multiple header protections, only one is allowed"
 msgstr "حمايات ترويسة متعددة، يسمح بواحدة فقط"
 
-#: norminette/norm_error.py:103
+#: norminette/norm_error.py:104
 msgid "Header protection not containing #define"
 msgstr "حماية الترويسة لا تحتوي على #define"
 
-#: norminette/norm_error.py:104
+#: norminette/norm_error.py:105
 msgid "Ternaries are forbidden"
 msgstr "المعاملات الثلاثية ممنوعة"
 
-#: norminette/norm_error.py:105
+#: norminette/norm_error.py:106
 msgid "Too many values on define"
 msgstr "قيم كثيرة جدا في define"
 
-#: norminette/norm_error.py:106
+#: norminette/norm_error.py:107
 msgid "Newline in declaration"
 msgstr "سطر جديد داخل التعريف"
 
-#: norminette/norm_error.py:107
+#: norminette/norm_error.py:108
 msgid "Multiple instructions in single line control structure"
 msgstr "تعليمات متعددة في بنية تحكم ذات سطر واحد"
 
-#: norminette/norm_error.py:108
+#: norminette/norm_error.py:109
 msgid "Newline in define"
 msgstr "سطر جديد داخل define"
 
-#: norminette/norm_error.py:109
+#: norminette/norm_error.py:110
 msgid "Missing identifier in typedef declaration"
 msgstr "معرف مفقود في تعريف typedef"
 
-#: norminette/norm_error.py:110
+#: norminette/norm_error.py:111
 msgid "Label statements are forbidden"
 msgstr "تعليمات label ممنوعة"
 
-#: norminette/norm_error.py:111
+#: norminette/norm_error.py:112
 msgid "Goto statements are forbidden"
 msgstr "تعليمات goto ممنوعة"
 
-#: norminette/norm_error.py:112
+#: norminette/norm_error.py:113
 msgid "Preprocessors can only be used in the global scope"
 msgstr "يمكن استخدام المعالجات المسبقة فقط في النطاق العام"
 
-#: norminette/norm_error.py:113
+#: norminette/norm_error.py:114
 msgid "Function prototype in incorrect scope"
 msgstr "نموذج function في نطاق غير صحيح"
 
-#: norminette/norm_error.py:114
+#: norminette/norm_error.py:115
 msgid "Statement is in incorrect scope"
 msgstr "التعليمة في نطاق غير صحيح"
 
-#: norminette/norm_error.py:115
+#: norminette/norm_error.py:116
 msgid "Incorrect values in define"
 msgstr "قيم غير صحيحة في define"
 
-#: norminette/norm_error.py:116
+#: norminette/norm_error.py:117
 msgid "Expected newline before brace"
 msgstr "كان متوقعا سطر جديد قبل القوس المعقوف"
 
-#: norminette/norm_error.py:117
+#: norminette/norm_error.py:118
 msgid "Expected newline after control structure"
 msgstr "كان متوقعا سطر جديد بعد بنية التحكم"
 
-#: norminette/norm_error.py:118
+#: norminette/norm_error.py:119
 msgid "Unrecognized variable type"
 msgstr "نوع متغير غير معروف"
 
-#: norminette/norm_error.py:119
+#: norminette/norm_error.py:120
 msgid "Comment must be on its own line or at end of a line"
 msgstr "يجب أن يكون التعليق في سطر مستقل أو في نهاية السطر"
 
-#: norminette/norm_error.py:120
+#: norminette/norm_error.py:121
 msgid "Comma at line start"
 msgstr "فاصلة في بداية السطر"
 
-#: norminette/norm_error.py:121
+#: norminette/norm_error.py:122
 msgid "Mixed spaces and tabs"
 msgstr "مزج بين المسافات وعلامات التبويب"
 
-#: norminette/norm_error.py:122
+#: norminette/norm_error.py:123
 msgid "Function attribute must be at the end of line"
 msgstr "سمة function يجب أن تكون في نهاية السطر"
 
-#: norminette/norm_error.py:123
+#: norminette/norm_error.py:124
 msgid "Missing or invalid 42 header"
 msgstr "ترويسة 42 مفقودة أو غير صالحة"
 
-#: norminette/norm_error.py:124
+#: norminette/norm_error.py:125
 msgid "Missing space between include and filename"
 msgstr "مسافة مفقودة بين include واسم الملف"
 
-#: norminette/norm_error.py:125
+#: norminette/norm_error.py:126
 msgid "Enums, structs and unions need to be defined only in global scope"
 msgstr "يجب تعريف enums وstructs وunions فقط في النطاق العام"
 
-#: norminette/norm_error.py:126
+#: norminette/norm_error.py:127
 msgid "Typedef declaration are not allowed in .c files"
 msgstr "تعريفات typedef غير مسموح بها في ملفات .c"
 
-#: norminette/norm_error.py:127
+#: norminette/norm_error.py:128
 msgid "Struct declaration are not allowed in .c files"
 msgstr "تعريفات struct غير مسموح بها في ملفات .c"
 
-#: norminette/norm_error.py:128
+#: norminette/norm_error.py:129
 msgid "Union declaration are not allowed in .c files"
 msgstr "تعريفات union غير مسموح بها في ملفات .c"
 
-#: norminette/norm_error.py:129
+#: norminette/norm_error.py:130
 msgid "Enum declaration are not allowed in .c files"
 msgstr "تعريفات enum غير مسموح بها في ملفات .c"
 
-#: norminette/norm_error.py:130
+#: norminette/norm_error.py:131
 msgid "Unexpected end of file (EOF) while parsing a char"
 msgstr "نهاية ملف غير متوقعة (EOF) أثناء تحليل حرف"
 
-#: norminette/norm_error.py:131
+#: norminette/norm_error.py:132
 msgid "Unexpected end of line (EOL) while parsing a char"
 msgstr "نهاية سطر غير متوقعة (EOL) أثناء تحليل حرف"
 
-#: norminette/norm_error.py:132
+#: norminette/norm_error.py:133
 msgid "Unexpected end of file (EOF) while parsing a multiline comment"
 msgstr "نهاية ملف غير متوقعة (EOF) أثناء تحليل تعليق متعدد الأسطر"
 
-#: norminette/norm_error.py:133
+#: norminette/norm_error.py:134
 msgid "Unexpected end of file (EOF) while parsing a string"
 msgstr "نهاية ملف غير متوقعة (EOF) أثناء تحليل سلسلة نصية"
 
-#: norminette/norm_error.py:134
+#: norminette/norm_error.py:135
 msgid "Empty character constant"
 msgstr "ثابت حرفي فارغ"
 
-#: norminette/norm_error.py:135
+#: norminette/norm_error.py:136
 msgid "Character constants can have only one character"
 msgstr "الثوابت الحرفية يمكن أن تحتوي على حرف واحد فقط"
 
-#: norminette/norm_error.py:136
+#: norminette/norm_error.py:137
 msgid "This suffix is invalid"
 msgstr "هذه اللاحقة غير صالحة"
 
-#: norminette/norm_error.py:137
+#: norminette/norm_error.py:138
 msgid "Invalid suffix for float/double literal constant"
 msgstr "لاحقة غير صالحة لثابت float/double حرفي"
 
-#: norminette/norm_error.py:138
+#: norminette/norm_error.py:139
 msgid "Invalid binary integer literal"
 msgstr "ثابت عدد صحيح ثنائي غير صالح"
 
-#: norminette/norm_error.py:139
+#: norminette/norm_error.py:140
 msgid "Invalid octal integer literal"
 msgstr "ثابت عدد صحيح ثماني غير صالح"
 
-#: norminette/norm_error.py:140
+#: norminette/norm_error.py:141
 msgid "Invalid hexadecimal integer literal"
 msgstr "ثابت عدد صحيح سداسي عشري غير صالح"
 
-#: norminette/norm_error.py:141
+#: norminette/norm_error.py:142
 msgid "Potential maximal munch detected"
 msgstr "تم اكتشاف احتمال maximal munch"
 
-#: norminette/norm_error.py:142
+#: norminette/norm_error.py:143
 msgid "No hexadecimal digits followed by the \\x"
 msgstr "لا توجد أرقام سداسية عشرية بعد \\x"
 
-#: norminette/norm_error.py:143
+#: norminette/norm_error.py:144
 msgid "Unknown escape sequence"
 msgstr "تسلسل هروب غير معروف"
 
-#: norminette/norm_error.py:144
+#: norminette/norm_error.py:145
 msgid "Exponent has no digits"
 msgstr "الأس لا يحتوي على أرقام"
 
-#: norminette/norm_error.py:145
+#: norminette/norm_error.py:146
 msgid "Multiple dots in float constant"
 msgstr "نقاط متعددة في ثابت float"
 
-#: norminette/norm_error.py:146
+#: norminette/norm_error.py:147
 msgid "Multiple 'x' in hexadecimal float constant"
 msgstr "عدة 'x' في ثابت float سداسي عشري"
 

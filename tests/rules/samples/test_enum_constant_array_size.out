@@ -27,6 +27,7 @@
 [36mtest_enum_constant_array_size.h[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 14":
 		<IDENTIFIER=t_fn> <TAB> <IDENTIFIER=g_from_literal> <LBRACKET> <CONSTANT=4> <RBRACKET> <SEMI_COLON> <NEWLINE>
 test_enum_constant_array_size.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: GLOBAL_VAR_DETECTED  (line:  12, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: MISALIGNED_VAR_DECL  (line:  12, col:   9):	Misaligned variable declaration
