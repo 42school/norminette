@@ -123,7 +123,9 @@ class CheckUtypeDeclaration(Rule, Check):
             loc = ids[0][1]
         else:
             loc = ids[0][1]
-        if is_td is False:
+        # A typedef names the type twice, and the tag it introduces follows
+        # the same rule as a bare one
+        if is_td is False or len(ids) > 1:
             if (
                 utype is not None
                 and utype.type == "STRUCT"
