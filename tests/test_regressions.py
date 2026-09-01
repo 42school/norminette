@@ -390,3 +390,11 @@ def test_one_mistake_is_reported_once():
 def test_a_multiline_macro_says_so():
     assert "MULTILINE_MACRO" in names(check("#define M 1 \\\n\t+ 2\n"))
     assert "MULTILINE_MACRO" not in names(check("#define M 1\n"))
+
+
+def test_a_file_name_holds_lowercases_digits_and_underscores(tmp_path):
+    good = write(tmp_path, "my_file.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    assert "FORBIDDEN_CHAR_FILE" not in norminette(good).stdout
+
+    bad = write(tmp_path, "MyFile.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    assert "FORBIDDEN_CHAR_FILE" in norminette(bad).stdout

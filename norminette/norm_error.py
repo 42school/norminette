@@ -28,6 +28,8 @@ errors = {
     "MISSING_IDENTIFIER": _("missing type qualifier or identifier in function arguments"),
     "FORBIDDEN_CHAR_NAME": _("user defined identifiers should contain only lowercase characters, \
 digits or '_'"),
+    "FORBIDDEN_CHAR_FILE": _("file and directory names should contain only lowercase \
+characters, digits or '_'"),
     "TOO_FEW_TAB": _("Missing tabs for indent level"),
     "TOO_MANY_TAB": _("Extra tabs for indent level"),
     "TOO_MANY_WS": _("Extra whitespaces for indent level"),
