@@ -1,0 +1,44 @@
+[36mtest_nested_control_braces.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockStart[0m In "ControlStructure" from "ControlStructure" line 5":
+		<TAB> <TAB> <LBRACE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 6":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 7":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockEnd[0m In "ControlStructure" from "ControlStructure" line 8":
+		<TAB> <TAB> <RBRACE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 10":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 11":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 12":
+		<TAB> <TAB> <ELSE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockStart[0m In "ControlStructure" from "ControlStructure" line 13":
+		<TAB> <TAB> <LBRACE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 14":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 15":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockEnd[0m In "ControlStructure" from "ControlStructure" line 16":
+		<TAB> <TAB> <RBRACE> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 17":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 18":
+		<TAB> <TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsAssignation[0m In "ControlStructure" from "ControlStructure" line 19":
+		<TAB> <TAB> <TAB> <IDENTIFIER=a> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 20":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_control_braces.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 21":
+		<RBRACE> <NEWLINE>
+test_nested_control_braces.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

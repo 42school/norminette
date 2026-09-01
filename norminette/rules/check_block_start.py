@@ -1,5 +1,5 @@
 from norminette.rules import Rule, Check
-from norminette.scope import GlobalScope, ControlStructure
+from norminette.scope import GlobalScope
 
 
 class CheckBlockStart(Rule, Check):
@@ -12,9 +12,8 @@ class CheckBlockStart(Rule, Check):
         Braces signal that the control structure, function, or user defined type can contain
         multiple lines.
         A control structure that has no braces can only contain one instruction line, but can
-        contain multiple control structures
+        contain multiple control structures, braced or not
         """
-        outer = context.scope.get_outer()
         if len(context.history) > 2:
             i = 0
             for item in context.history[::]:
@@ -34,11 +33,4 @@ class CheckBlockStart(Rule, Check):
                 context.scope = context.tmp_scope
                 context.scope.multiline = True
                 context.tmp_scope = None
-        if (
-            type(context.scope) is ControlStructure
-            and outer is not None
-            and type(outer) is ControlStructure
-        ):
-            if outer.multiline is False:
-                context.new_error("MULT_IN_SINGLE_INSTR", context.peek_token(0))
         return False, 0
