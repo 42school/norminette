@@ -124,11 +124,10 @@ msgid ""
 msgstr "ユーザー定義の識別子は小文字、数字、'_'のみを含むべきです"
 
 #: norminette/norm_error.py:31
-#, fuzzy
 msgid ""
 "file and directory names should contain only lowercase characters, digits or "
 "'_'"
-msgstr "ユーザー定義の識別子は小文字、数字、'_'のみを含むべきです"
+msgstr "ファイル名とディレクトリ名は小文字、数字、'_'のみを含むべきです"
 
 #: norminette/norm_error.py:33
 msgid "Missing tabs for indent level"
@@ -243,13 +242,10 @@ msgid "Missing whitespace before typedef name"
 msgstr "typedef名の前に空白がありません"
 
 #: norminette/norm_error.py:62
-#, fuzzy
 msgid ""
 "Global variable present in file. It is forbidden unless the project "
 "explicitly allows it."
-msgstr ""
-"ファイルにグローバル変数があります。プロジェクトが明示的に許可しない限り禁止"
-"されています。"
+msgstr "ファイルにグローバル変数があります。プロジェクトが明示的に許可しない限り禁止されています"
 
 #: norminette/norm_error.py:64
 msgid "Logic operator at the end of line"
@@ -340,14 +336,12 @@ msgid "Expected tab"
 msgstr "タブが期待されます"
 
 #: norminette/norm_error.py:86
-#, fuzzy
 msgid "Missing return type in function declaration"
-msgstr "関数宣言の位置が整列していません"
+msgstr "関数宣言に戻り値の型がありません"
 
 #: norminette/norm_error.py:87
-#, fuzzy
 msgid "Missing newline at end of file"
-msgstr "ファイルの末尾に空行があります"
+msgstr "ファイルの末尾に改行がありません"
 
 #: norminette/norm_error.py:88
 msgid "Empty function argument requires void"
@@ -366,9 +360,8 @@ msgid "Comment is invalid in this scope"
 msgstr "このスコープではコメントが無効です"
 
 #: norminette/norm_error.py:92
-#, fuzzy
 msgid "Multiline macro is forbidden"
-msgstr "複数行のプリプロセッサ文は禁止されています"
+msgstr "複数行のマクロは禁止されています"
 
 #: norminette/norm_error.py:93
 msgid "Macro name must be capitalized"
@@ -387,9 +380,8 @@ msgid "Variable length array forbidden"
 msgstr "可変長配列は禁止されています"
 
 #: norminette/norm_error.py:97
-#, fuzzy
 msgid "typeof is forbidden"
-msgstr "typeof は禁止されています"
+msgstr "typeofは禁止されています"
 
 #: norminette/norm_error.py:98
 msgid "Function has more than 4 arguments"
@@ -405,7 +397,7 @@ msgstr "includeはファイルの先頭にある必要があります"
 
 #: norminette/norm_error.py:101
 msgid "Header file is not protected from double inclusion"
-msgstr ""
+msgstr "ヘッダーファイルが二重インクルードから保護されていません"
 
 #: norminette/norm_error.py:102
 msgid "Header protection must include all the instructions"

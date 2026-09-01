@@ -126,12 +126,10 @@ msgstr ""
 "يجب أن تحتوي المعرفات المعرفة من المستخدم على أحرف صغيرة أو أرقام أو '_' فقط"
 
 #: norminette/norm_error.py:31
-#, fuzzy
 msgid ""
 "file and directory names should contain only lowercase characters, digits or "
 "'_'"
-msgstr ""
-"يجب أن تحتوي المعرفات المعرفة من المستخدم على أحرف صغيرة أو أرقام أو '_' فقط"
+msgstr "يجب أن تحتوي أسماء الملفات والمجلدات على أحرف صغيرة أو أرقام أو '_' فقط"
 
 #: norminette/norm_error.py:33
 msgid "Missing tabs for indent level"
@@ -246,11 +244,10 @@ msgid "Missing whitespace before typedef name"
 msgstr "whitespace مفقودة قبل اسم typedef"
 
 #: norminette/norm_error.py:62
-#, fuzzy
 msgid ""
 "Global variable present in file. It is forbidden unless the project "
 "explicitly allows it."
-msgstr "يوجد متغير عام في الملف. وهو ممنوع إلا إذا سمح المشروع بذلك صراحة."
+msgstr "يوجد متغير عام في الملف. وهو ممنوع ما لم يسمح به المشروع صراحةً"
 
 #: norminette/norm_error.py:64
 msgid "Logic operator at the end of line"
@@ -341,14 +338,12 @@ msgid "Expected tab"
 msgstr "كان متوقعا علامة تاب"
 
 #: norminette/norm_error.py:86
-#, fuzzy
 msgid "Missing return type in function declaration"
-msgstr "تعريف دالة غير محاذى"
+msgstr "نوع الإرجاع مفقود في تعريف الدالة"
 
 #: norminette/norm_error.py:87
-#, fuzzy
 msgid "Missing newline at end of file"
-msgstr "سطر فارغ في نهاية الملف"
+msgstr "سطر جديد مفقود في نهاية الملف"
 
 #: norminette/norm_error.py:88
 msgid "Empty function argument requires void"
@@ -367,9 +362,8 @@ msgid "Comment is invalid in this scope"
 msgstr "التعليق غير صالح في هذا النطاق"
 
 #: norminette/norm_error.py:92
-#, fuzzy
 msgid "Multiline macro is forbidden"
-msgstr "تعليمة المعالج المسبق متعددة الأسطر ممنوعة"
+msgstr "الماكرو متعدد الأسطر ممنوع"
 
 #: norminette/norm_error.py:93
 msgid "Macro name must be capitalized"
@@ -388,9 +382,8 @@ msgid "Variable length array forbidden"
 msgstr "مصفوفة بطول متغير ممنوعة"
 
 #: norminette/norm_error.py:97
-#, fuzzy
 msgid "typeof is forbidden"
-msgstr "‏typeof ممنوع"
+msgstr "typeof ممنوع"
 
 #: norminette/norm_error.py:98
 msgid "Function has more than 4 arguments"
@@ -406,7 +399,7 @@ msgstr "تعليمات include يجب أن تكون في بداية الملف"
 
 #: norminette/norm_error.py:101
 msgid "Header file is not protected from double inclusion"
-msgstr ""
+msgstr "ملف الترويسة غير محمي من التضمين المزدوج"
 
 #: norminette/norm_error.py:102
 msgid "Header protection must include all the instructions"

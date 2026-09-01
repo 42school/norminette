@@ -127,13 +127,10 @@ msgstr ""
 "minúsculas, dígitos ou '_'"
 
 #: norminette/norm_error.py:31
-#, fuzzy
 msgid ""
 "file and directory names should contain only lowercase characters, digits or "
 "'_'"
-msgstr ""
-"Identificadores definidos pelo usuário devem conter apenas letras "
-"minúsculas, dígitos ou '_'"
+msgstr "Nomes de arquivos e diretórios devem conter apenas letras minúsculas, dígitos ou '_'"
 
 #: norminette/norm_error.py:33
 msgid "Missing tabs for indent level"
@@ -248,13 +245,10 @@ msgid "Missing whitespace before typedef name"
 msgstr "Espaço em branco faltando antes do nome do typedef"
 
 #: norminette/norm_error.py:62
-#, fuzzy
 msgid ""
 "Global variable present in file. It is forbidden unless the project "
 "explicitly allows it."
-msgstr ""
-"Variável global presente no arquivo. É proibida a menos que o projeto "
-"permita explicitamente."
+msgstr "Variável global presente no arquivo. É proibida a menos que o projeto permita explicitamente."
 
 #: norminette/norm_error.py:64
 msgid "Logic operator at the end of line"
@@ -345,14 +339,12 @@ msgid "Expected tab"
 msgstr "Tabulação esperada"
 
 #: norminette/norm_error.py:86
-#, fuzzy
 msgid "Missing return type in function declaration"
-msgstr "Declaração de função desalinhada"
+msgstr "Faltando tipo de retorno na declaração da função"
 
 #: norminette/norm_error.py:87
-#, fuzzy
 msgid "Missing newline at end of file"
-msgstr "Linha vazia no final do arquivo"
+msgstr "Faltando quebra de linha no final do arquivo"
 
 #: norminette/norm_error.py:88
 msgid "Empty function argument requires void"
@@ -371,9 +363,8 @@ msgid "Comment is invalid in this scope"
 msgstr "Comentário inválido neste escopo"
 
 #: norminette/norm_error.py:92
-#, fuzzy
 msgid "Multiline macro is forbidden"
-msgstr "Declaração de pré-processador em múltiplas linhas é proibida"
+msgstr "Macros multilinha são proibidas"
 
 #: norminette/norm_error.py:93
 msgid "Macro name must be capitalized"
@@ -392,7 +383,6 @@ msgid "Variable length array forbidden"
 msgstr "Arrays de tamanho variável são proibidos"
 
 #: norminette/norm_error.py:97
-#, fuzzy
 msgid "typeof is forbidden"
 msgstr "typeof é proibido"
 
@@ -410,7 +400,7 @@ msgstr "Instruções de include devem estar no início do arquivo"
 
 #: norminette/norm_error.py:101
 msgid "Header file is not protected from double inclusion"
-msgstr ""
+msgstr "Arquivo de cabeçalho não está protegido contra dupla inclusão"
 
 #: norminette/norm_error.py:102
 msgid "Header protection must include all the instructions"
