@@ -188,6 +188,24 @@ def test_json_output_holds_nothing_but_json(tmp_path):
     assert json.loads(result.stdout)["files"][0]["status"] == "Error"
 
 
+def test_allow_globals_keeps_the_naming_rule(tmp_path):
+    path = write(tmp_path, "gl.c", "int\tg_ok = 1;\nint\tbad_name = 2;\n")
+
+    default = norminette(path)
+    assert "GLOBAL_VAR_DETECTED" in default.stdout
+    assert "GLOBAL_VAR_NAMING" in default.stdout
+
+    allowed = norminette("--allow-globals", path)
+    assert "GLOBAL_VAR_DETECTED" not in allowed.stdout
+    assert "GLOBAL_VAR_NAMING" in allowed.stdout
+
+
+def test_allow_globals_clears_a_well_named_global(tmp_path):
+    path = write(tmp_path, "gl.c", "int\tg_ok = 1;\n")
+    assert "GLOBAL_VAR_DETECTED" in norminette(path).stdout
+    assert norminette("--allow-globals", path).stdout.strip() == "gl.c: OK!"
+
+
 def test_only_errors_hides_the_files_with_nothing_to_say(tmp_path):
     clean = write(tmp_path, "clean.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
     broken = write(tmp_path, "broken.c", "int\tmain(void)\n{\n\treturn (0)\n}\n")

@@ -187,7 +187,7 @@ class PreProcessors:
 
 
 class Context:
-    def __init__(self, file, tokens, debug=0, added_value=None):
+    def __init__(self, file, tokens, debug=0, added_value=None, allow_globals=False):
         # Header relative informations
         self.header_started = False
         self.header_parsed = False
@@ -208,6 +208,9 @@ class Context:
         self.sub = None
         self.fname_pos = 0
         self.arg_pos = [0, 0]
+
+        # Set when the project explicitly allows global variables
+        self.allow_globals = allow_globals
 
         # Enum constants declared in this file, they are not variables
         self.enum_constants = set()

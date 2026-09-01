@@ -77,6 +77,11 @@ def main():
         "--no-colors", action="store_true", help="Disable colors in output"
     )
     parser.add_argument(
+        "--allow-globals",
+        action="store_true",
+        help="For a project that explicitly allows global variables",
+    )
+    parser.add_argument(
         "--only-errors",
         action="store_true",
         help="Skip the files that have nothing to report",
@@ -147,7 +152,7 @@ def main():
         try:
             lexer = Lexer(file)
             tokens = list(lexer)
-            context = Context(file, tokens, debug, args.R)
+            context = Context(file, tokens, debug, args.R, args.allow_globals)
             registry.run(context)
         except NorminetteError as e:
             # Reported through the formatter, so `--format json` stays valid
