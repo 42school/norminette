@@ -24,6 +24,6 @@
 		<RBRACE> <NEWLINE>
 ok_func_ptr.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	Typedef declaration are not allowed in .c files
 Error: FORBIDDEN_TYPEDEF    (line:   6, col:   1):	Typedef declaration are not allowed in .c files

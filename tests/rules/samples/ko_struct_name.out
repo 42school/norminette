@@ -42,9 +42,9 @@ ko_struct_name.c: Error!
 Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	Typedef declaration are not allowed in .c files
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: USER_DEFINED_TYPEDEF (line:   1, col:  25):	User defined typedef must start with t_
-Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:   2, col:  25):	Global variable must start with g_
-Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:   3, col:  25):	Global variable must start with g_
 Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	Typedef declaration are not allowed in .c files
 Error: BRACE_NEWLINE        (line:   5, col:  21):	Expected newline before brace

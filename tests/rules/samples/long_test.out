@@ -179,12 +179,12 @@ Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
 Error: TOO_MANY_INSTR       (line:  31, col:  41):	Too many instructions on a single line
 Error: RETURN_PARENTHESIS   (line:  31, col:  48):	Return value must be in parenthesis
 Error: TOO_MANY_INSTR       (line:  31, col:  52):	Too many instructions on a single line
-Notice: GLOBAL_VAR_DETECTED  (line:  33, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  33, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:  33, col:   7):	Global variable must start with g_
-Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:  34, col:   9):	Global variable must start with g_
 Error: MISALIGNED_VAR_DECL  (line:  34, col:  19):	Misaligned variable declaration
-Notice: GLOBAL_VAR_DETECTED  (line:  38, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  38, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: SPACE_REPLACE_TAB    (line:  38, col:   4):	Found space when expecting tab
 Error: GLOBAL_VAR_NAMING    (line:  38, col:   8):	Global variable must start with g_
 Error: NO_SPC_AFR_PAR       (line:  38, col:  17):	Extra space after parenthesis (brace/bracket)

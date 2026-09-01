@@ -6,4 +6,4 @@
 		<INT> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=g_arr> <RPARENTHESIS> <LBRACKET> <CONSTANT=8> <RBRACKET> <SEMI_COLON> <NEWLINE>
 test_proto_returning_pointer.h: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.

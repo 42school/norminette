@@ -121,4 +121,4 @@
 [36mtest_file_1012_3.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 78":
 		<HASH> <IDENTIFIER=endif> 
 test_file_1012_3.h: OK!
-Notice: GLOBAL_VAR_DETECTED  (line:  18, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  18, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.

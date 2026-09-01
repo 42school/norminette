@@ -62,16 +62,16 @@ Error: SPACE_AFTER_KW       (line:   3, col:  20):	Missing space after keyword
 Error: SPACE_AFTER_KW       (line:   3, col:  50):	Missing space after keyword
 Error: SPACE_AFTER_KW       (line:   4, col:  28):	Missing space after keyword
 Error: SPACE_AFTER_KW       (line:   4, col:  57):	Missing space after keyword
-Notice: GLOBAL_VAR_DETECTED  (line:   7, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:   7, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: DECL_ASSIGN_LINE     (line:  13, col:  28):	Declaration and assignation on a single line
 Error: DECL_ASSIGN_LINE     (line:  14, col:  12):	Declaration and assignation on a single line
 Error: DECL_ASSIGN_LINE     (line:  15, col:  12):	Declaration and assignation on a single line
 Error: DECL_ASSIGN_LINE     (line:  16, col:  12):	Declaration and assignation on a single line
 Error: DECL_ASSIGN_LINE     (line:  17, col:  12):	Declaration and assignation on a single line
-Notice: GLOBAL_VAR_DETECTED  (line:  20, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
-Notice: GLOBAL_VAR_DETECTED  (line:  35, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  20, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
+Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
+Notice: GLOBAL_VAR_DETECTED  (line:  35, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: NO_SPC_BFR_PAR       (line:  35, col:  65):	Extra space before parenthesis (brace/bracket)
-Notice: GLOBAL_VAR_DETECTED  (line:  36, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Notice: GLOBAL_VAR_DETECTED  (line:  36, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
 Error: NO_SPC_BFR_PAR       (line:  36, col:  64):	Extra space before parenthesis (brace/bracket)
 Error: NO_SPC_BFR_PAR       (line:  38, col:  53):	Extra space before parenthesis (brace/bracket)
