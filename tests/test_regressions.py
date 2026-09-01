@@ -385,3 +385,8 @@ def test_one_mistake_is_reported_once():
     reported = names(check(source))
     assert reported.count("LINE_TOO_LONG") == 1
     assert reported.count("COMMENT_ON_INSTR") <= 1
+
+
+def test_a_multiline_macro_says_so():
+    assert "MULTILINE_MACRO" in names(check("#define M 1 \\\n\t+ 2\n"))
+    assert "MULTILINE_MACRO" not in names(check("#define M 1\n"))

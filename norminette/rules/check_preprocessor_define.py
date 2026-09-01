@@ -32,6 +32,14 @@ class CheckPreprocessorDefine(Rule, Check):
             return
         if context.preproc.skip_define:
             return
+        # A define carried over a backslash runs on several lines
+        last = None
+        for j in range(0, context.tkn_scope):
+            tkn = context.peek_token(j)
+            if tkn is not None and tkn.type != "NEWLINE":
+                last = tkn
+        if last is not None and last.lineno > context.peek_token(0).lineno:
+            context.new_error("MULTILINE_MACRO", context.peek_token(0))
         i += 1  # skip DEFINE
         i = context.skip_ws(i)
 
