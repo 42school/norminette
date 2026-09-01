@@ -618,6 +618,15 @@ In \"{self.scope.name}\" from \
                 ):
                     return False
                 skip = 1
+            if self.check_token(pos, ["INC", "DEC"]) is True:
+                # `i++ * 2`: a postfix increment leaves a value behind it
+                tmp = pos - 1
+                while self.check_token(tmp, ["SPACE", "TAB"]) is True:
+                    tmp -= 1
+                if self.check_token(
+                    tmp, ["IDENTIFIER", "CONSTANT", "RPARENTHESIS", "RBRACKET"]
+                ):
+                    return True
             if (
                 self.check_token(
                     pos, ["IDENTIFIER", "CONSTANT", "SIZEOF", "CHAR_CONST"]
