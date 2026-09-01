@@ -24,13 +24,19 @@ class CheckControlStatement(Rule, Check):
 
     def check_nest(self, context, i):
         depth = 1
+        braces = 0
         i += 1
-        while depth > 0:
+        while depth > 0 and context.peek_token(i) is not None:
             if context.check_token(i, "LPARENTHESIS") is True:
                 depth += 1
             if context.check_token(i, "RPARENTHESIS") is True:
                 depth -= 1
-            if context.check_token(i, assigns) is True:
+            if context.check_token(i, "LBRACE") is True:
+                braces += 1
+            if context.check_token(i, "RBRACE") is True:
+                braces -= 1
+            # `(t_x){.i = v}`: a designated initialiser is not an assignment
+            if context.check_token(i, assigns) is True and braces == 0:
                 context.new_error("ASSIGN_IN_CONTROL", context.peek_token(i))
                 return -1
             if context.check_token(i, forbidden_cs) is True:

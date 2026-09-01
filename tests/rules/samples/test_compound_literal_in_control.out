@@ -1,0 +1,23 @@
+[36mtest_compound_literal_in_control.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=v1> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=v2> <RPARENTHESIS> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=get_res> <LPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=t_stct> <RPARENTHESIS> <LBRACE> <IDENTIFIER=v1> <COMMA> <SPACE> <IDENTIFIER=v2> <RBRACE> <COMMA> <SPACE> <CONSTANT=1> <RPARENTHESIS> <SPACE> <EQUALS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=get_res> <LPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=t_stct> <RPARENTHESIS> <LBRACE> <DOT> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=v1> <COMMA> <SPACE> <DOT> <IDENTIFIER=j> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=v2> <RBRACE> <COMMA> <SPACE> <CONSTANT=1> <RPARENTHESIS> <SPACE> <EQUALS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 6":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=2> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=v1> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=v2> <RPARENTHESIS> <SPACE> <EQUALS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 8":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=3> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_compound_literal_in_control.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 10":
+		<RBRACE> <NEWLINE>
+test_compound_literal_in_control.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: ASSIGN_IN_CONTROL    (line:   7, col:  13):	Assignment in control structure
