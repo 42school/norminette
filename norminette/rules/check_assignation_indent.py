@@ -77,9 +77,15 @@ class CheckAssignationIndent(Rule, Check):
                     raise CParsingError(
                         f"Error: Unexpected EOF l.{context.peek_token(i - 1).pos[0]}"
                     )
-                if context.check_token(
-                    i + got, ["LBRACKET", "RBRACKET", "LBRACE", "RBRACE"]
-                ):
+                # A closing brace goes back a level, and so does an opening
+                # one alone on its line, which opens a block. One that starts
+                # an element of an initialiser does not: the norm wants the
+                # block indented
+                dedent = context.check_token(i + got, ["RBRACKET", "RBRACE"]) is True
+                if context.check_token(i + got, ["LBRACKET", "LBRACE"]) is True:
+                    tmp = context.skip_ws(i + got + 1)
+                    dedent = context.check_token(tmp, "NEWLINE") is True
+                if dedent:
                     nest -= 1
                 if got > nest or (
                     got > nest + 1
@@ -91,9 +97,7 @@ class CheckAssignationIndent(Rule, Check):
                     and context.history[-1] in ["IsAssignation", "IsVarDeclaration"]
                 ):
                     context.new_error("TOO_FEW_TAB", context.peek_token(i))
-                if context.check_token(
-                    i + got, ["LBRACKET", "RBRACKET", "LBRACE", "RBRACE"]
-                ):
+                if dedent:
                     nest += 1
             if context.check_token(i, "LPARENTHESIS") is True:
                 nest += 1
