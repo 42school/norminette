@@ -8,8 +8,14 @@ class CheckComment(Rule, Check):
         """
         i = context.skip_ws(0)
 
+        # Only the statement that just matched, otherwise every comment on the
+        # line is reported once per rule that runs on it
         tokens = []
-        while context.peek_token(i) and not context.check_token(i, "NEWLINE"):
+        while (
+            i < context.tkn_scope
+            and context.peek_token(i)
+            and not context.check_token(i, "NEWLINE")
+        ):
             token = context.peek_token(i)
             tokens.append(token)
             i += 1

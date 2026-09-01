@@ -450,7 +450,6 @@ Error: MULT_ASSIGN_LINE     (line:  15, col:  24):	Multiple assignations on a si
 Error: MULT_ASSIGN_LINE     (line:  15, col:  31):	Multiple assignations on a single line
 Error: TAB_INSTEAD_SPC      (line:  19, col:  16):	Found tab when expecting space
 Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
 Error: EMPTY_LINE_FUNCTION  (line:  22, col:   1):	Empty line in function
 Error: ASSIGN_IN_CONTROL    (line:  23, col:  16):	Assignment in control structure
 Error: FORBIDDEN_CS         (line:  24, col:   9):	Forbidden control structure
