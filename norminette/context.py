@@ -478,7 +478,10 @@ In \"{self.scope.name}\" from \
                 i += 1
             tmp = self.skip_misc_specifier(i, nl=nl)
             if tmp == i:
-                return True, i - 1
+                # `int(*f)(char *)`: stepping back would land on the type
+                if self.check_token(i - 1, whitespaces + ["MULT", "BWISE_AND"]):
+                    return True, i - 1
+                return True, i
             else:
                 return True, tmp
 

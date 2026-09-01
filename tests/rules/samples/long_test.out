@@ -164,14 +164,14 @@ Error: NL_AFTER_PREPROC     (line:  18, col:   1):	Preprocessor statement must b
 Error: NO_ARGS_VOID         (line:  18, col:  11):	Empty function argument requires void
 Error: RETURN_PARENTHESIS   (line:  20, col:  12):	Return value must be in parenthesis
 Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	Found space when expecting tab before function name
-Error: MISSING_IDENTIFIER   (line:  23, col:  16):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  23, col:  17):	missing type qualifier or identifier in function arguments
 Error: BRACE_NEWLINE        (line:  23, col:  22):	Expected newline before brace
 Error: RETURN_PARENTHESIS   (line:  24, col:  12):	Return value must be in parenthesis
 Error: TOO_MANY_INSTR       (line:  24, col:  17):	Too many instructions on a single line
 Error: TOO_MANY_FUNCS       (line:  26, col:   1):	Too many functions in file
-Error: MISSING_IDENTIFIER   (line:  26, col:  28):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  26, col:  29):	missing type qualifier or identifier in function arguments
 Error: TOO_MANY_FUNCS       (line:  31, col:   1):	Too many functions in file
-Error: MISSING_IDENTIFIER   (line:  31, col:  33):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  31, col:  34):	missing type qualifier or identifier in function arguments
 Error: BRACE_NEWLINE        (line:  31, col:  39):	Expected newline before brace
 Error: BRACE_SHOULD_EOL     (line:  31, col:  40):	Expected newline after brace
 Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
