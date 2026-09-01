@@ -50,11 +50,12 @@ INT_LITERAL_PATTERN = re.compile(r"""
 ^
 # (?P<Sign>[-+]*)
 (?P<Prefix>         # prefix can be
-    0[bBxX]*        #   0, 0b, 0B, 0x, 0X, 0bb, 0BB, ...
+    0[xX](?![xX])   #   0x or 0X, but `0xb` keeps the b as a digit
+    |0[bB](?![bB])  #   0b or 0B, same for the repeated form below
+    |0[bBxX]*       #   0, 0xx, 0bb, ...
     |               # or empty
 )
 (?P<Constant>
-    # BUG If prefix is followed by two or more x, it doesn't works correctly
     (?<=0[xX])       # is prefix for hex digits?
         [\da-fA-F]+  #   so, collect hex digits
     |                # otherwise
