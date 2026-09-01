@@ -420,6 +420,11 @@ In \"{self.scope.name}\" from \
                 i = tmp
                 i = self.skip_ws(i, nl=nl)
         while self.check_token(i, misc_specifiers):
+            # `unsigned x;`: a lone sign specifier is the type, not a qualifier
+            if self.check_token(i, sign_specifiers):
+                tmp = self.skip_ws(i + 1, nl=nl)
+                if self.check_token(tmp, types) is False:
+                    return i
             i += 1
             i = self.skip_ws(i, nl=nl)
             if self.check_token(i, "MULT"):
