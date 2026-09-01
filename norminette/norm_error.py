@@ -57,8 +57,8 @@ digits or '_'"),
     "UNION_TYPE_NAMING": _("Union name must start with u_"),
     "GLOBAL_VAR_NAMING": _("Global variable must start with g_"),
     "NO_TAB_BF_TYPEDEF": _("Missing whitespace before typedef name"),
-    "GLOBAL_VAR_DETECTED": _("Global variable present in file. It is forbidden unless it is const \
-or static, or the project explicitly allows it."),
+    "GLOBAL_VAR_DETECTED": _("Global variable present in file. It is forbidden unless the project \
+explicitly allows it."),
     "EOL_OPERATOR": _("Logic operator at the end of line"),
     "EMPTY_LINE_FILE_START": _("Empty line at start of file"),
     "EMPTY_LINE_FUNCTION": _("Empty line in function"),

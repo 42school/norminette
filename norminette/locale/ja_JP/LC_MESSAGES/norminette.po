@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.3.60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 09:39+0200\n"
+"POT-Creation-Date: 2026-09-01 11:19+0200\n"
 "PO-Revision-Date: 2025-08-09 00:00+0900\n"
 "Last-Translator: GitHub Copilot\n"
 "Language-Team: none\n"
@@ -236,10 +236,11 @@ msgid "Missing whitespace before typedef name"
 msgstr "typedef名の前に空白がありません"
 
 #: norminette/norm_error.py:60
+#, fuzzy
 msgid ""
-"Global variable present in file. It is forbidden unless it is const or "
-"static, or the project explicitly allows it."
-msgstr "ファイルにグローバル変数があります。const または static でない限り、またはプロジェクトが明示的に許可しない限り禁止されています。"
+"Global variable present in file. It is forbidden unless the project "
+"explicitly allows it."
+msgstr "ファイルにグローバル変数があります。プロジェクトが明示的に許可しない限り禁止されています。"
 
 #: norminette/norm_error.py:62
 msgid "Logic operator at the end of line"

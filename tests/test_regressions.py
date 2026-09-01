@@ -163,7 +163,8 @@ def write(directory, name, body):
 
 
 def test_a_file_holding_only_notices_exits_zero(tmp_path):
-    path = write(tmp_path, "notice.c", 'char\t*g_a = "\\q";\n')
+    body = 'int\tmain(void)\n{\n\treturn ("\\q"[0]);\n}\n'
+    path = write(tmp_path, "notice.c", body)
     result = norminette(path)
     assert "notice.c: OK!" in result.stdout
     assert "Notice: UNKNOWN_ESCAPE" in result.stdout

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.3.60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 09:39+0200\n"
+"POT-Creation-Date: 2026-09-01 11:19+0200\n"
 "PO-Revision-Date: 2025-04-09 17:51-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -239,10 +239,11 @@ msgid "Missing whitespace before typedef name"
 msgstr "Espaço em branco faltando antes do nome do typedef"
 
 #: norminette/norm_error.py:60
+#, fuzzy
 msgid ""
-"Global variable present in file. It is forbidden unless it is const or "
-"static, or the project explicitly allows it."
-msgstr "Variável global presente no arquivo. É proibida a menos que seja const ou static, ou que o projeto permita explicitamente."
+"Global variable present in file. It is forbidden unless the project "
+"explicitly allows it."
+msgstr "Variável global presente no arquivo. É proibida a menos que o projeto permita explicitamente."
 
 #: norminette/norm_error.py:62
 msgid "Logic operator at the end of line"

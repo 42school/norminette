@@ -1,5 +1,6 @@
 from norminette.rules import Rule, Check
 
+
 types = [
     "INT",
     "VOID",
@@ -44,7 +45,7 @@ class CheckGlobalNaming(Rule, Check):
             and context.peek_token(i).value != "environ"
         ):
             if context.allow_globals is False:
-                context.new_warning("GLOBAL_VAR_DETECTED", context.peek_token(0))
+                context.new_error("GLOBAL_VAR_DETECTED", context.peek_token(0))
             if context.peek_token(i).value.startswith("g_") is False:
                 context.new_error("GLOBAL_VAR_NAMING", context.peek_token(i))
         return False, i

@@ -18,4 +18,4 @@
 		<HASH> <IDENTIFIER=endif> <NEWLINE>
 ok_protection.h: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   6, col:   1):	Global variable present in file. It is forbidden unless it is const or static, or the project explicitly allows it.
+Error: GLOBAL_VAR_DETECTED  (line:   6, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
