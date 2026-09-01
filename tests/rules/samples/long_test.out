@@ -160,7 +160,6 @@ Error: TOO_MANY_INSTR       (line:  10, col:  27):	Too many instructions on a si
 Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	Found space when expecting tab before function name
 Error: RETURN_PARENTHESIS   (line:  14, col:  12):	Return value must be in parenthesis
 Error: INCLUDE_START_FILE   (line:  17, col:   1):	Include must be at the start of file
-Error: NL_AFTER_PREPROC     (line:  18, col:   1):	Preprocessor statement must be followed by a newline
 Error: NO_ARGS_VOID         (line:  18, col:  11):	Empty function argument requires void
 Error: RETURN_PARENTHESIS   (line:  20, col:  12):	Return value must be in parenthesis
 Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	Found space when expecting tab before function name
