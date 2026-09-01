@@ -11,7 +11,7 @@
 
 \begin{document}
 \title{A Norma}
-\subtitle{Versão 4.11}
+\subtitle{Versão 4.1}
 
 \summary
 {
@@ -135,15 +135,15 @@ Pull requests, sugestões e issues são bem-vindos!
 
         \begin{itemize}
 
-            \item Um struct deve ter um nome, e ele deve começar por
+            \item O nome de um struct deve começar por
                 \texttt{s\_}.
 
             \item O nome de um typedef deve começar por
                 \texttt{t\_}.
 
-            \item Um union deve ter um nome, e ele deve começar por \texttt{u\_}.
+            \item O nome de um union deve começar por \texttt{u\_}.
 
-            \item Um enum deve ter um nome, e ele deve começar por \texttt{e\_}.
+            \item O nome de um enum deve começar por \texttt{e\_}.
 
             \item O nome de uma variável global deve começar por \texttt{g\_}.
             
@@ -160,9 +160,8 @@ Pull requests, sugestões e issues são bem-vindos!
                 devem ser legíveis em inglês, com cada palavra separada por um underscore.
                 Isso se aplica a macros, nomes de arquivos e diretórios também.
 
-            \item O uso de variáveis globais é proibido e é considerado um erro de norma,
-                sejam elas marcadas como const ou static ou não, a menos que o projeto as
-                permita explicitamente.
+            \item O uso de variáveis globais que não são marcadas como const ou static é
+                proibido e é considerado um erro de norma, a menos que o projeto as permita explicitamente.
 
             \item O arquivo deve compilar. Não se espera que um arquivo que não compila
                 passe na Norma.
@@ -195,8 +194,6 @@ Pull requests, sugestões e issues são bem-vindos!
             \item Uma linha vazia deve estar realmente vazia: sem espaços ou tabulações.
 
             \item Uma linha nunca pode terminar com espaços ou tabulações.
-
-            \item Um arquivo deve terminar com uma quebra de linha.
             
             \item Nunca pode haver duas linhas vazias consecutivas.
             Nunca pode haver dois espaços consecutivos.
@@ -221,9 +218,7 @@ Pull requests, sugestões e issues são bem-vindos!
 
             \item Apenas uma instrução ou estrutura de controle por linha é permitida. Ex.: Atribuição em
             uma estrutura de controle é proibida, duas ou mais atribuições na mesma linha são proibidas,
-            uma nova linha é necessária ao final de uma estrutura de controle, ... . Isso alcança o
-            interior de um \texttt{return}: uma vírgula entre seus parênteses separa duas
-            instruções e é proibida.
+            uma nova linha é necessária ao final de uma estrutura de controle, ... .
 
             \item Uma instrução ou estrutura de controle pode ser dividida em várias linhas quando necessário.
             As linhas seguintes devem ser indentadas em relação à primeira linha,
@@ -238,13 +233,10 @@ Pull requests, sugestões e issues são bem-vindos!
 
             \item Cada palavra-chave do C deve ser seguida por um espaço, exceto por
             palavras-chave de tipos (como int, char, float, etc.),
-            assim como sizeof. Isso inclui \texttt{break}, \texttt{continue} e um
-            \texttt{return} sem valor, escrito \texttt{return ;}.
+            assim como sizeof.
 
             \item Estruturas de controle (if, while..) devem usar chaves, a menos que contenham uma única
-            instrução em uma única linha. Uma estrutura de controle conta como uma
-            instrução, portanto uma estrutura de controle sem chaves pode conter
-            outra, com ou sem chaves próprias.
+            instrução em uma única linha.
 
             \end{itemize}
 
@@ -281,8 +273,7 @@ int     main(void)
 
             \item Uma função que não tem argumentos deve ser
                 explicitamente prototipada com a palavra "void" como o
-                argumento. Isso se aplica a cada lista de argumentos que a declaração
-                contém, incluindo a de um ponteiro de função que ela receba ou retorne.
+                argumento.
 
             \item Parâmetros em protótipos de funções devem ser nomeados.
 
@@ -418,8 +409,8 @@ struct  s_struct;
 
       \begin{itemize}
 
-          \item Constantes de pré-processador (ou \#define) que você criar devem ser usadas
-              apenas para valores literais e expressões constantes construídas a partir deles.
+          \item \textit{(*)} Constantes de pré-processador (ou \#define) que você criar devem ser usadas
+              apenas para valores literais e constantes.
           \item \textit{(*)} Todo \#define criado para burlar a norma e/ou ofuscar
               o código é proibido.
           \item \textit{(*)} Você pode usar macros disponíveis em bibliotecas padrão, somente
@@ -457,11 +448,7 @@ struct  s_struct;
 
             \item VLAs - Arrays de comprimento variável.
 
-            \item Tipo implícito, tanto em uma declaração de variável quanto no tipo de
-        retorno de uma função.
-
-        \item \texttt{typeof}, e suas variantes \texttt{\_\_typeof\_\_} e
-        \texttt{typeof\_unqual}.
+            \item Tipo implícito em declarações variáveis.
 
         \end{itemize}
 

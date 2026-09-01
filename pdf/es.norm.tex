@@ -8,7 +8,7 @@
 
 \begin{document}
 \title{La Norma}
-\subtitle{Version 4.11}
+\subtitle{Version 4}
 
 \summary
 {
@@ -131,10 +131,10 @@ elecciones a continuación:
 
 \begin{itemize}
 
-      \item Una estructura debe tener un nombre, y debe comenzar con \texttt{s\_}.
+      \item El nombre de una estructura debe comenzar con \texttt{s\_}.
       \item El nombre de un typedef debe comenzar con \texttt{t\_}.
-      \item Un union debe tener un nombre, y debe comenzar con \texttt{u\_}.
-      \item Un enum debe tener un nombre, y debe comenzar con \texttt{e\_}.
+      \item El nombre de un union debe comenzar con \texttt{u\_}.
+      \item El nombre de un enum debe comenzar con \texttt{e\_}.
       \item El nombre de una variable global debe comenzar con \texttt{g\_}.
       \item Los nombres de variables y funciones solo pueden contener
             minúsculas, dígitos y '\_' (snake\_case).
@@ -151,9 +151,9 @@ elecciones a continuación:
       \item Los objetos (variables, funciones, macros, tipos, archivos o
             directorios) deben tener nombres lo más explícitos o mnemótecnicos
             posibles.
-      \item El uso de variables globales está prohibido y se considera un error de
-            norma, estén marcadas como const o static o no, a menos que el proyecto
-            las permita explícitamente.
+      \item El uso de variables globales que no están marcadas como const y
+            static está prohibido y se considera un error de norma, a menos que
+            el proyecto las permita explícitamente.
       \item El archivo debe compilar. Un archivo que no compila no se espera
             que
             pase la Norma.
@@ -196,8 +196,7 @@ elecciones a continuación:
             espacio.
       \item Cada palabra clave de C debe ir seguida de un espacio, excepto las
             palabras clave para tipos (como int, char, float, etc.), así como
-            sizeof. Esto incluye \texttt{break}, \texttt{continue} y un
-            \texttt{return} sin valor, escrito \texttt{return ;}.
+            sizeof.
       \item Cada declaración de variable debe estar indentada en la misma
             columna
             dentro de su scope.
@@ -222,16 +221,7 @@ elecciones a continuación:
             operador de asignación. Los operadores deben estar al principio de
             una línea.
       \item Las estructuras de control (if, while, etc...) deben tener llaves,
-            salvo que contengan una sola instrucción en una sola línea. Una
-            estructura de control cuenta como una instrucción, por lo que una
-            estructura de control sin llaves puede contener otra, con o sin
-            llaves propias.
-
-            \item Un archivo debe terminar con un salto de línea.
-
-            \item Solo se permite una instrucción por línea. Esto alcanza al
-            interior de un \texttt{return}: una coma entre sus paréntesis separa
-            dos instrucciones y está prohibida.
+            salvo que contengan una sola línea.
       \item Las llaves que siguen a las funciones, declaradores o estructuras
             de
             control deben estar precedidas y seguidas por una nueva línea.
@@ -267,9 +257,7 @@ Ejemplo general de formato:
 
       \item Una función no puede recibir más de 4 parámetros.
       \item Una función que no recibe argumentos debe ser prototipada con la
-            palabra ``void'' como argumento. Esto se aplica a cada lista de
-            argumentos que contenga la declaración, incluida la de un puntero a
-            función que reciba o devuelva.
+            palabra ``void'' como argumento.
       \item Los parámetros en los prototipos de las funciones deben tener
             nombre.
       \item Cada función debe estar separada de la siguiente por una línea
@@ -385,8 +373,7 @@ Ejemplo general de formato:
 \begin{itemize}
 
       \item Las constantes del preprocesador (o \#define) que crees, deben
-            usarse solo para valores literales y expresiones constantes
-            construidas a partir de ellos.
+            usarse solo para valores literales y constantes.
       \item Todos los \#define creados para evitar la norma y/o para ofuscar
             el código están prohibidos. Esta parte debe ser verificada por un
             humano.
@@ -419,11 +406,7 @@ Ejemplo general de formato:
             \end{itemize}
       \item Operadores ternarios como `?'.
       \item VLAs - o arrays de longitud variable.
-      \item Tipo implícito, tanto en una declaración de variable como en el tipo
-            de retorno de una función.
-
-            \item \texttt{typeof}, y sus variantes \texttt{\_\_typeof\_\_} y
-            \texttt{typeof\_unqual}.
+      \item Tipos implícitos en declaraciones de variables.
 
 \end{itemize}
 \begin{42ccode}
