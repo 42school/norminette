@@ -1,0 +1,15 @@
+[36mtest_long_comment_once.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_long_comment_once.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_long_comment_once.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <MULT_COMMENT=/* a comment that is quite a lot longer than the eighty columns the norm allows on one line */> <NEWLINE>
+[36mtest_long_comment_once.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_long_comment_once.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 5":
+		<RBRACE> <NEWLINE>
+test_long_comment_once.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: LINE_TOO_LONG        (line:   3, col:   1):	line too long
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:   5):	Comment is invalid in this scope
+Error: LINE_TOO_LONG        (line:   4, col:  82):	line too long
