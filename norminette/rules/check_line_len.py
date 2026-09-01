@@ -6,11 +6,14 @@ class CheckLineLen(Rule, Check):
         """
         Lines must not be over 80 characters long
         """
-        i = 0
-        line_too_long = {}
+        reported = {
+            highlight.lineno
+            for error in context.errors
+            if error.name == "LINE_TOO_LONG"
+            for highlight in error.highlights
+        }
         for tkn in context.tokens[: context.tkn_scope]:
-            if tkn.pos[1] > 81 and tkn.pos[0] not in line_too_long:
+            if tkn.pos[1] > 81 and tkn.pos[0] not in reported:
                 context.new_error("LINE_TOO_LONG", tkn)
-                line_too_long[tkn.pos[0]] = True
-            i += 1
+                reported.add(tkn.pos[0])
         return False, 0

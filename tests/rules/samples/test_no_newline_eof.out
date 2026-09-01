@@ -1,0 +1,6 @@
+[36mtest_no_newline_eof.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 1":
+		<MULT_COMMENT=/*
+** no newline after this comment
+*/> 
+test_no_newline_eof.c: Error!
+Error: NO_NEWLINE_EOF       (line:   3, col:   3):	Missing newline at end of file

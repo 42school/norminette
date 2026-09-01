@@ -31,10 +31,10 @@
 ko_struct_indent.c: Error!
 Error: FORBIDDEN_TYPEDEF    (line:   1, col:   1):	Typedef declaration are not allowed in .c files
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:   2, col:  29):	Global variable must start with g_
 Error: MISALIGNED_VAR_DECL  (line:   2, col:  29):	Misaligned variable declaration
-Notice: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   3, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: MISALIGNED_VAR_DECL  (line:   3, col:  29):	Misaligned variable declaration
 Error: MULT_DECL_LINE       (line:   3, col:  34):	Multiple declarations on a single line
 Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	Typedef declaration are not allowed in .c files

@@ -14,8 +14,8 @@ ko_preproc_define.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: MACRO_NAME_CAPITAL   (line:   1, col:   9):	Macro name must be capitalized
 Error: PREPROC_CONSTANT     (line:   1, col:  15):	Preprocessor statement must only contain constant defines
-Error: PREPROC_CONSTANT     (line:   2, col:  13):	Preprocessor statement must only contain constant defines
 Error: PREPROC_CONSTANT     (line:   3, col:  22):	Preprocessor statement must only contain constant defines
 Error: PREPROC_CONSTANT     (line:   5, col:  19):	Preprocessor statement must only contain constant defines
 Error: PREPROC_START_LINE   (line:   6, col:   2):	Preprocessor statement not at the beginning of the line
 Error: MACRO_NAME_CAPITAL   (line:   6, col:  10):	Macro name must be capitalized
+Error: NO_NEWLINE_EOF       (line:   6, col:  19):	Missing newline at end of file

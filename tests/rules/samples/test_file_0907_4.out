@@ -12,3 +12,4 @@ test_file_0907_4.c: Error!
 Error: EMPTY_LINE_FILE_START (line:   1, col:   1):	Empty line at start of file
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: BRACE_SHOULD_EOL     (line:   5, col:   1):	Expected newline after brace
+Error: NO_NEWLINE_EOF       (line:   5, col:   2):	Missing newline at end of file

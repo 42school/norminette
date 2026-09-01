@@ -1,0 +1,22 @@
+[36mtest_initializer_indent.c[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=g_test> <LBRACKET> <CONSTANT=3> <RBRACKET> <LBRACKET> <CONSTANT=2> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <LBRACE> <NEWLINE>
+		<TAB> <LBRACE> <MINUS> <CONSTANT=3> <COMMA> <SPACE> <CONSTANT=42> <RBRACE> <COMMA> <NEWLINE>
+		<TAB> <LBRACE> <CONSTANT=42> <COMMA> <SPACE> <CONSTANT=1> <RBRACE> <COMMA> <NEWLINE>
+		<TAB> <LBRACE> <MINUS> <CONSTANT=42> <COMMA> <SPACE> <CONSTANT=0> <RBRACE> <NEWLINE>
+		<RBRACE> <SEMI_COLON> <NEWLINE>
+[36mtest_initializer_indent.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 6":
+		<NEWLINE>
+[36mtest_initializer_indent.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 7":
+		<VOID> <TAB> <IDENTIFIER=f> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_initializer_indent.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 8":
+		<LBRACE> <NEWLINE>
+[36mtest_initializer_indent.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <STATIC> <SPACE> <CONST> <SPACE> <CHAR> <TAB> <MULT> <IDENTIFIER=ex> <LBRACKET> <CONSTANT=2> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <LBRACE> <NEWLINE>
+		<TAB> <TAB> <LBRACKET> <CONSTANT=0> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <STRING="a"> <COMMA> <NEWLINE>
+		<TAB> <TAB> <LBRACKET> <CONSTANT=1> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <STRING="b"> <COMMA> <NEWLINE>
+		<TAB> <RBRACE> <SEMI_COLON> <NEWLINE>
+[36mtest_initializer_indent.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
+		<RBRACE> <NEWLINE>
+test_initializer_indent.c: Error!
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

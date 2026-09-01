@@ -123,7 +123,9 @@ class CheckUtypeDeclaration(Rule, Check):
             loc = ids[0][1]
         else:
             loc = ids[0][1]
-        if is_td is False:
+        # A typedef names the type twice, and the tag it introduces follows
+        # the same rule as a bare one
+        if is_td is False or len(ids) > 1:
             if (
                 utype is not None
                 and utype.type == "STRUCT"
@@ -142,7 +144,13 @@ class CheckUtypeDeclaration(Rule, Check):
                 and name.value.startswith("e_") is False
             ):
                 context.new_error("ENUM_TYPE_NAMING", context.peek_token(loc))
-        if is_td or (is_td is False and contain_full_def is False):
+        if is_td is False and contain_full_def is False and len(ids) == 1:
+            # `struct s_foo;` names the type, not a variable, so the keyword
+            # rule applies: a space follows struct, union and enum
+            tmp = ids[0][1] - 1
+            if context.check_token(tmp, "TAB") is True:
+                context.new_error("TAB_REPLACE_SPACE", context.peek_token(tmp))
+        elif is_td or (is_td is False and contain_full_def is False):
             tmp = ids[-1][1] - 1
             tabs = 0
             while (context.check_token(tmp, "TAB")) is True and tmp > 0:
@@ -169,7 +177,9 @@ class CheckUtypeDeclaration(Rule, Check):
                 tmp -= 1
             if tab_error:
                 context.new_error("TAB_REPLACE_SPACE", context.peek_token(tmp))
-        if contain_full_def is False:
+        if contain_full_def is False and not (is_td is False and len(ids) == 1):
+            # A forward declaration holds no variable to align, and a single
+            # space cannot line struct, union and enum up anyway
             i = 0
             i = ids[-1][1]
             if (

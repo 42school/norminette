@@ -3,6 +3,7 @@
 [36mtest_file_1012_4.c[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 2":
 		<IDENTIFIER=t_montype> <TAB> <IDENTIFIER=g_glob> <SEMI_COLON> 
 test_file_1012_4.c: Error!
-Notice: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   2, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
+Error: NO_NEWLINE_EOF       (line:   2, col:  18):	Missing newline at end of file

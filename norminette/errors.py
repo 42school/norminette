@@ -193,9 +193,15 @@ class HumanizedErrorsFormatter(_formatter):
             return error.text
         return f"\x1b[{color}m{error.text}\x1b[0m"
 
+    @property
+    def only_errors(self) -> bool:
+        return self.options.get("only_errors", False)
+
     def __str__(self) -> str:
         output = ''
         for file in self.files:
+            if self.only_errors and file.errors.status == "OK":
+                continue
             output += f"{file.basename}: {file.errors.status}!"
             for error in file.errors:
                 error_text = self._colorize_error_text(error)

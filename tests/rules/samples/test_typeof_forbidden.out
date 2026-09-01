@@ -1,0 +1,35 @@
+[36mtest_typeof_forbidden.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=func> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=x> <RPARENTHESIS> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=typeofish> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=typeofish> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=x> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <LPARENTHESIS> <VOID> <RPARENTHESIS> <IDENTIFIER=typeofish> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 7":
+		<RBRACE> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 8":
+		<NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 9":
+		<VOID> <TAB> <IDENTIFIER=func2> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=x> <RPARENTHESIS> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 10":
+		<LBRACE> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsFunctionCall[0m In "Function" from "GlobalScope" line 11":
+		<TAB> <IDENTIFIER=typeof> <LPARENTHESIS> <IDENTIFIER=x> <RPARENTHESIS> <TAB> <IDENTIFIER=k> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 12":
+		<NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 13":
+		<TAB> <IDENTIFIER=k> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=x> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 14":
+		<TAB> <LPARENTHESIS> <VOID> <RPARENTHESIS> <IDENTIFIER=k> <SEMI_COLON> <NEWLINE>
+[36mtest_typeof_forbidden.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 15":
+		<RBRACE> <NEWLINE>
+test_typeof_forbidden.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TYPEOF_FORBIDDEN     (line:  11, col:   5):	typeof is forbidden
+Error: TAB_INSTEAD_SPC      (line:  11, col:  14):	Found tab when expecting space
+Error: EMPTY_LINE_FUNCTION  (line:  12, col:   1):	Empty line in function

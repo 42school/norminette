@@ -1,0 +1,34 @@
+[36mtest_many_comments_one_line.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=fn> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=a> <SEMI_COLON> <SPACE> 
+[36mtest_many_comments_one_line.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<MULT_COMMENT=/*1*/> <SPACE> 
+[36mtest_many_comments_one_line.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<MULT_COMMENT=/*2*/> <SPACE> 
+[36mtest_many_comments_one_line.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<MULT_COMMENT=/*3*/> <SPACE> 
+[36mtest_many_comments_one_line.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<MULT_COMMENT=/*4*/> <SPACE> 
+[36mtest_many_comments_one_line.c[0m - [32mIsComment[0m In "Function" from "GlobalScope" line 3":
+		<MULT_COMMENT=/*5*/> <NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <SEMI_COLON> <NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <MULT_COMMENT=/* middle */> <SPACE> <CONSTANT=2> <SEMI_COLON> <NEWLINE>
+[36mtest_many_comments_one_line.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 7":
+		<RBRACE> <NEWLINE>
+test_many_comments_one_line.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:  12):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:  18):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:  24):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:  30):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:   3, col:  36):	Comment is invalid in this scope
+Error: EMPTY_LINE_FUNCTION  (line:   4, col:   1):	Empty line in function
+Error: COMMENT_ON_INSTR     (line:   6, col:   9):	Comment must be on its own line or at end of a line
+Error: WRONG_SCOPE_COMMENT  (line:   6, col:   9):	Comment is invalid in this scope

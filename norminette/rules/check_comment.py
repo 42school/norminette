@@ -8,8 +8,10 @@ class CheckComment(Rule, Check):
         """
         i = context.skip_ws(0)
 
+        # Only the statement that just matched, otherwise every comment on the
+        # line is reported once per rule that runs on it
         tokens = []
-        while context.peek_token(i) and not context.check_token(i, "NEWLINE"):
+        while i < context.tkn_scope and context.peek_token(i):
             token = context.peek_token(i)
             tokens.append(token)
             i += 1
@@ -50,7 +52,11 @@ class CheckComment(Rule, Check):
         return False
 
     def is_last_token(self, token, foward):
-        expected = ("SPACE", "TAB")
-        if token.type == "MULT_COMMENT":
-            expected += ("COMMENT", "MULT_COMMENT")
-        return all(it.type in ("SPACE", "TAB", "COMMENT", "MULT_COMMENT") for it in foward)
+        # A comment ends its own line, so an instruction continuing on the
+        # next one does not put it in the middle of anything
+        for it in foward:
+            if it.type == "NEWLINE":
+                return True
+            if it.type not in ("SPACE", "TAB", "COMMENT", "MULT_COMMENT"):
+                return False
+        return True

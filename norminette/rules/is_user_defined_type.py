@@ -47,16 +47,22 @@ class IsUserDefinedType(Rule, Primary, priority=45):
         if context.peek_token(i) is None:
             return False, 0
         p = 0
+        b = 0
         while context.peek_token(i):
             if context.check_token(i, "LPARENTHESIS") is True:
                 p += 1
             if context.check_token(i, "RPARENTHESIS") is True:
                 p -= 1
+            if context.check_token(i, "LBRACKET") is True:
+                b += 1
+            if context.check_token(i, "RBRACKET") is True:
+                b -= 1
             if context.check_token(i, "ENUM") is True:
                 enum = True
             if context.check_token(i, ["NEWLINE", "SEMI_COLON"]) is True and p == 0:
                 break
-            if context.check_token(i, "IDENTIFIER"):
+            # `typedef char t_buf[LEN];`: an array size is not the type name
+            if context.check_token(i, "IDENTIFIER") and b == 0:
                 ids.append(context.peek_token(i))
             i += 1
         if context.check_token(i, "NEWLINE") is True and p <= 0:
@@ -68,6 +74,7 @@ class IsUserDefinedType(Rule, Primary, priority=45):
             return True, i
         elif context.check_token(i, "SEMI_COLON") is True:
             i += 1
-            context.scope.vars_name.append(ids[-1])
+            if ids:
+                context.scope.vars_name.append(ids[-1])
             i = context.eol(i)
             return True, i

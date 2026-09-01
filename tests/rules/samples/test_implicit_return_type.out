@@ -1,0 +1,13 @@
+[36mtest_implicit_return_type.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=ok> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_implicit_return_type.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 2":
+		<IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_implicit_return_type.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 3":
+		<LBRACE> <NEWLINE>
+[36mtest_implicit_return_type.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_implicit_return_type.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 5":
+		<RBRACE> <NEWLINE>
+test_implicit_return_type.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: MISSING_RETURN_TYPE  (line:   2, col:   1):	Missing return type in function declaration

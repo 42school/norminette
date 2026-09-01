@@ -1,0 +1,17 @@
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <TAB> <IDENTIFIER=ft_a> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <MULT> <IDENTIFIER=tab> <COMMA> <SPACE> <INT> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 2":
+		<INT> <TAB> <TAB> <IDENTIFIER=ft_b> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <MULT> <IDENTIFIER=tab> <COMMA> <SPACE> <INT> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 3":
+		<INT> <TAB> <TAB> <IDENTIFIER=ft_c> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <MULT> <IDENTIFIER=tab> <COMMA> <SPACE> <INT> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <IDENTIFIER=s> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 4":
+		<VOID> <TAB> <IDENTIFIER=ft_d> <LPARENTHESIS> <INT> <SPACE> <MULT> <IDENTIFIER=tab> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=len> <COMMA> <SPACE> <VOID> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <INT> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 5":
+		<INT> <TAB> <TAB> <IDENTIFIER=ft_e> <LPARENTHESIS> <INT> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_glued_func_pointer_arg.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 6":
+		<INT> <TAB> <TAB> <IDENTIFIER=ft_f> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <MULT> <IDENTIFIER=tab> <COMMA> <SPACE> <INT> <LPARENTHESIS> <MULT> <RPARENTHESIS> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+test_glued_func_pointer_arg.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: MISSING_IDENTIFIER   (line:   5, col:  14):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:   6, col:  29):	missing type qualifier or identifier in function arguments

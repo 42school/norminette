@@ -1,0 +1,34 @@
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 1":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 2":
+		<MULT_COMMENT=/**/> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 3":
+		<MULT_COMMENT=/**/> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 4":
+		<MULT_COMMENT=/*   */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 5":
+		<MULT_COMMENT=/**/> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 6":
+		<MULT_COMMENT=/*   By: */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 7":
+		<MULT_COMMENT=/**/> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 8":
+		<MULT_COMMENT=/*   Created:   by */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 9":
+		<MULT_COMMENT=/*   Updated:   by */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 10":
+		<MULT_COMMENT=/**/> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsComment[0m In "GlobalScope" from "None" line 11":
+		<MULT_COMMENT=/* ************************************************************************** */> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 12":
+		<NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 13":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 14":
+		<LBRACE> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 15":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_empty_header_fields.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 16":
+		<RBRACE> <NEWLINE>
+test_empty_header_fields.c: Error!
+Error: INVALID_HEADER       (line:  12, col:   1):	Missing or invalid 42 header

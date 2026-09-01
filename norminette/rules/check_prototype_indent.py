@@ -90,6 +90,11 @@ class CheckPrototypeIndent(Rule, Check):
             elif context.check_token(i, "SPACE") is True and type_identifier_nb == 0:
                 context.new_error("SPACE_REPLACE_TAB", context.peek_token(i))
                 return True, i
+            elif context.check_token(i, "NEWLINE") is True and type_identifier_nb == 0:
+                # The name is on its own line, so no tabulation separates it
+                # from the return type
+                context.new_error("MISSING_TAB_FUNC", context.peek_token(i))
+                return True, i
             elif context.check_token(i, "TAB") is True and type_identifier_nb == 0:
                 if current_indent == 0:
                     current_indent = math.floor((id_length + buffer_len) / 4)

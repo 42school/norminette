@@ -98,3 +98,4 @@ Error: NL_AFTER_VAR_DECL    (line:  22, col:  21):	Variable declarations must be
 Error: TOO_FEW_TAB          (line:  22, col:  21):	Missing tabs for indent level
 Error: TOO_MANY_INSTR       (line:  22, col:  21):	Too many instructions on a single line
 Error: BRACE_SHOULD_EOL     (line:  23, col:   1):	Expected newline after brace
+Error: NO_NEWLINE_EOF       (line:  23, col:   2):	Missing newline at end of file

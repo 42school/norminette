@@ -106,6 +106,7 @@ operators = [
     "CASE",
 ]
 misc_specifiers = [
+    "ALIGNAS",
     "CONST",
     "RESTRICT",
     "REGISTER",
@@ -169,6 +170,7 @@ class PreProcessors:
         self.total_ifndefs = 0
 
         self.skip_define = False
+        self.guard = None
 
     @property
     def indent(self):
@@ -186,7 +188,7 @@ class PreProcessors:
 
 
 class Context:
-    def __init__(self, file, tokens, debug=0, added_value=None):
+    def __init__(self, file, tokens, debug=0, added_value=None, allow_globals=False):
         # Header relative informations
         self.header_started = False
         self.header_parsed = False
@@ -207,6 +209,12 @@ class Context:
         self.sub = None
         self.fname_pos = 0
         self.arg_pos = [0, 0]
+
+        # Set when the project explicitly allows global variables
+        self.allow_globals = allow_globals
+
+        # Enum constants declared in this file, they are not variables
+        self.enum_constants = set()
 
         # Preprocessor handling
         self.protected = False
@@ -403,6 +411,12 @@ In \"{self.scope.name}\" from \
 
     def skip_misc_specifier(self, pos, nl=False):
         i = self.skip_ws(pos, nl=nl)
+        # `_Alignas(int) char c;`: the alignment belongs to the qualifier
+        while self.check_token(i, "ALIGNAS") is True:
+            i = self.skip_ws(i + 1, nl=nl)
+            if self.check_token(i, "LPARENTHESIS") is not True:
+                break
+            i = self.skip_ws(self.skip_nest(i) + 1, nl=nl)
         if self.check_token(i, "IDENTIFIER"):
             tmp = self.skip_misc_specifier(i + 1)
             if tmp != i + 1:
@@ -416,6 +430,11 @@ In \"{self.scope.name}\" from \
                 i = tmp
                 i = self.skip_ws(i, nl=nl)
         while self.check_token(i, misc_specifiers):
+            # `unsigned x;`: a lone sign specifier is the type, not a qualifier
+            if self.check_token(i, sign_specifiers):
+                tmp = self.skip_ws(i + 1, nl=nl)
+                if self.check_token(tmp, types) is False:
+                    return i
             i += 1
             i = self.skip_ws(i, nl=nl)
             if self.check_token(i, "MULT"):
@@ -478,7 +497,10 @@ In \"{self.scope.name}\" from \
                 i += 1
             tmp = self.skip_misc_specifier(i, nl=nl)
             if tmp == i:
-                return True, i - 1
+                # `int(*f)(char *)`: stepping back would land on the type
+                if self.check_token(i - 1, whitespaces + ["MULT", "BWISE_AND"]):
+                    return True, i - 1
+                return True, i
             else:
                 return True, tmp
 
@@ -618,6 +640,15 @@ In \"{self.scope.name}\" from \
                 ):
                     return False
                 skip = 1
+            if self.check_token(pos, ["INC", "DEC"]) is True:
+                # `i++ * 2`: a postfix increment leaves a value behind it
+                tmp = pos - 1
+                while self.check_token(tmp, ["SPACE", "TAB"]) is True:
+                    tmp -= 1
+                if self.check_token(
+                    tmp, ["IDENTIFIER", "CONSTANT", "RPARENTHESIS", "RBRACKET"]
+                ):
+                    return True
             if (
                 self.check_token(
                     pos, ["IDENTIFIER", "CONSTANT", "SIZEOF", "CHAR_CONST"]

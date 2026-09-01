@@ -8,3 +8,4 @@
 		<HASH> <IDENTIFIER=include> <SPACE> <LESS_THAN> <IDENTIFIER=main> <DOT> <IDENTIFIER=h> <MORE_THAN> 
 ok_include.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_NEWLINE_EOF       (line:   4, col:  18):	Missing newline at end of file

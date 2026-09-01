@@ -18,5 +18,7 @@
 		<RBRACE> <SPACE> <NEWLINE>
 ko_white_space_end_include.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPC_BEFORE_NL        (line:   1, col:  19):	Space before newline
+Error: SPC_BEFORE_NL        (line:   2, col:  19):	Space before newline
 Error: SPC_BEFORE_NL        (line:   5, col:   2):	Space before newline
 Error: SPC_BEFORE_NL        (line:   9, col:   2):	Space before newline

@@ -1,0 +1,33 @@
+[36mtest_typedef_tag_naming.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 1":
+		<TYPEDEF> <SPACE> <STRUCT> <SPACE> <IDENTIFIER=s_ok> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockStart[0m In "UserDefinedType" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsVarDeclaration[0m In "UserDefinedType" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=a> <SEMI_COLON> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockEnd[0m In "UserDefinedType" from "GlobalScope" line 4":
+		<RBRACE> <TAB> <IDENTIFIER=t_ok> <SEMI_COLON> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 5":
+		<NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 6":
+		<TYPEDEF> <SPACE> <STRUCT> <SPACE> <IDENTIFIER=e_ko> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockStart[0m In "UserDefinedType" from "GlobalScope" line 7":
+		<LBRACE> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsVarDeclaration[0m In "UserDefinedType" from "GlobalScope" line 8":
+		<TAB> <INT> <TAB> <IDENTIFIER=a> <SEMI_COLON> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockEnd[0m In "UserDefinedType" from "GlobalScope" line 9":
+		<RBRACE> <TAB> <IDENTIFIER=t_ko> <SEMI_COLON> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 10":
+		<NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 11":
+		<TYPEDEF> <SPACE> <ENUM> <SPACE> <IDENTIFIER=s_ke> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockStart[0m In "UserDefinedEnum" from "GlobalScope" line 12":
+		<LBRACE> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 13":
+		<TAB> <IDENTIFIER=A> <NEWLINE>
+[36mtest_typedef_tag_naming.h[0m - [32mIsBlockEnd[0m In "UserDefinedEnum" from "GlobalScope" line 14":
+		<RBRACE> <TAB> <IDENTIFIER=t_ke> <SEMI_COLON> <NEWLINE>
+test_typedef_tag_naming.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: STRUCT_TYPE_NAMING   (line:   6, col:  16):	Structure name must start with s_
+Error: ENUM_TYPE_NAMING     (line:  11, col:  14):	Enum name must start with e_

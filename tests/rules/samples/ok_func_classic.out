@@ -82,6 +82,6 @@
 [36mok_func_classic.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 50":
 		<RBRACE> <NEWLINE>
 ok_func_classic.c: Error!
-Notice: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: CHAR_AS_STRING       (line:  48, col:  21):	Character constants can have only one character

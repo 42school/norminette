@@ -1,0 +1,22 @@
+[36mtest_sign_before_constant.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=i> <SEMI_COLON> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <MINUS> <CONSTANT=10> <SEMI_COLON> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=i> <SPACE> <MULT> <SPACE> <MINUS> <CONSTANT=10> <SEMI_COLON> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=i> <SPACE> <PLUS> <CONSTANT=10> <SEMI_COLON> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 8":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <SPACE> <PLUS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_sign_before_constant.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 9":
+		<RBRACE> <NEWLINE>
+test_sign_before_constant.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPC_AFTER_OPERATOR   (line:   7, col:  11):	missing space after operator
+Error: SPC_AFTER_OPERATOR   (line:   8, col:  15):	missing space after operator

@@ -1,0 +1,10 @@
+[36mtest_proto_type_own_line.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<CHAR> <TAB> <IDENTIFIER=ok> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_proto_type_own_line.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 2":
+		<CHAR> <NEWLINE>
+		<IDENTIFIER=ko> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+test_proto_type_own_line.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: MISSING_TAB_FUNC     (line:   2, col:   5):	missing tab before function name
+Error: TOO_FEW_TAB          (line:   3, col:   1):	Missing tabs for indent level

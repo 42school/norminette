@@ -77,15 +77,14 @@ Error: MACRO_NAME_CAPITAL   (line:   6, col:  13):	Macro name must be capitalize
 Error: CONSECUTIVE_WS       (line:   7, col:   8):	Two or more consecutives white spaces
 Error: TAB_REPLACE_SPACE    (line:   7, col:   9):	Found tab when expecting space
 Error: CONSECUTIVE_NEWLINES (line:   9, col:   1):	Consecutive newlines
-Error: PREPROC_CONSTANT     (line:  19, col:  24):	Preprocessor statement must only contain constant defines
+Error: MULTILINE_MACRO      (line:  10, col:   1):	Multiline macro is forbidden
 Error: PREPROC_CONSTANT     (line:  20, col:  15):	Preprocessor statement must only contain constant defines
-Error: PREPROC_CONSTANT     (line:  22, col:  13):	Preprocessor statement must only contain constant defines
 Error: PREPROC_CONSTANT     (line:  24, col:  16):	Preprocessor statement must only contain constant defines
 Error: PREPROC_CONSTANT     (line:  26, col:  20):	Preprocessor statement must only contain constant defines
 Error: TERNARY_FBIDDEN      (line:  26, col:  20):	Ternaries are forbidden
 Error: PREPROC_CONSTANT     (line:  27, col:  21):	Preprocessor statement must only contain constant defines
 Error: MACRO_FUNC_FORBIDDEN (line:  29, col:  12):	Macro functions are forbidden
-Error: PREPROC_CONSTANT     (line:  29, col:  16):	Preprocessor statement must only contain constant defines
+Error: PREPROC_CONSTANT     (line:  29, col:  25):	Preprocessor statement must only contain constant defines
 Error: TERNARY_FBIDDEN      (line:  29, col:  25):	Ternaries are forbidden
 Error: MACRO_FUNC_FORBIDDEN (line:  30, col:  12):	Macro functions are forbidden
-Error: PREPROC_CONSTANT     (line:  30, col:  25):	Preprocessor statement must only contain constant defines
+Error: NO_NEWLINE_EOF       (line:  35, col:  14):	Missing newline at end of file

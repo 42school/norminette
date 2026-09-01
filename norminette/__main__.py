@@ -22,7 +22,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "file",
-        help="File(s) or folder(s) you wanna run the parser on. If no file provided, runs on current folder.",
+        help="File(s) or folder(s) you wanna run the parser on, or - to read one "
+             "from standard input. If no file provided, runs on current folder.",
         nargs="*",
     )
     parser.add_argument(
@@ -75,6 +76,16 @@ def main():
     parser.add_argument(
         "--no-colors", action="store_true", help="Disable colors in output"
     )
+    parser.add_argument(
+        "--allow-globals",
+        action="store_true",
+        help="For a project that explicitly allows global variables",
+    )
+    parser.add_argument(
+        "--only-errors",
+        action="store_true",
+        help="Skip the files that have nothing to report",
+    )
     parser.add_argument("-R", nargs=1, help="compatibility for norminette 2")
     args = parser.parse_args()
     registry = Registry()
@@ -88,6 +99,8 @@ def main():
         file_data = args.cfile if args.cfile else args.hfile
         file = File(file_name, file_data)
         files.append(file)
+    elif args.file == ["-"]:
+        files.append(File(args.filename or "file.c", sys.stdin.read()))
     else:
         stack = []
         seen = set()
@@ -139,7 +152,7 @@ def main():
         try:
             lexer = Lexer(file)
             tokens = list(lexer)
-            context = Context(file, tokens, debug, args.R)
+            context = Context(file, tokens, debug, args.R, args.allow_globals)
             registry.run(context)
         except NorminetteError as e:
             # Reported through the formatter, so `--format json` stays valid
@@ -147,7 +160,9 @@ def main():
             failed = True
         except KeyboardInterrupt:
             sys.exit(1)
-    errors = format(files, use_colors=not args.no_colors)
+    errors = format(
+        files, use_colors=not args.no_colors, only_errors=args.only_errors
+    )
     print(errors, end="")
     sys.exit(1 if failed or any(it.errors.status != "OK" for it in files) else 0)
 
