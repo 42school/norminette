@@ -12,7 +12,8 @@ class CheckHeader(Rule, Check):
 
     def check_header(self, context):
         # val = r"\/\* \*{74} \*\/\n\/\*.*\*\/\n\/\*.*\*\/\n\/\*.{3}([^ ]*).*\*\/\n\/\*.*\*\/\n\/\*   By: ([^ ]*).*\*\/\n\/\*.*\*\/\n\/\*   Created: ([^ ]* [^ ]*) by ([^ ]*).*\*\/\n\/\*   Updated: ([^ ]* [^ ]*) by ([^ ]*).*\*\/\n\/\*.*\*\/\n\/\* \*{74} \*\/\n" # noqa: E501
-        val_no_check_nl = r"\/\* \*{74} \*\/.\/\*.*\*\/.\/\*.*\*\/.\/\*.{3}([^ ]*).*\*\/.\/\*.*\*\/.\/\*   By: ([^ ]*).*\*\/.\/\*.*\*\/.\/\*   Created: ([^ ]* [^ ]*) by ([^ ]*).*\*\/.\/\*   Updated: ([^ ]* [^ ]*) by ([^ ]*).*\*\/.\/\*.*\*\/.\/\* \*{74} \*\/."  # noqa: E501
+        # Every field has to carry a value, an empty one is not a header
+        val_no_check_nl = r"\/\* \*{74} \*\/.\/\*.*\*\/.\/\*.*\*\/.\/\*.{3}([^ ]+).*\*\/.\/\*.*\*\/.\/\*   By: ([^ ]+).*\*\/.\/\*.*\*\/.\/\*   Created: ([^ ]+ [^ ]+) by ([^ ]+).*\*\/.\/\*   Updated: ([^ ]+ [^ ]+) by ([^ ]+).*\*\/.\/\*.*\*\/.\/\* \*{74} \*\/."  # noqa: E501
 
         # correct_header = re.match(val, context.header)
         regex = re.compile(val_no_check_nl, re.DOTALL)
