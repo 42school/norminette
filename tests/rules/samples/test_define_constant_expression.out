@@ -1,0 +1,35 @@
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IDENTIFIER=ifndef> <SPACE> <IDENTIFIER=TEST_DEFINE_CONSTANT_EXPRESSION_H> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 2":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=TEST_DEFINE_CONSTANT_EXPRESSION_H> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 3":
+		<NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 4":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=A> <SPACE> <CONSTANT=1> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 5":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=B> <SPACE> <IDENTIFIER=A> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 6":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=C> <SPACE> <LPARENTHESIS> <IDENTIFIER=A> <SPACE> <PLUS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 7":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=D> <SPACE> <LPARENTHESIS> <CONSTANT=1> <SPACE> <PLUS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 8":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=E> <SPACE> <MINUS> <CONSTANT=1> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 9":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=F> <SPACE> <STRING="str"> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 10":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=G> <SPACE> <LPARENTHESIS> <CONSTANT=1> <SPACE> <LEFT_SHIFT> <SPACE> <CONSTANT=8> <RPARENTHESIS> <SPACE> <DIV> <SPACE> <CONSTANT=8> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 11":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=H> <SPACE> <IDENTIFIER=foo> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 12":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=I> <SPACE> <IDENTIFIER=a> <SPACE> <ASSIGN> <SPACE> <CONSTANT=1> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 13":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=J> <SPACE> <LPARENTHESIS> <CONSTANT=1> <SPACE> <PLUS> <SPACE> <CONSTANT=1> <NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 14":
+		<NEWLINE>
+[36mtest_define_constant_expression.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 15":
+		<HASH> <IDENTIFIER=endif> <NEWLINE>
+test_define_constant_expression.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: PREPROC_CONSTANT     (line:  11, col:  15):	Preprocessor statement must only contain constant defines
+Error: PREPROC_CONSTANT     (line:  12, col:  14):	Preprocessor statement must only contain constant defines
+Error: PREPROC_CONSTANT     (line:  13, col:  17):	Preprocessor statement must only contain constant defines

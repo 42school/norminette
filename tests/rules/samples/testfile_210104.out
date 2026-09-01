@@ -34,4 +34,3 @@
 		<COMMENT=// issue 11, 12 (partly)> <NEWLINE>
 testfile_210104.h: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: PREPROC_CONSTANT     (line:  12, col:  15):	Preprocessor statement must only contain constant defines
