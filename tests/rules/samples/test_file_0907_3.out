@@ -547,3 +547,4 @@ Error: LINE_TOO_LONG        (line: 172, col:  86):	line too long
 Error: SPACE_AFTER_KW       (line: 182, col:  17):	Missing space after keyword
 Error: BRACE_SHOULD_EOL     (line: 201, col:   1):	Expected newline after brace
 Error: TOO_MANY_LINES       (line: 201, col:   1):	Function has more than 25 lines
+Error: NO_NEWLINE_EOF       (line: 201, col:   2):	Missing newline at end of file

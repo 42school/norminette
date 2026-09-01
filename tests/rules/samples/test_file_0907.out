@@ -2,3 +2,4 @@
 		<INT> <TAB> <IDENTIFIER=room_indexcmp> <LPARENTHESIS> <IDENTIFIER=t_room> <SPACE> <MULT> <IDENTIFIER=room1> <COMMA> <SPACE> <UNSIGNED> <SPACE> <MULT> <IDENTIFIER=index2> <RPARENTHESIS> <SEMI_COLON> 
 test_file_0907.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_NEWLINE_EOF       (line:   1, col:  52):	Missing newline at end of file

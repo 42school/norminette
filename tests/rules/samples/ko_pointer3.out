@@ -106,3 +106,4 @@ Error: SPC_AFTER_POINTER    (line:  21, col:  10):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  21, col:  12):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  21, col:  14):	space after pointer
 Error: BRACE_SHOULD_EOL     (line:  23, col:   1):	Expected newline after brace
+Error: NO_NEWLINE_EOF       (line:  23, col:   2):	Missing newline at end of file

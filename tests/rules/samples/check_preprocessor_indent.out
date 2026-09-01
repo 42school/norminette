@@ -171,3 +171,4 @@ Error: PREPOC_ONLY_GLOBAL   (line:  63, col:   1):	Preprocessor statements are o
 Error: NL_AFTER_PREPROC     (line:  64, col:   1):	Preprocessor statement must be followed by a newline
 Error: PREPOC_ONLY_GLOBAL   (line:  65, col:   1):	Preprocessor statements are only allowed in the global scope
 Error: NL_AFTER_PREPROC     (line:  66, col:   1):	Preprocessor statement must be followed by a newline
+Error: NO_NEWLINE_EOF       (line:  74, col:   7):	Missing newline at end of file

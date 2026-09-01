@@ -17,7 +17,7 @@ from norminette.errors import HumanizedErrorsFormatter
 @pytest.mark.parametrize("files, expected_result, ", [it.values() for it in [
         {
             "files": [
-                File("/nium/a.c", "#include <stdio.h>"),
+                File("/nium/a.c", "#include <stdio.h>\n"),
                 File("/nium/b.c", "int\tmain(void)\n{\n\treturn (1);\n}\n"),
                 File("/nium/c.c", "int\tfn(int n);\n"),
             ],
@@ -25,13 +25,13 @@ from norminette.errors import HumanizedErrorsFormatter
         },
         {
             "files": [
-                File("skyfall.c", "// Hello"),
+                File("skyfall.c", "// Hello\n"),
             ],
             "expected_result": "skyfall.c: OK!\n",
         },
         {
             "files": [
-                File("/nium/mortari.c", "#define TRUE 1"),
+                File("/nium/mortari.c", "#define TRUE 1\n"),
                 File("/nium/gensler.c", "int\tmain();\n"),
             ],
             "expected_result": (
@@ -42,8 +42,8 @@ from norminette.errors import HumanizedErrorsFormatter
         },
         {
             "files": [
-                File("/nium/john.c", "#define x"),
-                File("/nium/galt.c", "#define x"),
+                File("/nium/john.c", "#define x\n"),
+                File("/nium/galt.c", "#define x\n"),
             ],
             "expected_result": (
                 "john.c: Error!\n"

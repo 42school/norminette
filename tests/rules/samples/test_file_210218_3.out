@@ -14,3 +14,4 @@ Error: FORBIDDEN_TYPEDEF    (line:   2, col:   1):	Typedef declaration are not a
 Error: NL_AFTER_PREPROC     (line:   2, col:   1):	Preprocessor statement must be followed by a newline
 Error: FORBIDDEN_TYPEDEF    (line:   3, col:   1):	Typedef declaration are not allowed in .c files
 Error: FORBIDDEN_TYPEDEF    (line:   5, col:   1):	Typedef declaration are not allowed in .c files
+Error: NO_NEWLINE_EOF       (line:   5, col:  44):	Missing newline at end of file

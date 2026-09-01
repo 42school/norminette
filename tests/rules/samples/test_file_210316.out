@@ -75,3 +75,4 @@ Error: NO_SPC_BFR_PAR       (line:  35, col:  65):	Extra space before parenthesi
 Error: GLOBAL_VAR_DETECTED  (line:  36, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: NO_SPC_BFR_PAR       (line:  36, col:  64):	Extra space before parenthesis (brace/bracket)
 Error: NO_SPC_BFR_PAR       (line:  38, col:  53):	Extra space before parenthesis (brace/bracket)
+Error: NO_NEWLINE_EOF       (line:  38, col:  55):	Missing newline at end of file

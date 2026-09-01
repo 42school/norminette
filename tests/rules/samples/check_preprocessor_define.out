@@ -86,3 +86,4 @@ Error: MACRO_FUNC_FORBIDDEN (line:  29, col:  12):	Macro functions are forbidden
 Error: PREPROC_CONSTANT     (line:  29, col:  25):	Preprocessor statement must only contain constant defines
 Error: TERNARY_FBIDDEN      (line:  29, col:  25):	Ternaries are forbidden
 Error: MACRO_FUNC_FORBIDDEN (line:  30, col:  12):	Macro functions are forbidden
+Error: NO_NEWLINE_EOF       (line:  35, col:  14):	Missing newline at end of file

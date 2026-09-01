@@ -35,3 +35,4 @@ Error: SPC_BFR_OPERATOR     (line:   7, col:  18):	missing space before operator
 Error: SPC_AFTER_OPERATOR   (line:   7, col:  20):	missing space after operator
 Error: TOO_FEW_TAB          (line:   8, col:   1):	Missing tabs for indent level
 Error: SPACE_REPLACE_TAB    (line:   8, col:   5):	Found space when expecting tab
+Error: NO_NEWLINE_EOF       (line:  11, col:   5):	Missing newline at end of file

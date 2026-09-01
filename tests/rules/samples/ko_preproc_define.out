@@ -18,3 +18,4 @@ Error: PREPROC_CONSTANT     (line:   3, col:  22):	Preprocessor statement must o
 Error: PREPROC_CONSTANT     (line:   5, col:  19):	Preprocessor statement must only contain constant defines
 Error: PREPROC_START_LINE   (line:   6, col:   2):	Preprocessor statement not at the beginning of the line
 Error: MACRO_NAME_CAPITAL   (line:   6, col:  10):	Macro name must be capitalized
+Error: NO_NEWLINE_EOF       (line:   6, col:  19):	Missing newline at end of file
