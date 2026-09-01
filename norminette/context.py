@@ -208,6 +208,9 @@ class Context:
         self.fname_pos = 0
         self.arg_pos = [0, 0]
 
+        # Enum constants declared in this file, they are not variables
+        self.enum_constants = set()
+
         # Preprocessor handling
         self.protected = False
         self.preproc = PreProcessors()
