@@ -10,6 +10,8 @@ from typing import (
     Literal,
     Optional,
     List,
+    Dict,
+    Set,
     overload,
     Any,
     Type,
@@ -92,10 +94,13 @@ class Error:
 
 
 class Errors:
-    __slots__ = "_inner"
+    __slots__ = ("_inner", "_lines")
 
     def __init__(self) -> None:
         self._inner: List[Error] = []
+        # Lines already reported, by error name. Rules ask this on every run,
+        # so it is kept up to date here instead of rescanning `_inner`.
+        self._lines: Dict[str, Set[int]] = {}
 
     def __repr__(self) -> str:
         return repr(self._inner)
@@ -155,7 +160,14 @@ class Errors:
         if len(args) == 2:
             error = Error(*args, **kwargs)
         assert isinstance(error, Error), "bad function call"
+        lines = self._lines.setdefault(error.name, set())
+        lines.update(highlight.lineno for highlight in error.highlights)
         return self._inner.append(error)
+
+    def lines_with(self, name: str) -> Set[int]:
+        """Line numbers highlighted by the errors named `name` added so far.
+        """
+        return self._lines.get(name, set())
 
     @property
     def status(self) -> Literal["OK", "Error"]:
