@@ -1,0 +1,16 @@
+[36mtest_backslash_then_space.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_backslash_then_space.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_backslash_then_space.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_backslash_then_space.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=f> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <COMMA> <SPACE> <IDENTIFIER=g> <LPARENTHESIS> <CONSTANT=2> <RPARENTHESIS> <COMMA> <SPACE> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_backslash_then_space.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_backslash_then_space.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 7":
+		<RBRACE> <NEWLINE>
+test_backslash_then_space.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_MANY_INSTR       (line:   4, col:  21):	Too many instructions on a single line
+Error: SPC_BEFORE_NL        (line:   4, col:  24):	Space before newline

@@ -45,6 +45,21 @@ class CheckExpressionStatement(Rule, Check):
         "IsCast",
     )
 
+    def check_comma_operator(self, context, start, end):
+        """A comma between the parentheses of a return separates instructions,
+        the norm allows only one per line. A comma nested deeper belongs to a
+        call and is left alone.
+        """
+        depth = 0
+        for i in range(start, end):
+            if context.check_token(i, ["LPARENTHESIS", "LBRACKET", "LBRACE"]):
+                depth += 1
+            elif context.check_token(i, ["RPARENTHESIS", "RBRACKET", "RBRACE"]):
+                depth -= 1
+            elif depth == 1 and context.check_token(i, "COMMA"):
+                context.new_error("TOO_MANY_INSTR", context.peek_token(i))
+                return
+
     def run(self, context):
         """
         C keywords (return, break, continue...) must be followed by a space, with the
@@ -75,7 +90,9 @@ class CheckExpressionStatement(Rule, Check):
                     context.new_error("RETURN_PARENTHESIS", context.peek_token(tmp))
                     return False, 0
                 elif context.check_token(tmp, "SEMI_COLON") is False:
-                    tmp = context.skip_nest(tmp) + 1
+                    end = context.skip_nest(tmp)
+                    self.check_comma_operator(context, tmp, end)
+                    tmp = end + 1
                     if context.check_token(tmp, "SEMI_COLON") is False:
                         context.new_error("RETURN_PARENTHESIS", context.peek_token(tmp))
                         return False, 0

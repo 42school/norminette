@@ -137,6 +137,15 @@ right_auth = []
 
 whitespaces = ["NEWLINE", "SPACE", "TAB"]
 
+operands = [
+    "IDENTIFIER",
+    "CONSTANT",
+    "CHAR_CONST",
+    "STRING",
+    "RPARENTHESIS",
+    "RBRACKET",
+]
+
 
 class CheckOperatorsSpacing(Rule, Check):
     depends_on = (
@@ -205,6 +214,7 @@ class CheckOperatorsSpacing(Rule, Check):
                         "BWISE_AND",
                         "IDENTIFIER",
                         "SIZEOF",
+                        "ALIGNAS",
                     ],
                 )
                 is True
@@ -233,6 +243,7 @@ class CheckOperatorsSpacing(Rule, Check):
                         "BWISE_NOT",
                         "IDENTIFIER",
                         "SIZEOF",
+                        "ALIGNAS",
                         "NOT",
                         "MINUS",
                         "PLUS",
@@ -374,6 +385,11 @@ class CheckOperatorsSpacing(Rule, Check):
                     is True
                 ):
                     return False, 0
+                # A line split on a backslash leaves no token behind: the
+                # operator opens the new line, so nothing can precede it
+                before = context.peek_token(pos + tmp)
+                if before and before.lineno < context.peek_token(pos).lineno:
+                    return False, 0
             if (
                 context.check_token(pos - 1, "RPARENTHESIS")
                 and context.parenthesis_contain(context.skip_nest_reverse(pos - 1))[0]
@@ -408,6 +424,9 @@ class CheckOperatorsSpacing(Rule, Check):
             elif context.check_token(tmp, glued_operators) is False and not (
                 context.check_token(pos, ["PLUS", "MINUS"])
                 and context.check_token(pos + 1, "CONSTANT")
+                # `i +10`: a sign applies to the constant only when no
+                # operand precedes it, otherwise the operator is binary
+                and context.check_token(tmp, operands) is not True
             ):
                 context.new_error("SPC_AFTER_OPERATOR", context.peek_token(pos))
 

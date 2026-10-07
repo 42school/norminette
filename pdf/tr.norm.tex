@@ -10,7 +10,7 @@
 
 \begin{document}
 \title{Norm}
-\subtitle{Sürüm3}
+\subtitle{Sürüm 4.11}
 
 \summary
 {
@@ -53,13 +53,13 @@
 
         \begin{itemize}
 
-            \item Bir struct’ın ismi mutlaka \texttt{s\_} ile başlamalıdır.
+            \item Bir struct mutlaka bir isme sahip olmalı ve bu isim \texttt{s\_} ile başlamalıdır.
 
             \item Bir typedef’in ismi mutlaka \texttt{t\_} ile başlamalıdır
 
-            \item Bir union’ın ismi mutlaka \texttt{u\_} ile başlamalıdır.
+            \item Bir union mutlaka bir isme sahip olmalı ve bu isim \texttt{u\_} ile başlamalıdır.
 
-            \item Bir enum’ın ismi mutlaka \texttt{e\_} ile başlamalıdır.
+            \item Bir enum mutlaka bir isme sahip olmalı ve bu isim \texttt{e\_} ile başlamalıdır.
 
             \item Bir global’ın ismi mutlaka \texttt{g\_} ile başlamalıdır.
 
@@ -76,8 +76,9 @@
             \item Nesneler (değişkenler, fonksiyonlar, makrolar, tipler, dosyalar veya dizinler) mümkün olan en açık ve
 akılda kalıcı şekilde isimlendirilmelidir.
 
-            \item Const ve static olarak işaretlenmemiş global değişlenlerin kullanılması yasaktır ve bu durum, projenin
-bunlara açıkça izin vermediği hallerde norm hatası olarak değerlendirilir
+            \item Global değişkenlerin kullanılması, const veya static olarak işaretlenmiş olsalar
+da olmasalar da yasaktır ve proje bunlara açıkça izin vermediği sürece norm hatası olarak
+değerlendirilir
 
             \item Bir dosya mutlaka derlenebilmelidir. Derlenemeyen bir dosyanın Norm’a uymasısöz konusu olmayacaktır.
 
@@ -102,7 +103,8 @@ sütun olarak sayılmamakta, karşılık geldiği boşluk sayısı kadar dikkate
                 \item Her fonksiyon yeni bir satır başı ile ayrılmalıdır. Herhangi bir yorum veya ön işlemci, fonksiyonun hemen
 üzerinde yer alabilir. Satır başı bir önceki fonksiyondan sonra gelir.
 
-                \item Her satırda tek bir talimat yer almalıdır.
+                \item Her satırda tek bir talimat yer almalıdır. Bu kural bir \texttt{return} içine de
+uzanır: parantezleri arasındaki bir virgül iki talimatı ayırır ve yasaktır.
 
                 \item Boş bir satır mutlaka boş olmalıdır: herhangi bir boşluk veya tab olmamalıdır.
 
@@ -117,7 +119,8 @@ sütun olarak sayılmamakta, karşılık geldiği boşluk sayısı kadar dikkate
                 \item Her bir operatör veya operand yalnızca ve yalnızca tek bir boşluk ile ayrılmalıdır.
 
                 \item Tipler (int, char, float vs. gibi) için olanlar hariç her bir C sözcüğünden (keyword) ve sizeof’tan sonra bir
-boşluk bırakılmalıdır.
+boşluk bırakılmalıdır. Buna \texttt{break}, \texttt{continue} ve değer döndürmeyen
+\texttt{return} (\texttt{return ;} şeklinde yazılır) da dahildir.
 
                 \item Her bir değişken declarationı kendi kapsamına göre ilgili sütunda indentlenmiş olmalıdır
 
@@ -137,8 +140,12 @@ Fonksiyonda başka herhangi bir boş satıra izin verilmez.
                 \item Bir talimat ya da structuredan sonra yeni bir satır ekleyebilirsiniz, ancak bu durumda ayraçlar (brackets)
 veya atama operatörü ile bir girinti (indentation) eklemeniz gerekecektir. Operatörler satırın başında olmalıdır.
 
-                \item Kontrol yapılarında (if, while..), tek bir çizgi ya da tek bir koşul içerdikleri haller dışında, ayraç (brace)
-bulunmalıdır.
+                \item Kontrol yapılarında (if, while..), tek bir satırda tek bir talimat içerdikleri haller
+dışında, ayraç (brace) bulunmalıdır. Bir kontrol yapısı tek bir talimat sayılır, bu nedenle
+ayraçsız bir kontrol yapısı, kendi ayraçları olsun ya da olmasın, başka bir kontrol yapısı
+içerebilir.
+
+            \item Bir dosya mutlaka yeni satır ile bitmelidir.
 
             \end{itemize}
 
@@ -174,6 +181,8 @@ int     main(void)
             \item Bir fonksiyon maksimum 4 isimlendirilmiş parametre alabilir.
 
             \item Herhangi bir parametre almamış fonksiyonlar mutlaka parametre kısmına açıkça ‘void ’yazılarak prototiplendirilmelidir.
+Bu, bildirimin içerdiği her parametre listesi için geçerlidir; aldığı ya da döndürdüğü bir
+fonksiyon işaretçisinin parametre listesi de buna dahildir.
 
             \item Fonksiyonların prototiplerindeki parametreler mutlaka isimlendirilmelidir.
 
@@ -267,7 +276,8 @@ struct	s_struct;
 
         \begin{itemize}
 
-            \item Yarattığınız ön işlemci sabitleri (veya \#define) yalnızca gerçek ve sabit değerler için kullanılmalıdır.
+            \item Yarattığınız ön işlemci sabitleri (veya \#define) yalnızca literal değerler ve
+bunlardan oluşturulan sabit ifadeler için kullanılmalıdır.
 
             \item Normu bypass etmek ve/veya kod karıştırmak için yaratılan tüm \#define yasaktır. Bu kısım bir insan tarafından kontrol edilmelidir.
 
@@ -307,7 +317,11 @@ kullanabilirsiniz.
 
             \item VLAlar - Variable Length Arrays (Değişken Uzunluklu Dizi)
 
-            \item Değişlen declarationlarında implicit tip.
+            \item Örtük (implicit) tip; hem bir değişken bildiriminde hem de bir fonksiyonun dönüş
+tipinde yasaktır.
+
+            \item \texttt{typeof} ve türevleri \texttt{\_\_typeof\_\_} ile
+            \texttt{typeof\_unqual}.
 
         \end{itemize}
         \begin{42ccode}

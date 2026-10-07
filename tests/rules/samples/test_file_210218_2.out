@@ -15,3 +15,4 @@
 		<HASH> <IDENTIFIER=endif> 
 test_file_210218_2.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_NEWLINE_EOF       (line:   9, col:   7):	Missing newline at end of file

@@ -31,3 +31,4 @@ Error: FORBIDDEN_STRUCT     (line:   1, col:   1):	Struct declaration are not al
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: SPACE_REPLACE_TAB    (line:   9, col:   4):	Found space when expecting tab
 Error: FORBIDDEN_STRUCT     (line:  11, col:   1):	Struct declaration are not allowed in .c files
+Error: NO_NEWLINE_EOF       (line:  14, col:   3):	Missing newline at end of file

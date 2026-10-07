@@ -450,14 +450,12 @@ Error: MULT_ASSIGN_LINE     (line:  15, col:  24):	Multiple assignations on a si
 Error: MULT_ASSIGN_LINE     (line:  15, col:  31):	Multiple assignations on a single line
 Error: TAB_INSTEAD_SPC      (line:  19, col:  16):	Found tab when expecting space
 Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:  19, col:  17):	Comment is invalid in this scope
 Error: EMPTY_LINE_FUNCTION  (line:  22, col:   1):	Empty line in function
 Error: ASSIGN_IN_CONTROL    (line:  23, col:  16):	Assignment in control structure
 Error: FORBIDDEN_CS         (line:  24, col:   9):	Forbidden control structure
 Error: SPACE_AFTER_KW       (line:  24, col:   9):	Missing space after keyword
 Error: SPC_BFR_PAR          (line:  24, col:  15):	Missing space before parenthesis (brace/bracket)
 Error: NO_SPC_AFR_PAR       (line:  24, col:  18):	Extra space after parenthesis (brace/bracket)
-Error: MULT_IN_SINGLE_INSTR (line:  24, col:  20):	Multiple instructions in single line control structure
 Error: TOO_FEW_TAB          (line:  24, col:  20):	Missing tabs for indent level
 Error: FORBIDDEN_CS         (line:  25, col:  13):	Forbidden control structure
 Error: TOO_MANY_TAB         (line:  27, col:   1):	Extra tabs for indent level
@@ -549,3 +547,4 @@ Error: LINE_TOO_LONG        (line: 172, col:  86):	line too long
 Error: SPACE_AFTER_KW       (line: 182, col:  17):	Missing space after keyword
 Error: BRACE_SHOULD_EOL     (line: 201, col:   1):	Expected newline after brace
 Error: TOO_MANY_LINES       (line: 201, col:   1):	Function has more than 25 lines
+Error: NO_NEWLINE_EOF       (line: 201, col:   2):	Missing newline at end of file

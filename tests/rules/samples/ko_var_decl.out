@@ -38,4 +38,3 @@
 		<RBRACE> <NEWLINE>
 ko_var_decl.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: MULT_IN_SINGLE_INSTR (line:   9, col:   1):	Multiple instructions in single line control structure

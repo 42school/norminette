@@ -1,0 +1,22 @@
+[36mtest_nested_call_indent.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=y> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=y> <DEC> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=printf> <LPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <TAB> <TAB> <STRING="%c%c"> <COMMA> <NEWLINE>
+		<TAB> <TAB> <TAB> <TAB> <LPARENTHESIS> <CHAR> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=y> <RPARENTHESIS> <COMMA> <NEWLINE>
+		<TAB> <TAB> <TAB> <LPARENTHESIS> <CHAR> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=y> <RPARENTHESIS> <COMMA> <NEWLINE>
+		<TAB> <TAB> <TAB> <TAB> <LPARENTHESIS> <CHAR> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=y> <RPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <TAB> <RPARENTHESIS> <SPACE> <LESS_THAN> <SPACE> <CONSTANT=0> <RPARENTHESIS> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 10":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 11":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_nested_call_indent.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 12":
+		<RBRACE> <NEWLINE>
+test_nested_call_indent.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_FEW_TAB          (line:   7, col:  13):	Missing tabs for indent level

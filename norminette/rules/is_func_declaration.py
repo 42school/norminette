@@ -173,7 +173,7 @@ class IsFuncDeclaration(Rule, Primary, priority=81):
                     i += 1
             else:
                 i += 1
-        if len(type_id) > 0 and args is True and identifier is not None:
+        if args is True and identifier is not None:
             i = identifier[1]
             i = context.skip_ws(i, nl=True)
             while context.check_token(i, ["LPARENTHESIS", "MULT", "BWISE_AND"]) is True:

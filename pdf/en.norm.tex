@@ -10,7 +10,7 @@
 
 \begin{document}
 \title{The Norm}
-\subtitle{Version 4.1}
+\subtitle{Version 4.11}
 
 \summary
 {
@@ -116,15 +116,15 @@ Pull requests, suggestions and issues are welcome!
 
         \begin{itemize}
 
-            \item A structure's name must start by
+            \item A structure must have a name, and it must start by
                 \texttt{s\_}.
 
             \item A typedef's name must start by
                 \texttt{t\_}.
 
-            \item A union's name must start by \texttt{u\_}.
+            \item A union must have a name, and it must start by \texttt{u\_}.
 
-            \item An enum's name must start by \texttt{e\_}.
+            \item An enum must have a name, and it must start by \texttt{e\_}.
 
             \item A global's name must start by \texttt{g\_}.
 
@@ -142,8 +142,9 @@ Pull requests, suggestions and issues are welcome!
               should be readable in English, with each word separated by an underscore.
               This applies to macros, filenames and directories as well.
 
-            \item Using global variables that are not marked const or static is
-            forbidden and is considered a norm error, unless the project explicitly allows them.
+            \item Using global variables is forbidden and is considered a norm
+            error, whether or not they are marked const or static, unless the
+            project explicitly allows them.
 
             \item The file must compile. A file that doesn't compile isn't expected
                 to pass the Norm.
@@ -179,6 +180,8 @@ Pull requests, suggestions and issues are welcome!
             \item An empty line must be empty: no spaces or tabulations.
 
             \item A line can never end with spaces or tabulations.
+
+            \item A file must end with a newline.
               
             \item You can never have two consecutive empty lines.
               You can never have two consecutive spaces.
@@ -203,7 +206,9 @@ Pull requests, suggestions and issues are welcome!
 
             \item Only one instruction or control structure per line is allowed. Eg.: Assignment in
               a control structure is forbidden, two or multiple assignments on the same line is forbidden,
-              a newline is needed at the end of a control structure, ... .
+              a newline is needed at the end of a control structure, ... . This
+              reaches inside a return: a comma between its parentheses separates
+              two instructions and is forbidden.
 
             \item An instruction or control structure can be split into multiple lines when needed.
               The following lines created must be indented compared to the first line,
@@ -218,10 +223,13 @@ Pull requests, suggestions and issues are welcome!
 
             \item Each C keyword must be followed by a space, except for
               keywords for types (such as int, char, float, etc.),
-              as well as sizeof.
+              as well as sizeof. This includes \texttt{break}, \texttt{continue}
+              and a \texttt{return} with no value, written \texttt{return ;}.
 
             \item Control structures (if, while..) must use braces, unless they contain a single
-              instruction on a single line.
+              instruction on a single line. A control structure counts as one
+              instruction, so a control structure without braces may hold another
+              one, with or without braces of its own.
 
             \end{itemize}
 
@@ -230,12 +238,12 @@ Pull requests, suggestions and issues are welcome!
             General example:
             \begin{42ccode}
 int             g_global;
-typedef struct  s_struct
+typedef struct s_struct
 {
     char    *my_string;
     int     i;
 }               t_struct;
-struct          s_other_struct;
+struct s_other_struct;
 
 int     main(void)
 {
@@ -258,7 +266,9 @@ int     main(void)
 
             \item A function that doesn't take arguments must be
                 explicitly prototyped with the word "void" as the
-                argument.
+                argument. This applies to every argument list the declaration
+                holds, including that of a function pointer it takes or
+                returns.
 
             \item Parameters in functions' prototypes must be named.
 
@@ -351,7 +361,7 @@ int func2(void)
 # define FOO "bar"
 
 int     g_variable;
-struct  s_struct;
+struct s_struct;
 
 #endif
         \end{42ccode}
@@ -393,8 +403,8 @@ struct  s_struct;
 
         \begin{itemize}
 
-            \item \textit{(*)} Preprocessor constants (or \#define) you create must be used
-                only for literal and constant values.
+            \item Preprocessor constants (or \#define) you create must be used
+                only for literal values and constant expressions built from them.
             \item \textit{(*)} All \#define created to bypass the norm and/or obfuscate
                 code are forbidden.
             \item \textit{(*)} You can use macros available in standard libraries, only
@@ -432,7 +442,11 @@ struct  s_struct;
 
             \item VLAs - Variable Length Arrays.
 
-            \item Implicit type in variable declarations
+            \item Implicit type, in a variable declaration as well as in a
+              function's return type.
+
+            \item \texttt{typeof}, and its variants \texttt{\_\_typeof\_\_} and
+              \texttt{typeof\_unqual}.
 
         \end{itemize}
 

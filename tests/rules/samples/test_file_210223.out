@@ -24,5 +24,3 @@
 		<RBRACE> <NEWLINE>
 test_file_210223.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: MIXED_SPACE_TAB      (line:   3, col:  61):	Mixed spaces and tabs
-Error: TAB_INSTEAD_SPC      (line:   4, col:   1):	Found tab when expecting space

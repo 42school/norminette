@@ -1,0 +1,24 @@
+[36mtest_preproc_above_function.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=a> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 4":
+		<RBRACE> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 5":
+		<NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 6":
+		<HASH> <IDENTIFIER=ifdef> <SPACE> <IDENTIFIER=FOO> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 7":
+		<INT> <TAB> <IDENTIFIER=b> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 8":
+		<LBRACE> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 10":
+		<RBRACE> <NEWLINE>
+[36mtest_preproc_above_function.c[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 11":
+		<HASH> <IDENTIFIER=endif> <NEWLINE>
+test_preproc_above_function.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

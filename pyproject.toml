@@ -1,6 +1,6 @@
 [project]
 name = "norminette"
-version = "3.3.60"
+version = "3.4.0"
 description = "Open source C files linter for 42 Network campuses"
 authors = [{ name = "42", email = "pedago@42.fr" }]
 readme = "README.md"

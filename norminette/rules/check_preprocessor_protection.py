@@ -37,7 +37,14 @@ class CheckPreprocessorProtection(Rule, Check):
                 i = context.skip_ws(i, nl=True, comment=True)
                 if context.peek_token(i) is not None:
                     context.new_error("HEADER_PROT_ALL_AF", context.peek_token(i))
-                if not context.preproc.has_macro_defined(guard):
+                # A misnamed guard has its own error, so look for the name
+                # the file used, and ignore its case since that has one too
+                expected = (context.preproc.guard or guard).upper()
+                defined = any(
+                    macro.name.upper() == expected
+                    for macro in context.preproc.macros
+                )
+                if not defined:
                     context.new_error("HEADER_PROT_NODEF", hash)
                 context.protected = True
             return False, 0
@@ -45,6 +52,8 @@ class CheckPreprocessorProtection(Rule, Check):
             return False, 0
         i = context.skip_ws(i)
         macro = context.peek_token(i).value
+        if not context.protected:
+            context.preproc.guard = macro
         if macro != guard and not context.protected:
             if macro.upper() == guard:
                 context.new_error("HEADER_PROT_UPPER", context.peek_token(i))

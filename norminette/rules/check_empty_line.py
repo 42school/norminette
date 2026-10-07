@@ -2,6 +2,17 @@ from norminette.rules import Rule, Check
 
 
 class CheckEmptyLine(Rule, Check):
+    def preceded_by_empty_line(self, context):
+        """The norm asks for an empty line between two functions, wherever it
+        falls, so a preprocessor block already separated needs no other one.
+        """
+        i = -2
+        while context.history[i] == "IsPreprocessorStatement" and -i < len(
+            context.history
+        ):
+            i -= 1
+        return context.history[i] == "IsEmptyLine"
+
     def run(self, context):
         """
         Empty line must not contains tabs or spaces
@@ -35,6 +46,7 @@ class CheckEmptyLine(Rule, Check):
             and context.history[-1] != "IsPreprocessorStatement"
             and context.history[-1] != "IsEmptyLine"
             and context.history[-1] != "IsComment"
+            and self.preceded_by_empty_line(context) is False
         ):
             context.new_error("NL_AFTER_PREPROC", context.peek_token(i))
         if context.history[-1] != "IsEmptyLine":

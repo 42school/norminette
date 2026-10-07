@@ -1,0 +1,32 @@
+[36mtest_enum_trailing_comment.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IDENTIFIER=ifndef> <SPACE> <IDENTIFIER=TEST_ENUM_TRAILING_COMMENT_H> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 2":
+		<HASH> <SPACE> <IDENTIFIER=define> <SPACE> <IDENTIFIER=TEST_ENUM_TRAILING_COMMENT_H> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 3":
+		<NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 4":
+		<TYPEDEF> <SPACE> <ENUM> <SPACE> <IDENTIFIER=e_type> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsBlockStart[0m In "UserDefinedEnum" from "GlobalScope" line 5":
+		<LBRACE> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=TEX> <COMMA> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=COLOR> <COMMA> <TAB> <TAB> 
+[36mtest_enum_trailing_comment.h[0m - [32mIsComment[0m In "UserDefinedEnum" from "GlobalScope" line 7":
+		<COMMENT=// with a comma> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 8":
+		<TAB> <IDENTIFIER=OTHER> <COMMA> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 9":
+		<TAB> <IDENTIFIER=UNKNOWN> <TAB> <TAB> <MULT_COMMENT=/* block, no comma */> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsBlockEnd[0m In "UserDefinedEnum" from "GlobalScope" line 10":
+		<RBRACE> <TAB> <IDENTIFIER=t_type> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 11":
+		<NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 12":
+		<INT> <TAB> <IDENTIFIER=ft_a> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 13":
+		<NEWLINE>
+[36mtest_enum_trailing_comment.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 14":
+		<HASH> <IDENTIFIER=endif> <NEWLINE>
+test_enum_trailing_comment.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

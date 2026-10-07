@@ -163,7 +163,8 @@ def write(directory, name, body):
 
 
 def test_a_file_holding_only_notices_exits_zero(tmp_path):
-    path = write(tmp_path, "notice.c", 'char\t*g_a = "\\q";\n')
+    body = 'int\tmain(void)\n{\n\treturn ("\\q"[0]);\n}\n'
+    path = write(tmp_path, "notice.c", body)
     result = norminette(path)
     assert "notice.c: OK!" in result.stdout
     assert "Notice: UNKNOWN_ESCAPE" in result.stdout
@@ -188,7 +189,212 @@ def test_json_output_holds_nothing_but_json(tmp_path):
     assert json.loads(result.stdout)["files"][0]["status"] == "Error"
 
 
+def test_allow_globals_keeps_the_naming_rule(tmp_path):
+    path = write(tmp_path, "gl.c", "int\tg_ok = 1;\nint\tbad_name = 2;\n")
+
+    default = norminette(path)
+    assert "GLOBAL_VAR_DETECTED" in default.stdout
+    assert "GLOBAL_VAR_NAMING" in default.stdout
+
+    allowed = norminette("--allow-globals", path)
+    assert "GLOBAL_VAR_DETECTED" not in allowed.stdout
+    assert "GLOBAL_VAR_NAMING" in allowed.stdout
+
+
+def test_allow_globals_clears_a_well_named_global(tmp_path):
+    path = write(tmp_path, "gl.c", "int\tg_ok = 1;\n")
+    assert "GLOBAL_VAR_DETECTED" in norminette(path).stdout
+    assert norminette("--allow-globals", path).stdout.strip() == "gl.c: OK!"
+
+
+def test_only_errors_hides_the_files_with_nothing_to_say(tmp_path):
+    clean = write(tmp_path, "clean.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    broken = write(tmp_path, "broken.c", "int\tmain(void)\n{\n\treturn (0)\n}\n")
+
+    full = norminette(clean, broken)
+    assert "clean.c: OK!" in full.stdout
+
+    quiet = norminette("--only-errors", clean, broken)
+    assert "clean.c" not in quiet.stdout
+    assert "broken.c" in quiet.stdout
+    assert quiet.returncode == full.returncode
+
+
+def test_only_errors_leaves_json_complete(tmp_path):
+    clean = write(tmp_path, "clean.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    result = norminette("--format", "json", "--only-errors", clean)
+    assert len(json.loads(result.stdout)["files"]) == 1
+
+
+def test_a_dash_reads_the_file_from_stdin(tmp_path):
+    source = HEADER.format(name="stdin.c") + "int\tmain(void)\n{\n\treturn (0);\n}\n"
+    result = subprocess.run(
+        [sys.executable, "-m", "norminette", "-", "--filename", "stdin.c"],
+        input=source,
+        capture_output=True,
+        text=True,
+    )
+    assert "stdin.c: OK!" in result.stdout
+    assert result.returncode == 0
+
+
 def test_an_unsupported_extension_is_a_failure(tmp_path):
     path = tmp_path / "notes.txt"
     path.write_text("hello\n")
     assert norminette(str(path)).returncode == 1
+
+
+def test_a_comma_in_a_return_separates_two_instructions():
+    source = "int\tf(int a)\n{\n\treturn (g(a), 0);\n}\n"
+    assert "TOO_MANY_INSTR" in names(check(source))
+
+    nested = "int\tf(int a)\n{\n\treturn (g(a, 0));\n}\n"
+    assert "TOO_MANY_INSTR" not in names(check(nested))
+
+
+def test_every_argument_list_of_a_declaration_wants_void():
+    source = "void\t(*f(int a, void (*g)()))(void);\n"
+    assert "NO_ARGS_VOID" in names(check(source))
+
+    filled = "void\t(*f(int a, void (*g)(void)))(void);\n"
+    assert "NO_ARGS_VOID" not in names(check(filled))
+
+
+def test_a_sign_and_a_binary_operator_are_told_apart():
+    glued = "int\tmain(void)\n{\n\tint\ta;\n\n\ta = a +10;\n\treturn (0);\n}\n"
+    assert "SPC_AFTER_OPERATOR" in names(check(glued))
+
+    sign = "int\tmain(void)\n{\n\tint\ta;\n\n\ta = -10;\n\treturn (0);\n}\n"
+    assert "SPC_AFTER_OPERATOR" not in names(check(sign))
+
+
+def test_a_file_ends_with_a_newline():
+    assert "NO_NEWLINE_EOF" in names(check("// comment"))
+    assert "NO_NEWLINE_EOF" not in names(check("// comment\n"))
+
+
+def test_a_function_declares_its_return_type():
+    assert "MISSING_RETURN_TYPE" in names(check("main(void)\n{\n\treturn (0);\n}\n"))
+
+    typed = "int\tmain(void)\n{\n\treturn (0);\n}\n"
+    assert "MISSING_RETURN_TYPE" not in names(check(typed))
+
+
+def test_a_prototype_name_shares_the_line_of_its_return_type():
+    assert "MISSING_TAB_FUNC" in names(check("char\nfoo(void);\n", filename="a.h"))
+    assert "MISSING_TAB_FUNC" not in names(check("char\tfoo(void);\n", filename="a.h"))
+
+
+def test_a_typedef_tag_follows_the_naming_rule():
+    wrong = "typedef struct e_x\n{\n\tint\ta;\n}\tt_x;\n"
+    assert "STRUCT_TYPE_NAMING" in names(check(wrong, filename="a.h"))
+
+    right = "typedef struct s_x\n{\n\tint\ta;\n}\tt_x;\n"
+    assert "STRUCT_TYPE_NAMING" not in names(check(right, filename="a.h"))
+
+
+def test_a_header_is_protected_from_double_inclusion():
+    bare = "int\tf(void);\n"
+    assert "HEADER_PROT_MISSING" in names(check(bare, filename="a.h"))
+
+    guarded = "#ifndef A_H\n# define A_H\n\nint\tf(void);\n\n#endif\n"
+    assert "HEADER_PROT_MISSING" not in names(check(guarded, filename="a.h"))
+
+
+def test_a_forward_declaration_takes_a_space():
+    assert "TAB_REPLACE_SPACE" in names(check("struct\ts_x;\n", filename="a.h"))
+    assert "TAB_REPLACE_SPACE" not in names(check("struct s_x;\n", filename="a.h"))
+
+
+def test_a_subscript_that_follows_a_call_is_read():
+    source = "int\tmain(void)\n{\n\tf(a)[i] = g(x, y);\n\treturn (0);\n}\n"
+    assert "PARSING_ERROR" not in names(check(source))
+
+
+def test_a_split_string_counts_its_physical_lines():
+    body = "".join(f"line {i}\\n\\\n" for i in range(30))
+    source = 'int\tmain(void)\n{\n\tprintf("' + body + 'end");\n\treturn (0);\n}\n'
+    assert "TOO_MANY_LINES" in names(check(source))
+
+
+def test_a_backslash_separated_from_its_newline_still_splices():
+    source = "int\tmain(void)\n{\n\treturn (f(1) \\ \n\t\t\t+ 0);\n}\n"
+    reported = names(check(source))
+    assert "BAD_LEXEME" not in reported
+    assert "SPC_BEFORE_NL" in reported
+
+
+def test_a_preprocessor_block_may_sit_right_above_a_function():
+    body = "int\ta(void)\n{\n\treturn (0);\n}\n\n#ifdef FOO\nint\tb(void)\n{\n\treturn (0);\n}\n#endif\n"
+    assert "NL_AFTER_PREPROC" not in names(check(body))
+
+    glued = "int\ta(void)\n{\n\treturn (0);\n}\n#ifdef FOO\nint\tb(void)\n{\n\treturn (0);\n}\n#endif\n"
+    assert "NL_AFTER_PREPROC" in names(check(glued))
+
+
+def test_alignas_is_a_qualifier_not_a_call():
+    source = "int\tmain(void)\n{\n\t_Alignas(int) char\tdata[16];\n\n\treturn (0);\n}\n"
+    assert names(check(source)) == ["INVALID_HEADER"]
+
+
+def test_an_initialiser_block_is_indented():
+    indented = "int\tg_t[2] = {\n\t{1},\n\t{2}\n};\n"
+    assert "TOO_MANY_TAB" not in names(check(indented))
+
+    flat = "int\tg_t[2] = {\n{1},\n{2}\n};\n"
+    assert "TOO_FEW_TAB" in names(check(flat))
+
+
+def test_one_argument_list_keeps_one_indentation():
+    body = (
+        "\twhile (y--)\n"
+        "\t\tif (printf(\n"
+        "\t\t\t\t\"%c\",\n"
+        "\t\t\t\t(char)(y),\n"
+        "\t\t\t(char)(y)\n"
+        "\t\t\t) < 0)\n"
+        "\t\t\treturn (1);\n"
+    )
+    source = "int\tmain(int y)\n{\n" + body + "\treturn (0);\n}\n"
+    assert "TOO_FEW_TAB" in names(check(source))
+
+
+def test_a_preprocessor_line_cannot_end_with_a_blank():
+    assert "SPC_BEFORE_NL" in names(check("# include <stdio.h> \n"))
+    assert "SPC_BEFORE_NL" not in names(check("# include <stdio.h>\n"))
+
+
+def test_a_define_holds_a_constant_expression():
+    assert "PREPROC_CONSTANT" not in names(check("# define SIZE (2 * 4 + 1)\n"))
+    assert "PREPROC_CONSTANT" in names(check("# define SIZE 1 1 1\n"))
+
+
+def test_typeof_is_forbidden():
+    source = "int\tmain(void)\n{\n\tint\ta;\n\n\ta = typeof(1);\n\treturn (0);\n}\n"
+    assert "TYPEOF_FORBIDDEN" in names(check(source))
+
+
+def test_a_global_is_reported_whatever_its_form():
+    assert "GLOBAL_VAR_DETECTED" in names(check("static int\tg_x;\n"))
+    assert "GLOBAL_VAR_DETECTED" in names(check("const int\tg_x = 1;\n"))
+
+
+def test_one_mistake_is_reported_once():
+    long_comment = "\ta = 1;\t/* " + "x" * 90 + " */\n"
+    source = "int\tmain(void)\n{\n\tint\ta;\n\n" + long_comment + "\treturn (0);\n}\n"
+    reported = names(check(source))
+    assert reported.count("LINE_TOO_LONG") == 1
+    assert reported.count("COMMENT_ON_INSTR") <= 1
+
+
+def test_a_multiline_macro_says_so():
+    assert "MULTILINE_MACRO" in names(check("#define M 1 \\\n\t+ 2\n"))
+    assert "MULTILINE_MACRO" not in names(check("#define M 1\n"))
+
+
+def test_a_file_name_holds_lowercases_digits_and_underscores(tmp_path):
+    good = write(tmp_path, "my_file.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    assert "FORBIDDEN_CHAR_FILE" not in norminette(good).stdout
+
+    bad = write(tmp_path, "MyFile.c", "int\tmain(void)\n{\n\treturn (0);\n}\n")
+    assert "FORBIDDEN_CHAR_FILE" in norminette(bad).stdout

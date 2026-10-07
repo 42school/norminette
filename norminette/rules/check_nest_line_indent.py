@@ -52,6 +52,8 @@ class CheckNestLineIndent(Rule, Check):
             if context.check_token(i, ["LPARENTHESIS", "LBRACE", "LBRACKET"]) is True:
                 i += 1
                 i = self.find_nest_content(context, nest + 1, i) + 1
+                # `(a)(b)`: the token after a nest can open another one
+                continue
             if context.check_token(i, ["RBRACE", "RBRACKET", "RPARENTHESIS"]):
                 return i
             elif context.check_token(i, "NEWLINE") is True:

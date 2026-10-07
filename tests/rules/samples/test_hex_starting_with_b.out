@@ -1,0 +1,30 @@
+[36mtest_hex_starting_with_b.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=fn> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <UNSIGNED> <SPACE> <INT> <TAB> <IDENTIFIER=v> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0xb401D3> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0xB401D3> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0xb1b1b1> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 8":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0xbBEEFCA> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0xdeadbeef> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 10":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0b101> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 11":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0b12> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 12":
+		<TAB> <IDENTIFIER=v> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0779> <SEMI_COLON> <NEWLINE>
+[36mtest_hex_starting_with_b.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
+		<RBRACE> <NEWLINE>
+test_hex_starting_with_b.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: INVALID_BIN_INT      (line:  11, col:  12):	Invalid binary integer literal
+Error: INVALID_OCT_INT      (line:  12, col:  12):	Invalid octal integer literal

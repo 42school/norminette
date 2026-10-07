@@ -1,0 +1,13 @@
+[36mtest_escaped_newline_count.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_escaped_newline_count.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_escaped_newline_count.c[0m - [32mIsFunctionCall[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IDENTIFIER=printf> <LPARENTHESIS> <STRING="Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9\nLine 10\nLine 11\nLine 12\nLine 13\nLine 14\nLine 15\nLine 16\nLine 17\nLine 18\nLine 19\nLine 20\nLine 21\nLine 22\nLine 23\nLine 24\nLine 25\nLine 26\nLine 27\nLine 28\nLine 29\nLine 30\nend"> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_escaped_newline_count.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 34":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_escaped_newline_count.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 35":
+		<RBRACE> <NEWLINE>
+test_escaped_newline_count.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TOO_MANY_LINES       (line:  35, col:   1):	Function has more than 25 lines

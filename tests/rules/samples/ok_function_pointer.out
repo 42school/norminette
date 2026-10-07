@@ -6,3 +6,4 @@
 		<IDENTIFIER=result> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=fpcomparer> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=a> <COMMA> <SPACE> <IDENTIFIER=a> <SPACE> <MULT> <SPACE> <MULT> <IDENTIFIER=b> <RPARENTHESIS> <SEMI_COLON> 
 ok_function_pointer.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_NEWLINE_EOF       (line:   3, col:  35):	Missing newline at end of file

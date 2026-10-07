@@ -414,7 +414,7 @@ def test_lexer_parse_identifier_keyword_only(keyword: str):
     lexer = lexer_from_source(keyword)
     token = lexer.parse_identifier()
 
-    assert str(token) == f"<{keyword.upper()}>"
+    assert str(token) == f"<{keywords[keyword]}>"
     assert lexer.file.errors.status == "OK"
 
 

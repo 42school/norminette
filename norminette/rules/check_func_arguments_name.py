@@ -96,17 +96,27 @@ class CheckFuncArgumentsName(Rule, Check):
             if context.check_token(i, "RPARENTHESIS"):
                 return True
         elif context.check_token(i, "RPARENTHESIS"):
-            context.new_error("NO_ARGS_VOID", context.peek_token(i))
             return True
         return False
+
+    def empty_arg_lists(self, context):
+        """Every `()` in a function header is an argument list, the
+        function's own or that of a function pointer it takes or returns.
+        """
+        for i in range(0, context.tkn_scope):
+            if context.check_token(i, "LPARENTHESIS") is not True:
+                continue
+            tmp = context.skip_ws(i + 1, nl=True)
+            if context.check_token(tmp, "RPARENTHESIS") is True:
+                context.new_error("NO_ARGS_VOID", context.peek_token(tmp))
 
     def run(self, context):
         """
         Empty functions arguments must use void
         """
+        self.empty_arg_lists(context)
         i = context.arg_pos[0] + 1
-        ret = self.no_arg_func(context, i)
-        if ret is True:
+        if self.no_arg_func(context, i) is True:
             return False, 0
         while i < context.arg_pos[1]:
             i = context.skip_ws(i)

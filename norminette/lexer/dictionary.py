@@ -57,6 +57,7 @@ keywords = {
     "inline": "INLINE",
     "NULL": "NULL",
     "restrict": "RESTRICT",
+    "_Alignas": "ALIGNAS",
 }
 
 """

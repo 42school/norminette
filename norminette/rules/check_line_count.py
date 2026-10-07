@@ -7,8 +7,12 @@ class CheckLineCount(Rule, Check):
         """
         Each function can only have 25 lines between its opening and closing brackets
         """
-        for t in context.tokens[: context.tkn_scope]:
-            if t.type == "NEWLINE" or t.type == "ESCAPED_NEWLINE":
+        # Count the physical lines the statement spans: a string or a comment
+        # can swallow newlines of its own, and they are lines all the same
+        tokens = context.tokens[: context.tkn_scope]
+        if tokens:
+            context.scope.lines += tokens[-1].lineno - tokens[0].lineno
+            if tokens[-1].type in ("NEWLINE", "ESCAPED_NEWLINE"):
                 context.scope.lines += 1
 
         if type(context.scope) is GlobalScope:

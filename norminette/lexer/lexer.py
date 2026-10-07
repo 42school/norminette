@@ -1,6 +1,6 @@
 import re
 import string
-from typing import Optional, Tuple, cast
+from typing import Optional, Tuple
 
 from norminette.exceptions import UnexpectedEOF, MaybeInfiniteLoop
 from norminette.lexer.dictionary import digraphs, trigraphs
@@ -50,11 +50,12 @@ INT_LITERAL_PATTERN = re.compile(r"""
 ^
 # (?P<Sign>[-+]*)
 (?P<Prefix>         # prefix can be
-    0[bBxX]*        #   0, 0b, 0B, 0x, 0X, 0bb, 0BB, ...
+    0[xX](?![xX])   #   0x or 0X, but `0xb` keeps the b as a digit
+    |0[bB](?![bB])  #   0b or 0B, same for the repeated form below
+    |0[bBxX]*       #   0, 0xx, 0bb, ...
     |               # or empty
 )
 (?P<Constant>
-    # BUG If prefix is followed by two or more x, it doesn't works correctly
     (?<=0[xX])       # is prefix for hex digits?
         [\da-fA-F]+  #   so, collect hex digits
     |                # otherwise
@@ -143,7 +144,17 @@ class Lexer:
                 if peek is None:
                     break
                 temp, _ = peek  # Don't change the `temp` to `char`
-                if temp != '\n':
+                # A `\` and its newline may be separated by blanks, which the
+                # compiler splices all the same
+                blanks = 0
+                lookahead = temp
+                while lookahead in " \t":
+                    blanks += 1
+                    nxt = self.raw_peek(offset=size + blanks)
+                    if nxt is None:
+                        break
+                    lookahead = nxt
+                if lookahead != '\n':
                     if use_escape:
                         if temp in r"abefnrtv\"'?":
                             size += 1
@@ -175,7 +186,7 @@ class Lexer:
                             char += temp
                             size += 1
                     break
-                self.__pos += size + 1
+                self.__pos += size + blanks + 1
                 self.__line += 1
                 self.__line_pos = 0
                 peek = self.peek()
@@ -504,6 +515,20 @@ class Lexer:
         parse_brackets,
     )
 
+    def escaped_newline_length(self) -> int:
+        """Length of a `\\` and its newline, blanks in between included,
+        which the compiler splices all the same. 0 when there is none.
+        """
+        for prefix in ("\\", "??/"):
+            if self.raw_peek(collect=len(prefix)) != prefix:
+                continue
+            i = len(prefix)
+            while (char := self.raw_peek(offset=i)) and char in " \t":
+                i += 1
+            if self.raw_peek(offset=i) == "\n":
+                return i + 1
+        return 0
+
     def get_next_token(self) -> Optional[Token]:
         """Peeks one character and tries to match it to a token type,
         if it doesn't match any of the token types, an error will be raised
@@ -512,12 +537,18 @@ class Lexer:
         # Looping, not recursing: bad lexemes used to blow the stack
         while True:
             while self.raw_peek():
-                if self.raw_peek(collect=2) == "\\\n" or self.raw_peek(collect=4) == "??/\n":
+                if size := self.escaped_newline_length():
+                    prefix = 3 if self.raw_peek(collect=3) == "??/" else 1
+                    if size > prefix + 1:
+                        # The blanks the splice swallowed still end the line
+                        error = Error.from_name("SPC_BEFORE_NL")
+                        line, column = self.line_pos()
+                        error.add_highlight(line, column + prefix, length=1)
+                        self.file.errors.add(error)
                     # Avoid using `.pop()` here since it ignores the escaped
                     # newline and pops and upcomes after it. E.g, if we have
                     # `\\\nab` and use `.pop()`, the parsers funcs will see `b``.
-                    _, size = self.peek()  # type: ignore
-                    self.__pos += cast(int, size) + 1
+                    self.__pos += size
                     self.__line += 1
                     self.__line_pos = 1
                 else:

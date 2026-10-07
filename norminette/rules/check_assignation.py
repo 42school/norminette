@@ -29,6 +29,13 @@ class CheckAssignation(Rule, Check):
             i += 1
         return True, i
 
+    def nested_assign(self, context, start, end):
+        """Parentheses do not turn a second assignment into one"""
+        for i in range(start + 1, end):
+            if context.check_token(i, assigns) is True:
+                context.new_error("MULT_ASSIGN_LINE", context.peek_token(i))
+                return
+
     def check_assign_right(self, context, i, mini_assign=False):
         tmp_typ = None
         start = 0
@@ -46,6 +53,8 @@ class CheckAssignation(Rule, Check):
                     typ = tmp_typ
                 if tmp_typ == "assign":
                     context.new_error("MULT_ASSIGN_LINE", context.peek_token(start))
+                else:
+                    self.nested_assign(context, start, i)
                 if tmp_typ is None:
                     tmp = start + 1
                     while (

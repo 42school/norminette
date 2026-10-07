@@ -15,3 +15,4 @@
 ko_white_space_eof.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: SPACE_EMPTY_LINE     (line:   7, col:   1):	Space on empty line
+Error: NO_NEWLINE_EOF       (line:   7, col:   2):	Missing newline at end of file

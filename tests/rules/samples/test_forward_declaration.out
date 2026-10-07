@@ -1,0 +1,8 @@
+[36mtest_forward_declaration.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 1":
+		<STRUCT> <SPACE> <IDENTIFIER=s_ok> <SEMI_COLON> <NEWLINE>
+[36mtest_forward_declaration.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 2":
+		<STRUCT> <TAB> <IDENTIFIER=s_ko> <SEMI_COLON> <NEWLINE>
+test_forward_declaration.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: TAB_REPLACE_SPACE    (line:   2, col:   7):	Found tab when expecting space

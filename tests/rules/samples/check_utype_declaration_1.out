@@ -77,5 +77,4 @@ Error: FORBIDDEN_ENUM       (line:  15, col:   1):	Enum declaration are not allo
 Error: FORBIDDEN_UNION      (line:  23, col:   5):	Union declaration are not allowed in .c files
 Error: TYPE_NOT_GLOBAL      (line:  23, col:   5):	Enums, structs and unions need to be defined only in global scope
 Error: WRONG_SCOPE_COMMENT  (line:  27, col:  18):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:  27, col:  18):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:  28, col:   1):	Comment is invalid in this scope

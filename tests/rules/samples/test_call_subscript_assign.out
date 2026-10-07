@@ -1,0 +1,12 @@
+[36mtest_call_subscript_assign.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_call_subscript_assign.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_call_subscript_assign.c[0m - [32mIsFunctionCall[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IDENTIFIER=get_data> <LPARENTHESIS> <NULL> <RPARENTHESIS> <PTR> <IDENTIFIER=files_fds> <LBRACKET> <IDENTIFIER=INFILE> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=open> <LPARENTHESIS> <IDENTIFIER=argv> <LBRACKET> <CONSTANT=1> <RBRACKET> <COMMA> <SPACE> <IDENTIFIER=O_RDONLY> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_call_subscript_assign.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_call_subscript_assign.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 5":
+		<RBRACE> <NEWLINE>
+test_call_subscript_assign.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

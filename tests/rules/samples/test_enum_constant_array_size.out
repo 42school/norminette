@@ -1,0 +1,37 @@
+[36mtest_enum_constant_array_size.h[0m - [32mIsPreprocessorStatement[0m In "GlobalScope" from "None" line 1":
+		<HASH> <IDENTIFIER=define> <SPACE> <IDENTIFIER=LEN> <SPACE> <CONSTANT=4> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 2":
+		<NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 3":
+		<ENUM> <TAB> <IDENTIFIER=e_actions> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsBlockStart[0m In "UserDefinedEnum" from "GlobalScope" line 4":
+		<LBRACE> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=action_init> <COMMA> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=action_clear> <COMMA> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEnumVarDecl[0m In "UserDefinedEnum" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=last_action> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsBlockEnd[0m In "UserDefinedEnum" from "GlobalScope" line 8":
+		<RBRACE> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 9":
+		<NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 10":
+		<TYPEDEF> <SPACE> <INT> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=t_fn> <RPARENTHESIS> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 11":
+		<NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 12":
+		<IDENTIFIER=t_fn> <TAB> <IDENTIFIER=g_from_enum> <LBRACKET> <IDENTIFIER=last_action> <RBRACKET> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 13":
+		<IDENTIFIER=t_fn> <TAB> <IDENTIFIER=g_from_macro> <LBRACKET> <IDENTIFIER=LEN> <RBRACKET> <SEMI_COLON> <NEWLINE>
+[36mtest_enum_constant_array_size.h[0m - [32mIsVarDeclaration[0m In "GlobalScope" from "None" line 14":
+		<IDENTIFIER=t_fn> <TAB> <IDENTIFIER=g_from_literal> <LBRACKET> <CONSTANT=4> <RBRACKET> <SEMI_COLON> <NEWLINE>
+test_enum_constant_array_size.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: GLOBAL_VAR_DETECTED  (line:  12, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
+Error: MISALIGNED_VAR_DECL  (line:  12, col:   9):	Misaligned variable declaration
+Error: GLOBAL_VAR_DETECTED  (line:  13, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
+Error: MISALIGNED_VAR_DECL  (line:  13, col:   9):	Misaligned variable declaration
+Error: GLOBAL_VAR_DETECTED  (line:  14, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
+Error: MISALIGNED_VAR_DECL  (line:  14, col:   9):	Misaligned variable declaration

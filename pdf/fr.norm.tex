@@ -11,7 +11,7 @@
 
 \begin{document}
 \title{La Norme}
-\subtitle{Version 4}
+\subtitle{Version 4.11}
 
 \summary
 {
@@ -95,15 +95,15 @@
 
         \begin{itemize}
 
-            \item Un nom de structure doit commencer par
+            \item Une structure doit avoir un nom, et il doit commencer par
                 \texttt{s\_}.
 
             \item Un nom de typedef doit commencer par
                 \texttt{t\_}.
 
-            \item Un nom d’union doit commencer par \texttt{u\_}.
+            \item Une union doit avoir un nom, et il doit commencer par \texttt{u\_}.
 
-            \item Un nom d’enum doit commencer par \texttt{e\_}.
+            \item Un enum doit avoir un nom, et il doit commencer par \texttt{e\_}.
 
             \item Un nom de globale doit commencer par \texttt{g\_}.
 
@@ -125,8 +125,9 @@
             \item Les objets (variables, fonctions, macros, types, fichiers ou répertoires) 
                 doivent avoir les noms les plus explicites ou mnémoniques possibles.
             
-            \item Les variables globales sont interdites, sauf quand vous êtes obligé d'en utiliser ( signal handling ). L’utilisation d'une variable globale 
-                dans un projet où ce n’est pas explicitement autorisé est une erreur de Norme.
+            \item L’utilisation de variables globales est interdite et constitue une erreur
+                de Norme, qu’elles soient marquées const ou static ou non, sauf si le projet
+                l’autorise explicitement.
 
             \item Le fichier doit être compilable. Un fichier qui ne compile pas n'est 
                 pas censé passer La Norme.
@@ -153,11 +154,15 @@
                     Tout commentaire ou préprocesseur peut se trouver juste au-dessus
                     de la fonction. Le saut de ligne se trouve après la fonction précédente.
 
-                \item Une seule instruction par ligne
+                \item Une seule instruction par ligne. Cela vaut à l’intérieur d’un
+                \texttt{return} : une virgule entre ses parenthèses sépare deux instructions
+                et est interdite.
 
                 \item Une ligne vide doit être vide. Elle ne doit pas contenir d’espace ou de tabulation.
 
                 \item Une ligne ne doit jamais se terminer par des espaces ou des tabulations.
+
+            \item Un fichier doit se terminer par un retour à la ligne.
 
                 \item Vous ne pouvez pas avoir 2 espaces à la suite.
 
@@ -170,6 +175,14 @@
 
                 \item Chaque mot-clé en C doit être suivi d’un espace, sauf pour ceux
                     de type (comme \texttt{int}, \texttt{char}, \texttt{float}, etc.) ainsi que \texttt{sizeof}.
+                    Cela inclut \texttt{break}, \texttt{continue} et un \texttt{return} sans
+                    valeur, écrit \texttt{return ;}.
+
+            \item Les structures de contrôle (if, while..) doivent utiliser des accolades,
+                    sauf si elles contiennent une seule instruction sur une seule ligne. Une
+                    structure de contrôle compte pour une instruction : une structure de
+                    contrôle sans accolades peut donc en contenir une autre, avec ou sans
+                    accolades.
 
                 \item Chaque déclaration de variable doit être indentée sur la même colonne.
 
@@ -224,7 +237,9 @@ int     main(void)
             \item Une fonction prend au maximum 4 paramètres nommés.
 
             \item Une fonction qui ne prend pas d’argument doit explicitement être prototypée 
-                avec le mot \texttt{void} comme argument.
+                avec le mot \texttt{void} comme argument. Cela vaut pour chaque liste
+                d’arguments que porte la déclaration, y compris celle d’un pointeur de
+                fonction qu’elle prend ou retourne.
 
             \item Les paramètres des prototypes de fonctions doivent être nommés.
 
@@ -344,8 +359,9 @@ struct s_struct;
 
         \begin{itemize}
 
-            \item Les constantes de préprocesseur (or \texttt{\#define}) que vous créez ne doivent
-                être utilisés que pour associer des valeurs littérales et constantes, et rien d’autre.
+            \item Les constantes de préprocesseur (ou \texttt{\#define}) que vous créez ne doivent
+                être utilisées que pour des valeurs littérales et des expressions constantes
+                bâties sur celles-ci.
             \item Les \texttt{\#define} érigés dans le but de contourner la norme et/ou obfusquer
                 du code interdit par la norme sont interdites. 
                 Ce point doit être vérifiable par un humain.
@@ -383,7 +399,11 @@ struct s_struct;
 
             \item Les tableaux à taille variable (VLA - Variable Length Array).
 
-            \item Les types implicites dans les déclarations de variable.
+            \item Le type implicite, aussi bien dans une déclaration de variable que
+              comme type de retour d’une fonction.
+
+            \item \texttt{typeof}, et ses variantes \texttt{\_\_typeof\_\_} et
+              \texttt{typeof\_unqual}.
 
         \end{itemize}
         \begin{42ccode}

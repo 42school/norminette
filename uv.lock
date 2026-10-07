@@ -57,7 +57,7 @@ wheels = [
 
 [[package]]
 name = "norminette"
-version = "3.3.60"
+version = "3.4.0"
 source = { editable = "." }
 
 [package.dev-dependencies]

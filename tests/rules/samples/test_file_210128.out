@@ -40,11 +40,7 @@
 test_file_210128.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  14):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:   5, col:  63):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:   6, col:   5):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:  12, col:  36):	Comment is invalid in this scope
-Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	Comment is invalid in this scope
 Error: WRONG_SCOPE_COMMENT  (line:  18, col:  17):	Comment is invalid in this scope

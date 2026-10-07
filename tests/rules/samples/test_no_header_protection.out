@@ -1,0 +1,5 @@
+[36mtest_no_header_protection.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=foo> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+test_no_header_protection.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

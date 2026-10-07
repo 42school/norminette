@@ -140,7 +140,7 @@
 		<IDENTIFIER=trololo43> <TAB> <IDENTIFIER=func3> <LPARENTHESIS> <IDENTIFIER=youpibanane> <SPACE> <MULT> <MULT> <IDENTIFIER=cahuete> <COMMA> <SPACE> <IDENTIFIER=lol> <MULT> <MULT> <MULT> <SPACE> <MULT> <MULT> <IDENTIFIER=choupette> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 [36mlong_test.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 62":
 		<IDENTIFIER=trololo> <TAB> <IDENTIFIER=trololol> <TAB> <IDENTIFIER=func4> <LPARENTHESIS> <IDENTIFIER=uopi> <SPACE> <IDENTIFIER=sks> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
-[36mlong_test.c[0m - [32mIsFunctionCall[0m In "GlobalScope" from "None" line 63":
+[36mlong_test.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 63":
 		<MULT> <MULT> <MULT> <IDENTIFIER=func4> <LPARENTHESIS> <IDENTIFIER=udidf> <SPACE> <IDENTIFIER=fdfd> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 long_test.c: Error!
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
@@ -160,18 +160,17 @@ Error: TOO_MANY_INSTR       (line:  10, col:  27):	Too many instructions on a si
 Error: SPACE_BEFORE_FUNC    (line:  12, col:   4):	Found space when expecting tab before function name
 Error: RETURN_PARENTHESIS   (line:  14, col:  12):	Return value must be in parenthesis
 Error: INCLUDE_START_FILE   (line:  17, col:   1):	Include must be at the start of file
-Error: NL_AFTER_PREPROC     (line:  18, col:   1):	Preprocessor statement must be followed by a newline
 Error: NO_ARGS_VOID         (line:  18, col:  11):	Empty function argument requires void
 Error: RETURN_PARENTHESIS   (line:  20, col:  12):	Return value must be in parenthesis
 Error: SPACE_BEFORE_FUNC    (line:  23, col:   4):	Found space when expecting tab before function name
-Error: MISSING_IDENTIFIER   (line:  23, col:  16):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  23, col:  17):	missing type qualifier or identifier in function arguments
 Error: BRACE_NEWLINE        (line:  23, col:  22):	Expected newline before brace
 Error: RETURN_PARENTHESIS   (line:  24, col:  12):	Return value must be in parenthesis
 Error: TOO_MANY_INSTR       (line:  24, col:  17):	Too many instructions on a single line
 Error: TOO_MANY_FUNCS       (line:  26, col:   1):	Too many functions in file
-Error: MISSING_IDENTIFIER   (line:  26, col:  28):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  26, col:  29):	missing type qualifier or identifier in function arguments
 Error: TOO_MANY_FUNCS       (line:  31, col:   1):	Too many functions in file
-Error: MISSING_IDENTIFIER   (line:  31, col:  33):	missing type qualifier or identifier in function arguments
+Error: MISSING_IDENTIFIER   (line:  31, col:  34):	missing type qualifier or identifier in function arguments
 Error: BRACE_NEWLINE        (line:  31, col:  39):	Expected newline before brace
 Error: BRACE_SHOULD_EOL     (line:  31, col:  40):	Expected newline after brace
 Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
@@ -179,12 +178,12 @@ Error: TOO_FEW_TAB          (line:  31, col:  41):	Missing tabs for indent level
 Error: TOO_MANY_INSTR       (line:  31, col:  41):	Too many instructions on a single line
 Error: RETURN_PARENTHESIS   (line:  31, col:  48):	Return value must be in parenthesis
 Error: TOO_MANY_INSTR       (line:  31, col:  52):	Too many instructions on a single line
-Notice: GLOBAL_VAR_DETECTED  (line:  33, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:  33, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:  33, col:   7):	Global variable must start with g_
-Notice: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:  34, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: GLOBAL_VAR_NAMING    (line:  34, col:   9):	Global variable must start with g_
 Error: MISALIGNED_VAR_DECL  (line:  34, col:  19):	Misaligned variable declaration
-Notice: GLOBAL_VAR_DETECTED  (line:  38, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:  38, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: SPACE_REPLACE_TAB    (line:  38, col:   4):	Found space when expecting tab
 Error: GLOBAL_VAR_NAMING    (line:  38, col:   8):	Global variable must start with g_
 Error: NO_SPC_AFR_PAR       (line:  38, col:  17):	Extra space after parenthesis (brace/bracket)
@@ -209,3 +208,5 @@ Error: SPC_AFTER_POINTER    (line:  60, col:  44):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  61, col:  47):	space after pointer
 Error: SPC_AFTER_POINTER    (line:  61, col:  48):	space after pointer
 Error: MISALIGNED_FUNC_DECL (line:  62, col:  21):	Misaligned function declaration
+Error: MISALIGNED_FUNC_DECL (line:  63, col:   4):	Misaligned function declaration
+Error: MISSING_RETURN_TYPE  (line:  63, col:   4):	Missing return type in function declaration

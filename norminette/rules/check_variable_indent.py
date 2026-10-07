@@ -104,6 +104,9 @@ class CheckVariableIndent(Rule, Check):
                         i = context.skip_nest(i)
                         continue
                     elif context.check_token(i, "IDENTIFIER") is True:
+                        if context.peek_token(i).value in context.enum_constants:
+                            i += 1
+                            continue
                         for c in context.peek_token(i).value:
                             if c in string.ascii_lowercase:
                                 context.new_error(

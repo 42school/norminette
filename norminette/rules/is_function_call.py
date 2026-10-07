@@ -140,10 +140,20 @@ class IsFunctionCall(Rule, Primary, priority=80):
                 while context.check_token(i, "LPARENTHESIS") is True:
                     i = context.skip_nest(i) + 1
                 i = context.skip_ws(i)
-                if context.check_token(i, "PTR"):  # ->
-                    i = context.skip_ws(i + 1)
-                    if context.check_token(i, ("IDENTIFIER", *map(str.upper, keywords))):
+                # `f(a)[i]->b`: a subscript or a member belongs to the same
+                # expression as the call it follows
+                while context.check_token(i, ["LBRACKET", "PTR", "DOT"]) is True:
+                    if context.check_token(i, "LBRACKET") is True:
+                        i = context.skip_nest(i) + 1
+                        i = context.skip_ws(i)
+                    else:
                         i = context.skip_ws(i + 1)
+                        if context.check_token(
+                            i, ("IDENTIFIER", *map(str.upper, keywords))
+                        ):
+                            i = context.skip_ws(i + 1)
+                        else:
+                            break
                 if context.check_token(i, assign_ops):
                     expected = "SEMI_COLON"
                 else:

@@ -13,5 +13,6 @@
 		<IDENTIFIER=t_thing> <TAB> <MULT> <IDENTIFIER=empty_thing> <LPARENTHESIS> <NEWLINE>
 		<TAB> <TAB> <TAB> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
 test_multiline_void_args.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: NO_ARGS_VOID         (line:   9, col:  13):	Empty function argument requires void

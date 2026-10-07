@@ -44,7 +44,11 @@ class CheckSpacing(Rule, Check):
                         space_error = True
                     while i < context.tkn_scope and context.check_token(i, "SPACE"):
                         i += 1
-                if context.check_token(i, "TAB"):
+                # A tab opening a continuation line is indentation the norm
+                # asks for, not a tab mixed into the middle of a line
+                if context.check_token(i, "TAB") and context.peek_token(i).pos[
+                    0
+                ] == context.peek_token(i - 1).pos[0]:
                     if space_tab_error is False:
                         context.new_error("MIXED_SPACE_TAB", context.peek_token(i - 1))
                         space_tab_error = True

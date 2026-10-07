@@ -21,6 +21,6 @@
 [36mtestfile_210104_4.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 11":
 		<RBRACE> <NEWLINE>
 testfile_210104_4.c: Error!
-Notice: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
 Error: SPC_AFTER_OPERATOR   (line:   5, col:   7):	missing space after operator

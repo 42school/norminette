@@ -1,0 +1,28 @@
+[36mtest_mult_after_increment.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <CHAR> <SPACE> <MULT> <IDENTIFIER=grid> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=size> <COMMA> <SPACE> <INT> <SPACE> <MULT> <IDENTIFIER=p> <RPARENTHESIS> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=i> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <CONSTANT=0> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=grid> <LBRACKET> <IDENTIFIER=size> <SPACE> <PLUS> <SPACE> <IDENTIFIER=i> <INC> <SPACE> <MULT> <SPACE> <LPARENTHESIS> <IDENTIFIER=size> <SPACE> <PLUS> <SPACE> <CONSTANT=1> <RPARENTHESIS> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <CHAR_CONST='x'> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=grid> <LBRACKET> <IDENTIFIER=i> <INC> <SPACE> <MULT> <SPACE> <CONSTANT=2> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <CHAR_CONST='x'> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 8":
+		<TAB> <IDENTIFIER=grid> <LBRACKET> <IDENTIFIER=i> <DEC> <SPACE> <MULT> <SPACE> <CONSTANT=2> <RBRACKET> <SPACE> <ASSIGN> <SPACE> <CHAR_CONST='x'> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <MULT> <IDENTIFIER=p> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 10":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <INC> <MULT> <IDENTIFIER=p> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 11":
+		<TAB> <IDENTIFIER=i> <SPACE> <ASSIGN> <SPACE> <MULT> <IDENTIFIER=p> <INC> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 12":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=i> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_after_increment.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
+		<RBRACE> <NEWLINE>
+test_mult_after_increment.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

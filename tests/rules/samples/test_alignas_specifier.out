@@ -1,0 +1,14 @@
+[36mtest_alignas_specifier.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_alignas_specifier.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_alignas_specifier.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <ALIGNAS> <LPARENTHESIS> <INT> <RPARENTHESIS> <SPACE> <CHAR> <TAB> <IDENTIFIER=data> <LBRACKET> <CONSTANT=16> <RBRACKET> <SEMI_COLON> <NEWLINE>
+[36mtest_alignas_specifier.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_alignas_specifier.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_alignas_specifier.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 6":
+		<RBRACE> <NEWLINE>
+test_alignas_specifier.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

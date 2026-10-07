@@ -23,4 +23,5 @@
 [36mcheck_utype_declaration_2.h[0m - [32mIsBlockEnd[0m In "UserDefinedType" from "GlobalScope" line 12":
 		<RBRACE> <SEMI_COLON> <NEWLINE>
 check_utype_declaration_2.h: Error!
+Error: HEADER_PROT_MISSING  (line:   1, col:   1):	Header file is not protected from double inclusion
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

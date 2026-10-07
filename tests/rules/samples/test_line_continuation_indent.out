@@ -1,0 +1,14 @@
+[36mtest_line_continuation_indent.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_line_continuation_indent.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_line_continuation_indent.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=pthread_create> <LPARENTHESIS> <BWISE_AND> <IDENTIFIER=philos> <LBRACKET> <IDENTIFIER=a> <RBRACKET> <DOT> <IDENTIFIER=thread> <COMMA> <SPACE> <NULL> <COMMA> <SPACE> <TAB> <TAB> <TAB> <IDENTIFIER=check_status> <COMMA> <SPACE> <BWISE_AND> <IDENTIFIER=philos> <LBRACKET> <IDENTIFIER=a> <RBRACKET> <RPARENTHESIS> <RPARENTHESIS> <NEWLINE>
+[36mtest_line_continuation_indent.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "Function" line 5":
+		<TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <MINUS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_line_continuation_indent.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=foo> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <SPACE> <TAB> <TAB> <TAB> <PLUS> <SPACE> <IDENTIFIER=bar> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_line_continuation_indent.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 8":
+		<RBRACE> <NEWLINE>
+test_line_continuation_indent.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

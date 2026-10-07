@@ -15,3 +15,4 @@
 test_file_1116_1.c: Error!
 Error: FORBIDDEN_ENUM       (line:   1, col:   1):	Enum declaration are not allowed in .c files
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_NEWLINE_EOF       (line:   7, col:   3):	Missing newline at end of file

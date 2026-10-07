@@ -1,0 +1,8 @@
+[36mtest_func_ptr_arg_void.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=ok> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <VOID> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <VOID> <RPARENTHESIS> <RPARENTHESIS> <RPARENTHESIS> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_func_ptr_arg_void.c[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 2":
+		<VOID> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=ko> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <VOID> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <RPARENTHESIS> <RPARENTHESIS> <RPARENTHESIS> <LPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+test_func_ptr_arg_void.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_ARGS_VOID         (line:   2, col:  31):	Empty function argument requires void
+Error: NO_ARGS_VOID         (line:   2, col:  35):	Empty function argument requires void

@@ -15,9 +15,9 @@
 [36mko_too_many_instruction.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 6":
 		<RBRACE> <NEWLINE>
 ko_too_many_instruction.c: Error!
-Notice: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:   1):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Notice: GLOBAL_VAR_DETECTED  (line:   1, col:  10):	Global variable present in file. Make sure it is a reasonable choice.
+Error: GLOBAL_VAR_DETECTED  (line:   1, col:  10):	Global variable present in file. It is forbidden unless the project explicitly allows it.
 Error: TOO_MANY_INSTR       (line:   1, col:  10):	Too many instructions on a single line
 Error: MISALIGNED_VAR_DECL  (line:   1, col:  17):	Misaligned variable declaration
 Error: TOO_FEW_TAB          (line:   5, col:  23):	Missing tabs for indent level
