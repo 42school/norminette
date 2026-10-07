@@ -30,26 +30,21 @@ class CheckComment(Rule, Check):
         if context.scope.__class__.__name__.lower() == "function":
             return True
         # Sometimes the context scope is a `ControlStructure` scope instead of
-        # `Function` scope, so, to outsmart this bug, we need check manually
-        # the `context.history`.
-        last = None
-        for index, record in enumerate(reversed(context.history)):
-            if record == "IsFuncDeclaration" and last == "IsBlockStart":
-                # Since the limited history API, we can't say if we're in a
-                # nested function to reach the first enclosing function, so,
-                # we'll consider that the user just declared a normal function
-                # in global scope.
-                stack = 1
-                index -= 1  # Jumps to next record after `IsBlockStart`
-                while index > 0 and stack > 0:
-                    record = context.history[-index]
-                    index -= 1
-                    if record not in ("IsBlockStart", "IsBlockEnd"):
-                        continue
-                    stack = stack + (1, -1)[record == "IsBlockEnd"]
-                return bool(stack)
-            last = record
-        return False
+        # `Function` scope, so, to outsmart this bug, we follow the braces of
+        # the last function body in `context.history` ourselves. Only the
+        # records added since the last call are read, otherwise every comment
+        # rescans the whole history.
+        history = context.history
+        for index in range(context.history_read, len(history)):
+            record = history[index]
+            if record == "IsBlockStart" and index and history[index - 1] == "IsFuncDeclaration":
+                context.function_depth = 1
+            elif context.function_depth and record == "IsBlockStart":
+                context.function_depth += 1
+            elif context.function_depth and record == "IsBlockEnd":
+                context.function_depth -= 1
+        context.history_read = len(history)
+        return context.function_depth > 0
 
     def is_last_token(self, token, foward):
         # A comment ends its own line, so an instruction continuing on the

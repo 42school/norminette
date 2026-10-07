@@ -200,6 +200,9 @@ class Context:
 
         # Rule relative informations
         self.history = []
+        # Braces still open in the last function body, see `CheckComment`
+        self.function_depth = 0
+        self.history_read = 0
         self.errors = file.errors
         self.tkn_scope = len(tokens)
 
