@@ -1,0 +1,22 @@
+[36mtest_mult_vs_pointer.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <IDENTIFIER=b> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <INT> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=fct> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <RPARENTHESIS> <SPACE> <MULT> <SPACE> <CONSTANT=2> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <DOUBLE> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <DIV> <SPACE> <CONSTANT=2> <RPARENTHESIS> <SPACE> <MULT> <SPACE> <CONSTANT=6> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <LPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <CONSTANT=2> <RPARENTHESIS> <RPARENTHESIS> <SPACE> <MULT> <SPACE> <CONSTANT=256> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 8":
+		<TAB> <IDENTIFIER=b> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=a> <SPACE> <MULT> <SPACE> <CONSTANT=2> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 9":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_mult_vs_pointer.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 10":
+		<RBRACE> <NEWLINE>
+test_mult_vs_pointer.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

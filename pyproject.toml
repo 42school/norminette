@@ -1,52 +1,41 @@
-[tool.poetry]
+[project]
 name = "norminette"
-version = "3.3.59"
+version = "3.3.60"
 description = "Open source C files linter for 42 Network campuses"
-authors = ["42 <pedago@42.fr>"]
-license = "MIT Licence"
+authors = [{ name = "42", email = "pedago@42.fr" }]
 readme = "README.md"
-repository = "https://github.com/42School/norminette"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
 keywords = ["42", "norminette"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
-]
-include = [
-    "norminette/locale/**/LC_MESSAGES/*.mo"
+    "Programming Language :: Python :: 3.14",
 ]
 
-[tool.tox]
-legacy_tox_ini = """
-[tox]
-skipsdist = true
-envlist = py310, py311, py312, py313
+[project.urls]
+Repository = "https://github.com/42School/norminette"
 
-[testenv]
-allowlist_externals = poetry
-commands =
-    poetry install -v
-    poetry run pytest
-"""
+[project.scripts]
+norminette = "norminette.__main__:main"
 
-[tool.poetry.dependencies]
-python = ">=3.10"
-argparse = "^1.4.0"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.3.2"
-tox = "^4.6.0"
-flake8 = ">=7,<8"
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "flake8>=7.3.0",
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.9.0,<0.13.0"]
+build-backend = "uv_build"
 
-[tool.poetry.scripts]
-norminette = "norminette.__main__:main"
+[tool.uv.build-backend]
+module-root = ""
+module-name = "norminette"

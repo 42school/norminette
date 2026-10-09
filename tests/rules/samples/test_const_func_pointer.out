@@ -1,0 +1,28 @@
+[36mtest_const_func_pointer.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=with_pointer_return> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <VOID> <TAB> <MULT> <LPARENTHESIS> <MULT> <CONST> <SPACE> <IDENTIFIER=f> <RPARENTHESIS> <LPARENTHESIS> <IDENTIFIER=size_t> <RPARENTHESIS> <SPACE> <ASSIGN> <SPACE> <IDENTIFIER=malloc> <SEMI_COLON> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 4":
+		<NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 5":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=f> <SPACE> <NOT_EQUAL> <SPACE> <NULL> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 6":
+		<RBRACE> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 7":
+		<NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 8":
+		<INT> <TAB> <IDENTIFIER=with_plain_return> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 9":
+		<LBRACE> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 10":
+		<TAB> <VOID> <TAB> <LPARENTHESIS> <MULT> <CONST> <SPACE> <IDENTIFIER=g> <RPARENTHESIS> <LPARENTHESIS> <INT> <RPARENTHESIS> <SPACE> <ASSIGN> <SPACE> <NULL> <SEMI_COLON> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 11":
+		<NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 12":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=g> <SPACE> <NOT_EQUAL> <SPACE> <NULL> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_const_func_pointer.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 13":
+		<RBRACE> <NEWLINE>
+test_const_func_pointer.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

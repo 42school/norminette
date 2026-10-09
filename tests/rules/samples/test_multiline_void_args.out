@@ -1,0 +1,17 @@
+[36mtest_multiline_void_args.h[0m - [32mIsUserDefinedType[0m In "GlobalScope" from "None" line 1":
+		<TYPEDEF> <SPACE> <VOID> <TAB> <IDENTIFIER=t_thing> <SEMI_COLON> <NEWLINE>
+[36mtest_multiline_void_args.h[0m - [32mIsEmptyLine[0m In "GlobalScope" from "None" line 2":
+		<NEWLINE>
+[36mtest_multiline_void_args.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 3":
+		<IDENTIFIER=t_thing> <TAB> <MULT> <IDENTIFIER=new_thing> <LPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <TAB> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_multiline_void_args.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 5":
+		<VOID> <TAB> <IDENTIFIER=free_thing> <LPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <TAB> <IDENTIFIER=t_thing> <SPACE> <MULT> <IDENTIFIER=self> <COMMA> <NEWLINE>
+		<TAB> <TAB> <TAB> <VOID> <SPACE> <LPARENTHESIS> <MULT> <IDENTIFIER=fn> <RPARENTHESIS> <LPARENTHESIS> <VOID> <SPACE> <MULT> <IDENTIFIER=value> <RPARENTHESIS> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_multiline_void_args.h[0m - [32mIsFuncPrototype[0m In "GlobalScope" from "None" line 8":
+		<IDENTIFIER=t_thing> <TAB> <MULT> <IDENTIFIER=empty_thing> <LPARENTHESIS> <NEWLINE>
+		<TAB> <TAB> <TAB> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+test_multiline_void_args.h: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: NO_ARGS_VOID         (line:   9, col:  13):	Empty function argument requires void

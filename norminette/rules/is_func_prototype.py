@@ -147,7 +147,10 @@ class IsFuncPrototype(Rule, Primary, priority=82):
                         i += 1
                     identifier = (context.peek_token(i), i)
                     nxt = par[1] + 1
-                    if context.check_token(nxt, ["LPARENTHESIS"]) is False:
+                    if context.check_token(nxt, "LPARENTHESIS") is False and not (
+                        context.check_token(nxt, "LBRACKET")
+                        and context.check_token(i + 1, "LPARENTHESIS")
+                    ):
                         return False, 0
                     i = context.skip_nest(i)
                 else:
@@ -179,7 +182,7 @@ class IsFuncPrototype(Rule, Primary, priority=82):
             while context.check_token(i, ["RPARENTHESIS"]) is True:
                 i += 1
             i = context.skip_nest(i)
-            while context.check_token(i, ["RPARENTHESIS"]) is True:
+            while context.check_token(i, ["RPARENTHESIS", "RBRACKET"]) is True:
                 i += 1
             i = context.skip_ws(i, nl=True)
             return True, i

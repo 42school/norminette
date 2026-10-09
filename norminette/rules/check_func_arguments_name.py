@@ -89,10 +89,10 @@ class CheckFuncArgumentsName(Rule, Check):
         return i
 
     def no_arg_func(self, context, pos):
-        i = context.skip_ws(pos)
+        i = context.skip_ws(pos, nl=True)
         if context.check_token(i, "VOID"):
             i += 1
-            i = context.skip_ws(i)
+            i = context.skip_ws(i, nl=True)
             if context.check_token(i, "RPARENTHESIS"):
                 return True
         elif context.check_token(i, "RPARENTHESIS"):

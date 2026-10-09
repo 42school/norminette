@@ -1,3 +1,4 @@
+from norminette.errors import Error, Highlight
 from norminette.rules import Rule, Check
 
 
@@ -9,7 +10,7 @@ class CheckCommentLineLen(Rule, Check):
         Lines must not be over 80 characters long
         """
         i = 0
-        while not context.check_token(i, ["COMMENT", "MULT_COMMENT"]):
+        while context.peek_token(i) and not context.check_token(i, ["COMMENT", "MULT_COMMENT"]):
             i += 1
         token = context.peek_token(i)
         if not token:
@@ -22,7 +23,7 @@ class CheckCommentLineLen(Rule, Check):
             lines[0] = " " * index + lines[0]
             for lineno, line in enumerate(lines, start=token.pos[0]):
                 if len(line) > 81:
-                    token.pos = (lineno, 1)
-                    context.new_error("LINE_TOO_LONG", token)
+                    error = Error.from_name("LINE_TOO_LONG", highlights=[Highlight(lineno, 1)])
+                    context.errors.add(error)
         elif index + len(token.value) > 81:  # token.type == "COMMENT"
             context.new_error("LINE_TOO_LONG", token)

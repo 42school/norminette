@@ -13,7 +13,11 @@ __all__ = (
 )
 
 LOCALES = (
+    "ar_JO",
     "en_US",
+    "es_ES",
+    "fr_FR",
+    "ja_JP",
     "pt_BR",
 )
 
@@ -30,7 +34,6 @@ def set_locale(locale: str) -> None:
     Set the locale for the application.
     This function loads the translation files from the locale directory and sets the translation function.
     """
-    print(f"Setting locale to {locale}")
     global _
     try:
         import gettext

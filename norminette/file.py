@@ -16,7 +16,7 @@ class File:
     @property
     def source(self) -> str:
         if self._source is None:
-            with open(self.path) as file:
+            with open(self.path, encoding="utf-8", errors="replace") as file:
                 self._source = file.read()
         return self._source
 

@@ -1,0 +1,18 @@
+[36mtest_func_pointer_utype.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<VOID> <TAB> <IDENTIFIER=function2> <LPARENTHESIS> <VOID> <RPARENTHESIS> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <INT> <TAB> <TAB> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=builtin> <RPARENTHESIS> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsVarDeclaration[0m In "Function" from "GlobalScope" line 4":
+		<TAB> <IDENTIFIER=t_example> <TAB> <LPARENTHESIS> <MULT> <IDENTIFIER=user_defined> <RPARENTHESIS> <LPARENTHESIS> <VOID> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsEmptyLine[0m In "Function" from "GlobalScope" line 5":
+		<NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 6":
+		<TAB> <IDENTIFIER=builtin> <SPACE> <ASSIGN> <SPACE> <NULL> <SEMI_COLON> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsAssignation[0m In "Function" from "GlobalScope" line 7":
+		<TAB> <IDENTIFIER=user_defined> <SPACE> <ASSIGN> <SPACE> <NULL> <SEMI_COLON> <NEWLINE>
+[36mtest_func_pointer_utype.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 8":
+		<RBRACE> <NEWLINE>
+test_func_pointer_utype.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

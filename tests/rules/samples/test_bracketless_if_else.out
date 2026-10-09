@@ -1,0 +1,46 @@
+[36mtest_bracketless_if_else.c[0m - [32mIsFuncDeclaration[0m In "GlobalScope" from "None" line 1":
+		<INT> <TAB> <IDENTIFIER=main> <LPARENTHESIS> <INT> <SPACE> <IDENTIFIER=a> <COMMA> <SPACE> <INT> <SPACE> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsBlockStart[0m In "Function" from "GlobalScope" line 2":
+		<LBRACE> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 3":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 4":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 5":
+		<TAB> <TAB> <TAB> <BREAK> <SPACE> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 6":
+		<TAB> <TAB> <ELSE> <SPACE> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 7":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 8":
+		<TAB> <TAB> <ELSE> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 9":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 10":
+		<TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 11":
+		<TAB> <TAB> <WHILE> <SPACE> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "ControlStructure" line 12":
+		<TAB> <TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 13":
+		<TAB> <TAB> <TAB> <TAB> <BREAK> <SPACE> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "ControlStructure" line 14":
+		<TAB> <TAB> <TAB> <ELSE> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 15":
+		<TAB> <TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "Function" from "GlobalScope" line 16":
+		<TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 17":
+		<TAB> <TAB> <IF> <SPACE> <LPARENTHESIS> <IDENTIFIER=b> <RPARENTHESIS> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 18":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=0> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsControlStatement[0m In "ControlStructure" from "Function" line 19":
+		<TAB> <TAB> <ELSE> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "ControlStructure" from "ControlStructure" line 20":
+		<TAB> <TAB> <TAB> <RETURN> <SPACE> <LPARENTHESIS> <CONSTANT=1> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsExpressionStatement[0m In "Function" from "GlobalScope" line 21":
+		<TAB> <RETURN> <SPACE> <LPARENTHESIS> <IDENTIFIER=a> <SPACE> <PLUS> <SPACE> <IDENTIFIER=b> <RPARENTHESIS> <SEMI_COLON> <NEWLINE>
+[36mtest_bracketless_if_else.c[0m - [32mIsBlockEnd[0m In "Function" from "GlobalScope" line 22":
+		<RBRACE> <NEWLINE>
+test_bracketless_if_else.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header

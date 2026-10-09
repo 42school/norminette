@@ -509,28 +509,29 @@ class Lexer:
         if it doesn't match any of the token types, an error will be raised
         and current file's parsing will stop
         """
-        while self.raw_peek():
-            if self.raw_peek(collect=2) == "\\\n" or self.raw_peek(collect=4) == "??/\n":
-                # Avoid using `.pop()` here since it ignores the escaped
-                # newline and pops and upcomes after it. E.g, if we have
-                # `\\\nab` and use `.pop()`, the parsers funcs will see `b``.
-                _, size = self.peek()  # type: ignore
-                self.__pos += cast(int, size) + 1
-                self.__line += 1
-                self.__line_pos = 1
-            else:
-                break
-        for parser in self.parsers:
-            if result := parser(self):
-                return result
-        if char := self.raw_peek():
+        # Looping, not recursing: bad lexemes used to blow the stack
+        while True:
+            while self.raw_peek():
+                if self.raw_peek(collect=2) == "\\\n" or self.raw_peek(collect=4) == "??/\n":
+                    # Avoid using `.pop()` here since it ignores the escaped
+                    # newline and pops and upcomes after it. E.g, if we have
+                    # `\\\nab` and use `.pop()`, the parsers funcs will see `b``.
+                    _, size = self.peek()  # type: ignore
+                    self.__pos += cast(int, size) + 1
+                    self.__line += 1
+                    self.__line_pos = 1
+                else:
+                    break
+            for parser in self.parsers:
+                if result := parser(self):
+                    return result
+            if not (char := self.raw_peek()):
+                return None
             error = Error("BAD_LEXEME", f"No matchable token for '{char}' lexeme")
             error.add_highlight(*self.line_pos(), length=1)
             self.file.errors.add(error)
             self.__pos += 1
             self.__line_pos += 1
-            # BUG If we have multiples bad lexemes, it can raise RecursionError
-            return self.get_next_token()
 
     def __iter__(self):
         while token := self.get_next_token():

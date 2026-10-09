@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository (PR branch)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
@@ -19,25 +19,22 @@ jobs:
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y gettext
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.1
         with:
-          python-version: "3.11"
+          enable-cache: true
+          python-version: "3.14"
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
+        run: uv sync --locked
 
       - name: Run I18N module
-        run: |
-          poetry run python -m norminette.i18n
+        run: uv run python -m norminette.i18n
 
       - name: Check for uncommitted .po changes
         run: |
           if git diff --ignore-matching-lines='^"POT-Creation-Date:' -- '*.po' | grep -P '^[+-](?![+-]{2} [ab]/)' > /dev/null; then
-            echo "Meaningful I18N changes detected. Please run 'python -m norminette/i18n.py' and commit the changes."
+            echo "Meaningful I18N changes detected. Please run 'uv run python -m norminette.i18n' and commit the changes."
             git diff -- '*.po'
             exit 1
           else

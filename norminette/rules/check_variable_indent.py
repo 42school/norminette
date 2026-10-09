@@ -40,6 +40,10 @@ keywords = [
     "WHILE",
     "IDENTIFIER",
 ]
+qualifiers = [
+    "CONST",
+    "VOLATILE",
+]
 assigns_or_eol = [
     "RIGHT_ASSIGN",
     "LEFT_ASSIGN",
@@ -71,15 +75,25 @@ class CheckVariableIndent(Rule, Check):
         line_start = True
         id_length = 0
         buffer_len = 0
+        nests = ["LPARENTHESIS", "LBRACE", "LBRACKET"]
+        depth = 0
         while context.check_token(i, assigns_or_eol) is False:
-            if context.check_token(i, keywords) is True:
+            # `void\t(*const f)(int)`: the qualifier is not a type word
+            if context.check_token(i, keywords) is True and not (
+                depth > 0
+                and context.check_token(i, qualifiers) is True
+            ):
                 type_identifier_nb += 1
             if (
-                context.check_token(i, ["LPARENTHESIS", "LBRACE", "LBRACKET"])
+                context.check_token(i, nests)
                 and type_identifier_nb > 0
                 and context.parenthesis_contain(i)[0] != "pointer"
             ):
                 i = context.skip_nest(i)
+            elif context.check_token(i, nests) is True:
+                depth += 1
+            elif context.check_token(i, ["RPARENTHESIS", "RBRACE", "RBRACKET"]) is True:
+                depth -= 1
             i += 1
         i = 0
         while context.check_token(i, assigns_or_eol) is False:

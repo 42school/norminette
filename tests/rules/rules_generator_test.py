@@ -1,5 +1,7 @@
-import pytest
 import glob
+import os
+
+import pytest
 
 from norminette.file import File
 from norminette.lexer import Lexer
@@ -9,7 +11,9 @@ from norminette.errors import HumanizedErrorsFormatter
 
 
 registry = Registry()
-test_files = glob.glob("tests/rules/samples/*.[ch]")
+samples = os.path.join(os.path.dirname(__file__), "samples")
+test_files = sorted(glob.glob(os.path.join(samples, "*.[ch]")))
+assert test_files, f"no sample found in {samples!r}"
 
 
 @pytest.mark.parametrize("file", test_files)
@@ -17,7 +21,7 @@ def test_rule_for_file(file, capsys):
     with open(file, "r") as test_file:
         file_to_lex = test_file.read()
 
-    with open(f"{file.split('.')[0]}.out") as out_file:
+    with open(f"{os.path.splitext(file)[0]}.out") as out_file:
         out_content = out_file.read()
 
     file = File(file, file_to_lex)

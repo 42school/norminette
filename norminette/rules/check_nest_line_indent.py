@@ -64,6 +64,8 @@ class CheckNestLineIndent(Rule, Check):
                 while context.check_token(i, "TAB") is True:
                     indent += 1
                     i += 1
+                if context.peek_token(i) is None:
+                    return i
                 if context.check_token(i, ["RBRACE", "RBRACKET", "RPARENTHESIS"]):
                     expected -= 1
                 if indent > expected:

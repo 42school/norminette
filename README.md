@@ -80,22 +80,28 @@ Feel free to do pull requests if you want to help as well. Make sure that run_te
 
 ## Run for development
 
-This new version uses poetry as a dependency manager.
+This new version uses [uv](https://docs.astral.sh/uv/) as a dependency manager.
 
 If you want to contribute:
 
 ```shell
-poetry install
+uv sync
 
 # Run dev norminette
-poetry run norminette
+uv run norminette
 
 # Or... with virtual env
 source .venv/bin/activate
 norminette
 
 # Run tests
-poetry run pytest
+uv run pytest
+
+# Run tests against another Python version
+uv run --python 3.10 pytest
+
+# Run the linter
+uv run flake8
 ```
 
 ## Github action

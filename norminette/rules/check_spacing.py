@@ -21,6 +21,8 @@ class CheckSpacing(Rule, Check):
                 if context.peek_token(i).pos[1] == 1:
                     while i < context.tkn_scope and context.check_token(i, "SPACE"):
                         i += 1
+                    if context.peek_token(i) is None:
+                        break
                     if context.check_token(i + 1, "NEWLINE"):
                         context.new_error("SPACE_EMPTY_LINE", context.peek_token(i))
                         i += 1
